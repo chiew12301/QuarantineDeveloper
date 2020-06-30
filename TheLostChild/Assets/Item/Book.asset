@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0071a5f07c607b94b9ad7b5031592816, type: 3}
+  m_Name: Book
+  m_EditorClassIdentifier: 
+  itemSprite: {fileID: 21300000, guid: ec4ce037783b6144580f7269500b871b, type: 3}
+  name: Book
+  desc: I'm book
+  itemType: 0
+  itemPrefab: {fileID: 8513774114941369405, guid: ea40bc6324dbf1149af6bfe8926d3567,
+    type: 3}
+  isFull: 0

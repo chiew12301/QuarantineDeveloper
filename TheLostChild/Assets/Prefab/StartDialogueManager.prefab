@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7170083411149338981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7170083411149338983}
+  - component: {fileID: 7170083411149338980}
+  m_Layer: 0
+  m_Name: StartDialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7170083411149338983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7170083411149338981}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.254809, y: 93.4, z: -11.714402}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7170083411149338980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7170083411149338981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0b7627302333b4aa7bec9bcb54fe1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueStartScene: {fileID: 11400000, guid: 59e96196e5a2bf5499fc60a1200308cb, type: 2}
+  dialogueCutS2: {fileID: 11400000, guid: 81e2e8aca45865c488e27aa2881f3ae4, type: 2}
+  dialogueCutS3: {fileID: 11400000, guid: 974a4dacfd46c174cba2661e87177bff, type: 2}
+  dialogueCutS3P2: {fileID: 11400000, guid: 264401c3ab71d4e4a98adbda14b31b30, type: 2}
+  dialogueCutS3P3: {fileID: 11400000, guid: ced3e271f4245ab4b8b515e4032ad494, type: 2}
+  dialogueCutMem: {fileID: 11400000, guid: 22ffaf60463cb374393295f82c3496c9, type: 2}
+  dailogueAyuLivingR: {fileID: 11400000, guid: 0594a1dba764fc341b9b690b46dffdaf, type: 2}
+  dialogueLIG: {fileID: 11400000, guid: b6cb1434d6cd6ec4bb9753fcdb89288d, type: 2}
+  dialogueLIG2: {fileID: 11400000, guid: dd2d6a3e83dab914ebd2ee4749bea0ef, type: 2}
+  dialogueDisplay: {fileID: 0}
+  isStartCutScenePlayed: 0
+  isEnteredLobbyOnce: 0
+  isExitLobby: 0
+  isCutS2Played: 0
+  isCutS3PlayedP1: 0
+  isCutS3PlayedP2: 0
+  isCutS3PlayedP3: 0
+  isCutSMemPlayed: 0
+  isCutSAyuLivingRPlayed: 0
+  isCutSLIG: 0
+  isCutSLIG2: 0
+  player: {fileID: 0}
+  LeftLocationLobby: {x: 0.81, y: 1.55, z: 0}
+  RightLocationLobby: {x: 6.21, y: 0.45, z: 0}
+  FullLeftLocationLobby: {x: -14.92, y: 1.55, z: 0}
+  FullRightLocationLobby: {x: 9.53, y: 0.45, z: 0}
+  LeftLocation2: {x: -3.37, y: 158.94, z: 0}
+  RightLocation2: {x: 2.21, y: 156.5, z: 0}
+  LeftLocation3: {x: 0.76, y: 1.55, z: 0}
+  RightLocation3: {x: 6.29, y: 0.67, z: 0}
+  LeftLocationLR: {x: -119.59, y: 24, z: 0}
+  RightLocationLR: {x: -118.3, y: 21.78, z: 0}
+  LeftLocationLIG: {x: -3.55, y: 126.88, z: 0}
+  RightLocationLIG: {x: -1.18, y: 126.21, z: 0}

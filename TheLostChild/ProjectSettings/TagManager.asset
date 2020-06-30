@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Cursor
+  - InventoryUI
+  - Item
+  - Trigger
+  - Wall
+  - AudioManager
+  - Book
+  - ObjectPooling
+  - Journal
+  - Blocker
+  - EnemySoldier_1
+  - Hidden
+  - Jigsaw
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Background
+  - 
+  - Character
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1431707357
+    locked: 0
+  - name: Item
+    uniqueID: 3606627535
+    locked: 0
+  - name: Wall
+    uniqueID: 583442971
+    locked: 0
+  - name: Player
+    uniqueID: 3238830583
+    locked: 0
+  - name: Enemy
+    uniqueID: 2184790385
+    locked: 0

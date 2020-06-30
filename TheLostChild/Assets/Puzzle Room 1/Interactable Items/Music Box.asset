@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0071a5f07c607b94b9ad7b5031592816, type: 3}
+  m_Name: Music Box
+  m_EditorClassIdentifier: 
+  itemSprite: {fileID: 21300000, guid: c037b9ccb7510394faf6358599aebe60, type: 3}
+  name: Music Box
+  desc: A music box
+  itemType: 5
+  itemPrefab: {fileID: 3355301154141978493, guid: 7e00b2b84fad68f409532d54a2256a34,
+    type: 3}
+  isFull: 0

@@ -1,0 +1,728 @@
+fileFormatVersion: 2
+guid: 0e9cbd2437de0de4fa2b04073d406aa8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8513519563747129055
+    second: soldier_enemy_sprite_seperated_0
+  - first:
+      213: -8773763924283054578
+    second: soldier_enemy_sprite_seperated_1
+  - first:
+      213: 470872209432754017
+    second: soldier_enemy_sprite_seperated_2
+  - first:
+      213: -4172723166382953107
+    second: soldier_enemy_sprite_seperated_3
+  - first:
+      213: 981891188247473071
+    second: soldier_enemy_sprite_seperated_4
+  - first:
+      213: 7417860851691017779
+    second: soldier_enemy_sprite_seperated_5
+  - first:
+      213: -4607277292443961882
+    second: soldier_enemy_sprite_seperated_6
+  - first:
+      213: -7270450385436185588
+    second: soldier_enemy_sprite_seperated_7
+  - first:
+      213: -2664655325341260720
+    second: soldier_enemy_sprite_seperated_8
+  - first:
+      213: -7775944422946194318
+    second: soldier_enemy_sprite_seperated_9
+  - first:
+      213: -6523239516929899833
+    second: soldier_enemy_sprite_seperated_10
+  - first:
+      213: 3972552032917870115
+    second: soldier_enemy_sprite_seperated_11
+  - first:
+      213: -4250527478097484738
+    second: soldier_enemy_sprite_seperated_12
+  - first:
+      213: 5685119525559423800
+    second: soldier_enemy_sprite_seperated_13
+  - first:
+      213: -1999797741883018277
+    second: soldier_enemy_sprite_seperated_14
+  - first:
+      213: -5037507989198495501
+    second: soldier_enemy_sprite_seperated_15
+  - first:
+      213: -2086396218790813899
+    second: soldier_enemy_sprite_seperated_16
+  - first:
+      213: -5920826772362684200
+    second: soldier_enemy_sprite_seperated_17
+  - first:
+      213: 6593057918829120668
+    second: soldier_enemy_sprite_seperated_18
+  - first:
+      213: -752064275445673446
+    second: soldier_enemy_sprite_seperated_19
+  - first:
+      213: -3114891421436721437
+    second: soldier_enemy_sprite_seperated_20
+  - first:
+      213: -6273721006937330344
+    second: soldier_enemy_sprite_seperated_21
+  - first:
+      213: 7366272558101650203
+    second: soldier_enemy_sprite_seperated_22
+  - first:
+      213: 2875071027740020033
+    second: soldier_enemy_sprite_seperated_23
+  - first:
+      213: -7084181832805571344
+    second: soldier_enemy_sprite_seperated_24
+  - first:
+      213: -6495087727461058889
+    second: soldier_enemy_sprite_seperated_25
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_0
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 3212
+        width: 864
+        height: 2355
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd67c79cfe8162670800000000000000
+      internalID: 8513519563747129055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_1
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 3938
+        width: 424
+        height: 791
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06a8fd32345d3680800000000000000
+      internalID: -8773763924283054578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_2
+      rect:
+        serializedVersion: 2
+        x: 3661
+        y: 4576
+        width: 138
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167b7d997cfd88600800000000000000
+      internalID: 470872209432754017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_3
+      rect:
+        serializedVersion: 2
+        x: 3812
+        y: 4667
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d63b163628716c0800000000000000
+      internalID: -4172723166382953107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_4
+      rect:
+        serializedVersion: 2
+        x: 3832
+        y: 4614
+        width: 76
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faba39b55d060ad00800000000000000
+      internalID: 981891188247473071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_5
+      rect:
+        serializedVersion: 2
+        x: 3917
+        y: 4670
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336d152a42981f660800000000000000
+      internalID: 7417860851691017779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_6
+      rect:
+        serializedVersion: 2
+        x: 4087
+        y: 4664
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5772286b9af00c0800000000000000
+      internalID: -4607277292443961882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_7
+      rect:
+        serializedVersion: 2
+        x: 4149
+        y: 4623
+        width: 164
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c69fa15eb2a1b90800000000000000
+      internalID: -7270450385436185588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_8
+      rect:
+        serializedVersion: 2
+        x: 5126
+        y: 3997
+        width: 720
+        height: 1491
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0546e2c791e350bd0800000000000000
+      internalID: -2664655325341260720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_9
+      rect:
+        serializedVersion: 2
+        x: 4043
+        y: 4623
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27cbc1dfebb461490800000000000000
+      internalID: -7775944422946194318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_10
+      rect:
+        serializedVersion: 2
+        x: 3812
+        y: 4599
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c24a90983cc875a0800000000000000
+      internalID: -6523239516929899833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_11
+      rect:
+        serializedVersion: 2
+        x: 3826
+        y: 4605
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32653d5c607512730800000000000000
+      internalID: 3972552032917870115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_12
+      rect:
+        serializedVersion: 2
+        x: 3941
+        y: 4599
+        width: 63
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3466f767c71305c0800000000000000
+      internalID: -4250527478097484738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_13
+      rect:
+        serializedVersion: 2
+        x: 3806
+        y: 4594
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8335b92661a95ee40800000000000000
+      internalID: 5685119525559423800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_14
+      rect:
+        serializedVersion: 2
+        x: 2489
+        y: 3564
+        width: 345
+        height: 1010
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd33f649c8a4f34e0800000000000000
+      internalID: -1999797741883018277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_15
+      rect:
+        serializedVersion: 2
+        x: 3635
+        y: 3716
+        width: 796
+        height: 833
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f0a1a67c2d271ab0800000000000000
+      internalID: -5037507989198495501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_16
+      rect:
+        serializedVersion: 2
+        x: 4491
+        y: 4153
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f514671b1ab03e0800000000000000
+      internalID: -2086396218790813899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_17
+      rect:
+        serializedVersion: 2
+        x: 4380
+        y: 3571
+        width: 33
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d813b0ab6ff4dda0800000000000000
+      internalID: -5920826772362684200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_18
+      rect:
+        serializedVersion: 2
+        x: 2328
+        y: 2688
+        width: 246
+        height: 386
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9cc263ee3f3f7b50800000000000000
+      internalID: 6593057918829120668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_19
+      rect:
+        serializedVersion: 2
+        x: 5134
+        y: 2029
+        width: 692
+        height: 1493
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a129ccda6812095f0800000000000000
+      internalID: -752064275445673446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_20
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 286
+        width: 1264
+        height: 2308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e64a5f61cea5c4d0800000000000000
+      internalID: -3114891421436721437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_21
+      rect:
+        serializedVersion: 2
+        x: 1994
+        y: 415
+        width: 673
+        height: 1394
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d2899dbf34fe8a0800000000000000
+      internalID: -6273721006937330344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_22
+      rect:
+        serializedVersion: 2
+        x: 4119
+        y: 1507
+        width: 444
+        height: 1154
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b5b580dd14a3660800000000000000
+      internalID: 7366272558101650203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_23
+      rect:
+        serializedVersion: 2
+        x: 3254
+        y: 302
+        width: 298
+        height: 499
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d0670fddd46e720800000000000000
+      internalID: 2875071027740020033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_24
+      rect:
+        serializedVersion: 2
+        x: 4015
+        y: 291
+        width: 486
+        height: 900
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4295b182eefad90800000000000000
+      internalID: -7084181832805571344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_enemy_sprite_seperated_25
+      rect:
+        serializedVersion: 2
+        x: 5158
+        y: 101
+        width: 647
+        height: 1383
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b63fa3df10dcd5a0800000000000000
+      internalID: -6495087727461058889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
