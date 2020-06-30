@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfo:
   - name: 
-    portrait: {fileID: 21300000, guid: 442f78cbca569cd4289585828e03b985, type: 3}
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
     sentences: "The second floor hallway...it\u2019s really empty. "
     isJitter: 0
   - name: 
-    portrait: {fileID: 21300000, guid: 442f78cbca569cd4289585828e03b985, type: 3}
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
     sentences: Nevermind, I should focus on finding the lobby, maybe a security guard
       will help me.

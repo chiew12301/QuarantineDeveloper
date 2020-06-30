@@ -59,11 +59,19 @@ public class DialogueCutscene : MonoBehaviour
     public Vector3 RightLocationLR;
     public Vector3 LeftLocationLIG;
     public Vector3 RightLocationLIG;
+    public Vector3 LeftAyuPainting;
+    public Vector3 RightAyuPainting;
 
     // Start is called before the first frame update
     void Awake()
     {
-        if(isStartCutScenePlayed == false)
+
+
+    }
+
+private void Start()
+    {
+        if (isStartCutScenePlayed == false)
         {
             dialogueDisplay.SetActive(true);
             DialogueManager.instance.StartDialogue(dialogueStartScene);
@@ -73,39 +81,6 @@ public class DialogueCutscene : MonoBehaviour
         {
             return;
         }
-
-    }
-
-    //add bfr ienumerator
-    public void LIRwithHairPin()
-    {
-        if (pickedUpHairPin == false)
-        {
-            Debug.Log("PickedHairpin");
-            pickedUpHairPin = true;
-        }
-        else
-        {
-            return;
-        }
-    }
-    public void HairPinCutScene()
-    {
-        if (isHairPin == false)
-        {
-            dialogueDisplay.SetActive(true);
-            DialogueManager.instance.StartDialogue(dialogueHairPin);
-            player.GetComponent<MoveScriptTesting>().StopMoving();
-            isHairPin = true;
-        }
-        else
-        {
-            return;
-        }
-
-    }
-private void Start()
-    {
         mainCam = GameObject.Find("Main Camera").GetComponent<CameraScript>();
     }
 
@@ -163,21 +138,37 @@ private void Start()
             }
         }
 
+        //check goinfront of ayu picture
+        if(isHairPin == true)
+        {
+            if (player.transform.position.x >= LeftAyuPainting.x && player.transform.position.x <= RightAyuPainting.x)
+            {
+                if (player.transform.position.y <= LeftAyuPainting.y && player.transform.position.y >= RightAyuPainting.y)
+                {
+                    CutSceneLIG2();
+                }
+            }
+        }
+
     }
 
     public void checkEnterOnce()
     {
-        if (player.transform.position.x >= LeftLocationLobby.x && player.transform.position.x <= RightLocationLobby.x)
+        if (player.transform.position.x >= FullLeftLocationLobby.x && player.transform.position.x <= FullRightLocationLobby.x)
         {
-            if (player.transform.position.y <= LeftLocationLobby.y && player.transform.position.y >= RightLocationLobby.y)
-            { isEnteredLobbyOnce = true; isExitLobby = false; ; }
-            else { isExitLobby = true; }
+            if (player.transform.position.y <= FullLeftLocationLobby.y && player.transform.position.y >= FullRightLocationLobby.y)
+            { isEnteredLobbyOnce = true; isExitLobby = false; }
+            else
+            { isExitLobby = true; }
         }
-        else
-        {
-            isExitLobby = true;
-            return;
-        }
+        
+        //if(player.transform.position.x >= FullLeftLocationLobby.x && player.transform.position.x <= FullRightLocationLobby.x)
+        //{
+        //    if (player.transform.position.y >= FullLeftLocationLobby.y && player.transform.position.y <= FullRightLocationLobby.y)
+        //    {
+        //        isExitLobby = true;
+        //    }
+        //}
     }
 
     public void CutScene2()
@@ -243,8 +234,6 @@ private void Start()
             DialogueManager.instance.StartDialogue(dialogueLIG);
             player.GetComponent<MoveScriptTesting>().StopMoving();
             isCutSLIG = true;
-            //StartCoroutine(Delay());
-
         }
         else { return; }
     }
@@ -257,7 +246,7 @@ private void Start()
             DialogueManager.instance.StartDialogue(dialogueLIG2);
             player.GetComponent<MoveScriptTesting>().StopMoving();
             isCutSLIG2 = true;
-            //StartCoroutine(Delay2());
+            CutSceneLIG3();
         }
         else { return; }
     }
@@ -274,6 +263,36 @@ private void Start()
         else { return; }
     }
 
+
+    //add bfr ienumerator
+    public void LIRwithHairPin()
+    {
+        if (pickedUpHairPin == false)
+        {
+            Debug.Log("PickedHairpin");
+            pickedUpHairPin = true;
+        }
+        else
+        {
+            return;
+        }
+    }
+    public void HairPinCutScene()
+    {
+        if (isHairPin == false)
+        {
+            dialogueDisplay.SetActive(true);
+            DialogueManager.instance.StartDialogue(dialogueHairPin);
+            player.GetComponent<MoveScriptTesting>().StopMoving();
+            isHairPin = true;
+        }
+        else
+        {
+            return;
+        }
+
+    }
+
     //music box
     public void getMusicBox()
     {
@@ -286,45 +305,5 @@ private void Start()
         }
         else { return; }
     }
-    //public void MemoryCut()
-    //{
-    //    if (isCutSMemPlayed == false)
-    //    {
-    //        dialogueDisplay.SetActive(true);
-    //        FindObjectOfType<DialogueManager>().StartDialogue(dialogueCutMem);
-    //        player.GetComponent<MoveScriptTesting>().StopMoving();
-    //        isCutSMemPlayed = true;
-    //    }
-    //    else { return; }
-    //}
-
-    //void RiddleCut()
-    //{
-    //    if (isRiddleP1 == false)
-    //    {
-    //        dialogueDisplay.SetActive(true);
-    //        DialogueManager.instance.StartDialogue(dialogueRiddleP1);
-    //        player.GetComponent<MoveScriptTesting>().StopMoving();
-    //        isRiddleP1 = true;
-    //    }
-    //    else
-    //    {
-    //        return;
-    //    }
-    //}
-
-    //private IEnumerator Delay()
-    //{
-    //    yield return new WaitForSeconds(1f);
-    //    //mainCam.TransportToPainting();
-    //    CutSceneLIG2();
-    //}
-
-    //private IEnumerator Delay2()
-    //{
-    //    yield return new WaitForSeconds(2f);
-    //    CutSceneLIG3();
-    //}
-
 
 }

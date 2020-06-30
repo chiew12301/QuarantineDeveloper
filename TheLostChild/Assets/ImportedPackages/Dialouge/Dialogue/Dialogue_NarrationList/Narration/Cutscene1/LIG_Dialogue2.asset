@@ -14,34 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfo:
   - name: Max
-    portrait: {fileID: 21300000, guid: 442f78cbca569cd4289585828e03b985, type: 3}
+    portrait: {fileID: 21300000, guid: 281c846f24deff7449861c644f56e76c, type: 3}
     cutsceneImg: {fileID: 0}
     sentences: Are you the voice in my head? Who are you..?
     isJitter: 0
   - name: "Ayu\u2019s silhouette"
-    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: "My name is Ayu. I need your help Max\u2026"
+    sentences: My name is Ayu, I need your help Max...
     isJitter: 0
   - name: Max
-    portrait: {fileID: 21300000, guid: 442f78cbca569cd4289585828e03b985, type: 3}
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: "I found this hairpin..is it yours? You\u2019ve asked me to return
-      this to its rightful owner."
+    sentences: I found this hairpin..is it yours? You've asked me to return this
+      to its rightful owner.
     isJitter: 0
   - name: "Ayu\u2019s silhouette"
-    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: "Yes\u2026thank you Max. "
+    sentences: Yes...Thanks you Max.
     isJitter: 0
   - name: Max
-    portrait: {fileID: 21300000, guid: 442f78cbca569cd4289585828e03b985, type: 3}
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
     sentences: How can I give it to you?
     isJitter: 0
   - name: "Ayu\u2019s silhouette"
-    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: You need to place the hairpin back inside one of the five display
-      cases in this room.
+    sentences: You need to place the hairpin in the painting
     isJitter: 0

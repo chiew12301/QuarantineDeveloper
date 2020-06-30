@@ -14,39 +14,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfo:
   - name: Max
-    portrait: {fileID: 21300000, guid: 442f78cbca569cd4289585828e03b985, type: 3}
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
     sentences: What was the help you needed from me?
     isJitter: 0
   - name: 'Ayu '
-    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: 'Evil people trapped me here in this awful world. '
+    sentences: Evil people trapped me here in this awful world.
     isJitter: 0
   - name: 'Ayu '
-    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
     cutsceneImg: {fileID: 0}
     sentences: All you need to do is to collect all the items like this hairpin and
-      place it back in their display cases.
+      place it back back in their display case.
     isJitter: 0
   - name: Max
-    portrait: {fileID: 21300000, guid: 442f78cbca569cd4289585828e03b985, type: 3}
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: "But I just wanna go home\u2026"
+    sentences: But I just wanna go home...
     isJitter: 0
   - name: 'Ayu '
-    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
     cutsceneImg: {fileID: 0}
     sentences: You will after you collect all the items...both you and me will be
       free from this world..I promised you.
     isJitter: 0
   - name: Max
-    portrait: {fileID: 21300000, guid: 442f78cbca569cd4289585828e03b985, type: 3}
+    portrait: {fileID: 21300000, guid: 281c846f24deff7449861c644f56e76c, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: "Okay...But I\u2019m scared\u2026"
+    sentences: Okay...But I'm Scared.
     isJitter: 1
   - name: 'Ayu '
-    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: "Don\u2019t worry...I believe in you Max."
+    sentences: Don't worry...I believe in you Max
     isJitter: 0

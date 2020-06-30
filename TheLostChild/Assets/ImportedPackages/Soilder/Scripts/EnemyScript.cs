@@ -22,9 +22,9 @@ public class EnemyScript : MonoBehaviour
 
     bool isFacingLeft = false;
 
-    public float moveSpeedPatrol = 3f;
-    Transform leftWayPoint;
-    Transform rightWayPoint;
+    public float moveSpeedPatrol = 1f;
+    public Transform leftWayPoint;
+    public Transform rightWayPoint;
     bool movingRight = true;
     public bool patrolState = true;
 
@@ -38,8 +38,8 @@ public class EnemyScript : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
 
         //Patrol 
-        leftWayPoint = GameObject.Find("LeftWayPoint").GetComponent<Transform>();
-        rightWayPoint = GameObject.Find("RightWayPoint").GetComponent<Transform>();
+        //leftWayPoint = GameObject.Find("LeftWayPoint").GetComponent<Transform>();
+        //rightWayPoint = GameObject.Find("RightWayPoint").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -47,11 +47,9 @@ public class EnemyScript : MonoBehaviour
     {
         animator.SetBool("IsPatrol", patrolState);
 
-
-
         if (patrolState)
         {
-            moveSpeed = 2;
+            moveSpeed = 1;
             //Left & Right way points
             if (transform.position.x > rightWayPoint.position.x)
                 movingRight = false;
@@ -118,14 +116,14 @@ public class EnemyScript : MonoBehaviour
         {
             if (hit.collider.gameObject.CompareTag("Player"))
             {
-                moveSpeed = 6;
+                moveSpeed = 2;
                 Debug.DrawLine(castPoint.position, hit.point, Color.red);
                 val = true;
 
             }
             else
             {
-                moveSpeed = 4;
+                moveSpeed = 1;
                 Debug.DrawLine(castPoint.position, hit.point, Color.yellow);
                 val = false;
                 patrolState = true;

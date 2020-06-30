@@ -14,23 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfo:
   - name: Max
-    portrait: {fileID: 21300000, guid: 442f78cbca569cd4289585828e03b985, type: 3}
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: "I\u2019ve made it safe! The scary monster doesn't seem to follow
-      me here."
+    sentences: I've made it safe! The Scary monster doesn't seem to follow me here.
     isJitter: 0
   - name: "Ayu\u2019s silhouette"
-    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: Max...come to me...
+    sentences: Max...Come to me...
     isJitter: 0
   - name: Max
-    portrait: {fileID: 21300000, guid: 442f78cbca569cd4289585828e03b985, type: 3}
+    portrait: {fileID: 21300000, guid: 281c846f24deff7449861c644f56e76c, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: 'That voice again..? What do you want from me? '
+    sentences: That voice again..? What do you want from me?
     isJitter: 0
   - name: "Ayu\u2019s silhouette"
-    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: Come...to the Lady in Red painting.
+    sentences: Come...to Lady in Red Painting
     isJitter: 0

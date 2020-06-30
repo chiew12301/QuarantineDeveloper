@@ -32,6 +32,7 @@ public class sceneChange : MonoBehaviour
     {
         if (isTransfering == true)
         {
+            playerScript.isStop = isTransfering;
             playerScript.StopMoving();
         }
 
@@ -55,6 +56,7 @@ public class sceneChange : MonoBehaviour
         player.transform.position = new Vector3(newLocation.x, newLocation.y);
         isTransfering = false;
         isPressed = false;
+        playerScript.isStop = isTransfering;
     }
 
 }

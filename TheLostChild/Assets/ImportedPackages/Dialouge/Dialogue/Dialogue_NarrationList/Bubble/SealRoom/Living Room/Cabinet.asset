@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfo:
   - name: Max
-    portrait: {fileID: 21300000, guid: 442f78cbca569cd4289585828e03b985, type: 3}
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
     sentences: "Hmm... what\u2019s inside? Can I open it?"
     isJitter: 0
   - name: Max
-    portrait: {fileID: 21300000, guid: 442f78cbca569cd4289585828e03b985, type: 3}
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
     sentences: that's nothing here...
     isJitter: 0

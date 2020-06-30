@@ -16,6 +16,8 @@ public class MoveScriptTesting : MonoBehaviour
     public bool isLeftClicked = false;
     public Animator animator; //Animation purpose
     bool FacingRight = false;
+    public bool isMusicPicked = false;
+    public bool isStop = false;
 
     //Event
     public delegate void PressLeftClickEvent(bool f);
@@ -45,13 +47,13 @@ public class MoveScriptTesting : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             isLeftClicked = true;
-            if(inventoryUI.isOpen == false)
+            if(inventoryUI.isOpen == false && isStop == false)
             {
                 SetPosition();
             }
             else
             {
-                Debug.Log("Inventory opened");
+                Debug.Log("Stop");
                 return;
             }
 
@@ -68,6 +70,15 @@ public class MoveScriptTesting : MonoBehaviour
         {
             Move();
         }
+        if(isMusicPicked == true)
+        {
+            if(Time.timeScale == 1f)
+            {
+                SceneManager.LoadScene("StayTuneScene");
+                AudioManager.instance.Stop("BGM");
+                AudioManager.instance.Stop("Moving");
+            }
+        }
     }
     public void SetPosition()
     {
@@ -83,12 +94,10 @@ public class MoveScriptTesting : MonoBehaviour
     {
         if(x >= this.gameObject.transform.position.x && !FacingRight)
         {
-            //this.gameObject.transform.position = new Vector3(transform.position.x + 1f, transform.position.y, transform.position.z);
             flip();
         }
         else if (x <= this.gameObject.transform.position.x && FacingRight)
         {
-            //this.gameObject.transform.position = new Vector3(transform.position.x - 1f, transform.position.y, transform.position.z);
             flip();
         }
     }
@@ -98,9 +107,6 @@ public class MoveScriptTesting : MonoBehaviour
         FacingRight = !FacingRight;
 
         transform.Rotate(Vector3.up * 180);
-        //Vector3 theScale = transform.localScale;
-        //theScale.x *= -1;
-        //transform.localScale = theScale;
     }
 
     public void SetFeeze()
@@ -121,7 +127,8 @@ public class MoveScriptTesting : MonoBehaviour
             SetFeeze();
             isMoving = false;
             isPlayed = false;
-            FindObjectOfType<AudioManager>().Pause("Moving");
+            //FindObjectOfType<AudioManager>().Pause("Moving");
+            AudioManager.instance.Pause("Moving");
         }
         else
         {
@@ -131,12 +138,11 @@ public class MoveScriptTesting : MonoBehaviour
 
     public void Move()
     {
-        //transform.position = Quaternion.LookRotation(Vector3.foward, targetPos);
-        Speeds = 13f;
+        Speeds = 2f;
         transform.position = Vector3.MoveTowards(transform.position, targetPos, Speeds * Time.deltaTime);
         if(isPlayed == false)
         {
-            FindObjectOfType<AudioManager>().Play("Moving");
+            AudioManager.instance.Play("Moving");
             isPlayed = true;
         }
         if (transform.position == targetPos)
@@ -144,7 +150,7 @@ public class MoveScriptTesting : MonoBehaviour
             isMoving = false;
             isPlayed = false;   
             Speeds = 0f;
-            FindObjectOfType<AudioManager>().Pause("Moving");
+            AudioManager.instance.Pause("Moving");
         }
     }
 
@@ -152,11 +158,10 @@ public class MoveScriptTesting : MonoBehaviour
     {
         if (collision.CompareTag("EnemySoldier_1"))
         {
-            SceneManager.LoadScene("MainMenu");
-            FindObjectOfType<AudioManager>().Stop("BGM");
-            FindObjectOfType<AudioManager>().Stop("Moving");
+            SceneManager.LoadScene("DeadScene");
+            AudioManager.instance.Stop("BGM");
+            AudioManager.instance.Stop("Moving");
         }
-
     }
 
 
