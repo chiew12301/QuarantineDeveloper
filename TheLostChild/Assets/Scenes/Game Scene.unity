@@ -1514,11 +1514,21 @@ PrefabInstance:
       propertyPath: itemObtainedPanel
       value: 
       objectReference: {fileID: 1738032410}
+    - target: {fileID: 2871636026006098681, guid: eb90c4c12d828b644afd47947ccb40f6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4017631028595435864, guid: eb90c4c12d828b644afd47947ccb40f6,
         type: 3}
       propertyPath: BarrierGallery1
       value: 
       objectReference: {fileID: 922606663}
+    - target: {fileID: 4017631028595435869, guid: eb90c4c12d828b644afd47947ccb40f6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.33
+      objectReference: {fileID: 0}
     - target: {fileID: 4017631028837563239, guid: eb90c4c12d828b644afd47947ccb40f6,
         type: 3}
       propertyPath: dialogueDisplay
