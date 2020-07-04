@@ -31,6 +31,9 @@ public class UnlockJournalPage : MonoBehaviour
     [Header("Journal Pages To Unlock [2 - 9]")]
     public int PageNumber = 0;
 
+    int a = 0;
+    int totalA = 0;
+    bool runAgain = true;
 
 
     void Start()
@@ -38,7 +41,6 @@ public class UnlockJournalPage : MonoBehaviour
         mcS = GameObject.FindGameObjectWithTag("Cursor").GetComponent<MouseCursor>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<MoveScriptTesting>();
         player.OnPressLeftClick += OnPressLeftClick_Test;
-        //playerMovement = GameObject.FindWithTag("Player");
     }
 
     private void OnDisable()
@@ -60,20 +62,24 @@ public class UnlockJournalPage : MonoBehaviour
         calDistance(player.gameObject);
     }
 
+    bool isSecondRound = false;
+
     public void performPickup()
     {
-        //playerMovement.GetComponent<MoveScriptTesting>().enabled = false;
-        //if (Inventory.instance.itemLists.Count >= Inventory.instance.maxSize)
-        //{
-        //    Debug.Log("Inventory is full");
-        //    return;
-        //}
-        //if
-        //{
-            if (Dialogue == true)
+        if (isSecondRound)
+        {
+            JournalScript.p -= 2;
+        }
+
+        JournalScript.p += 2;
+        /*JournalScript.p -= 1;
+        JournalScript.p += 1;*/
+        isSecondRound = true;
+        ;
+        if (Dialogue == true)
             {
                 dialogueDisplay.SetActive(true);
-                DialogueManager.instance.StartDialogue(dialogue);
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
             }
 
             if (Item == true)
@@ -90,38 +96,73 @@ public class UnlockJournalPage : MonoBehaviour
 
         ObjectPoolingManager.instance.AddPoolList(this.gameObject);
         mcS.setToDefaultCursor("Hover");
-        //}
 
         switch (PageNumber)
         {
             case 2:
-                JournalScript.EnablePage2 = true;
+                JournalScript.p -= 1;
+                Debug.Log("Curernt p: " + JournalScript.p);
+                JournalScript.currentPage[JournalScript.p] = PageNumber-1;
+                JournalScript.enableArrows[JournalScript.p] = true;
+                Debug.Log("Page number found: " + PageNumber);
+                
                 break;
             case 3:
-                JournalScript.EnablePage3 = true;
+                JournalScript.p -= 1;
+                Debug.Log("Curernt p: " + JournalScript.p);
+                JournalScript.currentPage[JournalScript.p] = PageNumber-1;
+                JournalScript.enableArrows[JournalScript.p] = true;
+                Debug.Log("Page number found: " + PageNumber);
                 break;
             case 4:
-                JournalScript.EnablePage4 = true;
+                JournalScript.p -= 1;
+                Debug.Log("Curernt p: " + JournalScript.p);
+                JournalScript.currentPage[JournalScript.p] = PageNumber-1;
+                JournalScript.enableArrows[JournalScript.p] = true;
+                Debug.Log("Page number found: " + PageNumber);
                 break;
             case 5:
-                JournalScript.EnablePage5 = true;
+                JournalScript.p -= 1;
+                Debug.Log("Curernt p: " + JournalScript.p);
+                JournalScript.currentPage[JournalScript.p] = PageNumber-1;
+                JournalScript.enableArrows[JournalScript.p] = true;
+                Debug.Log("Page number found: " + PageNumber);
                 break;
             case 6:
-                JournalScript.EnablePage6 = true;
+                JournalScript.p -= 1;
+                Debug.Log("Curernt p: " + JournalScript.p);
+                JournalScript.currentPage[JournalScript.p] = PageNumber-1;
+                JournalScript.enableArrows[JournalScript.p] = true;
+                Debug.Log("Page number found: " + PageNumber);
                 break;
             case 7:
-                JournalScript.EnablePage7 = true;
+                JournalScript.p -= 1;
+                Debug.Log("Curernt p: " + JournalScript.p);
+                JournalScript.currentPage[JournalScript.p] = PageNumber-1;
+                JournalScript.enableArrows[JournalScript.p] = true;
+                Debug.Log("Page number found: " + PageNumber);
                 break;
             case 8:
-                JournalScript.EnablePage8 = true;
+                JournalScript.p -= 1;
+                Debug.Log("Curernt p: " + JournalScript.p);
+                JournalScript.currentPage[JournalScript.p] = PageNumber-1;
+                JournalScript.enableArrows[JournalScript.p] = true;
+                Debug.Log("Page number found: " + PageNumber);
                 break;
             case 9:
-                JournalScript.EnablePage9 = true;
+                JournalScript.p -= 1;
+                Debug.Log("Curernt p: " + JournalScript.p);
+                JournalScript.currentPage[JournalScript.p] = PageNumber-1;
+                JournalScript.enableArrows[JournalScript.p] = true;
+                Debug.Log("Page number found: " + PageNumber);
                 break;
             default:
-                print("Incorrect intelligence level.");
+                print("Incorrect");
                 break;
         }
+        
+        
+        
     }
 
     public float calDistance(GameObject playerObject)
@@ -137,6 +178,7 @@ public class UnlockJournalPage : MonoBehaviour
         MouseisIn = true;
     }
 
+    
     private void OnPressLeftClick_Test(bool f)
     {
         //StartCoroutine(timerDelay(2f));
@@ -144,8 +186,7 @@ public class UnlockJournalPage : MonoBehaviour
         {
             if (calDistance(player.gameObject) <= 3 && MouseisIn == true)
             {
-               performPickup();
-
+                    performPickup();
             }
             else
             {
