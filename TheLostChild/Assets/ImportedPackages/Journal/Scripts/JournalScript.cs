@@ -46,6 +46,12 @@ public class JournalScript : MonoBehaviour
     public GameObject SettingsTabBig;
     public Button SettingsTabSmall;
 
+    [Header("Map Tabs")]    //Journal Tabs
+    public GameObject MapDetails;
+    public GameObject MapTab;
+    public GameObject MapTabBig;
+    public Button MapTabSmall;
+
     MoveScriptTesting player;
 
     private const int SIZE = 9;
@@ -345,22 +351,42 @@ public class JournalScript : MonoBehaviour
     {
         NoteTab.SetActive(false);
         NoteTabBig.SetActive(true);
-        SettingsTabBig.SetActive(false);
         SettingsTab.SetActive(true);
+        SettingsTabBig.SetActive(false);
+        MapTab.SetActive(true);
+        MapTabBig.SetActive(false);
 
         NoteDetails.SetActive(true);
         SettingsDetails.SetActive(false);
+        MapDetails.SetActive(false);
     }
 
     public void OpenSettings()
     {
         NoteTab.SetActive(true);
         NoteTabBig.SetActive(false);
-        SettingsTabBig.SetActive(true);
         SettingsTab.SetActive(false);
+        SettingsTabBig.SetActive(true);
+        MapTab.SetActive(true);
+        MapTabBig.SetActive(false);
 
         NoteDetails.SetActive(false);
         SettingsDetails.SetActive(true);
+        MapDetails.SetActive(false);
+    }
+
+    public void OpenMap()
+    {
+        NoteTab.SetActive(true);
+        NoteTabBig.SetActive(false);
+        SettingsTab.SetActive(true);
+        SettingsTabBig.SetActive(false);
+        MapTab.SetActive(false);
+        MapTabBig.SetActive(true);
+
+        NoteDetails.SetActive(false);
+        SettingsDetails.SetActive(false);
+        MapDetails.SetActive(true);
     }
 
 
