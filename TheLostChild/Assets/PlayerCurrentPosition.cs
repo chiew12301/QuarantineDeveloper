@@ -17,9 +17,11 @@ public class PlayerCurrentPosition : MonoBehaviour
     public bool HistoriacalTimeGallery = false;
     public bool StoreRoom = false;
     public bool OldPaintingGallery = false;
+    public bool Toilet = false;
 
     [Header("Player Icon (Journal)")]
     public GameObject []playerIcon;
+    public GameObject[] OverlayBG;
 
     [Header("Enemy Soldiers (Journal)")]
     public GameObject soldier;
@@ -33,53 +35,80 @@ public class PlayerCurrentPosition : MonoBehaviour
         {
             if (Hallway1)                   // -- Floor 1 --
             {
+                EnableOverlay();
+                OverlayBG[0].SetActive(false);
                 DisableAllPlayerIcon();
                 playerIcon[0].SetActive(true);
             }
             else if (Lobby)
             {
+                EnableOverlay();
+                OverlayBG[1].SetActive(false);
                 DisableAllPlayerIcon();
                 playerIcon[1].SetActive(true);
             }
             else if (CeramicGallery)
             {
+                EnableOverlay();
+                OverlayBG[2].SetActive(false);
                 DisableAllPlayerIcon();
                 playerIcon[2].SetActive(true);
             }
             else if (ArtStation)
             {
+                EnableOverlay();
+                OverlayBG[3].SetActive(false);
                 DisableAllPlayerIcon();
                 playerIcon[3].SetActive(true);
             }
             else if (Antique_Photograph)
             {
+                EnableOverlay();
+                OverlayBG[4].SetActive(false);
                 DisableAllPlayerIcon();
                 playerIcon[4].SetActive(true);
             }
             else if (PontianakGallery)    // -- Floor 2 --
             {
+                EnableOverlay();
+                OverlayBG[5].SetActive(false);
                 DisableAllPlayerIcon();
                 playerIcon[5].SetActive(true);
             }
             else if (Hallway2)
             {
+                EnableOverlay();
+                OverlayBG[6].SetActive(false);
                 DisableAllPlayerIcon();
                 playerIcon[6].SetActive(true);
             }
             else if (HistoriacalTimeGallery)
             {
+                EnableOverlay();
+                OverlayBG[7].SetActive(false);
                 DisableAllPlayerIcon();
                 playerIcon[7].SetActive(true);
             }
             else if (StoreRoom)
             {
+                EnableOverlay();
+                OverlayBG[8].SetActive(false);
                 DisableAllPlayerIcon();
                 playerIcon[8].SetActive(true);
             }
             else if (OldPaintingGallery)
             {
+                EnableOverlay();
+                OverlayBG[9].SetActive(false);
                 DisableAllPlayerIcon();
                 playerIcon[9].SetActive(true);
+            }
+            else if (Toilet)
+            {
+                EnableOverlay();
+                OverlayBG[10].SetActive(false);
+                DisableAllPlayerIcon();
+                playerIcon[10].SetActive(true);
             }
 
         }
@@ -103,9 +132,17 @@ public class PlayerCurrentPosition : MonoBehaviour
 
     void DisableAllPlayerIcon()
     {
-        for(int x = 0; x < 10; x++)
+        for(int x = 0; x < 11; x++)
         {
             playerIcon[x].SetActive(false);
+        }
+    }
+
+    void EnableOverlay()
+    {
+        for (int x = 0; x < 11; x++)
+        {
+            OverlayBG[x].SetActive(true);
         }
     }
 }
