@@ -15,6 +15,7 @@ MonoBehaviour:
   itemSprite: {fileID: 21300000, guid: a0a6e5feb98509e489b70efc0fa64625, type: 3}
   name: NegativeFilm
   desc: A negative film
-  itemType: 0
-  itemPrefab: {fileID: 0}
+  itemType: 7
+  itemPrefab: {fileID: 5378826340501938024, guid: 569a230155772ff48baedf29a1143558,
+    type: 3}
   isFull: 0

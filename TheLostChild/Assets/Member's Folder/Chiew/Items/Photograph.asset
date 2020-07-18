@@ -15,6 +15,7 @@ MonoBehaviour:
   itemSprite: {fileID: 21300000, guid: 36b1f4425494c3c4481acbf367574845, type: 3}
   name: Photograph
   desc: A photograph
-  itemType: 0
-  itemPrefab: {fileID: 0}
+  itemType: 8
+  itemPrefab: {fileID: 5636562398972030787, guid: 02ef4012f73269544a4e277efb406fa9,
+    type: 3}
   isFull: 0
