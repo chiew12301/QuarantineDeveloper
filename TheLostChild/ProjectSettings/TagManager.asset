@@ -17,6 +17,7 @@ TagManager:
   - EnemySoldier_1
   - Hidden
   - Jigsaw
+  - Nail
   layers:
   - Default
   - TransparentFX

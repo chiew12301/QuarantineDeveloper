@@ -22,6 +22,8 @@ public class newGame : MonoBehaviour
     public void newStart()
     {
         textLoading.gameObject.SetActive(true);
+        PlayerPrefs.SetInt("Ending", 0);
+        PlayerPrefs.Save();
         //SceneManager.LoadScene(firstScene);
         StartCoroutine(LoadLevel());
     }

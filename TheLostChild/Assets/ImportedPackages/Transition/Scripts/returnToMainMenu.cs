@@ -10,4 +10,24 @@ public class returnToMainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void goodEnding()
+    {
+        //Dialogue related code
+        PlayerPrefs.SetInt("Ending", 1);
+        PlayerPrefs.Save();
+        SceneManager.LoadScene("MainMenu");
+
+
+    }
+
+    public void badEnding()
+    {
+        //Dialogue related Code
+        PlayerPrefs.SetInt("Ending", 2);
+        PlayerPrefs.Save();
+        SceneManager.LoadScene("MainMenu");
+
+    }
+
 }

@@ -41,6 +41,7 @@ public class sceneChange : MonoBehaviour
     {
         if (door.playerTouch && isPressed == false)
         {
+            Debug.Log("yes");
             isPressed = true;
             isTransfering = true;
             transition.SetTrigger("Start");
@@ -52,7 +53,7 @@ public class sceneChange : MonoBehaviour
     {
 
         yield return new WaitForSeconds(transitionTime);
-
+        Debug.Log("No");
         player.transform.position = new Vector3(newLocation.x, newLocation.y);
         isTransfering = false;
         isPressed = false;
