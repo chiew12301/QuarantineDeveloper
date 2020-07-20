@@ -30,8 +30,11 @@ public class JournalScript : MonoBehaviour
     public static bool EnablePage7 = false;
     public static bool EnablePage8 = false;
     public static bool EnablePage9 = false;
+    public static bool EnablePage10 = false;
+    public static bool EnablePage11 = false;
+    public static bool EnablePage12 = false;
 
-    
+
 
 
     [Header("Note Tabs")]    //Journal Tabs
@@ -54,7 +57,7 @@ public class JournalScript : MonoBehaviour
 
     MoveScriptTesting player;
 
-    private const int SIZE = 9;
+    private const int SIZE = 12;
     public static int p = -1;
     public static int[] currentPage = new int[SIZE];
     public static bool[] enableArrows = new bool[SIZE];
@@ -64,7 +67,7 @@ public class JournalScript : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").GetComponent<MoveScriptTesting>();
 
-        for(int x = 0; x < 9; x++)
+        for(int x = 0; x < 12; x++)
         {
             enableArrows[x] = false;
         }
@@ -186,7 +189,43 @@ public class JournalScript : MonoBehaviour
                 displayNextButton();
             }
         }
-        else if(Page == 9)
+        else if (Page == 9)
+        {
+            if (enableArrows[8])
+            {
+                NextPage.SetActive(true);
+                PrevPage.SetActive(true);
+            }
+            else
+            {
+                displayNextButton();
+            }
+        }
+        else if (Page == 10)
+        {
+            if (enableArrows[9])
+            {
+                NextPage.SetActive(true);
+                PrevPage.SetActive(true);
+            }
+            else
+            {
+                displayNextButton();
+            }
+        }
+        else if (Page == 11)
+        {
+            if (enableArrows[10])
+            {
+                NextPage.SetActive(true);
+                PrevPage.SetActive(true);
+            }
+            else
+            {
+                displayNextButton();
+            }
+        }
+        else if(Page == 12)
         {
                 NextPage.SetActive(false);
                 PrevPage.SetActive(true);
@@ -252,6 +291,24 @@ public class JournalScript : MonoBehaviour
         }
         else if (Page == 9)
         {
+            ResetNotes();
+            Notes[currentPage[8]].SetActive(true);
+            Page++;
+        }
+        else if (Page == 10)
+        {
+            ResetNotes();
+            Notes[currentPage[9]].SetActive(true);
+            Page++;
+        }
+        else if (Page == 11)
+        {
+            ResetNotes();
+            Notes[currentPage[10]].SetActive(true);
+            Page++;
+        }
+        else if (Page == 12)
+        {
             //Nothing
         }
 
@@ -308,6 +365,24 @@ public class JournalScript : MonoBehaviour
         {
             ResetNotes();
             Notes[currentPage[6]].SetActive(true);
+            Page--;
+        }
+        else if (Page == 10)
+        {
+            ResetNotes();
+            Notes[currentPage[7]].SetActive(true);
+            Page--;
+        }
+        else if (Page == 11)
+        {
+            ResetNotes();
+            Notes[currentPage[8]].SetActive(true);
+            Page--;
+        }
+        else if (Page == 12)
+        {
+            ResetNotes();
+            Notes[currentPage[9]].SetActive(true);
             Page--;
         }
     }
@@ -392,7 +467,7 @@ public class JournalScript : MonoBehaviour
 
     private void ResetNotes()
     {
-        for(int x = 0; x < 9; x++)
+        for(int x = 0; x < 12; x++)
         {
             Notes[x].SetActive(false);
         }
