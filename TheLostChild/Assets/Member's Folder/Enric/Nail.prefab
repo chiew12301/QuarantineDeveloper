@@ -126,11 +126,11 @@ MonoBehaviour:
   DontDestroy: 0
   CanInteractAgain: 0
   isRiddleDone: 0
-  Dialogue: 0
+  Dialogue: 1
   isMirror: 0
   isMusicBox: 0
   dialogueDisplay: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 11400000, guid: b3a05c20e1d182945b979d674fac8aab, type: 2}
   dialogue2: {fileID: 0}
   Item: 1
   itemObtainedPanel: {fileID: 0}

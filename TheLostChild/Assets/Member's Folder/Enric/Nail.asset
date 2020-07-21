@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 3cda0e65cc18f2544b3f43129fa600e2, type: 3}
   name: Nail
-  desc: A crappy nail
+  desc: A rusty nail
   itemType: 0
   itemPrefab: {fileID: 8080877594804626502, guid: 9fdbdcc4350d58c4c9f57a0dc7d65cfe,
     type: 3}
