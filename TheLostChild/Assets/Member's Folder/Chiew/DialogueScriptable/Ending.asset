@@ -13,8 +13,130 @@ MonoBehaviour:
   m_Name: Ending
   m_EditorClassIdentifier: 
   dialogueInfo:
-  - name: System
-    portrait: {fileID: 0}
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: CutScene
+    sentences: "\u2026 (I came to see the newcomer like Mama asked to.)"
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "(Why would anyone honestly come to this small village\u2026)"
+    isJitter: 0
+  - name: Villager 1
+    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: Look, the newcomer!
+    isJitter: 0
+  - name: Villager 2
+    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: I heard that person came straight from Malacca!
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "(Malacca\u2026? That\u2019s pretty far from here.)"
+    isJitter: 0
+  - name: Villager 1
+    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "Amboi...he\u2019s pretty charming"
+    isJitter: 0
+  - name: Villager 2
+    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "Eh, he\u2019s coming this way"
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "(Oh? He\u2019s holding a sketchbook under his right arm...could he
+      be an artist?)"
+    isJitter: 0
+  - name: House Head
+    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: Salam sejahtera, young man. Welcome. You travelled quite a distance
+      eh? Well, welcome to our village
+    isJitter: 0
+  - name: Man
+    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "Yes, thank you. I really wanted a change of scenery and I\u2019m
+      glad I was recommended to move here. The city has too much noise and pollution..."
+    isJitter: 0
+  - name: House Head
+    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "I\u2019m sure you\u2019ll experience peace far different from what
+      you\u2019re used to in the big city."
+    isJitter: 0
+  - name: Pak Yap
+    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "Alright everyone, come together! Let\u2019s take a photo with the
+      young man!"
+    isJitter: 0
+  - name: Man
+    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: Huh-? I-
+    isJitter: 0
+  - name: House Head
+    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "It\u2019s a custom around here. Don\u2019t worry about it."
+    isJitter: 0
+  - name: Villager 1
+    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: 'Eh Ayu, cepatlah! Why are you so slow?! '
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "Ye lah, i\u2019m coming as fast as I can! This kebaya isn\u2019t
+      suitable for runni-"
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: ...!
+    isJitter: 0
+  - name: Man
+    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "A-are you okay? It\u2019s a good thing I caught you in time, wouldn\u2019t
+      want you to ruin that lovely red kebaya..."
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "A-ah...umm...thank you, sir\u2026"
+    isJitter: 0
+  - name: Pak Yap
+    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "Dah, dah! Cukup! I don\u2019t have all day! Rapat sikit! Closer!"
+    isJitter: 0
+  - name: Man
+    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "It\u2019s nice to meet you, Ayu."
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: ....
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: So the photograph I found earlier were of the villagers...
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: (...Seems like Ayu could have found an interest in that newcomer.)
     isJitter: 0

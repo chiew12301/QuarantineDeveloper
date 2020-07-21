@@ -16,10 +16,10 @@ MonoBehaviour:
   - name: Max
     portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: Hm?
+    sentences: ...Woah, this place is really dark and eerie...
     isJitter: 0
   - name: Nax
     portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: (What is this place? It's kinda dark)
+    sentences: (It smells kinda musty though...) *coughs*
     isJitter: 0

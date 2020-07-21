@@ -5,6 +5,8 @@ using TMPro;
 
 public class PasscodeScript : MonoBehaviour
 {
+    public MoveScriptTesting player;
+    public Vector3 backtoGallery;
     public SafeVaultTrigger svTrigger;
     public string insertNum;
     public string thePassCode = "2121";
@@ -39,6 +41,8 @@ public class PasscodeScript : MonoBehaviour
                 photoItem.GetComponent<PickUp>().performPickup();
             }
             //Transfer to puzzle gallery again
+            this.GetComponent<TransferPlayer>().TransferPlayerToDes();
+            //player.gameObject.transform.position = backtoGallery;
         }
 
         if (insertNum.Length >= 4 && isCompleted == false)

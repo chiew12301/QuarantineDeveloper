@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TransferPlayer : MonoBehaviour
 {
+    public LoadingScript loadingObj;
     [Header("Player Info")]
     public GameObject playerObj;
     public Vector3 Des;
@@ -14,12 +16,21 @@ public class TransferPlayer : MonoBehaviour
     public bool haveBubble = false;
     public BubbleSpeech bubble;
 
+    public void Start()
+    {
+        isEnterOnce = false;
+    }
+
     public void AtFirstEnter()
     {
-        if(playerObj.transform.position == Des)
+        playerObj.transform.position = Des;
+        if (playerObj.transform.position == Des)
         {
-            TriggerDialogueBubble();
-            isEnterOnce = true;
+            if (loadingObj.stopMoving == false)
+            {
+                TriggerDialogueBubble();
+                isEnterOnce = true;
+            }
         }
     }
 
@@ -43,8 +54,12 @@ public class TransferPlayer : MonoBehaviour
 
     public void TransferPlayerToDes()
     {
-        playerObj.transform.position = Des;
-        AtFirstEnter();
+        loadingObj.onLoading(this);
+        //if (loadingObj.stopMoving == false)
+        //{
+        //    playerObj.transform.position = Des;
+        //    AtFirstEnter();
+        //}
     }
 
 }

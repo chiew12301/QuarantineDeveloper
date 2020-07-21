@@ -73,7 +73,7 @@ public class PickUp : MonoBehaviour
 
     private void OnDisable()
     {
-        //player.OnPressLeftClick -= OnPressLeftClick_Test;
+        player.OnPressLeftClick -= OnPressLeftClick_Test;
     }
 
     private void OnEnable()

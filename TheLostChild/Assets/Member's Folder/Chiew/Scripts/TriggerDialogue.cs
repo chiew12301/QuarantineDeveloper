@@ -58,7 +58,7 @@ public class TriggerDialogue : MonoBehaviour
         {
             Debug.Log("Triggered dialog");
             DialogueManager.instance.StartDialogue(dialogue);
-            if(DialogueManager.instance.isDialogueEnd == true)
+            if (DialogueManager.instance.isDialogueEnd == true)
             {
                 tpScript.TransferPlayerToDes();
             }
@@ -72,13 +72,17 @@ public class TriggerDialogue : MonoBehaviour
             DialogueManager.instance.StartBubble(bubble);
             if (item1 != null)
             {
-                item1.gameObject.SetActive(true);
-                item1.gameObject.transform.position = this.transform.position;
+                if (item1.GetComponent<PickUp>() != null)
+                {
+                    item1.GetComponent<PickUp>().performPickup();
+                }
             }
             if (item2 != null)
             {
-                item2.gameObject.SetActive(true);
-                item2.gameObject.transform.position = this.transform.position;
+                if (item2.GetComponent<PickUp>() != null)
+                {
+                    item2.GetComponent<PickUp>().performPickup();
+                }
             }
             if (desAfterTrigger == true)
             {
