@@ -54,12 +54,8 @@ public class TransferPlayer : MonoBehaviour
 
     public void TransferPlayerToDes()
     {
+        loadingObj.gameObject.SetActive(true);
         loadingObj.onLoading(this);
-        //if (loadingObj.stopMoving == false)
-        //{
-        //    playerObj.transform.position = Des;
-        //    AtFirstEnter();
-        //}
     }
 
 }

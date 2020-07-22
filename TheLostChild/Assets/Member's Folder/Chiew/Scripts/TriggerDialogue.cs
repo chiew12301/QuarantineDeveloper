@@ -29,10 +29,7 @@ public class TriggerDialogue : MonoBehaviour
 
     private void Start()
     {
-        //if (item1 != null)
-        //{ item1.gameObject.SetActive(false); }
-        //if (item2 != null)
-        //{ item2.gameObject.SetActive(false); }
+        
     }
 
     private void Update()
@@ -58,9 +55,27 @@ public class TriggerDialogue : MonoBehaviour
         {
             Debug.Log("Triggered dialog");
             DialogueManager.instance.StartDialogue(dialogue);
-            if (DialogueManager.instance.isDialogueEnd == true)
+            //if (DialogueManager.instance.isDialogueEnd == true)
+            //{
+            tpScript.TransferPlayerToDes();
+            //}
+            if (item1 != null)
             {
-                tpScript.TransferPlayerToDes();
+                if (item1.GetComponent<PickUp>() != null)
+                {
+                    item1.GetComponent<PickUp>().performPickup();
+                }
+            }
+            if (item2 != null)
+            {
+                if (item2.GetComponent<PickUp>() != null)
+                {
+                    item2.GetComponent<PickUp>().performPickup();
+                }
+            }
+            if (desAfterTrigger == true)
+            {
+                this.gameObject.SetActive(false);
             }
         }
     }

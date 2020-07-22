@@ -8,31 +8,38 @@ public class LoadingScript : MonoBehaviour
     public TransferPlayer tpPlayer;
 
     public bool stopMoving = false;
+
+    public Animator transition;
+    private bool isTransfering = false;
     // Start is called before the first frame update
     void Start()
     {
-        this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(false);
     }
 
     private void Update()
     {
-        Debug.Log(stopMoving);
-        if(stopMoving == true)
+        if(isTransfering == true)
         {
+            playerScript.isStop = isTransfering;
             playerScript.StopMoving();
         }
     }
 
     private void OnEnable()
     {
-        StartCoroutine(OffDelay());
+        //StartCoroutine(OffDelay());
+        //StartCoroutine(TransferArea());
     }
 
     public void onLoading(TransferPlayer tp)
     {
         this.gameObject.SetActive(true);
         tpPlayer = tp;
+        isTransfering = true;
         stopMoving = true;
+        transition.SetTrigger("Start");
+        StartCoroutine(TransferArea());
     }
 
     public void Transfer()
@@ -50,6 +57,16 @@ public class LoadingScript : MonoBehaviour
         this.gameObject.SetActive(false);
         Transfer();
         yield return null;
+    }
+
+    IEnumerator TransferArea()
+    {
+        yield return new WaitForSeconds(1f);
+        Transfer();
+        isTransfering = false;
+        stopMoving = false;
+        playerScript.isStop = isTransfering;
+        this.gameObject.SetActive(false);
     }
 
 }

@@ -2619,7 +2619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &659254326
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2652,7 +2652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2691,6 +2691,7 @@ MonoBehaviour:
   playerScript: {fileID: 1426436120}
   tpPlayer: {fileID: 0}
   stopMoving: 0
+  transition: {fileID: 659302664}
 --- !u!1001 &659302663
 PrefabInstance:
   m_ObjectHideFlags: 0
