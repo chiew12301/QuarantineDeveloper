@@ -17,6 +17,8 @@ TagManager:
   - EnemySoldier_1
   - Hidden
   - Jigsaw
+  - NegativeFilm
+  - Photograph
   - CorrectPainting
   - CorrectBottle
   layers:
@@ -71,6 +73,11 @@ TagManager:
   - name: Enemy
     uniqueID: 2184790385
     locked: 0
+  - name: LowerParallex
+    uniqueID: 2050047401
+    locked: 0
+  - name: Parallex
+    uniqueID: 4179545683
   - name: UIpopup
     uniqueID: 4081635035
     locked: 0

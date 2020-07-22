@@ -22,6 +22,8 @@ public class Item : ScriptableObject
         Hairpin,
         Musicbox,
         Jigsaw,
+        NegativeFilm,
+        Photograph,
     }
 
     public Item(string na, string des) //Default constructor
