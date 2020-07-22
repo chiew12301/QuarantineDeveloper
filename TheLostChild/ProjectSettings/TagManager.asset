@@ -19,6 +19,8 @@ TagManager:
   - Jigsaw
   - NegativeFilm
   - Photograph
+  - CorrectPainting
+  - CorrectBottle
   layers:
   - Default
   - TransparentFX
@@ -59,11 +61,11 @@ TagManager:
   - name: Background
     uniqueID: 1431707357
     locked: 0
-  - name: Item
-    uniqueID: 3606627535
-    locked: 0
   - name: Wall
     uniqueID: 583442971
+    locked: 0
+  - name: Item
+    uniqueID: 3606627535
     locked: 0
   - name: Player
     uniqueID: 3238830583
@@ -76,4 +78,9 @@ TagManager:
     locked: 0
   - name: Parallex
     uniqueID: 4179545683
+  - name: UIpopup
+    uniqueID: 4081635035
+    locked: 0
+  - name: Item in UIpopUp
+    uniqueID: 3865122117
     locked: 0

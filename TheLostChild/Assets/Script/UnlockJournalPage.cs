@@ -28,7 +28,7 @@ public class UnlockJournalPage : MonoBehaviour
     [Header("Mouse")]
     public bool MouseisIn = false;
 
-    [Header("Journal Pages To Unlock [2 - 9]")]
+    [Header("Journal Pages To Unlock [2 - 12]")]
     public int PageNumber = 0;
 
     int a = 0;
@@ -153,6 +153,27 @@ public class UnlockJournalPage : MonoBehaviour
                 JournalScript.p -= 1;
                 Debug.Log("Curernt p: " + JournalScript.p);
                 JournalScript.currentPage[JournalScript.p] = PageNumber-1;
+                JournalScript.enableArrows[JournalScript.p] = true;
+                Debug.Log("Page number found: " + PageNumber);
+                break;
+            case 10:
+                JournalScript.p -= 1;
+                Debug.Log("Curernt p: " + JournalScript.p);
+                JournalScript.currentPage[JournalScript.p] = PageNumber - 1;
+                JournalScript.enableArrows[JournalScript.p] = true;
+                Debug.Log("Page number found: " + PageNumber);
+                break;
+            case 11:
+                JournalScript.p -= 1;
+                Debug.Log("Curernt p: " + JournalScript.p);
+                JournalScript.currentPage[JournalScript.p] = PageNumber - 1;
+                JournalScript.enableArrows[JournalScript.p] = true;
+                Debug.Log("Page number found: " + PageNumber);
+                break;
+            case 12:
+                JournalScript.p -= 1;
+                Debug.Log("Curernt p: " + JournalScript.p);
+                JournalScript.currentPage[JournalScript.p] = PageNumber - 1;
                 JournalScript.enableArrows[JournalScript.p] = true;
                 Debug.Log("Page number found: " + PageNumber);
                 break;
