@@ -1,0 +1,242 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
+  m_Name: memoryCutscene
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - name: Villager 1
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: Now remember dear, never leave the house past your curfew.
+    isJitter: 0
+  - name: Villager 1
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: "You wouldn\u2019t want her to come snatch you away."
+    isJitter: 0
+  - name: Kid
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: "What are you saying, mama? I\u2019m an obedient child, there\u2019s
+      no way I would do that. Besides\u2026"
+    isJitter: 0
+  - name: Kid
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: "That\u2019s just a myth...right?"
+    isJitter: 0
+  - name: Villager 1
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: Well...you never know.
+    isJitter: 0
+  - name: Kid
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: "G-Get away! Please don\u2019t hurt me! Go away you monster!"
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 3eb95b349bdfe0f458e9e381492e618e, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "<color=#800000ff><b>M-m o n ster\u2026?</color></b>"
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 3eb95b349bdfe0f458e9e381492e618e, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "<color=#800000ff><b> W h y\u2026</color></b>"
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 2d1194d4d5bbd3346ba0d9fa56ec4b0d, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: <color=#800000ff><b>W h y wo u ld y ou ca ll m e th at...m y ch il
+      d ?</color></b>
+    isJitter: 0
+  - name: Kid
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: Get away! Somebody! Please help!
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 2d1194d4d5bbd3346ba0d9fa56ec4b0d, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "<color=#800000ff>Co m e to  me...th er e\u2019s  no ne ed to  be
+      afr aid.<b></color></b>"
+    isJitter: 0
+  - name: Kid
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: " \u2026!  "
+    isJitter: 0
+  - name: Villager 1
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: "\u2026!"
+    isJitter: 0
+  - name: Villager 1
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: 'Anak...?!  ...Where are you!? '
+    isJitter: 0
+  - name: Villager 1
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: Anak!
+    isJitter: 0
+  - name: Kid
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: Mama!
+    isJitter: 0
+  - name: Villager 1
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: What are you doing young man, do you know how late it is! Sneaking
+      outside like-
+    isJitter: 0
+  - name: Villager 1
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: ...!?
+    isJitter: 0
+  - name: Kid
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: "Mama\u2026.m-mama\u2026."
+    isJitter: 0
+  - name: Kid
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: "...y-you were right...s-she does exist\u2026"
+    isJitter: 0
+  - name: Villager 1
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: " W-who\u2026"
+    isJitter: 0
+  - name: Villager 1
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: "I-it\u2019s okay...you\u2019re safe now. "
+    isJitter: 0
+  - name: Villager 1
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: I know who to call.
+    isJitter: 0
+  - name: Witch Doctor
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: "I told you not to let your desires take control...look at the monster
+      you\u2019ve become."
+    isJitter: 0
+  - name: Witch Doctor
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: You could have passed on peacefully...if only you could just let go...
+    isJitter: 0
+  - name: Witch Doctor
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: "You\u2019ve caused so much trouble for this village...The survivors
+      from the attack are too scared to go out...even after the war is over."
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: d06f16f41bc112147b8028f19eed6f58, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "<color=#800000ff><b> ...you don\u2019t know me...you don\u2019t understand
+      how much I yearn for my child\u2026</color></b>"
+    isJitter: 0
+  - name: Witch Doctor
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: And all of that is in the past.
+    isJitter: 0
+  - name: Witch Doctor
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: Now let me relieve you of your pain.
+    isJitter: 0
+  - name: Man 1
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: Get her!
+    isJitter: 0
+  - name: Man 2
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: Slam her against that canvas!
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: d06f16f41bc112147b8028f19eed6f58, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "<color=#800000ff><b> What-...you\u2026</color></b>"
+    isJitter: 0
+  - name: Witch Doctor
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: "Take a look. You were so full of joy...that beautiful smile. It\u2019s
+      all gone now. "
+    isJitter: 0
+  - name: Witch Doctor
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: I will do you a favor and seal you within your happiest memory. May
+      you find peace within this painting, Ayu
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: d06f16f41bc112147b8028f19eed6f58, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "<color=#800000ff><b> (Th i  s   is\u2026 m  y port r a  i t  m y  
+      s a ya n g p ai nte d\u2026)\r\n</color></b>"
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: d06f16f41bc112147b8028f19eed6f58, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "<color=#800000ff><b>I  w o n\u2019t  g i v e  u p. I\u2019ll   ke
+      e p  o n    s e a rc hi ng...</color></b>"
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: d06f16f41bc112147b8028f19eed6f58, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "<color=#800000ff><b>Y o u  will n ev e r   be   a b le   t o   s
+      t op  m e\u2026</color></b>"
+    isJitter: 0
+  - name: Witch Doctor
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: Farewell Ayu.
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "\u2026!"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "(That was...Ayu\u2026) "
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "(She turned into this monster\u2026)"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "(Those terrible people...were only trying to seal off a monster\u2026)"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "(...A ...monster\u2026)"
+    isJitter: 0

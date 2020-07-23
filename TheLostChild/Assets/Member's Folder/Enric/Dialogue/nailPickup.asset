@@ -10,16 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
-  m_Name: enterDimensionEnd
+  m_Name: nailPickup
   m_EditorClassIdentifier: 
   dialogueInfo:
   - name: Max
-    portrait: {fileID: 21300000, guid: 281c846f24deff7449861c644f56e76c, type: 3}
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: '*pant*....'
+    sentences: This is....the nail! I Found it!
     isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: '*pant*...*cough*... I think I lost her..'
+    sentences: (....)
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: (....I Feel...)
     isJitter: 0

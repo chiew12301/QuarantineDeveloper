@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
+  m_Name: badEnding
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - name: Max
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: (This one is the correct painting.)
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: .....
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: "Max\u2026I\u2019m so glad you came to your senses. "
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 281c846f24deff7449861c644f56e76c, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: "\u2026(Oh no...did I choose wrong?)"
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: 'You are my child after all. '
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 281c846f24deff7449861c644f56e76c, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: Ayu...no...
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: "We\u2019ve been separated for too long... we can finally be together..."
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    sentences: ...forever.
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 281c846f24deff7449861c644f56e76c, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: NO!!
+    isJitter: 0
