@@ -9,17 +9,19 @@ public class PasscodeScript : MonoBehaviour
     public Vector3 backtoGallery;
     public SafeVaultTrigger svTrigger;
     public string insertNum;
-    public string thePassCode = "2121";
+    public string thePassCode = "08121941";
     public TextMeshProUGUI passcodeText;
     public Dialogue Puzzle2Ending;
     public GameObject photoItem;
     private bool isCompleted = false;
-
+    public GameObject inventoryPanel;
     // Start is called before the first frame update
     void Start()
     {
         svTrigger.SVUIOff();
-        insertNum = "0000";
+        insertNum = "00000000";
+        inventoryPanel.gameObject.SetActive(false);
+        this.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -42,10 +44,11 @@ public class PasscodeScript : MonoBehaviour
             }
             //Transfer to puzzle gallery again
             this.GetComponent<TransferPlayer>().TransferPlayerToDes();
+            inventoryPanel.gameObject.SetActive(true);
             //player.gameObject.transform.position = backtoGallery;
         }
 
-        if (insertNum.Length >= 4 && isCompleted == false)
+        if (insertNum.Length >= 8 && isCompleted == false)
         {
             insertNum = "";
         }

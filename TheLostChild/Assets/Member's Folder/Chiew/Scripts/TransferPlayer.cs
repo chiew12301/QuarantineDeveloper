@@ -26,30 +26,33 @@ public class TransferPlayer : MonoBehaviour
         playerObj.transform.position = Des;
         if (playerObj.transform.position == Des)
         {
-            if (loadingObj.stopMoving == false)
-            {
+            //if (loadingObj.stopMoving == false)
+            //{
                 TriggerDialogueBubble();
                 isEnterOnce = true;
-            }
+            //}
         }
     }
 
     public void TriggerDialogueBubble()
     {
-        if(haveDialogue == true)
+        if(isEnterOnce == false)
         {
-            if(dialogue != null)
+            if (haveDialogue == true)
             {
-                DialogueManager.instance.StartDialogue(dialogue);
+                if (dialogue != null)
+                {
+                    DialogueManager.instance.StartDialogue(dialogue);
+                }
             }
-        }
-        if (haveBubble == true)
-        {
-            if (bubble != null)
+            if (haveBubble == true)
             {
-                DialogueManager.instance.StartBubble(bubble);
+                if (bubble != null)
+                {
+                    DialogueManager.instance.StartBubble(bubble);
+                }
             }
-        }
+        } 
     }
 
     public void TransferPlayerToDes()

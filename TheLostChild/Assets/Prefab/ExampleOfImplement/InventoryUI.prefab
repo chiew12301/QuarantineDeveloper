@@ -105,6 +105,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 0}
   isDrop: 0
   isHolding: 0
+  isHovered: 0
   parentslotscript: {fileID: 0}
 --- !u!1 &455002313
 GameObject:
@@ -367,6 +368,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 0}
   isDrop: 0
   isHolding: 0
+  isHovered: 0
   parentslotscript: {fileID: 0}
 --- !u!1 &1664346361
 GameObject:
@@ -473,6 +475,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 0}
   isDrop: 0
   isHolding: 0
+  isHovered: 0
   parentslotscript: {fileID: 0}
 --- !u!1 &57574995524407091
 GameObject:
@@ -722,6 +725,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 0}
   isDrop: 0
   isHolding: 0
+  isHovered: 0
   parentslotscript: {fileID: 0}
 --- !u!1 &1619692242365119462
 GameObject:
@@ -828,6 +832,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 0}
   isDrop: 0
   isHolding: 0
+  isHovered: 0
   parentslotscript: {fileID: 0}
 --- !u!1 &2519280010949183928
 GameObject:

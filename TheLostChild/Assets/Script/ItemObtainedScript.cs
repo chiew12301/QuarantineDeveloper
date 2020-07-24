@@ -15,6 +15,7 @@ public class ItemObtainedScript : MonoBehaviour
 
     public GameObject Panel;
 
+    public GameObject player;
     //GameObject player;
 
     private void Start()
@@ -32,6 +33,9 @@ public class ItemObtainedScript : MonoBehaviour
 
         tempItemSprite = Inventory.saveditemSprite;
         itemImage.sprite = tempItemSprite;
+
+        Time.timeScale = 0.001f;
+        player.GetComponent<MoveScriptTesting>().StopMoving();
     }
     public void ClosePanel()
     {
@@ -41,8 +45,5 @@ public class ItemObtainedScript : MonoBehaviour
             //bool isActive = Panel.activeSelf;
 
             Panel.SetActive(false);
-
-        
-
     }
 }

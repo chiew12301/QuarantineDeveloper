@@ -10,6 +10,7 @@ public class TriggerDialogue : MonoBehaviour
     private Transform t;
     private Transform player;
     private bool isNear = false;
+    private bool isPicked = false;
     public bool isDialogTrigger = false;
 
     public GameObject item1;
@@ -57,22 +58,30 @@ public class TriggerDialogue : MonoBehaviour
             DialogueManager.instance.StartDialogue(dialogue);
             //if (DialogueManager.instance.isDialogueEnd == true)
             //{
-            tpScript.TransferPlayerToDes();
+            if(tpScript != null)
+            {
+                tpScript.TransferPlayerToDes();
+            }
             //}
-            if (item1 != null)
+            if(isPicked == false)
             {
-                if (item1.GetComponent<PickUp>() != null)
+                if (item1 != null)
                 {
-                    item1.GetComponent<PickUp>().performPickup();
+                    if (item1.GetComponent<PickUp>() != null)
+                    {
+                        item1.GetComponent<PickUp>().performPickup();
+                        isPicked = true;
+                    }
                 }
-            }
-            if (item2 != null)
-            {
-                if (item2.GetComponent<PickUp>() != null)
+                if (item2 != null)
                 {
-                    item2.GetComponent<PickUp>().performPickup();
+                    if (item2.GetComponent<PickUp>() != null)
+                    {
+                        item2.GetComponent<PickUp>().performPickup();
+                        isPicked = true;
+                    }
                 }
-            }
+            }          
             if (desAfterTrigger == true)
             {
                 this.gameObject.SetActive(false);
@@ -85,18 +94,23 @@ public class TriggerDialogue : MonoBehaviour
         if (isNear)
         {
             DialogueManager.instance.StartBubble(bubble);
-            if (item1 != null)
+            if (isPicked == false)
             {
-                if (item1.GetComponent<PickUp>() != null)
+                if (item1 != null)
                 {
-                    item1.GetComponent<PickUp>().performPickup();
+                    if (item1.GetComponent<PickUp>() != null)
+                    {
+                        item1.GetComponent<PickUp>().performPickup();
+                        isPicked = true;
+                    }
                 }
-            }
-            if (item2 != null)
-            {
-                if (item2.GetComponent<PickUp>() != null)
+                if (item2 != null)
                 {
-                    item2.GetComponent<PickUp>().performPickup();
+                    if (item2.GetComponent<PickUp>() != null)
+                    {
+                        item2.GetComponent<PickUp>().performPickup();
+                        isPicked = true;
+                    }
                 }
             }
             if (desAfterTrigger == true)

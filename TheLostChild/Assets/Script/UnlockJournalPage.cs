@@ -40,21 +40,21 @@ public class UnlockJournalPage : MonoBehaviour
     {
         mcS = GameObject.FindGameObjectWithTag("Cursor").GetComponent<MouseCursor>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<MoveScriptTesting>();
-        player.OnPressLeftClick += OnPressLeftClick_Test;
+        //player.OnPressLeftClick += OnPressLeftClick_Test;
     }
 
     private void OnDisable()
     {
-        player.OnPressLeftClick -= OnPressLeftClick_Test;
+        //player.OnPressLeftClick -= OnPressLeftClick_Test;
     }
 
     private void OnEnable()
     {
-        if (player.OnPressLeftClick != null)
-        {
-            player.OnPressLeftClick.Invoke(player.isLeftClicked);
-        }
-        player.OnPressLeftClick += OnPressLeftClick_Test;
+        //if (player.OnPressLeftClick != null)
+        //{
+        //    player.OnPressLeftClick.Invoke(player.isLeftClicked);
+        //}
+        //player.OnPressLeftClick += OnPressLeftClick_Test;
     }
 
     private void Update()
