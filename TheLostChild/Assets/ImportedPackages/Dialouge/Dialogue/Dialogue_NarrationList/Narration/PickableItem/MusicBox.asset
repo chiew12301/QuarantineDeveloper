@@ -10,21 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
-  m_Name: Mirror_Before
+  m_Name: MusicBox
   m_EditorClassIdentifier: 
   dialogueInfo:
   - name: Max
     portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: Words are written on the mirror...
+    sentences: What a calming tune...
     isJitter: 0
-  - name: Riddle
+  - name: Max
     portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: ...What kind of relationship does the Moon have with the stars?...
-    isJitter: 0
-  - name: Riddle
-    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
-    cutsceneImg: {fileID: 0}
-    sentences: ...A riddle?
+    sentences: 'I think this belonged to Ayu.
+
+'
     isJitter: 0

@@ -61,7 +61,7 @@ public class PickUp : MonoBehaviour
     {
         mcS = GameObject.FindGameObjectWithTag("Cursor").GetComponent<MouseCursor>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<MoveScriptTesting>();
-        player.OnPressLeftClick += OnPressLeftClick_Test;
+        //player.OnPressLeftClick += OnPressLeftClick_Test;
         //playerMovement = GameObject.FindWithTag("Player");
         col2d = GetComponent<BoxCollider2D>();
         if(itemshowafterhide != null)
@@ -82,7 +82,7 @@ public class PickUp : MonoBehaviour
         //{
         //    player.OnPressLeftClick.Invoke(player.isLeftClicked);
         //}
-        //player.OnPressLeftClick += OnPressLeftClick_Test;
+        player.OnPressLeftClick += OnPressLeftClick_Test;
     }
 
     private void Update()

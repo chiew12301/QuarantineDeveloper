@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0071a5f07c607b94b9ad7b5031592816, type: 3}
-  m_Name: Flyer
+  m_Name: Jigsaw Piece 3
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 7bddfbde8fe766243abbe72b1a5125b8, type: 3}
-  name: Flyer
-  desc: New page unlocked in journal (Page 2)
-  itemType: 3
-  itemPrefab: {fileID: 6180867674161099922, guid: 2886468c2bc0e6545985a56cf33045f9,
+  name: Jigsaw Piece 3
+  desc: Puzzle Piece 3
+  itemType: 5
+  itemPrefab: {fileID: 7507303627312307289, guid: eaeff1ac2ea4e2b4b9f584f056d5f6a2,
     type: 3}
   isFull: 0

@@ -57,7 +57,17 @@ public class DialogueTrigger : MonoBehaviour
         {
             Debug.Log("Triggered dialog");
             DialogueManager.instance.StartDialogue(dialogue);
+
+            if (item1 != null)
+            { item1.gameObject.SetActive(true); }
+            if (item2 != null)
+            { item2.gameObject.SetActive(true); }
+            if (desAfterTrigger == true)
+            {
+                this.gameObject.SetActive(false);
+            }
         }
+
     }
 
     public void TriggerBubble()

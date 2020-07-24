@@ -107,7 +107,7 @@ MonoBehaviour:
   isShowDialogue: 0
   isItemObtain: 0
   MouseisIn: 1
-  PageNumber: 2
+  PageNumber: 5
 --- !u!61 &1160635549382425286
 BoxCollider2D:
   m_ObjectHideFlags: 0

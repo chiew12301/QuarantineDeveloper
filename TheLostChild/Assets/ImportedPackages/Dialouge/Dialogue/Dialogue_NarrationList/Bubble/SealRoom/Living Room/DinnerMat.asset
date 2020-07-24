@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
-  m_Name: PuzzleFrame
+  m_Script: {fileID: 11500000, guid: 948ceb2176cb4cd43bfdea7a1c011b89, type: 3}
+  m_Name: DinnerMat
   m_EditorClassIdentifier: 
-  dialogueInfo:
-  - name: Max
-    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
-    cutsceneImg: {fileID: 0}
-    sentences: (It's missing few pieces..)
+  oriOnlyOnce: 0
+  bubbleInfo:
+  - sentences: (Ops! Better not step on someone's little feast..)
     isJitter: 0
+  changedInfo: []
