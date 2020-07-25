@@ -19,7 +19,6 @@ public class UnlockJournalPage : MonoBehaviour
     [Header("Others")]
     public MoveScriptTesting player;
     private float Distance;
-    private MouseCursor mcS;
     //GameObject playerMovement;
 
     public bool isShowDialogue = false;
@@ -38,7 +37,6 @@ public class UnlockJournalPage : MonoBehaviour
 
     void Start()
     {
-        mcS = GameObject.FindGameObjectWithTag("Cursor").GetComponent<MouseCursor>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<MoveScriptTesting>();
         //player.OnPressLeftClick += OnPressLeftClick_Test;
     }
@@ -95,7 +93,6 @@ public class UnlockJournalPage : MonoBehaviour
         player.OnPressLeftClick -= OnPressLeftClick_Test;
 
         ObjectPoolingManager.instance.AddPoolList(this.gameObject);
-        mcS.setToDefaultCursor("Hover");
 
         switch (PageNumber)
         {
@@ -195,7 +192,6 @@ public class UnlockJournalPage : MonoBehaviour
     void OnMouseEnter()
     {
         //Debug.Log("Mouse is in");
-        mcS.setToCursorEyes("Hover");
         MouseisIn = true;
     }
 
@@ -212,7 +208,6 @@ public class UnlockJournalPage : MonoBehaviour
             else
             {
                 //Debug.Log("Not clicking or not in range");
-                mcS.setToDefaultCursor("Hover");
                 return;
             }
 
@@ -221,7 +216,6 @@ public class UnlockJournalPage : MonoBehaviour
 
     void OnMouseExit()
     {
-        mcS.setToDefaultCursor("Hover");
         MouseisIn = false;
     }
 }
