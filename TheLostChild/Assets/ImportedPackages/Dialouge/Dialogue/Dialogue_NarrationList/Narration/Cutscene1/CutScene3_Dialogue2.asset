@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfo:
   - name: Max
-    portrait: {fileID: 21300000, guid: 442f78cbca569cd4289585828e03b985, type: 3}
+    portrait: {fileID: 21300000, guid: 281c846f24deff7449861c644f56e76c, type: 3}
     cutsceneImg: {fileID: 0}
     sentences: I had a strange feeling, like someone is here with me...is it the
       museum security guard?

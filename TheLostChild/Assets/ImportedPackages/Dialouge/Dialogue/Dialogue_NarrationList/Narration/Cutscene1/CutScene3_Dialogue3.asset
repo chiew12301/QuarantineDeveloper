@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfo:
   - name: Max
-    portrait: {fileID: 21300000, guid: 442f78cbca569cd4289585828e03b985, type: 3}
+    portrait: {fileID: 21300000, guid: 281c846f24deff7449861c644f56e76c, type: 3}
     cutsceneImg: {fileID: 0}
     sentences: "What\u2019s that?! No! It can\u2019t be, but the soldiers are all
       dead! Why are they here?"
     isJitter: 0
   - name: Max
-    portrait: {fileID: 21300000, guid: 442f78cbca569cd4289585828e03b985, type: 3}
+    portrait: {fileID: 21300000, guid: 281c846f24deff7449861c644f56e76c, type: 3}
     cutsceneImg: {fileID: 0}
     sentences: I need to hide. Now!
     isJitter: 0

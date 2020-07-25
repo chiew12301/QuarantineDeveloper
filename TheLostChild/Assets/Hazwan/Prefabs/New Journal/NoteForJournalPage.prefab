@@ -106,8 +106,8 @@ MonoBehaviour:
   player: {fileID: 1346889373, guid: c19a4cfa4008cd449880bb23e939ad39, type: 3}
   isShowDialogue: 0
   isItemObtain: 0
-  MouseisIn: 0
-  PageNumber: 2
+  MouseisIn: 1
+  PageNumber: 5
 --- !u!61 &1160635549382425286
 BoxCollider2D:
   m_ObjectHideFlags: 0

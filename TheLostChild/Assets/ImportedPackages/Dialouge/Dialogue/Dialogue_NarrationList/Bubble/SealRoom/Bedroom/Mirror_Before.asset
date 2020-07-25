@@ -14,12 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfo:
   - name: Max
-    portrait: {fileID: 21300000, guid: 442f78cbca569cd4289585828e03b985, type: 3}
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: Huh? There's some words written on the mirror.
+    sentences: Words are written on the mirror...
     isJitter: 0
   - name: Riddle
-    portrait: {fileID: 21300000, guid: 442f78cbca569cd4289585828e03b985, type: 3}
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: What relationship the Moon and the Stars have?
+    sentences: ...What kind of relationship does the Moon have with the stars?...
+    isJitter: 0
+  - name: Riddle
+    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
+    cutsceneImg: {fileID: 0}
+    sentences: ...A riddle?
     isJitter: 0

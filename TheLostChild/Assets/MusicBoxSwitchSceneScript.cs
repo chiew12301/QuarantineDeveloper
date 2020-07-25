@@ -35,6 +35,7 @@ public class MusicBoxSwitchSceneScript : MonoBehaviour
         DialogueManager.instance.StartDialogue(dialogue);
         Inventory.instance.addItem(item);
         ObjectPoolingManager.instance.AddPoolList(this.gameObject);
+        player.isMusicPicked = true;
         player.OnPressLeftClick -= OnPressLeftClick_Event;
         mcS.setToDefaultCursor("Hover");
     }

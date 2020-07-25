@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Logo Scene.unity
+    guid: 84f70c1dc59705540a868e8981a7c0a2
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 34c143464ff0d2741813dbbc4c2113a8
   - enabled: 1
@@ -14,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/DeadScene.unity
+    guid: fd9e47568dcaab84baee2de66fff7b1e
+  - enabled: 1
+    path: Assets/Scenes/StayTuneScene.unity
+    guid: c3823ad7889de7540891e03af38c6436
   m_configObjects: {}

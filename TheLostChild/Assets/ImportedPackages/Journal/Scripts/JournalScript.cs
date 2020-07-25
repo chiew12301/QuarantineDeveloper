@@ -30,6 +30,12 @@ public class JournalScript : MonoBehaviour
     public static bool EnablePage7 = false;
     public static bool EnablePage8 = false;
     public static bool EnablePage9 = false;
+    public static bool EnablePage10 = false;
+    public static bool EnablePage11 = false;
+    public static bool EnablePage12 = false;
+
+
+
 
     [Header("Note Tabs")]    //Journal Tabs
     public GameObject NoteDetails;
@@ -43,58 +49,37 @@ public class JournalScript : MonoBehaviour
     public GameObject SettingsTabBig;
     public Button SettingsTabSmall;
 
+    [Header("Map Tabs")]    //Journal Tabs
+    public GameObject MapDetails;
+    public GameObject MapTab;
+    public GameObject MapTabBig;
+    public Button MapTabSmall;
+
     MoveScriptTesting player;
+
+    private const int SIZE = 12;
+    public static int p = -1;
+    public static int[] currentPage = new int[SIZE];
+    public static bool[] enableArrows = new bool[SIZE];
+    
 
     void Start()
     {
         player = GameObject.FindWithTag("Player").GetComponent<MoveScriptTesting>();
+
+        for(int x = 0; x < 12; x++)
+        {
+            enableArrows[x] = false;
+        }
+        
     }
 
     void Update()
     {
         pageVisibility();
+
     }
-    public void ExitJournal()
-    {
-        TutorialScript.disableTutorialBlocks = true;
-        pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
-        GameisPaused = false;
-        ResetNotes();
-        JournalButton.interactable = true;
-        //player.GetComponent<MoveScriptTesting>().enabled = true;
-    }
-
-    public void OpenJournal()
-    {
-        //player.GetComponent<MoveScriptTesting>().enabled = false;
-        //MoveScriptTesting.instance.StopMoving();
-
-        OpenNoteTab();
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0.0001f;
-        player.StopMoving();
-        GameisPaused = true;
-
-        Notes[0].SetActive(true);
-        Notes[1].SetActive(false);
-
-        //PrevButton.Select();
-        JournalButton.interactable = false;
-
-        Page = 1;
-    }
-
-    public void OpenNoteTab()
-    {
-        NoteTab.SetActive(false);
-        NoteTabBig.SetActive(true);
-        SettingsTabBig.SetActive(false);
-        SettingsTab.SetActive(true);
-
-        NoteDetails.SetActive(true);
-        SettingsDetails.SetActive(false);
-    }
+    
 
     public void Note_1()
     {
@@ -102,72 +87,14 @@ public class JournalScript : MonoBehaviour
         Notes[0].SetActive(true);
     }
 
-    public void Note_2()
-    {
-        ResetNotes();
-        Notes[1].SetActive(true);
-    }
-
-    public void Note_3()
-    {
-        ResetNotes();
-        Notes[2].SetActive(true);
-    }
-
-    public void Note_4()
-    {
-        ResetNotes();
-        Notes[3].SetActive(true);
-    }
-
-    public void Note_5()
-    {
-        ResetNotes();
-        Notes[4].SetActive(true);
-    }
-
-    public void Note_6()
-    {
-        ResetNotes();
-        Notes[5].SetActive(true);
-    }
-
-    public void Note_7()
-    {
-        ResetNotes();
-        Notes[6].SetActive(true);
-    }
-
-    public void Note_8()
-    {
-        ResetNotes();
-        Notes[7].SetActive(true);
-    }
-    public void Note_9()
-    {
-        ResetNotes();
-        Notes[8].SetActive(true);
-    }
 
 
-
-
-    public void OpenSettings()
-    {
-        NoteTab.SetActive(true);
-        NoteTabBig.SetActive(false);
-        SettingsTabBig.SetActive(true);
-        SettingsTab.SetActive(false);
-
-        NoteDetails.SetActive(false);
-        SettingsDetails.SetActive(true);
-    }
 
     public void pageVisibility()
     {
         if(Page == 1)
         {
-            if(EnablePage2 == true)
+            if(enableArrows[0] == true)
             {
                 NextPage.SetActive(true);
                 PrevPage.SetActive(false);
@@ -180,7 +107,7 @@ public class JournalScript : MonoBehaviour
         }
         else if(Page == 2)
         {
-            if(EnablePage3)
+            if(enableArrows[1])
             {
                 NextPage.SetActive(true);
                 PrevPage.SetActive(true);
@@ -192,7 +119,7 @@ public class JournalScript : MonoBehaviour
         }
         else if (Page == 3)
         {
-            if(EnablePage4)
+            if(enableArrows[2])
             {
                 NextPage.SetActive(true);
                 PrevPage.SetActive(true);
@@ -204,7 +131,7 @@ public class JournalScript : MonoBehaviour
         }
         else if (Page == 4)
         {
-            if(EnablePage5)
+            if(enableArrows[3])
             {
                 NextPage.SetActive(true);
                 PrevPage.SetActive(true);
@@ -216,7 +143,7 @@ public class JournalScript : MonoBehaviour
         }
         else if (Page == 5)
         {
-            if (EnablePage6)
+            if (enableArrows[4])
             {
                 NextPage.SetActive(true);
                 PrevPage.SetActive(true);
@@ -228,7 +155,7 @@ public class JournalScript : MonoBehaviour
         }
         else if (Page == 6)
         {
-            if (EnablePage7)
+            if (enableArrows[5])
             {
                 NextPage.SetActive(true);
                 PrevPage.SetActive(true);
@@ -240,7 +167,7 @@ public class JournalScript : MonoBehaviour
         }
         else if (Page == 7)
         {
-            if (EnablePage8)
+            if (enableArrows[6])
             {
                 NextPage.SetActive(true);
                 PrevPage.SetActive(true);
@@ -252,7 +179,7 @@ public class JournalScript : MonoBehaviour
         }
         else if (Page == 8)
         {
-            if (EnablePage9)
+            if (enableArrows[7])
             {
                 NextPage.SetActive(true);
                 PrevPage.SetActive(true);
@@ -262,10 +189,46 @@ public class JournalScript : MonoBehaviour
                 displayNextButton();
             }
         }
-        else if(Page == 9)
+        else if (Page == 9)
         {
-            NextPage.SetActive(false);
-            PrevPage.SetActive(true);
+            if (enableArrows[8])
+            {
+                NextPage.SetActive(true);
+                PrevPage.SetActive(true);
+            }
+            else
+            {
+                displayNextButton();
+            }
+        }
+        else if (Page == 10)
+        {
+            if (enableArrows[9])
+            {
+                NextPage.SetActive(true);
+                PrevPage.SetActive(true);
+            }
+            else
+            {
+                displayNextButton();
+            }
+        }
+        else if (Page == 11)
+        {
+            if (enableArrows[10])
+            {
+                NextPage.SetActive(true);
+                PrevPage.SetActive(true);
+            }
+            else
+            {
+                displayNextButton();
+            }
+        }
+        else if(Page == 12)
+        {
+                NextPage.SetActive(false);
+                PrevPage.SetActive(true);
         }
     }
 
@@ -275,49 +238,76 @@ public class JournalScript : MonoBehaviour
         PrevPage.SetActive(true);
     }
 
+
     public void GoNextPage()
     {
         if (Page == 1)
         {
-            Note_2();
+            ResetNotes();
+            Notes[currentPage[0]].SetActive(true);
             Page++;
         }
         else if(Page == 2)
         {
-            Note_3();
+            ResetNotes();
+            Notes[currentPage[1]].SetActive(true);
             Page++;
         }
         else if (Page == 3)
         {
-            Note_4();
+            ResetNotes();
+            Notes[currentPage[2]].SetActive(true);
             Page++;
         }
         else if (Page == 4)
         {
-            Note_5();
+            ResetNotes();
+            Notes[currentPage[3]].SetActive(true);
             Page++;
         }
         else if (Page == 5)
         {
-            Note_6();
+            ResetNotes();
+            Notes[currentPage[4]].SetActive(true);
             Page++;
         }
         else if (Page == 6)
         {
-            Note_7();
+            ResetNotes();
+            Notes[currentPage[5]].SetActive(true);
             Page++;
         }
         else if (Page == 7)
         {
-            Note_8();
+            ResetNotes();
+            Notes[currentPage[6]].SetActive(true);
             Page++;
         }
         else if (Page == 8)
         {
-            Note_9();
+            ResetNotes();
+            Notes[currentPage[7]].SetActive(true);
             Page++;
         }
         else if (Page == 9)
+        {
+            ResetNotes();
+            Notes[currentPage[8]].SetActive(true);
+            Page++;
+        }
+        else if (Page == 10)
+        {
+            ResetNotes();
+            Notes[currentPage[9]].SetActive(true);
+            Page++;
+        }
+        else if (Page == 11)
+        {
+            ResetNotes();
+            Notes[currentPage[10]].SetActive(true);
+            Page++;
+        }
+        else if (Page == 12)
         {
             //Nothing
         }
@@ -337,44 +327,147 @@ public class JournalScript : MonoBehaviour
         }
         else if (Page == 3)
         {
-            Note_2();
+            ResetNotes();
+            Notes[currentPage[0]].SetActive(true);
             Page--;
         }
         else if (Page == 4)
         {
-            Note_3();
+            ResetNotes();
+            Notes[currentPage[1]].SetActive(true);
             Page--;
         }
         else if (Page == 5)
         {
-            Note_4();
+            ResetNotes();
+            Notes[currentPage[2]].SetActive(true);
             Page--;
         }
         else if (Page == 6)
         {
-            Note_5();
+            ResetNotes();
+            Notes[currentPage[3]].SetActive(true);
             Page--;
         }
         else if (Page == 7)
         {
-            Note_6();
+            ResetNotes();
+            Notes[currentPage[4]].SetActive(true);
             Page--;
         }
         else if (Page == 8)
         {
-            Note_7();
+            ResetNotes();
+            Notes[currentPage[5]].SetActive(true);
             Page--;
         }
         else if (Page == 9)
         {
-            Note_8();
+            ResetNotes();
+            Notes[currentPage[6]].SetActive(true);
+            Page--;
+        }
+        else if (Page == 10)
+        {
+            ResetNotes();
+            Notes[currentPage[7]].SetActive(true);
+            Page--;
+        }
+        else if (Page == 11)
+        {
+            ResetNotes();
+            Notes[currentPage[8]].SetActive(true);
+            Page--;
+        }
+        else if (Page == 12)
+        {
+            ResetNotes();
+            Notes[currentPage[9]].SetActive(true);
             Page--;
         }
     }
 
+
+
+
+
+
+
+
+
+    public void ExitJournal()
+    {
+        TutorialScript.disableTutorialBlocks = true;
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameisPaused = false;
+        ResetNotes();
+        JournalButton.interactable = true;
+    }
+
+    public void OpenJournal()
+    {
+
+        OpenNoteTab();
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0.0001f;
+        player.StopMoving();
+        GameisPaused = true;
+
+        Notes[0].SetActive(true);
+        Notes[1].SetActive(false);
+
+        JournalButton.interactable = false;
+
+        Page = 1;
+    }
+
+    public void OpenNoteTab()
+    {
+        NoteTab.SetActive(false);
+        NoteTabBig.SetActive(true);
+        SettingsTab.SetActive(true);
+        SettingsTabBig.SetActive(false);
+        MapTab.SetActive(true);
+        MapTabBig.SetActive(false);
+
+        NoteDetails.SetActive(true);
+        SettingsDetails.SetActive(false);
+        MapDetails.SetActive(false);
+    }
+
+    public void OpenSettings()
+    {
+        NoteTab.SetActive(true);
+        NoteTabBig.SetActive(false);
+        SettingsTab.SetActive(false);
+        SettingsTabBig.SetActive(true);
+        MapTab.SetActive(true);
+        MapTabBig.SetActive(false);
+
+        NoteDetails.SetActive(false);
+        SettingsDetails.SetActive(true);
+        MapDetails.SetActive(false);
+    }
+
+    public void OpenMap()
+    {
+        NoteTab.SetActive(true);
+        NoteTabBig.SetActive(false);
+        SettingsTab.SetActive(true);
+        SettingsTabBig.SetActive(false);
+        MapTab.SetActive(false);
+        MapTabBig.SetActive(true);
+
+        NoteDetails.SetActive(false);
+        SettingsDetails.SetActive(false);
+        MapDetails.SetActive(true);
+    }
+
+
     private void ResetNotes()
     {
-        for(int x = 0; x < 9; x++)
+        for(int x = 0; x < 12; x++)
         {
             Notes[x].SetActive(false);
         }

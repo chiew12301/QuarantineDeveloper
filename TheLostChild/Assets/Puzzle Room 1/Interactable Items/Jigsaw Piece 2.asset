@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0071a5f07c607b94b9ad7b5031592816, type: 3}
   m_Name: Jigsaw Piece 2
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: de30a7a39f830d84f8aecb6cce5e5d06, type: 3}
+  itemSprite: {fileID: 21300000, guid: 42b18d6454dcf8d4bb137d1a5105a203, type: 3}
   name: Jigsaw Piece 2
-  desc: Puzzle Piece 1
+  desc: Puzzle Piece 2
   itemType: 5
-  itemPrefab: {fileID: 3037353189465481739, guid: 9b821cf1a9a686648869d7b911ba6bc6,
+  itemPrefab: {fileID: 5279552048396302833, guid: 9b821cf1a9a686648869d7b911ba6bc6,
     type: 3}
   isFull: 0
