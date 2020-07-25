@@ -55,8 +55,11 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (isDialogTrigger == true)
         {
-            Debug.Log("Triggered dialog");
-            DialogueManager.instance.StartDialogue(dialogue);
+            if (isNear)
+            {
+                Debug.Log("Triggered dialog");
+                DialogueManager.instance.StartDialogue(dialogue);
+            }
         }
     }
 
