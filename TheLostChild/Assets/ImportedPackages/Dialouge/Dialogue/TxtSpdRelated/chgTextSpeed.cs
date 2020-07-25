@@ -19,7 +19,7 @@ public class chgTextSpeed : MonoBehaviour
 
      private void Awake()
     {
-        if (instance == null) //For Multiple Scene Purpose
+        if (instance == null)
         {
             instance = this;
         }
@@ -76,5 +76,6 @@ public class chgTextSpeed : MonoBehaviour
         {
             txtSpdIndex--;
         }
+        changedTextSpeed = txtSpeedList[txtSpdIndex];
     }
 }
