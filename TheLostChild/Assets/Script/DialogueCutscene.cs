@@ -193,10 +193,12 @@ private void Start()
             isCutS3PlayedP1 = true;
         }
         else { return; }
+        
     }
 
     public void CutScene3ExitLobby()
     {
+        
         if (isCutS3PlayedP2 == false)
         {
             dialogueDisplay.SetActive(true);
@@ -212,6 +214,7 @@ private void Start()
             isCutS3PlayedP3 = true;
         }
         else { return; }
+        GetJournalNoteAuto.getNote5 = true;
     }
 
     public void CutSceneLR()

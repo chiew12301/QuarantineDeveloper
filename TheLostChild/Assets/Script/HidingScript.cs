@@ -8,7 +8,7 @@ public class HidingScript : MonoBehaviour
     Transform p;
 
     public GameObject player;
-    public float rangeToInteract = 1; 
+    public float rangeToInteract = 5; 
 
 
     void Update()
@@ -31,10 +31,13 @@ public class HidingScript : MonoBehaviour
                         {
                             player.SetActive(true);
                             //player.transform.position = transform.position;
+
+                            MoveScriptTesting.instance.Move();
                         }
                         else if (player.activeInHierarchy == true)
                         {
                             player.SetActive(false);
+                            MoveScriptTesting.instance.StopMoving();
                         }
                     }
                 }

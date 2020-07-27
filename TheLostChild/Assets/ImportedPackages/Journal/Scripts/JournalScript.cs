@@ -71,7 +71,6 @@ public class JournalScript : MonoBehaviour
         {
             enableArrows[x] = false;
         }
-        
     }
 
     void Update()
@@ -428,9 +427,13 @@ public class JournalScript : MonoBehaviour
         NoteTabBig.SetActive(true);
         SettingsTab.SetActive(true);
         SettingsTabBig.SetActive(false);
-        MapTab.SetActive(true);
-        MapTabBig.SetActive(false);
 
+        if(SetMapJournal.MapIsAvailable == true)
+        {
+            MapTab.SetActive(true);
+            MapTabBig.SetActive(false);
+        }        
+        
         NoteDetails.SetActive(true);
         SettingsDetails.SetActive(false);
         MapDetails.SetActive(false);
@@ -442,8 +445,12 @@ public class JournalScript : MonoBehaviour
         NoteTabBig.SetActive(false);
         SettingsTab.SetActive(false);
         SettingsTabBig.SetActive(true);
-        MapTab.SetActive(true);
-        MapTabBig.SetActive(false);
+
+        if (SetMapJournal.MapIsAvailable == true)
+        {
+            MapTab.SetActive(true);
+            MapTabBig.SetActive(false);
+        }
 
         NoteDetails.SetActive(false);
         SettingsDetails.SetActive(true);
@@ -456,9 +463,13 @@ public class JournalScript : MonoBehaviour
         NoteTabBig.SetActive(false);
         SettingsTab.SetActive(true);
         SettingsTabBig.SetActive(false);
-        MapTab.SetActive(false);
-        MapTabBig.SetActive(true);
 
+        if (SetMapJournal.MapIsAvailable == true)
+        {
+            MapTab.SetActive(false);
+            MapTabBig.SetActive(true);
+        }
+            
         NoteDetails.SetActive(false);
         SettingsDetails.SetActive(false);
         MapDetails.SetActive(true);

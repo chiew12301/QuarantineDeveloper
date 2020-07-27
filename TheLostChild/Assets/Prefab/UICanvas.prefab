@@ -270,7 +270,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071005395186559754}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -11251,6 +11251,7 @@ MonoBehaviour:
   itemDesc: {fileID: 6463882580101736770}
   itemImage: {fileID: 6463882581187178832}
   Panel: {fileID: 6463882579563489789}
+  player: {fileID: 0}
 --- !u!1 &6463882579633750832
 GameObject:
   m_ObjectHideFlags: 0

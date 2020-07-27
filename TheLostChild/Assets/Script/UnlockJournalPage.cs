@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class UnlockJournalPage : MonoBehaviour
 {
+    public static UnlockJournalPage instance;
+
     [Header("Dialogue")]
     public bool Dialogue = false;
     public GameObject dialogueDisplay;
@@ -19,7 +21,6 @@ public class UnlockJournalPage : MonoBehaviour
     [Header("Others")]
     public MoveScriptTesting player;
     private float Distance;
-    private MouseCursor mcS;
     //GameObject playerMovement;
 
     public bool isShowDialogue = false;
@@ -31,14 +32,18 @@ public class UnlockJournalPage : MonoBehaviour
     [Header("Journal Pages To Unlock [2 - 12]")]
     public int PageNumber = 0;
 
+    //public static int getPageAuto_PageNumber;
+
     int a = 0;
     int totalA = 0;
     bool runAgain = true;
 
-
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
-        mcS = GameObject.FindGameObjectWithTag("Cursor").GetComponent<MouseCursor>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<MoveScriptTesting>();
         //player.OnPressLeftClick += OnPressLeftClick_Test;
     }
@@ -66,6 +71,9 @@ public class UnlockJournalPage : MonoBehaviour
 
     public void performPickup()
     {
+
+
+
         if (isSecondRound)
         {
             JournalScript.p -= 2;
@@ -85,7 +93,7 @@ public class UnlockJournalPage : MonoBehaviour
             if (Item == true)
             {
 
-                itemObtainedPanel.SetActive(true);
+                //itemObtainedPanel.SetActive(true);
 
             }
 
@@ -95,7 +103,11 @@ public class UnlockJournalPage : MonoBehaviour
         player.OnPressLeftClick -= OnPressLeftClick_Test;
 
         ObjectPoolingManager.instance.AddPoolList(this.gameObject);
-        mcS.setToDefaultCursor("Hover");
+
+        if(JournalScript.p <= 0)
+        {
+            JournalScript.p = 0;
+        }
 
         switch (PageNumber)
         {
@@ -110,7 +122,7 @@ public class UnlockJournalPage : MonoBehaviour
             case 3:
                 JournalScript.p -= 1;
                 Debug.Log("Curernt p: " + JournalScript.p);
-                JournalScript.currentPage[JournalScript.p] = PageNumber-1;
+                JournalScript.currentPage[JournalScript.p] = PageNumber - 1;
                 JournalScript.enableArrows[JournalScript.p] = true;
                 Debug.Log("Page number found: " + PageNumber);
                 break;
@@ -195,7 +207,6 @@ public class UnlockJournalPage : MonoBehaviour
     void OnMouseEnter()
     {
         //Debug.Log("Mouse is in");
-        mcS.setToCursorEyes("Hover");
         MouseisIn = true;
     }
 
@@ -212,7 +223,6 @@ public class UnlockJournalPage : MonoBehaviour
             else
             {
                 //Debug.Log("Not clicking or not in range");
-                mcS.setToDefaultCursor("Hover");
                 return;
             }
 
@@ -221,7 +231,6 @@ public class UnlockJournalPage : MonoBehaviour
 
     void OnMouseExit()
     {
-        mcS.setToDefaultCursor("Hover");
         MouseisIn = false;
     }
 }

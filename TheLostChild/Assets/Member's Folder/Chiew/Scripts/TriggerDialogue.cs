@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class TriggerDialogue : MonoBehaviour
+public class TriggerDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     public Dialogue dialogue;
     public BubbleSpeech bubble;
@@ -12,9 +13,15 @@ public class TriggerDialogue : MonoBehaviour
     private bool isNear = false;
     private bool isPicked = false;
     public bool isDialogTrigger = false;
+    private MouseCursor mcs;
 
+    [Header("Item")]
     public GameObject item1;
     public GameObject item2;
+    [Header("Journal")]
+    public GameObject journal1;
+    public GameObject journal2;
+
     public bool desAfterTrigger = false;
 
     public TransferPlayer tpScript;
@@ -30,7 +37,7 @@ public class TriggerDialogue : MonoBehaviour
 
     private void Start()
     {
-        
+        mcs = GameObject.FindGameObjectWithTag("Cursor").GetComponent<MouseCursor>();
     }
 
     private void Update()
@@ -81,6 +88,22 @@ public class TriggerDialogue : MonoBehaviour
                         isPicked = true;
                     }
                 }
+                if (journal1 != null)
+                {
+                    if (journal1.GetComponent<UnlockJournalPage>() != null)
+                    {
+                        journal1.GetComponent<UnlockJournalPage>().performPickup();
+                        isPicked = true;
+                    }
+                }
+                if (journal2 != null)
+                {
+                    if (journal2.GetComponent<UnlockJournalPage>() != null)
+                    {
+                        journal2.GetComponent<UnlockJournalPage>().performPickup();
+                        isPicked = true;
+                    }
+                }
             }          
             if (desAfterTrigger == true)
             {
@@ -112,6 +135,22 @@ public class TriggerDialogue : MonoBehaviour
                         isPicked = true;
                     }
                 }
+                if (journal1 != null)
+                {
+                    if (journal1.GetComponent<UnlockJournalPage>() != null)
+                    {
+                        journal1.GetComponent<UnlockJournalPage>().performPickup();
+                        isPicked = true;
+                    }
+                }
+                if (journal2 != null)
+                {
+                    if (journal2.GetComponent<UnlockJournalPage>() != null)
+                    {
+                        journal2.GetComponent<UnlockJournalPage>().performPickup();
+                        isPicked = true;
+                    }
+                }
             }
             if (desAfterTrigger == true)
             {
@@ -130,6 +169,38 @@ public class TriggerDialogue : MonoBehaviour
         {
             TriggerBubbleSpeech();
         }
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (dialogue != null)
+        {
+            TriggerDialogueSpeech();
+        }
+        else if (bubble != null)
+        {
+            TriggerBubbleSpeech();
+        }
+    }
+
+    private void OnMouseEnter()
+    {
+        mcs.setToCursorEyes("Hover");
+    }
+
+    private void OnMouseExit()
+    {
+        mcs.setToDefaultCursor("Hover");
+    }
+
+    public void OnPointerEnter(PointerEventData data)
+    {
+        mcs.setToCursorEyes("Hover");
+    }
+
+    public void OnPointerExit(PointerEventData data)
+    {
+        mcs.setToDefaultCursor("Hover");
     }
 
 }
