@@ -129,9 +129,9 @@ public class PreloadCutsceneManager : MonoBehaviour
             
             if(tempImg!= null)
             {
-            //    tempImg.gameObject.SetActive(true);
-             //   StartCoroutine(Wait());
-                tempObj.SetActive(false);
+                tempImg.gameObject.SetActive(true);
+                StartCoroutine(Wait());
+                
             }
             else
             {
@@ -211,7 +211,8 @@ public class PreloadCutsceneManager : MonoBehaviour
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(1.0f);
+        tempObj.SetActive(false);
     }
     private void CutsceneEnd()
     {
