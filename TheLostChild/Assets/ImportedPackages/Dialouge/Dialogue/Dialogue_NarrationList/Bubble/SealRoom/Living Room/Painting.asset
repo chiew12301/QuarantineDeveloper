@@ -16,8 +16,7 @@ MonoBehaviour:
   - name: Max
     portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: A family portrait? This small lady looks like Ayu..she is an only
-      child huh?
+    sentences: "Hey...there seems to be something here\u2026 \r\nA jigsaw piece\u2026?\r"
     isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
