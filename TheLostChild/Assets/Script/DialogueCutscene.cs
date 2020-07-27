@@ -1,9 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class DialogueCutscene : MonoBehaviour
 {
+    public static DialogueCutscene instance;
+   
+
+    [Header("OpeningCutscene")]
+    public GameObject OPObj;
+    public Paragraph OPparagraph;
+    public TextMeshProUGUI OPparagraphText;
+    public Image picture;
+    public bool isStartCutScenePlayed = false;
+
+    [Header("ConversationWithParentCutscene")]
+    public Dialogue conversationWithParent;
+    public bool isStartConversation = false;
+    public bool isStartConversationEnd = false;
+
+    [Header("VerticalSliceSummary")]
+    public GameObject VSObj;
+    public Paragraph VSparagraph;
+    public TextMeshProUGUI VSparagraphText;
+    public bool isVSCutscenePlayed = false;
+
+
     [Header("DialogueData")]
     public Dialogue dialogueMusicBox;
     public Dialogue dialogueStartScene;
@@ -11,7 +35,6 @@ public class DialogueCutscene : MonoBehaviour
     public Dialogue dialogueCutS3;
     public Dialogue dialogueCutS3P2;
     public Dialogue dialogueCutS3P3;
-    //public Dialogue dialogueCutMem;
     public Dialogue dailogueAyuLivingR; //not working
     public Dialogue dialogueLIG;
     public Dialogue dialogueLIG2;
@@ -24,7 +47,6 @@ public class DialogueCutscene : MonoBehaviour
 
     [Header("Boolean")]
     private bool isMusicBox = false;
-    public bool isStartCutScenePlayed = false;
     public bool isEnteredLobbyOnce = false;
     public bool isExitLobby = false;
     public bool isCutS2Played = false;
@@ -37,6 +59,7 @@ public class DialogueCutscene : MonoBehaviour
     public bool isCutSLIG2 = false;
     public bool isCutSLIG3 = false;
     public bool isRiddleP1 = false;
+
     //in header boolean
     private bool pickedUpHairPin = false; //check if hairpin in inventory or not
     private bool isHairPin = false;
@@ -62,20 +85,26 @@ public class DialogueCutscene : MonoBehaviour
     public Vector3 LeftAyuPainting;
     public Vector3 RightAyuPainting;
 
-    // Start is called before the first frame update
-    void Awake()
+    private void Awake()
     {
-
-
+        if (instance != null)
+        {
+            return;
+        }
+        instance = this;
     }
 
-private void Start()
+    private void Start()
     {
+        //starting cutscene
         if (isStartCutScenePlayed == false)
         {
-            dialogueDisplay.SetActive(true);
-            DialogueManager.instance.StartDialogue(dialogueStartScene);
-            isStartCutScenePlayed = true;
+            OPObj.SetActive(true);
+            PreloadCutsceneManager.instance.StartParagraph(OPObj, OPparagraph, OPparagraphText, picture);
+ 
+           //dialogueDisplay.SetActive(true);
+          //DialogueManager.instance.StartDialogue(dialogueStartScene);
+            
         }
         else
         {
@@ -92,6 +121,22 @@ private void Start()
 
     void CheckTriggerCutScene()
     {
+        //the conveersation with parents
+        if(isStartCutScenePlayed == true && isStartConversation == false)
+        {
+            DialogueManager.instance.StartDialogue(conversationWithParent);
+            isStartConversation = true;
+        }
+
+        //VSSummary
+        if(isStartConversationEnd == true && isVSCutscenePlayed == false)
+        {
+        //    Debug.Log("HI");
+            VSObj.SetActive(true);
+            PreloadCutsceneManager.instance.StartParagraph(VSObj, VSparagraph, VSparagraphText, null);
+            isVSCutscenePlayed = true;
+        }
+
         if (player.transform.position.x >= LeftLocation2.x && player.transform.position.x <= RightLocation2.x)
         {
             if(player.transform.position.y <= LeftLocation2.y && player.transform.position.y >= RightLocation2.y)
