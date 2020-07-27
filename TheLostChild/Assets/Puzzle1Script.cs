@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Puzzle1Script : MonoBehaviour
 {
+    public static Puzzle1Script instance;
+
+    Collider2D col;
+
     public int totalPuzzle = 0;
     public bool isPuzzleDone = false;
 
@@ -27,12 +31,18 @@ public class Puzzle1Script : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             JigsawPuzzle[i].SetActive(false);
+            col = GetComponent<Collider2D>();
         }
     }
 
     private void Update()
     {
         PuzzleCompleted();
+    }
+
+    private void Awake()
+    {
+        instance = this;
     }
 
     void PuzzleCompleted()
@@ -49,6 +59,8 @@ public class Puzzle1Script : MonoBehaviour
             mirrorAfter.SetActive(true);
 
             cabinetForPuzzle3.SetActive(false);
+
+            col.enabled = false;
         }
     }
 

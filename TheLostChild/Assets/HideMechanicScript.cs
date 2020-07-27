@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HidingScript : MonoBehaviour
+public class HideMechanicScript : MonoBehaviour
 {
     [SerializeField]
     Transform p;
 
     public GameObject player;
-    public float rangeToInteract = 5; 
+    public float rangeToInteract = 5;
 
 
     void Update()
     {
         float distToPlayer = Vector2.Distance(transform.position, p.position);
 
-        if(distToPlayer < rangeToInteract)
+        if (distToPlayer < rangeToInteract)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -31,13 +31,10 @@ public class HidingScript : MonoBehaviour
                         {
                             player.SetActive(true);
                             //player.transform.position = transform.position;
-
-                            MoveScriptTesting.instance.Move();
                         }
                         else if (player.activeInHierarchy == true)
                         {
                             player.SetActive(false);
-                            MoveScriptTesting.instance.StopMoving();
                         }
                     }
                 }
@@ -46,6 +43,6 @@ public class HidingScript : MonoBehaviour
         }
 
 
-        
+
     }
 }

@@ -78,6 +78,7 @@ TagManager:
     locked: 0
   - name: Parallex
     uniqueID: 4179545683
+    locked: 0
   - name: UIpopup
     uniqueID: 4081635035
     locked: 0
