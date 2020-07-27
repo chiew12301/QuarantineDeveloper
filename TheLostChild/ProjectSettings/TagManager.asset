@@ -21,6 +21,7 @@ TagManager:
   - Photograph
   - CorrectPainting
   - CorrectBottle
+  - MusicBox
   layers:
   - Default
   - TransparentFX

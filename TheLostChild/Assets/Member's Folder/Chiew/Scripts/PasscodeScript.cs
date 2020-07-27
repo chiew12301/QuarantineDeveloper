@@ -15,6 +15,7 @@ public class PasscodeScript : MonoBehaviour
     public GameObject photoItem;
     private bool isCompleted = false;
     public GameObject inventoryPanel;
+    public GameObject Journal9;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +42,10 @@ public class PasscodeScript : MonoBehaviour
             if(photoItem.GetComponent<PickUp>() != null)
             {
                 photoItem.GetComponent<PickUp>().performPickup();
+            }
+            if(Journal9.GetComponent<UnlockJournalPage>() != null)
+            {
+                Journal9.GetComponent<UnlockJournalPage>().performPickup();
             }
             //Transfer to puzzle gallery again
             this.GetComponent<TransferPlayer>().TransferPlayerToDes();

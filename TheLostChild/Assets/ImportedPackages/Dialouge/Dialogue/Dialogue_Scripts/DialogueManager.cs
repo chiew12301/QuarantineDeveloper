@@ -71,6 +71,7 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
+        playerScript.isStop = isTalking;
         if (isTalking == true)
         {
             playerScript.StopMoving();

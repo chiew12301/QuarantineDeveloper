@@ -70,15 +70,15 @@ public class MoveScriptTesting : MonoBehaviour
         {
             Move();
         }
-        if(isMusicPicked == true)
-        {
-            if(Time.timeScale == 1f)
-            {
-                SceneManager.LoadScene("StayTuneScene");
-                AudioManager.instance.Stop("BGM");
-                AudioManager.instance.Stop("Moving");
-            }
-        }
+        //if(isMusicPicked == true)
+        //{
+        //    if(Time.timeScale == 1f)
+        //    {
+        //        SceneManager.LoadScene("StayTuneScene");
+        //        AudioManager.instance.Stop("BGM");
+        //        AudioManager.instance.Stop("Moving");
+        //    }
+        //}
     }
     public void SetPosition()
     {

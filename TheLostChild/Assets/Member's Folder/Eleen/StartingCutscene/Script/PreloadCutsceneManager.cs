@@ -11,6 +11,7 @@ public class PreloadCutsceneManager : MonoBehaviour
     //to stop player moving
     private MoveScriptTesting playerScript;
     private bool isCutscene = false;
+    private bool loading = false;
 
     //to check player click in order to instantly display the sentence (work with IEnumerator (dialogue ver))
     private bool hasClicked;
@@ -45,6 +46,7 @@ public class PreloadCutsceneManager : MonoBehaviour
     }
     void Update()
     {
+        playerScript.isStop = isCutscene;
         if (isCutscene == true)
         {
             playerScript.StopMoving();
