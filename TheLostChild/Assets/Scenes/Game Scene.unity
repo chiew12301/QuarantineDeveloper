@@ -3853,11 +3853,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalSlice
       objectReference: {fileID: 0}
-    - target: {fileID: 6492008745590786304, guid: 4aef2797e10e19a4cbe5880e6e11e8d9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6492008745590786307, guid: 4aef2797e10e19a4cbe5880e6e11e8d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8418,16 +8413,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StartCutscene
-      objectReference: {fileID: 0}
-    - target: {fileID: 7630400881699515727, guid: e453b059d70b5b849bfe7ec166a8c527,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7630400881749406560, guid: e453b059d70b5b849bfe7ec166a8c527,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e453b059d70b5b849bfe7ec166a8c527, type: 3}
