@@ -438,7 +438,12 @@ public class DialogueManager : MonoBehaviour
         
       //  Time.timeScale = 1.0f;
         ItemObtainedScript.instance.ClosePanel();
-       
+
+        if (DialogueCutscene.instance.isStartConversation == true)
+        {
+            DialogueCutscene.instance.isStartConversationEnd = true;
+        }
+
     }
 
     //!!! Extra fancy stuff : colours and effects

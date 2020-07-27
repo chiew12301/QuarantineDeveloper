@@ -213,13 +213,14 @@ public class PreloadCutsceneManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         tempObj.SetActive(false);
-    }
-    private void CutsceneEnd()
-    {
-        if(DialogueCutscene.instance.isStartCutScenePlayed ==false)
+        if (DialogueCutscene.instance.isStartCutScenePlayed == false)
         {
             DialogueCutscene.instance.isStartCutScenePlayed = true;
         }
+    }
+    private void CutsceneEnd()
+    {
+        
 
         if(DialogueCutscene.instance.isStartConversationEnd == true && DialogueCutscene.instance.isVSCutscenePlayed == false)
         {

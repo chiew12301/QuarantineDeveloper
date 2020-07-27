@@ -20,6 +20,7 @@ public class DialogueCutscene : MonoBehaviour
     public Dialogue conversationWithParent;
     public bool isStartConversation = false;
     public bool isStartConversationEnd = false;
+    public Image ParentBG;
 
     [Header("VerticalSliceSummary")]
     public GameObject VSObj;
@@ -124,6 +125,7 @@ public class DialogueCutscene : MonoBehaviour
         //the conveersation with parents
         if(isStartCutScenePlayed == true && isStartConversation == false)
         {
+            ParentBG.gameObject.SetActive(true);
             DialogueManager.instance.StartDialogue(conversationWithParent);
             isStartConversation = true;
         }
@@ -131,7 +133,8 @@ public class DialogueCutscene : MonoBehaviour
         //VSSummary
         if(isStartConversationEnd == true && isVSCutscenePlayed == false)
         {
-        //    Debug.Log("HI");
+            //    Debug.Log("HI");
+            ParentBG.gameObject.SetActive(false);
             VSObj.SetActive(true);
             PreloadCutsceneManager.instance.StartParagraph(VSObj, VSparagraph, VSparagraphText, null);
             isVSCutscenePlayed = true;
