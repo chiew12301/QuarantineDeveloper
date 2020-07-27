@@ -16,10 +16,6 @@ MonoBehaviour:
   - name: Max
     portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: "Hmm\u2026 there\u2019s a music box inside\u2026 Does it play?"
-    isJitter: 0
-  - name: Max
-    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
-    cutsceneImg: {fileID: 0}
-    sentences: "I guess not\u2026 But there\u2019s a jigsaw piece here."
+    sentences: "A third piece! I think that\u2019s all that is missing from the hanging
+      puzzle.\r"
     isJitter: 0

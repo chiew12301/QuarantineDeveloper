@@ -61,7 +61,7 @@ public class LoadingScript : MonoBehaviour
 
     IEnumerator TransferArea()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         Transfer();
         isTransfering = false;
         stopMoving = false;

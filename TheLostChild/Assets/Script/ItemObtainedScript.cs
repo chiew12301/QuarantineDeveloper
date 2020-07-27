@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ItemObtainedScript : MonoBehaviour
 {
+    public static ItemObtainedScript instance;
+
     public Text itemName;
     public Text itemDesc;
     public Image itemImage;
@@ -15,11 +17,11 @@ public class ItemObtainedScript : MonoBehaviour
 
     public GameObject Panel;
 
-    //GameObject player;
+    public GameObject player;
 
-    private void Start()
+    private void Awake()
     {
-        //player = GameObject.FindGameObjectWithTag("Player");
+        instance = this;
     }
 
     private void Update()
@@ -32,17 +34,14 @@ public class ItemObtainedScript : MonoBehaviour
 
         tempItemSprite = Inventory.saveditemSprite;
         itemImage.sprite = tempItemSprite;
+
+        //Time.timeScale = 0.001f;                                      - Bug for black screen and player unable to move
+        //player.GetComponent<MoveScriptTesting>().StopMoving();
     }
     public void ClosePanel()
     {
             Time.timeScale = 1;
-            //player.GetComponent<MoveScriptTesting>().enabled = true;
-
-            //bool isActive = Panel.activeSelf;
 
             Panel.SetActive(false);
-
-        
-
     }
 }

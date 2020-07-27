@@ -105,8 +105,10 @@ public class MoveScriptTesting : MonoBehaviour
     private void flip()
     {
         FacingRight = !FacingRight;
-
-        transform.Rotate(Vector3.up * 180);
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+        //transform.Rotate(Vector3.up * 180);
     }
 
     public void SetFeeze()

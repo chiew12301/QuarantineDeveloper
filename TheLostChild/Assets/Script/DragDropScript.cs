@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragDropScript : MonoBehaviour, IPointerDownHandler, IDragHandler, IEndDragHandler, IBeginDragHandler
+public class DragDropScript : MonoBehaviour, IPointerDownHandler, IDragHandler, IEndDragHandler, IBeginDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
 	public RectTransform rectTransform;
 	public Vector3 StartPos;
 	public CanvasGroup canvasGroup;
 	public bool isDrop = false;
 	public bool isHolding = false;
+	public bool isHovered = false;
 	public IconParentsScript parentslotscript;
 
 	private void Awake()
@@ -51,5 +52,16 @@ public class DragDropScript : MonoBehaviour, IPointerDownHandler, IDragHandler, 
 	{
 		//Debug.Log("On Pointer Down");
 	}
-	
+
+	public void OnPointerEnter(PointerEventData data)
+	{
+		Debug.Log("ok");
+		isHovered = true;
+	}
+
+	public void OnPointerExit(PointerEventData data)
+	{
+		isHovered = false;
+	}
+
 }

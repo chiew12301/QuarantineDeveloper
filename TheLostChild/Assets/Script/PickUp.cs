@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class PickUp : MonoBehaviour
+public class PickUp : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public PuzzleDrop pD;
     BoxCollider2D col2d;
@@ -42,7 +43,7 @@ public class PickUp : MonoBehaviour
     [Header("Others")]
     public MoveScriptTesting player;
     private float Distance;
-    private MouseCursor mcS;
+    public MouseCursor mcS;
     //GameObject playerMovement;
 
     public bool isShowDialogue = false;
@@ -287,6 +288,18 @@ public class PickUp : MonoBehaviour
     }
 
     void OnMouseExit()
+    {
+        mcS.setToDefaultCursor("Hover");
+        MouseisIn = false;
+    }
+
+    public void OnPointerEnter(PointerEventData data)
+    {
+        mcS.setToCursorEyes("Hover");
+        MouseisIn = true;
+    }
+
+    public void OnPointerExit(PointerEventData data)
     {
         mcS.setToDefaultCursor("Hover");
         MouseisIn = false;

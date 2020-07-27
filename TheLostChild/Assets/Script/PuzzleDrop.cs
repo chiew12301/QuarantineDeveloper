@@ -7,10 +7,14 @@ public class PuzzleDrop : MonoBehaviour
     public int counterBookDrop = 0;
     public bool isPuzzleDone = false;
 
+    public Sprite completedSprite;
+    public Sprite IncompletedSprite;
+
     //private DialogueCutscene DCS;
 
     private void Start()
     {
+        this.GetComponent<SpriteRenderer>().sprite = IncompletedSprite;
         //DCS = GameObject.Find("StartDialogueManager").GetComponent<DialogueCutscene>();
     }
 
@@ -23,6 +27,7 @@ public class PuzzleDrop : MonoBehaviour
     {
         if (counterBookDrop >= 3)
         {
+            this.GetComponent<SpriteRenderer>().sprite = completedSprite;
             isPuzzleDone = true;
             Debug.Log("Done Puzzle");
         }

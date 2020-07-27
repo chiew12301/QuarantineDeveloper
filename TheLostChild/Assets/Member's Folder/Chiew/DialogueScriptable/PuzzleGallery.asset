@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfo:
   - name: Max
-    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     cutsceneImg: {fileID: 0}
     sentences: Another display without ropes...
     isJitter: 0
   - name: Max
-    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     cutsceneImg: {fileID: 0}
     sentences: (...Oh! This one looks like grandpa's old camera!)
     isJitter: 0

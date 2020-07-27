@@ -6,6 +6,8 @@ public class VetScript : MonoBehaviour
 {
     [HideInInspector]
     public bool isCollected = false;
+    public GameObject journal;
+    private bool isGived = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,11 @@ public class VetScript : MonoBehaviour
     {
         if(isCollected == true)
         {
+            if(journal != null && isGived == false)
+            {
+                journal.GetComponent<UnlockJournalPage>().performPickup();
+                isGived = true;
+            }
             //give journal for password
         }
     }

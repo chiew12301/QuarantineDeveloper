@@ -16,26 +16,15 @@ MonoBehaviour:
   - name: Max
     portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: What relationship the Moon and the Stars have?
+    sentences: ...What kind of relationship does the Moon have with the stars?...
     isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: The answer would be... Mother and Child!
+    sentences: 'The answer should be... '
     isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
     cutsceneImg: {fileID: 0}
-    sentences: I remember reading this riddle before in a book... I asked Mom about
-      it but... she was too busy like always.
-    isJitter: 0
-  - name: ...
-    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
-    cutsceneImg: {fileID: 0}
-    sentences: '*Music Played'
-    isJitter: 0
-  - name: Max
-    portrait: {fileID: 21300000, guid: 34107d5f73c6169479feac46bd6947da, type: 3}
-    cutsceneImg: {fileID: 0}
-    sentences: I hear something from the music box in the cabinet...
+    sentences: Mother and Child!
     isJitter: 0
