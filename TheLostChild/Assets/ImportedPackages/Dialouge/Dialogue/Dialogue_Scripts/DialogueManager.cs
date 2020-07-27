@@ -436,7 +436,7 @@ public class DialogueManager : MonoBehaviour
         bubbleAnimator.SetBool("isOpen", false);
         panelAnimator.SetBool("isOpen", false);
         
-        Time.timeScale = 1.0f;
+      //  Time.timeScale = 1.0f;
         ItemObtainedScript.instance.ClosePanel();
        
     }

@@ -151,8 +151,8 @@ public class PickUp : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
             if (Item == true)
             {
-
-                Time.timeScale = 0.0001f;
+              ////////!!!!!!! commented ouyt by Eleen _ for dialogue manager to work
+              //  Time.timeScale = 0.0001f;
                 itemObtainedPanel.SetActive(true);
                 player.StopMoving();
                 Inventory.instance.addItem(item);
