@@ -2864,6 +2864,7 @@ MonoBehaviour:
   TransitionObject: {fileID: 2059342267}
   Children: {fileID: 1253646875}
   childrenSprite: {fileID: 0}
+  isCollected: 0
 --- !u!50 &131303476
 Rigidbody2D:
   serializedVersion: 4
@@ -5832,6 +5833,7 @@ MonoBehaviour:
   TransitionObject: {fileID: 1537085392}
   Children: {fileID: 566804089}
   childrenSprite: {fileID: 0}
+  isCollected: 0
 --- !u!50 &522822023
 Rigidbody2D:
   serializedVersion: 4
@@ -12805,6 +12807,7 @@ MonoBehaviour:
   TransitionObject: {fileID: 750497000}
   Children: {fileID: 1359824535}
   childrenSprite: {fileID: 0}
+  isCollected: 0
 --- !u!50 &1528615406
 Rigidbody2D:
   serializedVersion: 4
@@ -13304,6 +13307,7 @@ MonoBehaviour:
   TransitionObject: {fileID: 0}
   Children: {fileID: 381364788}
   childrenSprite: {fileID: 0}
+  isCollected: 0
 --- !u!50 &1641237402
 Rigidbody2D:
   serializedVersion: 4
@@ -13706,6 +13710,7 @@ GameObject:
   - component: {fileID: 1730794549}
   - component: {fileID: 1730794548}
   - component: {fileID: 1730794547}
+  - component: {fileID: 1730794551}
   m_Layer: 0
   m_Name: DisplayCollector (2)
   m_TagString: Untagged
@@ -13745,6 +13750,7 @@ MonoBehaviour:
   TransitionObject: {fileID: 1895083487}
   Children: {fileID: 1069965248}
   childrenSprite: {fileID: 0}
+  isCollected: 0
 --- !u!50 &1730794548
 Rigidbody2D:
   serializedVersion: 4
@@ -13842,6 +13848,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1730794551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730794545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94abcd39768b3c3469af7dba65f70861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisCollector: {fileID: 0}
 --- !u!1 &1767321758
 GameObject:
   m_ObjectHideFlags: 0
@@ -16076,12 +16095,12 @@ PrefabInstance:
     - target: {fileID: 341687085787327744, guid: 243fdb79b3c05524798022fb2143b978,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.399982
+      value: 122.2
       objectReference: {fileID: 0}
     - target: {fileID: 341687085787327744, guid: 243fdb79b3c05524798022fb2143b978,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 128.53
+      value: 39.82
       objectReference: {fileID: 0}
     - target: {fileID: 341687085787327744, guid: 243fdb79b3c05524798022fb2143b978,
         type: 3}
@@ -23904,12 +23923,12 @@ PrefabInstance:
     - target: {fileID: 3791725898869786933, guid: c19a4cfa4008cd449880bb23e939ad39,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.5
+      value: 122.099976
       objectReference: {fileID: 0}
     - target: {fileID: 3791725898869786933, guid: c19a4cfa4008cd449880bb23e939ad39,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 126.66
+      value: 37.95001
       objectReference: {fileID: 0}
     - target: {fileID: 3791725898869786933, guid: c19a4cfa4008cd449880bb23e939ad39,
         type: 3}

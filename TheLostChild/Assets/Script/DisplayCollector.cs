@@ -12,7 +12,8 @@ public class DisplayCollector : MonoBehaviour
 
     public Sprite childrenSprite;
 
-    private bool isCollected = false;
+    [HideInInspector]
+    public bool isCollected = false;
 
     private Renderer r;
     private Color newColor;
