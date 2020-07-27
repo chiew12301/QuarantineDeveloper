@@ -46,19 +46,31 @@ MonoBehaviour:
   sounds:
   - name: Moving
     clip: {fileID: 8300000, guid: e9386f1a46346aa4e8d7e2fcf205a6ad, type: 3}
-    volume: 0.431
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: BGM
     clip: {fileID: 8300000, guid: 9b6003fb38ecf3b4db113e2a5970b1a4, type: 3}
-    volume: 0.566
+    volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: PageFlip
     clip: {fileID: 8300000, guid: ba712541c4712f849b71aa50d6ddee9f, type: 3}
-    volume: 0.566
+    volume: 0.5
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  - name: MusicBox
+    clip: {fileID: 8300000, guid: 8344fcb97ff3a044083b5d895536a704, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: HeartBeat
+    clip: {fileID: 8300000, guid: f697ee27a95862b44a42a38b11a6096d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
