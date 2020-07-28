@@ -28,18 +28,35 @@ public class DialogueCutscene : MonoBehaviour
     public TextMeshProUGUI VSparagraphText;
     public bool isVSCutscenePlayed = false;
 
+    [Header("After received Hairpin")]
+    public GameObject hairpin;
+    public Dialogue firstTimePickupHairpin;
+    private bool hasTriggeredHairpinDialogue = false;
+
+    [Header("After put hairpin in display case")]
+    public GameObject hairpinInDisplayCase;
+    public Dialogue dialogueHairPinDisplay;
+    private bool hasTriggeredHairpinInDisplayCase = false;
 
     [Header("DialogueData")]
     public Dialogue dialogueMusicBox;
     public Dialogue dialogueStartScene;
+
+    //first time out lady in red
     public Dialogue dialogueCutS2;
+
+    //first time in lobby
     public Dialogue dialogueCutS3;
-    public Dialogue dialogueCutS3P2;
+   // public Dialogue dialogueCutS3P2;
+
+    //first time out lobby - enemy spawn dialogue
     public Dialogue dialogueCutS3P3;
+
+
     public Dialogue dailogueAyuLivingR; //not working
-    public Dialogue dialogueLIG;
-    public Dialogue dialogueLIG2;
-    public Dialogue dialogueLIG3;
+  //  public Dialogue dialogueLIG;
+  //  public Dialogue dialogueLIG2;
+  //  public Dialogue dialogueLIG3;
     public Dialogue dialogueRiddleP1;
     // in header dialogue data
     public Dialogue dialogueHairPin;
@@ -52,13 +69,13 @@ public class DialogueCutscene : MonoBehaviour
     public bool isExitLobby = false;
     public bool isCutS2Played = false;
     public bool isCutS3PlayedP1 = false;
-    public bool isCutS3PlayedP2 = false;
+  //  public bool isCutS3PlayedP2 = false;
     public bool isCutS3PlayedP3 = false;
     public bool isCutSMemPlayed = false;
     public bool isCutSAyuLivingRPlayed = false;
-    public bool isCutSLIG = false;
-    public bool isCutSLIG2 = false;
-    public bool isCutSLIG3 = false;
+ //   public bool isCutSLIG = false;
+ //   public bool isCutSLIG2 = false;
+ //   public bool isCutSLIG3 = false;
     public bool isRiddleP1 = false;
 
     //in header boolean
@@ -115,7 +132,7 @@ public class DialogueCutscene : MonoBehaviour
         }
         mainCam = GameObject.Find("Main Camera").GetComponent<CameraScript>();
 
-        JournalAuto_Folder.SetActive(true);
+       
     }
 
     private void Update()
@@ -142,7 +159,30 @@ public class DialogueCutscene : MonoBehaviour
             VSObj.SetActive(true);
             PreloadCutsceneManager.instance.StartParagraph(VSObj, VSparagraph, VSparagraphText, null);
             isVSCutscenePlayed = true;
+
+            //for new note - journal
+            JournalAuto_Folder.SetActive(true);
         }
+
+        ////first time receive hairpin
+        if (player.transform.position.x >= -11 && player.transform.position.x <= 8)
+        {
+            if (player.transform.position.y >= 1  && player.transform.position.y <= 2)
+            {
+                if (hasTriggeredHairpinDialogue == false)
+                { FirstTimeHairPin(); }
+            }
+        }
+
+        //firtime put hairpin in
+        if(hairpinInDisplayCase.GetComponent<DisplayCollector>().isCollected == true )
+        {
+            if(hasTriggeredHairpinInDisplayCase == false)
+            {
+                HairPininCase();
+            }
+        }
+
 
         if (player.transform.position.x >= LeftLocation2.x && player.transform.position.x <= RightLocation2.x)
         {
@@ -178,29 +218,29 @@ public class DialogueCutscene : MonoBehaviour
             CutScene3ExitLobby();
         }
 
-        //in checkTriggerCutscene()
-        if (pickedUpHairPin == true)
-        {
-            if (player.transform.position.x >= LeftLocationLIG.x && player.transform.position.x <= RightLocationLIG.x)
-            {
-                if (player.transform.position.y <= LeftLocationLIG.y && player.transform.position.y >= RightLocationLIG.y)
-                {
-                    HairPinCutScene();
-                }
-            }
-        }
+        //////in checkTriggerCutscene()
+        ////if (pickedUpHairPin == true)
+        ////{
+        ////    if (player.transform.position.x >= LeftLocationLIG.x && player.transform.position.x <= RightLocationLIG.x)
+        ////    {
+        ////        if (player.transform.position.y <= LeftLocationLIG.y && player.transform.position.y >= RightLocationLIG.y)
+        ////        {
+        ////            HairPinCutScene();
+        ////        }
+        ////    }
+        ////}
 
-        //check goinfront of ayu picture
-        if(isHairPin == true)
-        {
-            if (player.transform.position.x >= LeftAyuPainting.x && player.transform.position.x <= RightAyuPainting.x)
-            {
-                if (player.transform.position.y <= LeftAyuPainting.y && player.transform.position.y >= RightAyuPainting.y)
-                {
-                    CutSceneLIG2();
-                }
-            }
-        }
+        ////check goinfront of ayu picture
+        //if(isHairPin == true)
+        //{
+        //    if (player.transform.position.x >= LeftAyuPainting.x && player.transform.position.x <= RightAyuPainting.x)
+        //    {
+        //        if (player.transform.position.y <= LeftAyuPainting.y && player.transform.position.y >= RightAyuPainting.y)
+        //        {
+        //            CutSceneLIG2();
+        //        }
+        //    }
+        //}
 
     }
 
@@ -222,7 +262,21 @@ public class DialogueCutscene : MonoBehaviour
         //    }
         //}
     }
+    //FirstTimeHairPin
+    public void FirstTimeHairPin()
+    {
+        if (hairpin.activeSelf == false && hasTriggeredHairpinDialogue == false)
+        {
+            dialogueDisplay.SetActive(true);
+            DialogueManager.instance.StartDialogue(firstTimePickupHairpin);
+            player.GetComponent<MoveScriptTesting>().StopMoving();
+            hasTriggeredHairpinDialogue = true;
+        }
+        else { return; }
 
+    }
+
+    //first time out lady in red
     public void CutScene2()
     {
         if (isCutS2Played == false)
@@ -235,6 +289,7 @@ public class DialogueCutscene : MonoBehaviour
         else { return; }
     }
 
+    //first time in lobby
     public void CutScene3()
     {
         if (isCutS3PlayedP1 == false)
@@ -248,17 +303,19 @@ public class DialogueCutscene : MonoBehaviour
         
     }
 
+
+    //first time out lobby -  enemy spawn 
     public void CutScene3ExitLobby()
     {
-        
-        if (isCutS3PlayedP2 == false)
-        {
-            dialogueDisplay.SetActive(true);
-            DialogueManager.instance.StartDialogue(dialogueCutS3P2);
-            player.GetComponent<MoveScriptTesting>().StopMoving();
-            isCutS3PlayedP2 = true;
-        }
-        if (isCutS3PlayedP3 == false && isCutS3PlayedP2 == true)
+
+        //if (isCutS3PlayedP2 == false)
+        //{
+        //    dialogueDisplay.SetActive(true);
+        //    DialogueManager.instance.StartDialogue(dialogueCutS3P2);
+        //    player.GetComponent<MoveScriptTesting>().StopMoving();
+        //    isCutS3PlayedP2 = true;
+        //}
+        if (isCutS3PlayedP3 == false && MainEnemyScript.enableES == true )//&& isCutS3PlayedP2 == true)
         {
             dialogueDisplay.SetActive(true);
             DialogueManager.instance.StartDialogue(dialogueCutS3P3);
@@ -267,6 +324,19 @@ public class DialogueCutscene : MonoBehaviour
         }
         else { return; }
         GetJournalNoteAuto.getNote5 = true;
+    }
+
+    //first time put hairpin in display case
+    public void HairPininCase()
+    {
+        if (hasTriggeredHairpinInDisplayCase == false)
+        {
+            dialogueDisplay.SetActive(true);
+            DialogueManager.instance.StartDialogue(dialogueHairPinDisplay);
+            player.GetComponent<MoveScriptTesting>().StopMoving();
+            hasTriggeredHairpinInDisplayCase = true;
+        }
+        else { return; }
     }
 
     public void CutSceneLR()
@@ -281,72 +351,74 @@ public class DialogueCutscene : MonoBehaviour
         else { return; }
     }
 
-    public void CutSceneLIG()
-    {
-        if (isCutSLIG == false)
-        {
-            dialogueDisplay.SetActive(true);
-            DialogueManager.instance.StartDialogue(dialogueLIG);
-            player.GetComponent<MoveScriptTesting>().StopMoving();
-            isCutSLIG = true;
-        }
-        else { return; }
-    }
+    //public void CutSceneLIG()
+    //{
+    //    if (isCutSLIG == false)
+    //    {
+    //        dialogueDisplay.SetActive(true);
+    //        DialogueManager.instance.StartDialogue(dialogueLIG);
+    //        player.GetComponent<MoveScriptTesting>().StopMoving();
+    //        isCutSLIG = true;
+    //    }
+    //    else { return; }
+    //}
 
-    public void CutSceneLIG2()
-    {
-        if (isCutSLIG2 == false)
-        {
-            dialogueDisplay.SetActive(true);
-            DialogueManager.instance.StartDialogue(dialogueLIG2);
-            player.GetComponent<MoveScriptTesting>().StopMoving();
-            isCutSLIG2 = true;
-            CutSceneLIG3();
-        }
-        else { return; }
-    }
+    //public void CutSceneLIG2()
+    //{
+    //    if (isCutSLIG2 == false)
+    //    {
+    //        dialogueDisplay.SetActive(true);
+    //        DialogueManager.instance.StartDialogue(dialogueLIG2);
+    //        player.GetComponent<MoveScriptTesting>().StopMoving();
+    //        isCutSLIG2 = true;
+    //        CutSceneLIG3();
+    //    }
+    //    else { return; }
+    //}
 
-    public void CutSceneLIG3()
-    {
-        if (isCutSLIG3 == false)
-        {
-            dialogueDisplay.SetActive(true);
-            DialogueManager.instance.StartDialogue(dialogueLIG3);
-            player.GetComponent<MoveScriptTesting>().StopMoving();
-            isCutSLIG3 = true;
-        }
-        else { return; }
-    }
+    //public void CutSceneLIG3()
+    //{
+    //    if (isCutSLIG3 == false)
+    //    {
+    //        dialogueDisplay.SetActive(true);
+    //        DialogueManager.instance.StartDialogue(dialogueLIG3);
+    //        player.GetComponent<MoveScriptTesting>().StopMoving();
+    //        isCutSLIG3 = true;
+    //    }
+    //    else { return; }
+    //}
 
 
-    //add bfr ienumerator
-    public void LIRwithHairPin()
-    {
-        if (pickedUpHairPin == false)
-        {
-            Debug.Log("PickedHairpin");
-            pickedUpHairPin = true;
-        }
-        else
-        {
-            return;
-        }
-    }
-    public void HairPinCutScene()
-    {
-        if (isHairPin == false)
-        {
-            dialogueDisplay.SetActive(true);
-            DialogueManager.instance.StartDialogue(dialogueHairPin);
-            player.GetComponent<MoveScriptTesting>().StopMoving();
-            isHairPin = true;
-        }
-        else
-        {
-            return;
-        }
+    ////Picked up Hairpin
+    //public void LIRwithHairPin()
+    //{
+    //    if (pickedUpHairPin == false)
+    //    {
+    //        Debug.Log("PickedHairpin");
+    //        pickedUpHairPin = true;
+    //    }
+    //    else
+    //    {
+    //        return;
+    //    }
+    //}
 
-    }
+    ////to take out
+    //public void HairPinCutScene()
+    //{
+    //    if (isHairPin == false)
+    //    {
+    //        dialogueDisplay.SetActive(true);
+    //        DialogueManager.instance.StartDialogue(dialogueHairPin);
+    //        player.GetComponent<MoveScriptTesting>().StopMoving();
+    //        isHairPin = true;
+    //    }
+    //    else
+    //    {
+    //        return;
+    //    }
+
+    //}
 
     //music box
     public void getMusicBox()

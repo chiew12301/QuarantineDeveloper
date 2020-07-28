@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
+  m_Name: FirstTimeGetHairPin
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - name: Unknown Voice
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "Help me\u2026"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 8515a77517b4d5248a6a25795438c83c, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: " \u2026! (It\u2019s that voice again!)"
+    isJitter: 0
+  - name: Unknown Voice
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "Please\u2026. help me\u2026."
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 8515a77517b4d5248a6a25795438c83c, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: Hello? Who are you?
+    isJitter: 0
+  - name: Unknown Voice
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "The hairpin\u2026.it\u2019s important to me\u2026.. Return it to
+      the display case\u2026."
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "...Return it\u2026? This is yours\u2026?"
+    isJitter: 0
+  - name: Unknown Voice
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: ...
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "I don\u2019t hear anything anymore...)"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: (Hmm...I think I saw display cases in the Lady in Red Gallery. I should
+      go back there.)
+    isJitter: 0
