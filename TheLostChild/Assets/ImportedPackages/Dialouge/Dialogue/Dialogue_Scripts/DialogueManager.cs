@@ -9,25 +9,47 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
+
     public Image dialoguePortrait;
     public Image cutscenePanel;
+
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI bubbleText;
+
+    //so that the GO wont block programmers view when coding
     public GameObject DialogueUI;
 
     private Queue<Dialogue.Info> dialogueInfo = new Queue<Dialogue.Info>();
     private Queue<BubbleSpeech.Info> bubbleInfo = new Queue<BubbleSpeech.Info>();
-   
+
+    //this for obj that has diff lines when second interaction (bubble)
     private BubbleSpeech tempBubble;
 
+    public bool isTalking;
     private bool isBubble;
     public bool isDialogueTrigger = false;
     public bool isDialogueEnd = false;
+
+    //to check player click in order to instantly display the sentence (work with IEnumerator (dialogue ver))
+    private bool hasClicked;
+    private float ClickTimer = 0.0f;
+    private float ClickDelay = 0.1f;
+
+    //to check when the sentence end
+    private int sentenceMaxLength;
+    private int sentenceCurrentLength;
+    private bool isSentenceEnd;
+
+    //open close text boxes
     public Animator dialogueAnimator;
     public Animator bubbleAnimator;
     public Animator panelAnimator;
 
+    //to stop player moving
+    private MoveScriptTesting playerScript;
+
+    //for jittering and extra custom effects -- scroll btm
     private List<SpecialCommand> specialCommands;
     private VertexJitter[] jitterScript;
 
@@ -38,11 +60,59 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         instance = this;
+
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<MoveScriptTesting>();
     }
 
     void Start()
     {
         DialogueUI.SetActive(true);
+    }
+
+    void Update()
+    {
+        playerScript.isStop = isTalking;
+        if (isTalking == true)
+        {
+            playerScript.StopMoving();
+        }
+
+        //check if player click while sentence haven't end, work with IEnumerator(dialogue ver)
+        if (Input.GetMouseButtonDown(0) && isSentenceEnd == false)
+        {
+            hasClicked = true;
+        }
+
+        if (hasClicked == true)
+        {
+            if (ClickTimer >= ClickDelay)
+            {
+                hasClicked = false;
+                ClickTimer = 0.0f;
+            }
+            else
+            {
+                ClickTimer += Time.deltaTime;
+            }
+        }
+
+        //check to see if reached the end of the sentence, work with IEnumerator(dialogue ver)
+        if (sentenceCurrentLength != 0 && sentenceMaxLength != 0)
+        {
+            if (sentenceCurrentLength >= sentenceMaxLength)
+            {
+                isSentenceEnd = true;
+            }
+        }
+
+        // if end of sentence reached, and player clicks again
+        if (isSentenceEnd == true && Input.GetMouseButtonDown(0))
+        {
+            sentenceCurrentLength = 0;
+            sentenceMaxLength = 0;
+            DisplayNextSentence();
+            isSentenceEnd = false;
+        }
     }
 
     public void ResetDialogueChange()
@@ -53,31 +123,44 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         Debug.Log("Start dialog");
+
+        isTalking = true;
         isBubble = false;
+        isDialogueEnd = false;
+
+        //clear out previously queued lines
+        dialogueInfo.Clear();
+
         dialogueAnimator.SetBool("isOpen", true);
         panelAnimator.SetBool("isOpen", true);
-        dialogueInfo.Clear();
+        
 
         //for each seperate info(name, portrait, dialogue text) in the list of information(dialogueInfo)....
         foreach (Dialogue.Info info in dialogue.dialogueInfo)
         {
             dialogueInfo.Enqueue(info);
         }
+
+        ////to display the firstmost sentence, or not it will load the default dialogue text placeholder
         DisplayNextSentence();
 
     }
 
     public void StartBubble(BubbleSpeech bubble)
     {
+        isTalking = true;
         isBubble = true;
+
+        //clear out previously queued lines
+        bubbleInfo.Clear();
+
+        //open the img
         bubbleAnimator.SetBool("isOpen", true);
         panelAnimator.SetBool("isOpen", true);
         tempBubble = bubble;
-     
-        bubbleInfo.Clear();
 
-            
-            if (bubble.onlyOnce)
+        //if only want to trigger once      
+        if (bubble.onlyOnce)
             {
                 if (bubble.alreadyTriggered)
                 {
@@ -108,14 +191,16 @@ public class DialogueManager : MonoBehaviour
 
                 }
             }
+
+        //to display the firstmost sentence
         DisplayNextSentence();
 
     }
 
+    //Display next is shared by both bubble and dialogue
     public void DisplayNextSentence()
     {
-        Time.timeScale = 0f;
-        if (isBubble)
+        if (isBubble) // if it is bubble box
         {
             if (bubbleInfo.Count == 0)
             {
@@ -124,15 +209,15 @@ public class DialogueManager : MonoBehaviour
             }
 
             BubbleSpeech.Info info = bubbleInfo.Dequeue();
-
             bubbleText.text = info.sentences;
             StopAllCoroutines();
             StartCoroutine(TypeSentence(info));
         }
-        else
+        else // if it is dialogue box
         {
             if (dialogueInfo.Count == 0)
             {
+                isDialogueEnd = true;
                 EndDialogue();
                 return;
             }
@@ -142,13 +227,14 @@ public class DialogueManager : MonoBehaviour
             dialoguePortrait.sprite = info.portrait;
             cutscenePanel.sprite = info.cutsceneImg;
             dialogueText.text = info.sentences;
-         
+
+            Debug.Log(info.sentences);
             StopAllCoroutines();
             StartCoroutine(TypeSceneDialogue(info));
         }
-        isDialogueEnd = true;
     }
 
+    //typewriting effect for bubble
     IEnumerator TypeSentence(BubbleSpeech.Info info)
     {
         bubbleText.text = "";
@@ -156,6 +242,10 @@ public class DialogueManager : MonoBehaviour
         specialCommands = BuildSpecialCommandList(info.sentences);
         string stripText = StripAllCommands(info.sentences);
         int counter = 0; //to make typewriter effect
+
+        sentenceMaxLength = stripText.Length;
+
+        yield return new WaitForSeconds(0.1f);
 
         //sentence without the {} special commands
         while (i < stripText.Length)
@@ -168,37 +258,82 @@ public class DialogueManager : MonoBehaviour
             i++;
         }
 
-        //sentence  without the <> 
-        while(true)
+        if (hasClicked == true)
         {
-            if(Input.GetMouseButtonDown(0))
-            {
-                yield return null;
-            }
-            bubbleText.maxVisibleCharacters = counter;
-            counter += 1;
+            sentenceCurrentLength = stripText.Length;
+        }
 
-            if (info.isJitter)
+        //sentence  without the <> 
+        while (true)
+        {
+            //to see sentence reach end or not   
+            sentenceCurrentLength = counter;
+            bubbleText.maxVisibleCharacters = counter;
+
+            //wat is this -- i didnt add this -Eleen
+            //if (Input.GetMouseButtonDown(0))
+            //{
+            //    yield return null;
+            //}
+            if (hasClicked == true)
             {
-                jitterScript = Object.FindObjectsOfType<VertexJitter>();
-                foreach (VertexJitter jitter in jitterScript)
+                sentenceCurrentLength = stripText.Length;
+                bubbleText.maxVisibleCharacters = sentenceCurrentLength;
+
+                if (info.isJitter)
                 {
-                    jitter.Start();
+                    jitterScript = Object.FindObjectsOfType<VertexJitter>();
+                    foreach (VertexJitter jitter in jitterScript)
+                    {
+                        jitter.Start();
+                    }
                 }
+                else
+                {
+                    jitterScript = Object.FindObjectsOfType<VertexJitter>();
+                    foreach (VertexJitter jitter in jitterScript)
+                    {
+                        jitter.StopAllCoroutines();
+                    }
+                }
+                yield break;
             }
             else
             {
-                jitterScript = Object.FindObjectsOfType<VertexJitter>();
-                foreach (VertexJitter jitter in jitterScript)
+                bubbleText.maxVisibleCharacters = counter;
+
+                if (counter >= stripText.Length)
                 {
-                    jitter.StopAllCoroutines();
+                    counter = stripText.Length;
                 }
+                else
+                {
+                    counter += 1;
+                }
+
+                if (info.isJitter)
+                {
+                    jitterScript = Object.FindObjectsOfType<VertexJitter>();
+                    foreach (VertexJitter jitter in jitterScript)
+                    {
+                        jitter.Start();
+                    }
+                }
+                else
+                {
+                    jitterScript = Object.FindObjectsOfType<VertexJitter>();
+                    foreach (VertexJitter jitter in jitterScript)
+                    {
+                        jitter.StopAllCoroutines();
+                    }
+                }
+
+                yield return null;
             }
-           
-            yield return null;
         }
     }
 
+    //typewriting effect for dialogue box
     IEnumerator TypeSceneDialogue(Dialogue.Info info)
     {
         dialogueText.text = "";
@@ -207,6 +342,11 @@ public class DialogueManager : MonoBehaviour
         string stripText = StripAllCommands(info.sentences);
         int counter = 0; //to make typewriter effect
 
+        sentenceMaxLength = stripText.Length;
+        //txt spd 
+        float finalTxtSpd = info.textSpeed / (chgTextSpeed.instance.changedTextSpeed * 4);
+
+        yield return new WaitForSeconds(0.1f);
 
         //sentence without the {} special commands
         while (i < stripText.Length)
@@ -219,42 +359,92 @@ public class DialogueManager : MonoBehaviour
             i++;
         }
 
+        if (hasClicked == true)
+        {
+            sentenceCurrentLength = stripText.Length;
+        }
+
         //sentence  without the <> 
         while (true)
         {
+            //to see sentence reach end or not   
+            sentenceCurrentLength = counter;
             dialogueText.maxVisibleCharacters = counter;
-            counter += 1;
 
-            if (info.isJitter)
+            if (hasClicked == true)
             {
-                jitterScript = Object.FindObjectsOfType<VertexJitter>();
-                foreach (VertexJitter jitter in jitterScript)
+                sentenceCurrentLength = stripText.Length;
+                dialogueText.maxVisibleCharacters = sentenceCurrentLength;
+
+                if (info.isJitter)
                 {
-                    jitter.Start();
+                    jitterScript = Object.FindObjectsOfType<VertexJitter>();
+                    foreach (VertexJitter jitter in jitterScript)
+                    {
+                        jitter.Start();
+                    }
                 }
+                else
+                {
+                    jitterScript = Object.FindObjectsOfType<VertexJitter>();
+                    foreach (VertexJitter jitter in jitterScript)
+                    {
+                        jitter.StopAllCoroutines();
+                    }
+                }
+                yield break;
             }
             else
             {
-                jitterScript = Object.FindObjectsOfType<VertexJitter>();
-                foreach (VertexJitter jitter in jitterScript)
+
+                dialogueText.maxVisibleCharacters = counter;
+
+                if (counter >= stripText.Length)
                 {
-                    jitter.StopAllCoroutines();
+                    counter = stripText.Length;
                 }
+                else
+                {
+                    counter += 1;
+                }
+
+                if (info.isJitter)
+                {
+                    jitterScript = Object.FindObjectsOfType<VertexJitter>();
+                    foreach (VertexJitter jitter in jitterScript)
+                    {
+                        jitter.Start();
+                    }
+                }
+                else
+                {
+                    jitterScript = Object.FindObjectsOfType<VertexJitter>();
+                    foreach (VertexJitter jitter in jitterScript)
+                    {
+                        jitter.StopAllCoroutines();
+                    }
+                }
+                yield return new WaitForSeconds(finalTxtSpd);
             }
-            
-            yield return null;
         }
     }
 
-
+    //ends the dialogue
     void EndDialogue()
     {
+        isTalking = false;
         dialogueAnimator.SetBool("isOpen", false);
         bubbleAnimator.SetBool("isOpen", false);
         panelAnimator.SetBool("isOpen", false);
-        Time.timeScale = 1.0f;
+        
+      //  Time.timeScale = 1.0f;
         ItemObtainedScript.instance.ClosePanel();
-       
+
+        if (DialogueCutscene.instance.isStartConversation == true)
+        {
+            DialogueCutscene.instance.isStartConversationEnd = true;
+        }
+
     }
 
     //!!! Extra fancy stuff : colours and effects

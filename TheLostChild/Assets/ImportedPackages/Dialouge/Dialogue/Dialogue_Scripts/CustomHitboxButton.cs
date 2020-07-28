@@ -7,6 +7,6 @@ public class CustomHitboxButton : MonoBehaviour
 {
     void Start()
     {
-        this.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.9f;
+            this.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.9f;
     }
 }

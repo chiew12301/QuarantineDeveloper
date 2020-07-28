@@ -7,11 +7,13 @@ public class DisplayCollector : MonoBehaviour
     [Header("Game Object")]
     public GameObject ItemCollect;
     public GameObject BarrierToUnlock;
+    public GameObject TransitionObject;
     public GameObject Children;
 
     public Sprite childrenSprite;
 
-    private bool isCollected = false;
+    [HideInInspector]
+    public bool isCollected = false;
 
     private Renderer r;
     private Color newColor;
@@ -22,6 +24,10 @@ public class DisplayCollector : MonoBehaviour
         newColor = Children.GetComponent<SpriteRenderer>().material.color;
         newColor.a = 0;
         Children.GetComponent<SpriteRenderer>().material.color = newColor;
+        if(TransitionObject != null)
+        {
+            TransitionObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -40,6 +46,10 @@ public class DisplayCollector : MonoBehaviour
             newColor = Children.GetComponent<SpriteRenderer>().material.color;
             newColor.a = 1;
             Children.GetComponent<SpriteRenderer>().material.color = newColor;
+            if(TransitionObject != null)
+            {
+                TransitionObject.SetActive(true);
+            }
             BarrierToUnlock.SetActive(false);
         }
     }

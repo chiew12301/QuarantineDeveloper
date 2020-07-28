@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oriOnlyOnce: 0
   bubbleInfo:
-  - sentences: My family use to had these things when we had our dinners.
-    isJitter: 0
-  - sentences: ' Now everyone sold it off just to survive in this current time...'
+  - sentences: These were probably last of its kind...
     isJitter: 0
   changedInfo: []

@@ -32,6 +32,11 @@ public class UnlockJournalPage : MonoBehaviour
     [Header("Journal Pages To Unlock [2 - 12]")]
     public int PageNumber = 0;
 
+    [Header("Notify Panel")]
+    public bool EnablePanel = true;
+    public GameObject NotifyPanel;
+    
+
     //public static int getPageAuto_PageNumber;
 
     int a = 0;
@@ -71,7 +76,8 @@ public class UnlockJournalPage : MonoBehaviour
 
     public void performPickup()
     {
-
+        NotifyPanel.SetActive(true);
+        //Invoke("DisableNotifyPanel", 5);
 
 
         if (isSecondRound)
@@ -232,5 +238,10 @@ public class UnlockJournalPage : MonoBehaviour
     void OnMouseExit()
     {
         MouseisIn = false;
+    }
+
+    void DisableNotifyPanel()
+    {
+        NotifyPanel.SetActive(false);
     }
 }

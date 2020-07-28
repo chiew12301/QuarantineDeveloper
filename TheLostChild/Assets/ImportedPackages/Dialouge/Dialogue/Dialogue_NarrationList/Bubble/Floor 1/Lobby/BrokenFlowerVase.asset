@@ -14,12 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oriOnlyOnce: 1
   bubbleInfo:
-  - sentences: Oh no, the flower vase!
-    isJitter: 0
-  - sentences: Who did this? I should pick it up...
-    isJitter: 0
-  - sentences: Wait what's this inside the flower vase?
-    isJitter: 0
-  - sentences: ' A hairpin?'
+  - sentences: (Looks like the vase was dropped on purpose.)
     isJitter: 0
   changedInfo: []

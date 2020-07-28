@@ -30,6 +30,10 @@ public class SetMapJournal : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public TransferPlayer tpScript;
 
+    [Header("Notify Panel")]
+    public bool EnablePanel = true;
+    public GameObject NotifyPanelMap;
+
     private void Awake()
     {
         if (bubble)
@@ -63,6 +67,7 @@ public class SetMapJournal : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void TriggerDialogueSpeech()
     {
+        NotifyPanelMap.SetActive(true);
         MapJournalTabBig.SetActive(true);
         MapJournalTabSmall.SetActive(true);
         MapIsAvailable = true;

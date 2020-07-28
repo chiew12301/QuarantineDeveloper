@@ -12,6 +12,7 @@ public class Dialogue : ScriptableObject
         public string name;
         public Sprite portrait;
         public Sprite cutsceneImg;
+        public float textSpeed = 0.1f;
         [TextArea(1, 10)]
         public string sentences;
         public bool isJitter;

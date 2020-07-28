@@ -21,9 +21,10 @@ public class newGame : MonoBehaviour
     // Update is called once per frame
     public void newStart()
     {
-        textLoading.gameObject.SetActive(true);
+        //textLoading.gameObject.SetActive(true);
         //SceneManager.LoadScene(firstScene);
-        StartCoroutine(LoadLevel());
+        //StartCoroutine(LoadLevel());
+        SceneManager.LoadScene("Loading Scene");
     }
 
     IEnumerator LoadLevel()

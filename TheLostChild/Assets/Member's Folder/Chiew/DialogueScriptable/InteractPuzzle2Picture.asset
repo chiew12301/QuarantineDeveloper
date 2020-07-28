@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oriOnlyOnce: 0
   bubbleInfo:
-  - sentences: (Is just some historic picture...)
-    isJitter: 0
-  - sentences: (Nothing much...)
+  - sentences: (...These are war photos...)
     isJitter: 0
   changedInfo: []

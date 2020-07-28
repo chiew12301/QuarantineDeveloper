@@ -10,6 +10,9 @@ public class JournalScript : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
+    public GameObject NoteNotifyPanel;
+    public GameObject MapNotifyPanel;
+
     public GameObject []Notes;
 
     [Header("Buttons")]
@@ -404,9 +407,11 @@ public class JournalScript : MonoBehaviour
         JournalButton.interactable = true;
     }
 
+    
     public void OpenJournal()
     {
-
+        NoteNotifyPanel.SetActive(false);
+        MapNotifyPanel.SetActive(false);
         OpenNoteTab();
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0.0001f;

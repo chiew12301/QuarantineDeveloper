@@ -35,6 +35,7 @@ public class ItemObtainedScript : MonoBehaviour
         tempItemSprite = Inventory.saveditemSprite;
         itemImage.sprite = tempItemSprite;
 
+        ////////!!!!!!! timescale commented ouyt by Eleen _ for dialogue manager to work
         //Time.timeScale = 0.001f;                                      - Bug for black screen and player unable to move
         //player.GetComponent<MoveScriptTesting>().StopMoving();
     }

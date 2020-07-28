@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948ceb2176cb4cd43bfdea7a1c011b89, type: 3}
   m_Name: LadyInRed
   m_EditorClassIdentifier: 
-  oriOnlyOnce: 1
+  oriOnlyOnce: 0
   bubbleInfo:
   - sentences: "It\u2019s the infamous Lady in Red painting."
     isJitter: 0

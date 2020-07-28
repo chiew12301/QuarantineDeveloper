@@ -59,8 +59,11 @@ public class DialogueTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         if (isDialogTrigger == true)
         {
-            Debug.Log("Triggered dialog");
-            DialogueManager.instance.StartDialogue(dialogue);
+            if (isNear)
+            {
+                Debug.Log("Triggered dialog");
+                DialogueManager.instance.StartDialogue(dialogue);
+            }
         }
     }
 

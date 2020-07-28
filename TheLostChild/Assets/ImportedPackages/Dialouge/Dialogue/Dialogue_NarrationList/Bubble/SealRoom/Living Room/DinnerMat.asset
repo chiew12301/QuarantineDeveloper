@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oriOnlyOnce: 0
   bubbleInfo:
-  - sentences: (Ops! Better not step on someone's little feast..)
+  - sentences: (...! ...Better not step on someone else's feast..)
     isJitter: 0
   changedInfo: []

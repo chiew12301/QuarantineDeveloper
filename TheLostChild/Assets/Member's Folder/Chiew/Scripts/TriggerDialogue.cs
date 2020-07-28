@@ -79,12 +79,22 @@ public class TriggerDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExit
                         item1.GetComponent<PickUp>().performPickup();
                         isPicked = true;
                     }
+                    if(item1.GetComponent<MusicBoxSwitchSceneScript>() != null)
+                    {
+                        item1.GetComponent<MusicBoxSwitchSceneScript>().performPickup();
+                        isPicked = true;
+                    }
                 }
                 if (item2 != null)
                 {
                     if (item2.GetComponent<PickUp>() != null)
                     {
                         item2.GetComponent<PickUp>().performPickup();
+                        isPicked = true;
+                    }
+                    if (item2.GetComponent<MusicBoxSwitchSceneScript>() != null)
+                    {
+                        item2.GetComponent<MusicBoxSwitchSceneScript>().performPickup();
                         isPicked = true;
                     }
                 }
@@ -119,11 +129,16 @@ public class TriggerDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExit
             DialogueManager.instance.StartBubble(bubble);
             if (isPicked == false)
             {
-                if (item1 != null)
+               if (item1 != null)
                 {
                     if (item1.GetComponent<PickUp>() != null)
                     {
                         item1.GetComponent<PickUp>().performPickup();
+                        isPicked = true;
+                    }
+                    if(item1.GetComponent<MusicBoxSwitchSceneScript>() != null)
+                    {
+                        item1.GetComponent<MusicBoxSwitchSceneScript>().performPickup();
                         isPicked = true;
                     }
                 }
@@ -132,6 +147,11 @@ public class TriggerDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExit
                     if (item2.GetComponent<PickUp>() != null)
                     {
                         item2.GetComponent<PickUp>().performPickup();
+                        isPicked = true;
+                    }
+                    if (item2.GetComponent<MusicBoxSwitchSceneScript>() != null)
+                    {
+                        item2.GetComponent<MusicBoxSwitchSceneScript>().performPickup();
                         isPicked = true;
                     }
                 }

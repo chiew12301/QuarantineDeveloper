@@ -9,13 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 948ceb2176cb4cd43bfdea7a1c011b89, type: 3}
+  m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
   m_Name: OldPhotograph
   m_EditorClassIdentifier: 
-  oriOnlyOnce: 1
-  bubbleInfo:
-  - sentences: I feel like...this photograph is telling me something...
+  dialogueInfo:
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "(Weird that there aren\u2019t any ropes here\u2026)"
     isJitter: 0
-  - sentences: ...I feel like I should touch it....
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "(...Hm...since they\u2019re technically not real, no harm in touching
+      the displays?)"
     isJitter: 0
-  changedInfo: []
