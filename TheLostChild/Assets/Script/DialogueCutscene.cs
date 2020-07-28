@@ -117,7 +117,7 @@ public class DialogueCutscene : MonoBehaviour
     private void Start()
     {
         //starting cutscene
-        /*if (isStartCutScenePlayed == false)
+        if (isStartCutScenePlayed == false)
         {
             OPObj.SetActive(true);
             PreloadCutsceneManager.instance.StartParagraph(OPObj, OPparagraph, OPparagraphText, picture);
@@ -130,7 +130,7 @@ public class DialogueCutscene : MonoBehaviour
         {
             return;
         }
-        mainCam = GameObject.Find("Main Camera").GetComponent<CameraScript>();*/
+        mainCam = GameObject.Find("Main Camera").GetComponent<CameraScript>();
 
        
     }
