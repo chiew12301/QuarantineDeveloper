@@ -57,7 +57,7 @@ public class Inventory : MonoBehaviour
         }
         if (i.name == "Hairpin") //change to the hairpin name
         {
-            FindObjectOfType<DialogueCutscene>().LIRwithHairPin();
+      //      FindObjectOfType<DialogueCutscene>().LIRwithHairPin();
         }
 
         //Debug.Log("Item Get");

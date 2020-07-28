@@ -208,4 +208,9 @@ public class Puzzle1Script_3 : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         mcs.setToDefaultCursor("Hover");
     }
+
+
+
+
+    
 }

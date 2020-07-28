@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
+  m_Name: FirstTimeinSealRoom1
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: ...! (Oh god where am I now?)
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: You found the first seal.
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: Ayu? Is this part of the dimension? I can hear you again.
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "Don\u2019t worry...the plate you touched in the museum brought you
+      into one of my memories."
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: 'I see... '
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "There\u2019s something here you need to retrieve for me...that is
+      all I can tell you."
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: Like the hairpin? You want me to find something like that here?
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: Yes. When you find the items, bring it back to the display cases.
+      I can only be freed when all of them are filled.
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "<i> \u2026I understand.</i>"
+    isJitter: 0

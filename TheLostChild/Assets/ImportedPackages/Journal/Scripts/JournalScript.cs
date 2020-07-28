@@ -469,11 +469,9 @@ public class JournalScript : MonoBehaviour
         SettingsTab.SetActive(true);
         SettingsTabBig.SetActive(false);
 
-        if (SetMapJournal.MapIsAvailable == true)
-        {
             MapTab.SetActive(false);
             MapTabBig.SetActive(true);
-        }
+        
             
         NoteDetails.SetActive(false);
         SettingsDetails.SetActive(false);
