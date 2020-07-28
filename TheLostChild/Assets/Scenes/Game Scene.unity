@@ -3401,7 +3401,7 @@ MonoBehaviour:
   dialogue: {fileID: 11400000, guid: 33f73b3b4570cdf459a172e5378afe90, type: 2}
   bubble: {fileID: 0}
   isDialogTrigger: 1
-  item1: {fileID: 109885692}
+  item1: {fileID: 3355301152766675858}
   item2: {fileID: 0}
   journal1: {fileID: 875205547}
   journal2: {fileID: 0}
@@ -25550,7 +25550,7 @@ PrefabInstance:
     - target: {fileID: 3791725898869786933, guid: c19a4cfa4008cd449880bb23e939ad39,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.17
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 3791725898869786933, guid: c19a4cfa4008cd449880bb23e939ad39,
         type: 3}
