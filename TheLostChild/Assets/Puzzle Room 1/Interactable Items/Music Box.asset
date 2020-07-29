@@ -16,6 +16,6 @@ MonoBehaviour:
   name: Music Box
   desc: A music box
   itemType: 5
-  itemPrefab: {fileID: 5689928041490574088, guid: cde0b2089166f454198b2c76b2400362,
+  itemPrefab: {fileID: 3355301154141978493, guid: 7e00b2b84fad68f409532d54a2256a34,
     type: 3}
   isFull: 0
