@@ -36,7 +36,7 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-
+        animator.keepAnimatorControllerStateOnDisable = true;
         //Patrol 
         //leftWayPoint = GameObject.Find("LeftWayPoint").GetComponent<Transform>();
         //rightWayPoint = GameObject.Find("RightWayPoint").GetComponent<Transform>();

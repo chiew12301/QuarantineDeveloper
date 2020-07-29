@@ -37,6 +37,7 @@ public class MoveScriptTesting : MonoBehaviour
     {
         targetPos = transform.position;
         inventoryUI = GameObject.FindGameObjectWithTag("InventoryUI").GetComponent<InventoryScriptUI>();
+        animator.keepAnimatorControllerStateOnDisable = true;
     }
 
     // Update is called once per frame
