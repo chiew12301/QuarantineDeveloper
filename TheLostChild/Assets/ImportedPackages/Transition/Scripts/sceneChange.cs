@@ -125,31 +125,49 @@ public class sceneChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerEnter(PointerEventData data)
     {
-        if (StairUpOrDown == "None")
+        if (BackBoneManager.instance.isCutScene == false)
         {
-            if (RoomUpOrDown == null)
+            if (StairUpOrDown == "None")
             {
-                mcs.setToCursorEyes("Hover");
+                if (RoomUpOrDown == null)
+                {
+                    mcs.setToCursorEyes("Hover");
+                    return;
+                }
+                else if (RoomUpOrDown == "Up")
+                {
+                    mcs.setToCursorRoom("Up", "Hover");
+                    return;
+                }
+                else if (RoomUpOrDown == "Down")
+                {
+                    mcs.setToCursorRoom("Down", "Hover");
+                    return;
+                }
+                else if (RoomUpOrDown == "Left")
+                {
+                    mcs.setToCursorRoom("Left", "Hover");
+                    return;
+                }
+                else if (RoomUpOrDown == "Right")
+                {
+                    mcs.setToCursorRoom("Right", "Hover");
+                    return;
+                }
+                else
+                {
+                    mcs.setToCursorEyes("Hover");
+                    return;
+                }
+            }
+            else if (StairUpOrDown == "Up")
+            {
+                mcs.setToCursorStair("Up", "Hover");
                 return;
             }
-            else if (RoomUpOrDown == "Up")
+            else if (StairUpOrDown == "Down")
             {
-                mcs.setToCursorRoom("Up", "Hover");
-                return;
-            }
-            else if (RoomUpOrDown == "Down")
-            {
-                mcs.setToCursorRoom("Down", "Hover");
-                return;
-            }
-            else if (RoomUpOrDown == "Left")
-            {
-                mcs.setToCursorRoom("Left", "Hover");
-                return;
-            }
-            else if (RoomUpOrDown == "Right")
-            {
-                mcs.setToCursorRoom("Right", "Hover");
+                mcs.setToCursorStair("Down", "Hover");
                 return;
             }
             else
@@ -157,27 +175,23 @@ public class sceneChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                 mcs.setToCursorEyes("Hover");
                 return;
             }
-        }
-        else if (StairUpOrDown == "Up")
-        {
-            mcs.setToCursorStair("Up", "Hover");
-            return;
-        }
-        else if (StairUpOrDown == "Down")
-        {
-            mcs.setToCursorStair("Down", "Hover");
-            return;
+
         }
         else
         {
-            mcs.setToCursorEyes("Hover");
-            return;
+            mcs.setToDefaultCursor("Hover");
         }
     }
 
     public void OnPointerExit(PointerEventData data)
     {
-        mcs.setToDefaultCursor("Hover");
+        if (BackBoneManager.instance.isCutScene == false)
+        {
+            mcs.setToDefaultCursor("Hover");
+        }
+        else
+        {
+            mcs.setToDefaultCursor("Hover");
+        }
     }
-
 }

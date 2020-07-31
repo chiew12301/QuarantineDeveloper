@@ -85,12 +85,26 @@ public class DialogueTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     public void OnPointerEnter(PointerEventData data)
     {
-        mcs.setToCursorEyes("Hover");
+        if (BackBoneManager.instance.isCutScene == false)
+        {
+            mcs.setToCursorEyes("Hover");
+        }
+        else
+        {
+            mcs.setToDefaultCursor("Hover");
+        }
     }
 
     public void OnPointerExit(PointerEventData data)
     {
-        mcs.setToDefaultCursor("Hover");
+        if (BackBoneManager.instance.isCutScene == false)
+        {
+            mcs.setToDefaultCursor("Hover");
+        }
+        else
+        {
+            mcs.setToDefaultCursor("Hover");
+        }
     }
 
 }

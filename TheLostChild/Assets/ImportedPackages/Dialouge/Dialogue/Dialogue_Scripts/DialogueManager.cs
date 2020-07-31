@@ -71,12 +71,6 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        playerScript.isStop = isTalking;
-        if (isTalking == true)
-        {
-            playerScript.StopMoving();
-        }
-
         //check if player click while sentence haven't end, work with IEnumerator(dialogue ver)
         if (Input.GetMouseButtonDown(0) && isSentenceEnd == false)
         {

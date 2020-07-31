@@ -181,46 +181,72 @@ public class TriggerDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     private void OnMouseDown()
     {
-        if(dialogue != null)
+        if(BackBoneManager.instance.isCutScene == false)
         {
-            TriggerDialogueSpeech();
-        }
-        else if (bubble != null)
-        {
-            TriggerBubbleSpeech();
+            if (dialogue != null)
+            {
+                TriggerDialogueSpeech();
+            }
+            else if (bubble != null)
+            {
+                TriggerBubbleSpeech();
+            }
         }
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (dialogue != null)
+        if (BackBoneManager.instance.isCutScene == false)
         {
-            TriggerDialogueSpeech();
-        }
-        else if (bubble != null)
-        {
-            TriggerBubbleSpeech();
+            if (dialogue != null)
+            {
+                TriggerDialogueSpeech();
+            }
+            else if (bubble != null)
+            {
+                TriggerBubbleSpeech();
+            }
         }
     }
 
     private void OnMouseEnter()
     {
-        mcs.setToCursorEyes("Hover");
+        if (BackBoneManager.instance.isCutScene == false)
+        {
+            mcs.setToCursorEyes("Hover");
+        }
     }
 
     private void OnMouseExit()
     {
-        mcs.setToDefaultCursor("Hover");
+        if (BackBoneManager.instance.isCutScene == false)
+        {
+            mcs.setToDefaultCursor("Hover");
+        }
     }
 
     public void OnPointerEnter(PointerEventData data)
     {
-        mcs.setToCursorEyes("Hover");
+        if (BackBoneManager.instance.isCutScene == false)
+        {
+            mcs.setToCursorEyes("Hover");
+        }
+        else
+        {
+            mcs.setToDefaultCursor("Hover");
+        }
     }
 
     public void OnPointerExit(PointerEventData data)
     {
-        mcs.setToDefaultCursor("Hover");
+        if (BackBoneManager.instance.isCutScene == false)
+        {
+            mcs.setToDefaultCursor("Hover");
+        }
+        else
+        {
+            mcs.setToDefaultCursor("Hover");
+        }
     }
 
 }

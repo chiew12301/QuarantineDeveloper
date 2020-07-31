@@ -48,7 +48,8 @@ public class MoveScriptTesting : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             isLeftClicked = true;
-            if(inventoryUI.isOpen == false && isStop == false)
+            /*inventoryUI.isOpen == false || */
+            if (isStop == false)
             {
                 SetPosition();
             }
