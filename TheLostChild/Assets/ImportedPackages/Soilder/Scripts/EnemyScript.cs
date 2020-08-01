@@ -31,7 +31,17 @@ public class EnemyScript : MonoBehaviour
     public Animator animator; //Animation purpose
     bool FacingRight = false;
 
+    public GameObject enemyParent;
+    public GameObject enemyParent2;
 
+    void Awake()
+    {
+        if (enemyParent != null)
+        {
+            enemyParent.SetActive(false);
+            enemyParent2.SetActive(false);
+        }
+    }
 
     void Start()
     {

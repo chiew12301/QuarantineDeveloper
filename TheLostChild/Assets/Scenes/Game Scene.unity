@@ -189,6 +189,8 @@ MonoBehaviour:
   rightWayPoint: {fileID: 6342046733101375350}
   patrolState: 1
   animator: {fileID: 6938069677733530336}
+  enemyParent: {fileID: 0}
+  enemyParent2: {fileID: 0}
 --- !u!1 &15561055
 GameObject:
   m_ObjectHideFlags: 0
@@ -22429,6 +22431,8 @@ MonoBehaviour:
   rightWayPoint: {fileID: 4095033816792947509}
   patrolState: 1
   animator: {fileID: 8267134831768355168}
+  enemyParent: {fileID: 4164080062669874431}
+  enemyParent2: {fileID: 141539228863624109}
 --- !u!222 &1230242056186370001
 CanvasRenderer:
   m_ObjectHideFlags: 0
