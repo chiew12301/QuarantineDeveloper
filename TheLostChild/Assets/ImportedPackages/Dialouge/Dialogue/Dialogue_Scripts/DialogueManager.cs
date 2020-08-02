@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
 
     public Image dialoguePortrait;
     public Image cutscenePanel;
+    public Image blackOverlay;
 
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
@@ -25,6 +26,9 @@ public class DialogueManager : MonoBehaviour
 
     //this for obj that has diff lines when second interaction (bubble)
     private BubbleSpeech tempBubble;
+
+    //for check if that dialogue ended
+    private Dialogue tempDialogue;
 
     public bool isTalking;
     private bool isBubble;
@@ -121,6 +125,7 @@ public class DialogueManager : MonoBehaviour
         isTalking = true;
         isBubble = false;
         isDialogueEnd = false;
+        tempDialogue = dialogue;
 
         //clear out previously queued lines
         dialogueInfo.Clear();
@@ -204,6 +209,8 @@ public class DialogueManager : MonoBehaviour
 
             BubbleSpeech.Info info = bubbleInfo.Dequeue();
             bubbleText.text = info.sentences;
+       //     cutscenePanel.enabled = false;
+           
             StopAllCoroutines();
             StartCoroutine(TypeSentence(info));
         }
@@ -212,14 +219,28 @@ public class DialogueManager : MonoBehaviour
             if (dialogueInfo.Count == 0)
             {
                 isDialogueEnd = true;
+                tempDialogue.hasDialogueEnded = true;
                 EndDialogue();
                 return;
             }
 
             Dialogue.Info info = dialogueInfo.Dequeue();
             nameText.text = info.name;
+            if (info.cutsceneImg == null)
+            {
+                cutscenePanel.gameObject.SetActive(false);
+
+            }
+            else
+            {
+                // cutscenePanel.enabled = true;
+                cutscenePanel.gameObject.SetActive(true);
+                cutscenePanel.sprite = info.cutsceneImg;
+            }
             dialoguePortrait.sprite = info.portrait;
-            cutscenePanel.sprite = info.cutsceneImg;
+           
+            
+           
             dialogueText.text = info.sentences;
 
             Debug.Log(info.sentences);

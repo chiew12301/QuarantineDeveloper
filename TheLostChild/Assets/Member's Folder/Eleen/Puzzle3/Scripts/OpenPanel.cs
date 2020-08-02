@@ -7,6 +7,7 @@ public class OpenPanel : MonoBehaviour
     public static OpenPanel instance;
     public GameObject window;
     public GameObject bottle2;
+    public GameObject artworkDialogues;
     public bool hasPickedUpBottle;
     private Transform t;
     private Transform player;
@@ -37,30 +38,47 @@ public class OpenPanel : MonoBehaviour
         if (hasPickedUpBottle == true)
         {
             bottle2.SetActive(false);
+
         }
 
         if (window.activeSelf == true)
         {
             playerScript.StopMoving();
         }
-        else
-        {
-            bottle2.SetActive(false);
-        }
+        //else
+        //{
+        //    bottle2.SetActive(false);
+        //}
+    }
+    private void OnMouseDown()
+    {
+        Open();
     }
     public void Open()
     {
-        playerScript.StopMoving();
-        window.SetActive(true);
-        if (hasPickedUpBottle == false)
+        //  playerScript.StopMoving();
+
+        if (hasPickedUpBottle == true)
+        {
+            bottle2.SetActive(false);
+        }
+        else if (hasPickedUpBottle == false)
         {
             bottle2.SetActive(true);
+
         }
+        window.SetActive(true);
+        artworkDialogues.SetActive(false);
     }
 
     public void Close()
     {
-        playerScript.StopMoving();
+       // playerScript.StopMoving();
         window.SetActive(false);
+        artworkDialogues.SetActive(true);
+        if(hasPickedUpBottle == true || hasPickedUpBottle == false)
+        {
+            bottle2.SetActive(false);
+        }
     }
 }

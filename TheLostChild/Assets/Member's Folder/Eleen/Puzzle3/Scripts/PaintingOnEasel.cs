@@ -6,17 +6,18 @@ public class PaintingOnEasel : MonoBehaviour
 {
     public static PaintingOnEasel instance;
 
-    public Sprite emptyPainting;
+    public GameObject emptyPainting;
     public Sprite wornPainting;
     public Sprite shinyPainting;
 
     public SpriteRenderer curSprite;
     public bool clearedPuzzle3 = false;
 
-    public Dialogue wPaintingOnEasel;
+//    public Dialogue wPaintingOnEasel;
     public Dialogue firstPlacePainting;
+    public Dialogue afterCleanPainting;
 
-    public GameObject correctBottle;
+    public GameObject correctPainting;
     void Awake()
     {
         if (instance != null)
@@ -30,32 +31,36 @@ public class PaintingOnEasel : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         //if worn painting is placed
-        if (collision.name == "Painting4")
+        if (collision.tag == "CorrectPainting")//"CorrectPainting(Outside)")
         {
             Debug.Log("Worn painting placed");
             collision.gameObject.SetActive(false);
-            curSprite.sprite = wornPainting;
+            collision.gameObject.GetComponent<PickUp>().enabled = false;
+            emptyPainting.GetComponent<SpriteRenderer>().sprite = wornPainting;
+          //  curSprite.sprite = wornPainting;
             DialogueManager.instance.StartDialogue(firstPlacePainting);
         }
 
-        if ( collision.name == "Bottle2")
+        if ( collision.tag == "CorrectBottle")
         {
             Debug.Log("Correct bottle used (bottle 2)");
-            if (curSprite.sprite == wornPainting)
+            if (emptyPainting.GetComponent<SpriteRenderer>().sprite == wornPainting)
             {
                 Debug.Log("Bottle used on worn painting");
                 collision.gameObject.SetActive(false);
-                curSprite.sprite = shinyPainting;
+                emptyPainting.GetComponent<SpriteRenderer>().sprite = shinyPainting;
+                DialogueManager.instance.StartDialogue(afterCleanPainting);
+                //   curSprite.sprite = shinyPainting;
             }
         }
     }
 
 
-    void OnMouseDown()
-    {
-        if (curSprite.sprite == wornPainting)
-        {
-            DialogueManager.instance.StartDialogue(wPaintingOnEasel);
-        }
-    }
+    //void OnMouseDown()
+    //{
+    //    if (emptyPainting.GetComponent<SpriteRenderer>().sprite == wornPainting)
+    //    {
+    //        DialogueManager.instance.StartDialogue(wPaintingOnEasel);
+    //    }
+    //}
 }

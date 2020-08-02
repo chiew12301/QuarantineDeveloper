@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0071a5f07c607b94b9ad7b5031592816, type: 3}
-  m_Name: CorrectBottle
+  m_Name: CorrectPainting
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: d9ca3796c906ddd498c96b1f2dffbce9, type: 3}
-  name: DistilledVinegar
-  desc: A cheap alternative to clean their dirty painting.
-  itemType: 4
-  itemPrefab: {fileID: 1786052273208952876, guid: c42a47ca4e82c8c44a78082327d4086a,
+  itemSprite: {fileID: 21300000, guid: 829c7df551555584b88f8a8e5efac8d2, type: 3}
+  name: CorrectPainting
+  desc: CorrectPainting
+  itemType: 9
+  itemPrefab: {fileID: 2706955731952168836, guid: 890c32f6667d7be4a8cec86b5c3ef158,
     type: 3}
   isFull: 0

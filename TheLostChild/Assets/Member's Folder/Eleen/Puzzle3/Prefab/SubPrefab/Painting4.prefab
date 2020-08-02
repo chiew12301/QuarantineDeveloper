@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4738390660567038652}
   m_Layer: 8
   m_Name: Painting4
-  m_TagString: CorrectPainting
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,12 +137,13 @@ MonoBehaviour:
   itemObtainedPanel: {fileID: 0}
   itemButton: {fileID: 6902115521112785369, guid: 72d0e82d48111ee478c7feeb05d1ea54,
     type: 3}
-  item: {fileID: 11400000, guid: 937415d3ffa29b84fa549ebe672feedb, type: 2}
+  item: {fileID: 0}
   isItemLocked: 0
   lockedMessagePanel: {fileID: 0}
   Inspect: 0
   inspectDisplay: {fileID: 0}
   player: {fileID: 1346889373, guid: c19a4cfa4008cd449880bb23e939ad39, type: 3}
+  mcS: {fileID: 0}
   isShowDialogue: 0
   isItemObtain: 0
   MouseisIn: 0

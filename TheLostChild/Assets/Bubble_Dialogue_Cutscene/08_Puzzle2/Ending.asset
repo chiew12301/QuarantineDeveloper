@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
   m_Name: Ending
   m_EditorClassIdentifier: 
+  hasDialogueEnded: 1
   dialogueInfo:
   - name: Ayu
-    portrait: {fileID: 21300000, guid: a864105f9e0edbd488803a84bca40573, type: 3}
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
     cutsceneImg: {fileID: 0}
     textSpeed: 0.1
     sentences: "\u2026 (I came to see the newcomer like Mama asked to.)"
     isJitter: 0
   - name: Ayu
-    portrait: {fileID: 21300000, guid: a864105f9e0edbd488803a84bca40573, type: 3}
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
     cutsceneImg: {fileID: 0}
     textSpeed: 0.1
     sentences: "(Why would anyone honestly come to this small village\u2026)"
@@ -38,7 +39,7 @@ MonoBehaviour:
     sentences: I heard that person came straight from Malacca!
     isJitter: 0
   - name: Ayu
-    portrait: {fileID: 21300000, guid: a864105f9e0edbd488803a84bca40573, type: 3}
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
     cutsceneImg: {fileID: 0}
     textSpeed: 0.1
     sentences: "(Malacca\u2026? That\u2019s pretty far from here.)"
@@ -56,7 +57,7 @@ MonoBehaviour:
     sentences: "Eh, he\u2019s coming this way"
     isJitter: 0
   - name: Ayu
-    portrait: {fileID: 21300000, guid: a864105f9e0edbd488803a84bca40573, type: 3}
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
     cutsceneImg: {fileID: 0}
     textSpeed: 0.1
     sentences: "(Oh? He\u2019s holding a sketchbook under his right arm...could he
@@ -70,7 +71,7 @@ MonoBehaviour:
       eh? Well, welcome to our village
     isJitter: 0
   - name: Man
-    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
     cutsceneImg: {fileID: 0}
     textSpeed: 0.1
     sentences: "Yes, thank you. I really wanted a change of scenery and I\u2019m
@@ -91,7 +92,7 @@ MonoBehaviour:
       young man!"
     isJitter: 0
   - name: Man
-    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
     cutsceneImg: {fileID: 0}
     textSpeed: 0.1
     sentences: Huh-? I-
@@ -109,27 +110,27 @@ MonoBehaviour:
     sentences: 'Eh Ayu, cepatlah! Why are you so slow?! '
     isJitter: 0
   - name: Ayu
-    portrait: {fileID: 21300000, guid: a864105f9e0edbd488803a84bca40573, type: 3}
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
     cutsceneImg: {fileID: 0}
     textSpeed: 0.1
     sentences: "Ye lah, i\u2019m coming as fast as I can! This kebaya isn\u2019t
       suitable for runni-"
     isJitter: 0
   - name: Ayu
-    portrait: {fileID: 21300000, guid: a864105f9e0edbd488803a84bca40573, type: 3}
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
     cutsceneImg: {fileID: 0}
     textSpeed: 0.1
     sentences: ...!
     isJitter: 0
   - name: Man
-    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
     cutsceneImg: {fileID: 0}
     textSpeed: 0.1
     sentences: "A-are you okay? It\u2019s a good thing I caught you in time, wouldn\u2019t
       want you to ruin that lovely red kebaya..."
     isJitter: 0
   - name: Ayu
-    portrait: {fileID: 21300000, guid: a864105f9e0edbd488803a84bca40573, type: 3}
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
     cutsceneImg: {fileID: 0}
     textSpeed: 0.1
     sentences: "A-ah...umm...thank you, sir\u2026"
@@ -141,7 +142,7 @@ MonoBehaviour:
     sentences: "Dah, dah! Cukup! I don\u2019t have all day! Rapat sikit! Closer!"
     isJitter: 0
   - name: Man
-    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
     cutsceneImg: {fileID: 0}
     textSpeed: 0.1
     sentences: "It\u2019s nice to meet you, Ayu."

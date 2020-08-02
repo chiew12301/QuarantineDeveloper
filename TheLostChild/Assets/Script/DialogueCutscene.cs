@@ -38,6 +38,13 @@ public class DialogueCutscene : MonoBehaviour
     public Dialogue dialogueHairPinDisplay;
     private bool hasTriggeredHairpinInDisplayCase = false;
 
+    [Header("Puzzle3related")]
+    public Dialogue dialoguePuzzle3;
+    private bool hasTriggeredPuzzle3Cutscene = false;
+    private bool hasTriggeredFinP3Cutscene = false;
+    public TransferPlayer tpScript;
+    public PickUp pickUpBottle;
+
     [Header("DialogueData")]
     public Dialogue dialogueMusicBox;
     public Dialogue dialogueStartScene;
@@ -183,6 +190,16 @@ public class DialogueCutscene : MonoBehaviour
             }
         }
 
+        //check if finished puzzle3 dialogue
+        if(PaintingOnEasel.instance.afterCleanPainting.hasDialogueEnded ==true)
+        {
+            Puzzle3Cutscene();
+        }
+
+        if(dialoguePuzzle3.hasDialogueEnded ==true)
+        {
+            Puzzle3TransportPlayer();
+        }
 
         if (player.transform.position.x >= LeftLocation2.x && player.transform.position.x <= RightLocation2.x)
         {
@@ -335,6 +352,37 @@ public class DialogueCutscene : MonoBehaviour
             DialogueManager.instance.StartDialogue(dialogueHairPinDisplay);
             player.GetComponent<MoveScriptTesting>().StopMoving();
             hasTriggeredHairpinInDisplayCase = true;
+        }
+        else { return; }
+    }
+
+    //after puzzle3 dialogue end - the cutscene plays
+    public void Puzzle3Cutscene()
+    {
+        if (hasTriggeredPuzzle3Cutscene == false)
+        {
+            dialogueDisplay.SetActive(true);
+            DialogueManager.instance.StartDialogue(dialoguePuzzle3);
+            player.GetComponent<MoveScriptTesting>().StopMoving();
+            hasTriggeredPuzzle3Cutscene = true;
+        }
+        else { return; }
+    }
+
+    //after fin puzzle3 cutscene
+    public void Puzzle3TransportPlayer()
+    {
+        if (hasTriggeredFinP3Cutscene == false)
+        {
+            if (tpScript != null)
+            {
+                tpScript.TransferPlayerToDes();
+                hasTriggeredFinP3Cutscene = true;
+                pickUpBottle.performPickup();
+                pickUpBottle.itemObtainedPanel.SetActive(false);
+            }
+           
+          
         }
         else { return; }
     }

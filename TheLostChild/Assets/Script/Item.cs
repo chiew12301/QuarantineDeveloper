@@ -24,6 +24,8 @@ public class Item : ScriptableObject
         Jigsaw,
         NegativeFilm,
         Photograph,
+        CorrectPainting,
+        CorrectBottle,
     }
 
     public Item(string na, string des) //Default constructor

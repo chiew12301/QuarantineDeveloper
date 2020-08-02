@@ -10,12 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
-  m_Name: oldPaintingSet
+  m_Name: SealRoom3Enter
   m_EditorClassIdentifier: 
+  hasDialogueEnded: 1
   dialogueInfo:
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     cutsceneImg: {fileID: 0}
-    textSpeed: 0
-    sentences: "(This is...a collection of antique horse-hair brushes\u2026)"
+    textSpeed: 0.1
+    sentences: "...What\u2019s that heavy smell?"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "(...This room reeks of paint\u2026)"
     isJitter: 0

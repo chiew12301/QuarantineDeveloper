@@ -10,43 +10,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
-  m_Name: OPConversationWithParent
+  m_Name: BottleOnPainting
   m_EditorClassIdentifier: 
   hasDialogueEnded: 1
   dialogueInfo:
-  - name: Mom
-    portrait: {fileID: 21300000, guid: 4f5af962634edea40acecabd491e0134, type: 3}
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     cutsceneImg: {fileID: 0}
     textSpeed: 0.1
-    sentences: Max, get off your journal. We have arrived.
+    sentences: "(This should do the trick\u2026)"
     isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     cutsceneImg: {fileID: 0}
     textSpeed: 0.1
-    sentences: "\u2026 (Maybe I can show them my drawings after to-)"
-    isJitter: 0
-  - name: Dad
-    portrait: {fileID: 21300000, guid: 3b437f119bfba054e862980efd1f30d9, type: 3}
-    cutsceneImg: {fileID: 0}
-    textSpeed: 0.1
-    sentences: Quit writing! Give me that stupid journal!
-    isJitter: 0
-  - name: Dad
-    portrait: {fileID: 21300000, guid: 3b437f119bfba054e862980efd1f30d9, type: 3}
-    cutsceneImg: {fileID: 0}
-    textSpeed: 0.1
-    sentences: "That\u2019ll teach you not to ignore your mother! Apologise!"
+    sentences: (It worked! The painting looks much cleaner than before.)
     isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     cutsceneImg: {fileID: 0}
     textSpeed: 0.1
-    sentences: "\u2026(How could he...do something like that...)"
+    sentences: "(Huh...There\u2019s some scribbling above that woman\u2019s head\u2026)"
     isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     cutsceneImg: {fileID: 0}
     textSpeed: 0.1
-    sentences: "I\u2019m sorry...Mom."
+    sentences: "<color=#800000ff>...\u201CWaktu malam senyap sunyi, Waktu siang mata
+      hari\u2026</color>"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "<color=#800000ff>...Kasih suami pada isteri, Lebih dari nyawa sendiri\u2026</color>"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "<color=#800000ff>...\u201CSenyap suara isteri, Senyap suami pergi\u201D</color>"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "(...Sounds like a love poem of some sort\u2026)"
     isJitter: 0
