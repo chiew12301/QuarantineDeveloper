@@ -17,6 +17,8 @@ TagManager:
   - EnemySoldier_1
   - Hidden
   - Jigsaw
+  - Bullets
+  - EnemySoldier_P4
   layers:
   - Default
   - TransparentFX
@@ -68,4 +70,10 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 2184790385
+    locked: 0
+  - name: LowerParallex
+    uniqueID: 1936097293
+    locked: 0
+  - name: Parallex
+    uniqueID: 384072165
     locked: 0

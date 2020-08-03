@@ -7,6 +7,9 @@ public class MoveScriptTesting : MonoBehaviour
 {
     public static MoveScriptTesting instance;
 
+    [Header("Player Info")]
+    public GameObject playerObj;
+
     public float Speeds; //Speeds of character
     [SerializeField] Transform target = null;
     private InventoryScriptUI inventoryUI;
@@ -32,6 +35,7 @@ public class MoveScriptTesting : MonoBehaviour
         instance = this;
     }
 
+    SkyScript ss;
     // Start is called before the first frame update
     void Start()
     {
@@ -161,6 +165,10 @@ public class MoveScriptTesting : MonoBehaviour
             SceneManager.LoadScene("DeadScene");
             AudioManager.instance.Stop("BGM");
             AudioManager.instance.Stop("Moving");
+        }
+        else if(collision.CompareTag("EnemySoldier_P4"))
+        {
+            this.gameObject.GetComponent<TransferScript>().TransferPlayerToDes();
         }
     }
 

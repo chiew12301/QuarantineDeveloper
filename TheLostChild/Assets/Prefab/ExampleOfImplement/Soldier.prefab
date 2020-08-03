@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 1727220842130293705}
   m_Layer: 0
   m_Name: Soldier
-  m_TagString: Untagged
+  m_TagString: EnemySoldier_1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,6 +208,8 @@ MonoBehaviour:
   agroRange: 6
   moveSpeed: 2
   moveSpeedPatrol: 3
+  leftWayPoint: {fileID: 0}
+  rightWayPoint: {fileID: 0}
   patrolState: 1
   animator: {fileID: 0}
 --- !u!1001 &1727220840962173954
