@@ -28898,10 +28898,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 36045396, guid: 7b7ee33a945de6644a0411f55ae6dd88, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 767830970, guid: 7b7ee33a945de6644a0411f55ae6dd88, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664346362, guid: 7b7ee33a945de6644a0411f55ae6dd88, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664346363, guid: 7b7ee33a945de6644a0411f55ae6dd88, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664346363, guid: 7b7ee33a945de6644a0411f55ae6dd88, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1241650420448464840, guid: 7b7ee33a945de6644a0411f55ae6dd88,
         type: 3}
       propertyPath: m_RaycastTarget
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2619989077264907430, guid: 7b7ee33a945de6644a0411f55ae6dd88,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165938813550137220, guid: 7b7ee33a945de6644a0411f55ae6dd88,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165938813550137220, guid: 7b7ee33a945de6644a0411f55ae6dd88,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165938813550137220, guid: 7b7ee33a945de6644a0411f55ae6dd88,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.21960786
       objectReference: {fileID: 0}
     - target: {fileID: 3874098563073176654, guid: 7b7ee33a945de6644a0411f55ae6dd88,
         type: 3}
@@ -28967,6 +29007,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InventoryUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435027622804989797, guid: 7b7ee33a945de6644a0411f55ae6dd88,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 9107901696024750042, guid: 7b7ee33a945de6644a0411f55ae6dd88,
         type: 3}

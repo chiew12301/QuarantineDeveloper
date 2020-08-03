@@ -45,6 +45,7 @@ public class sceneChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if (door.playerTouch && isPressed == false)
         {
             isPressed = true;
+            playerScript.StopMoving();
             BackBoneManager.instance.isTransfering = true;
             transition.SetTrigger("Start");
             StartCoroutine(LoadArea());     
