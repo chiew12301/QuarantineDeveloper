@@ -8,7 +8,6 @@ public class saveTrigger : MonoBehaviour
     public static int puzzleProgression = 0;
     public GameObject tutorialObject;
     [HideInInspector]
-    public bool tutorialPassed = false;
     public List<GameObject> itemObject = new List<GameObject>();
     public static List<bool> itemCheck = new List<bool>();
     public List<Item> itemScriptObject = new List<Item>();
@@ -32,10 +31,6 @@ public class saveTrigger : MonoBehaviour
     }
     public void Update()
     {
-        if (!tutorialObject.activeInHierarchy)
-        {
-            tutorialPassed = true;
-        }
         for (int j = 0; j < itemObject.Capacity; j++)
         {
             if (itemObject[j].activeInHierarchy == false)

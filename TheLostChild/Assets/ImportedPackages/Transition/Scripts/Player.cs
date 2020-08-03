@@ -63,6 +63,10 @@ public class Player : MonoBehaviour
     {
         loadedYet = true;
         playerData data = saveSystem.Load();
+        JournalScript.enableArrows = data.journalArrows;
+        JournalScript.currentPage = data.journalNotes;
+        SetMapJournal.MapIsAvailable = data.map;
+        TutorialScript.disableTutorialBlocks = data.tutorial;
         if (data.tutorial == true)
         {
             Debug.Log("y");

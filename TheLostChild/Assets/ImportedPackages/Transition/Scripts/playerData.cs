@@ -9,13 +9,21 @@ public class playerData
     public float[] position;
     public string[] savedItems;
     public string[] takenItems;
+    public bool map;
     public int puzzleProgress;
     public bool tutorial;
+    public bool[] journalArrows;
+    public int[] journalNotes;
     public List<bool> checking = new List<bool>();
 
     public playerData(Player player)
     {
-        tutorial = saveTrigger.instance.tutorialPassed;
+        map = SetMapJournal.MapIsAvailable;
+        journalArrows = new bool[12];
+        journalArrows = JournalScript.enableArrows;
+        journalNotes = new int[12];
+        journalNotes = JournalScript.currentPage;
+        tutorial = TutorialScript.disableTutorialBlocks;
         puzzleProgress = saveTrigger.puzzleProgression;
         takenItems = new string[player.takenItems.Count + 1];
         savedItems = new string[5];
