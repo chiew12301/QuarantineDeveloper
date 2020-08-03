@@ -7,6 +7,7 @@ public class BackBoneManager : MonoBehaviour
     public static BackBoneManager instance;
     public MoveScriptTesting _playerMoveScript;
     public DialogueManager _dialogueScript;
+    public JournalScript _journalScript;
 
     [HideInInspector]
     public bool stopPlayerMove = false;
@@ -14,6 +15,8 @@ public class BackBoneManager : MonoBehaviour
     public bool InvenUIIsStop = false;
     [HideInInspector]
     public bool isCutScene = false;
+    [HideInInspector]
+    public bool isTransfering = false;
 
     void Awake()
     {
@@ -33,10 +36,12 @@ public class BackBoneManager : MonoBehaviour
     {//playerScript.isStop = isCutscene;
         InvenUIIsStop = InventoryScriptUI.instance.isOpen;
         if(InvenUIIsStop == true || DialogueManager.instance.isTalking == true 
-            || PreloadCutsceneManager.instance.isCutscene == true)
+            || PreloadCutsceneManager.instance.isCutscene == true ||isTransfering == true || 
+            checkTFJournal() == false)
         {
             if(DialogueManager.instance.isTalking == true 
-                || PreloadCutsceneManager.instance.isCutscene == true)
+                || PreloadCutsceneManager.instance.isCutscene == true || isTransfering == true 
+                || checkTFJournal() == false)
             {
                 InventoryScriptUI.instance.closeInventorySlots();
                 InvenUIIsStop = InventoryScriptUI.instance.isOpen;
@@ -50,6 +55,18 @@ public class BackBoneManager : MonoBehaviour
         _playerMoveScript.isStop = stopPlayerMove;
 
         isCutScene = stopPlayerMove;
+    }
+
+    bool checkTFJournal()
+    {
+        if(_journalScript.JournalButton.interactable == false)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
 }

@@ -37,19 +37,15 @@ public class sceneChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     private void Update()
     {
-        if (isTransfering == true)
-        {
-            playerScript.isStop = isTransfering;
-            playerScript.StopMoving();
-        }
 
     }
+
     public void changeArea()
     {
         if (door.playerTouch && isPressed == false)
         {
             isPressed = true;
-            isTransfering = true;
+            BackBoneManager.instance.isTransfering = true;
             transition.SetTrigger("Start");
             StartCoroutine(LoadArea());     
         }
@@ -61,9 +57,8 @@ public class sceneChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         yield return new WaitForSeconds(transitionTime);
 
         player.transform.position = new Vector3(newLocation.x, newLocation.y);
-        isTransfering = false;
+        BackBoneManager.instance.isTransfering = false;
         isPressed = false;
-        playerScript.isStop = isTransfering;
     }
 
     private void OnMouseEnter()
