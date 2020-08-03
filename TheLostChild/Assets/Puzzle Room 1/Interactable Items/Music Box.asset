@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0071a5f07c607b94b9ad7b5031592816, type: 3}
   m_Name: Music Box
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: c037b9ccb7510394faf6358599aebe60, type: 3}
+  itemSprite: {fileID: 21300000, guid: c6295aa517e3c5940958eb1ce3566b68, type: 3}
   name: Music Box
   desc: A music box
   itemType: 5

@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class PickUp : MonoBehaviour
+public class PickUp : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public PuzzleDrop pD;
     BoxCollider2D col2d;
@@ -42,7 +43,7 @@ public class PickUp : MonoBehaviour
     [Header("Others")]
     public MoveScriptTesting player;
     private float Distance;
-    private MouseCursor mcS;
+    public MouseCursor mcS;
     //GameObject playerMovement;
 
     public bool isShowDialogue = false;
@@ -61,7 +62,7 @@ public class PickUp : MonoBehaviour
     {
         mcS = GameObject.FindGameObjectWithTag("Cursor").GetComponent<MouseCursor>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<MoveScriptTesting>();
-        player.OnPressLeftClick += OnPressLeftClick_Test;
+        //player.OnPressLeftClick += OnPressLeftClick_Test;
         //playerMovement = GameObject.FindWithTag("Player");
         col2d = GetComponent<BoxCollider2D>();
         if(itemshowafterhide != null)
@@ -82,7 +83,7 @@ public class PickUp : MonoBehaviour
         //{
         //    player.OnPressLeftClick.Invoke(player.isLeftClicked);
         //}
-        //player.OnPressLeftClick += OnPressLeftClick_Test;
+        player.OnPressLeftClick += OnPressLeftClick_Test;
     }
 
     private void Update()
@@ -150,11 +151,10 @@ public class PickUp : MonoBehaviour
 
             if (Item == true)
             {
-
-                Time.timeScale = 0.0001f;
+              ////////!!!!!!! commented ouyt by Eleen _ for dialogue manager to work
+              //  Time.timeScale = 0.0001f;
                 itemObtainedPanel.SetActive(true);
                 player.StopMoving();
-
                 Inventory.instance.addItem(item);
             }
 
@@ -189,6 +189,12 @@ public class PickUp : MonoBehaviour
                 }
                 this.gameObject.SetActive(false);
             }
+
+            if(Item == true)
+            {
+                col2d.enabled = true;
+            }
+
         }
     }
 
@@ -282,6 +288,18 @@ public class PickUp : MonoBehaviour
     }
 
     void OnMouseExit()
+    {
+        mcS.setToDefaultCursor("Hover");
+        MouseisIn = false;
+    }
+
+    public void OnPointerEnter(PointerEventData data)
+    {
+        mcS.setToCursorEyes("Hover");
+        MouseisIn = true;
+    }
+
+    public void OnPointerExit(PointerEventData data)
     {
         mcS.setToDefaultCursor("Hover");
         MouseisIn = false;

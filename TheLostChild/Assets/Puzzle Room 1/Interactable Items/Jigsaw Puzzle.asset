@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0071a5f07c607b94b9ad7b5031592816, type: 3}
   m_Name: Jigsaw Puzzle
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: d72f2859d0aa5994ab9ef193e2fd1809, type: 3}
+  itemSprite: {fileID: 21300000, guid: 3da371d781d8326418ce03c260a019e3, type: 3}
   name: Jigsaw Piece 3
   desc: Puzzle Piece 1
   itemType: 5

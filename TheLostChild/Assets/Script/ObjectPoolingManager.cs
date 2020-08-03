@@ -50,7 +50,7 @@ public class ObjectPoolingManager : MonoBehaviour
         {
             if (inpool.tag == i.tag)
             {
-                if (inpool.GetComponent<PickUp>().item.desc == i.GetComponent<PickUp>().item.desc)
+                if (inpool.GetComponent<PickUp>().item.desc == i.GetComponent<PickUp>().item.desc || inpool.GetComponent<MusicBoxSwitchSceneScript>().item.desc == i.GetComponent<MusicBoxSwitchSceneScript>().item.desc)
                 {
                     setPoolObjActive(inpool);
                     Vector3 dropSpawnPos = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0f);

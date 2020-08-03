@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 34c143464ff0d2741813dbbc4c2113a8
   - enabled: 1
+    path: Assets/Member's Folder/Chiew/Loading Scene.unity
+    guid: 21298dddcceae1649b359795cc883f68
+  - enabled: 1
     path: Assets/Scenes/Settings Scene.unity
     guid: f3fa51b942a27ba4c8b93e294ef19e9e
   - enabled: 1

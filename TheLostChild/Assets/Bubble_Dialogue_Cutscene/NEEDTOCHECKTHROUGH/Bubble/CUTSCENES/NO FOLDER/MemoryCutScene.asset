@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
+  m_Name: MemoryCutScene
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: Mom! Dad! The food is ready! Let's eat together!
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: Mom! Dad! I want to do something...
+    isJitter: 0
+  - name: Mom
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: Ayu, not now..Mom and dd need rest. Tomorrow, we can talk...
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: Okay...but I never got the chance to talk to you in the morning.
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: You always left without saying anything..just give another empty promise..
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: The moon shines brighter with its tiny stars.
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 81619c6dc359f0045b57b95e783daa30, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: I wish my parents would cherish me...this family feels like it's in
+      the dark with no love
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 58a0a816b706de1489167c950422a9ea, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: If I had a child of my own..I would cherish him and make him shine
+      the brightest with love.
+    isJitter: 0

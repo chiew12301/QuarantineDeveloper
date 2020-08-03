@@ -19,6 +19,11 @@ TagManager:
   - Jigsaw
   - Bullets
   - EnemySoldier_P4
+  - NegativeFilm
+  - Photograph
+  - CorrectPainting
+  - CorrectBottle
+  - MusicBox
   layers:
   - Default
   - TransparentFX
@@ -59,11 +64,11 @@ TagManager:
   - name: Background
     uniqueID: 1431707357
     locked: 0
-  - name: Item
-    uniqueID: 3606627535
-    locked: 0
   - name: Wall
     uniqueID: 583442971
+    locked: 0
+  - name: Item
+    uniqueID: 3606627535
     locked: 0
   - name: Player
     uniqueID: 3238830583
@@ -75,5 +80,11 @@ TagManager:
     uniqueID: 1936097293
     locked: 0
   - name: Parallex
-    uniqueID: 384072165
+    uniqueID: 4179545683
+    locked: 0
+  - name: UIpopup
+    uniqueID: 4081635035
+    locked: 0
+  - name: Item in UIpopUp
+    uniqueID: 3865122117
     locked: 0

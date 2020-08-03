@@ -41,6 +41,7 @@ public class MoveScriptTesting : MonoBehaviour
     {
         targetPos = transform.position;
         inventoryUI = GameObject.FindGameObjectWithTag("InventoryUI").GetComponent<InventoryScriptUI>();
+        animator.keepAnimatorControllerStateOnDisable = true;
     }
 
     // Update is called once per frame
@@ -51,7 +52,8 @@ public class MoveScriptTesting : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             isLeftClicked = true;
-            if(inventoryUI.isOpen == false && isStop == false)
+            /*inventoryUI.isOpen == false || */
+            if (isStop == false)
             {
                 SetPosition();
             }
@@ -74,15 +76,15 @@ public class MoveScriptTesting : MonoBehaviour
         {
             Move();
         }
-        if(isMusicPicked == true)
-        {
-            if(Time.timeScale == 1f)
-            {
-                SceneManager.LoadScene("StayTuneScene");
-                AudioManager.instance.Stop("BGM");
-                AudioManager.instance.Stop("Moving");
-            }
-        }
+        //if(isMusicPicked == true)
+        //{
+        //    if(Time.timeScale == 1f)
+        //    {
+        //        SceneManager.LoadScene("StayTuneScene");
+        //        AudioManager.instance.Stop("BGM");
+        //        AudioManager.instance.Stop("Moving");
+        //    }
+        //}
     }
     public void SetPosition()
     {
@@ -109,8 +111,10 @@ public class MoveScriptTesting : MonoBehaviour
     private void flip()
     {
         FacingRight = !FacingRight;
-
-        transform.Rotate(Vector3.up * 180);
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+        //transform.Rotate(Vector3.up * 180);
     }
 
     public void SetFeeze()

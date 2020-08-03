@@ -1,15 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class HidingScript : MonoBehaviour
+public class HidingScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField]
     Transform p;
 
     public GameObject player;
-    public float rangeToInteract = 1; 
+    public float rangeToInteract = 5;
+    private MouseCursor mcs;
 
+    private void Start()
+    {
+        mcs = GameObject.FindGameObjectWithTag("Cursor").GetComponent<MouseCursor>();
+    }
 
     void Update()
     {
@@ -30,11 +36,16 @@ public class HidingScript : MonoBehaviour
                         if (player.activeInHierarchy == false)
                         {
                             player.SetActive(true);
+                            AudioManager.instance.Stop("HeartBeat");
                             //player.transform.position = transform.position;
+
+                            MoveScriptTesting.instance.Move();
                         }
                         else if (player.activeInHierarchy == true)
                         {
                             player.SetActive(false);
+                            AudioManager.instance.Play("HeartBeat");
+                            MoveScriptTesting.instance.StopMoving();
                         }
                     }
                 }
@@ -42,7 +53,15 @@ public class HidingScript : MonoBehaviour
             }
         }
 
+    }
 
-        
+    public void OnPointerEnter(PointerEventData data)
+    {
+        mcs.setToCursorEyes("Hover");
+    }
+
+    public void OnPointerExit(PointerEventData data)
+    {
+        mcs.setToDefaultCursor("Hover");
     }
 }
