@@ -46,6 +46,7 @@ public class BackBoneManager : MonoBehaviour
                 InventoryScriptUI.instance.closeInventorySlots();
                 InvenUIIsStop = InventoryScriptUI.instance.isOpen;
             }
+            _playerMoveScript.StopMoving();
             stopPlayerMove = true;
         }
         else

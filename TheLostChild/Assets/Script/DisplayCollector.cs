@@ -12,6 +12,7 @@ public class DisplayCollector : MonoBehaviour
 
     public Sprite childrenSprite;
 
+    public bool withTriggerDialogue = false;
     [HideInInspector]
     public bool isCollected = false;
 
@@ -50,7 +51,17 @@ public class DisplayCollector : MonoBehaviour
             {
                 TransitionObject.SetActive(true);
             }
-            BarrierToUnlock.SetActive(false);
+            if(BarrierToUnlock != null)
+            {
+                BarrierToUnlock.SetActive(false);
+            }
+            if(withTriggerDialogue == true)
+            {
+                if(this.GetComponent<TriggerDialogue>() != null)
+                {
+                    this.GetComponent<TriggerDialogue>().TriggerDialogueSpeech();
+                }
+            }
         }
     }
 

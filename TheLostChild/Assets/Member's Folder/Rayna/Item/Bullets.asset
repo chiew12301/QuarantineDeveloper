@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0071a5f07c607b94b9ad7b5031592816, type: 3}
   m_Name: Bullets
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: 8a862a6c70e5cd946be3d650a09d2b52, type: 3}
+  itemSprite: {fileID: 21300000, guid: 6950a3123f99ca448a9c0d8265775544, type: 3}
   name: Bullets
   desc: Is a bullet
   itemType: 0

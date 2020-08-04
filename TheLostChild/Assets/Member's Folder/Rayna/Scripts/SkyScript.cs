@@ -21,12 +21,12 @@ public class SkyScript : MonoBehaviour
         {
             isMove = true;
         }
-        if(player.transform.position.x < 17.45f)
+        if(player.transform.position.x < 78.4f)
         {
             isMove = true;
         }
 
-        if(this.transform.position.x >= 17.45f && player.transform.position.x >= 17.45f)
+        if(this.transform.position.x >= 17.61f && player.transform.position.x >= 78.4f)
         {
             isMove = false;
         }

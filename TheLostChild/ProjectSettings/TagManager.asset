@@ -24,6 +24,7 @@ TagManager:
   - CorrectPainting
   - CorrectBottle
   - MusicBox
+  - Hairpin
   layers:
   - Default
   - TransparentFX
