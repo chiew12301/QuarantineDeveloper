@@ -1,0 +1,268 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
+  m_Name: LastCollector
+  m_EditorClassIdentifier: 
+  hasDialogueEnded: 0
+  dialogueInfo:
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "Yes! That should be the last of it. \r"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: Ayu? Are you there?
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: I found all of your items...You can be freed now ...right?
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b5ebbae2935e6834e9498502a0061f27, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: Yes
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: '*startled* Wha- Ayu?'
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "(Her voice is so much clearer now...like she\u2019s actually-)\r"
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b5ebbae2935e6834e9498502a0061f27, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: Here.
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b5ebbae2935e6834e9498502a0061f27, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "Thank you Max... I\u2019m finally free, thanks to you. "
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: Ayu!
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "You\u2019re...really real..?"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "(Wah...she is really pretty up close\u2026)\r"
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b5ebbae2935e6834e9498502a0061f27, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "Thank you Max\u2026You\u2019ve done so much for me. \r"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "I\u2019m just\u2026really glad that I could help.\r"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: f920cbd22327c044da4527aea3ed7f37, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: Now please tell me how I can get out of-
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 10895650d0ef6124d80a59b349ff55c0, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "It\u2019s a shame that your parents can\u2019t see how wonderful
+      you are\u2026 "
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: " \u2026(What..?)"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "...What do you mean by that\u2026?"
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 10895650d0ef6124d80a59b349ff55c0, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "It\u2019s clear that they don\u2019t appreciate you, don\u2019t love
+      you. \r"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: f920cbd22327c044da4527aea3ed7f37, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "Y-you\u2019re lying. T-they do love me. They care."
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "I just want to know how I can return. Please. Mom and Dad must be
+      worried that I\u2019m missing. "
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 10895650d0ef6124d80a59b349ff55c0, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "Worried\u2026? Why would they be worried? They didn\u2019t seem like
+      they were worried when you slipped past them."
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 10895650d0ef6124d80a59b349ff55c0, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "In fact, they probably went back home once they realized you were
+      missing. They\u2019re probably relieved."
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "...No that\u2019s not true\u2026 Why would you say something so hurtful?"
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 10895650d0ef6124d80a59b349ff55c0, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "How is anything of what I\u2019m saying different from what you\u2019ve
+      been telling yourself?"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: ...
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 10895650d0ef6124d80a59b349ff55c0, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: You deserve better parents, Max. You deserve someone who will respect
+      you...
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 10895650d0ef6124d80a59b349ff55c0, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: Someone who will take care of you... love you...
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 10895650d0ef6124d80a59b349ff55c0, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: Someone like-
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 10895650d0ef6124d80a59b349ff55c0, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: Agh..!
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: f920cbd22327c044da4527aea3ed7f37, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: ...What is it?!
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 10895650d0ef6124d80a59b349ff55c0, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "It hurts\u2026 so bad\u2026"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: f920cbd22327c044da4527aea3ed7f37, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: ...What does?
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 10895650d0ef6124d80a59b349ff55c0, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "T-there\u2019s a nail. The terrible people stabbed it into the nape
+      of my neck\u2026 Ah! "
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 10895650d0ef6124d80a59b349ff55c0, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "Could you take it out for me? Please...This nail... it\u2019s hurting
+      me so much\u2026"
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "...I still know nothing about the terrible people that trapped you
+      here. I\u2019ll take it out if you promise to tell me everything."
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 10895650d0ef6124d80a59b349ff55c0, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "I promise\u2026 Max...  please\u2026"
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c3c687aa5e1594849814e7a30abe8ed5, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "Max...you\u2019re too kind\u2026You\u2019re just like the child I\u2019ve
+      always wanted..."
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: f920cbd22327c044da4527aea3ed7f37, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "I-I\u2019ve helped you...I\u2019ve done what you\u2019ve asked me
+      to do and now you\u2019re free. Please... tell me how I can return home-"
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c3c687aa5e1594849814e7a30abe8ed5, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "But Max\u2026"
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: f7234d2463f6cfa419fcc624429729e5, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0
+    sentences: "Y o u \u2019r e   a l r e a d y   h o m e. "
+    isJitter: 1

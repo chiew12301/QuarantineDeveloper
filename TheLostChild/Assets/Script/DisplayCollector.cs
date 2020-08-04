@@ -13,6 +13,7 @@ public class DisplayCollector : MonoBehaviour
     public Sprite childrenSprite;
 
     public bool withTriggerDialogue = false;
+    private bool checkOnlyOnce = false;
     [HideInInspector]
     public bool isCollected = false;
 
@@ -55,8 +56,9 @@ public class DisplayCollector : MonoBehaviour
             {
                 BarrierToUnlock.SetActive(false);
             }
-            if(withTriggerDialogue == true)
+            if(withTriggerDialogue == true && checkOnlyOnce == false)
             {
+                checkOnlyOnce = true;
                 if(this.GetComponent<TriggerDialogue>() != null)
                 {
                     this.GetComponent<TriggerDialogue>().TriggerDialogueSpeech();

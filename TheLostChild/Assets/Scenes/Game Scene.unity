@@ -275,6 +275,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!50 &15561059
 Rigidbody2D:
@@ -398,6 +399,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!212 &31522118
 SpriteRenderer:
@@ -636,6 +638,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &52489295
 GameObject:
@@ -828,6 +831,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 52489303}
 --- !u!114 &52489303
 MonoBehaviour:
@@ -949,6 +953,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!212 &55658375
 SpriteRenderer:
@@ -2010,7 +2015,7 @@ PrefabInstance:
     - target: {fileID: 9203203948995110234, guid: c460f9bc43955a4468593b68fc9019a6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9203203948995110237, guid: c460f9bc43955a4468593b68fc9019a6,
         type: 3}
@@ -2060,7 +2065,7 @@ PrefabInstance:
     - target: {fileID: 9203203949032497306, guid: c460f9bc43955a4468593b68fc9019a6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9203203949032497309, guid: c460f9bc43955a4468593b68fc9019a6,
         type: 3}
@@ -2755,7 +2760,7 @@ PrefabInstance:
     - target: {fileID: 9203203950325950544, guid: c460f9bc43955a4468593b68fc9019a6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9203203950325950549, guid: c460f9bc43955a4468593b68fc9019a6,
         type: 3}
@@ -2805,7 +2810,7 @@ PrefabInstance:
     - target: {fileID: 9203203950355689394, guid: c460f9bc43955a4468593b68fc9019a6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9203203950355689394, guid: c460f9bc43955a4468593b68fc9019a6,
         type: 3}
@@ -2905,7 +2910,7 @@ PrefabInstance:
     - target: {fileID: 9203203950359876613, guid: c460f9bc43955a4468593b68fc9019a6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9203203950359876613, guid: c460f9bc43955a4468593b68fc9019a6,
         type: 3}
@@ -3025,6 +3030,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1001 &80976912
 PrefabInstance:
@@ -3766,6 +3772,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &134778872
 GameObject:
@@ -3827,6 +3834,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!114 &134778875
 MonoBehaviour:
@@ -4019,6 +4027,7 @@ MonoBehaviour:
   journal1: {fileID: 875205547}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 144174209}
 --- !u!224 &144174208
 RectTransform:
@@ -4303,6 +4312,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!212 &149994938
 SpriteRenderer:
@@ -4504,6 +4514,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &180056865
 GameObject:
@@ -4745,6 +4756,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 213631498}
 --- !u!212 &213631495
 SpriteRenderer:
@@ -5211,6 +5223,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &226811189
 GameObject:
@@ -5383,6 +5396,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &255534368 stripped
 GameObject:
@@ -6008,6 +6022,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!212 &359762847
 SpriteRenderer:
@@ -6187,6 +6202,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &365837811
 GameObject:
@@ -6568,6 +6584,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!212 &386766460
 SpriteRenderer:
@@ -6781,6 +6798,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!50 &410153438
 Rigidbody2D:
@@ -7197,6 +7215,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &428510343
 GameObject:
@@ -7369,6 +7388,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!114 &446199742
 MonoBehaviour:
@@ -7573,6 +7593,80 @@ MonoBehaviour:
   PageNumberToGet: 2
   note2: 1
   note5: 0
+--- !u!1 &486693878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 486693879}
+  - component: {fileID: 486693881}
+  - component: {fileID: 486693880}
+  m_Layer: 5
+  m_Name: JSPontianak
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &486693879
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486693878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1240006301}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -2.2, y: 0.3}
+  m_SizeDelta: {x: 1329.5604, y: 763.76917}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &486693880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486693878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 46fa3bbabc279464e98234bf6d40fe45, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &486693881
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486693878}
+  m_CullTransparentMesh: 0
 --- !u!1 &504750509
 GameObject:
   m_ObjectHideFlags: 0
@@ -7678,6 +7772,7 @@ MonoBehaviour:
   journal1: {fileID: 357289383}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &515963870
 GameObject:
@@ -8166,6 +8261,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &532843989 stripped
 GameObject:
@@ -8766,6 +8862,7 @@ MonoBehaviour:
   journal1: {fileID: 2871636025521772769}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1001 &574672908
 PrefabInstance:
@@ -9087,7 +9184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castPoint: {fileID: 574672910}
-  player: {fileID: 0}
+  player: {fileID: 3791725899826369984}
   agroRange: 6
   moveSpeed: 2
   moveSpeedPatrol: 3
@@ -9249,6 +9346,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &583160647
 GameObject:
@@ -9446,6 +9544,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &587046873 stripped
 GameObject:
@@ -9570,6 +9669,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &614362714
 GameObject:
@@ -9753,6 +9853,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &652841861
 GameObject:
@@ -9855,6 +9956,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!212 &652841866
 SpriteRenderer:
@@ -10116,7 +10218,7 @@ PrefabInstance:
     - target: {fileID: 181868256, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3791725899826369984}
     - target: {fileID: 181868256, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
       propertyPath: leftWayPoint
       value: 
@@ -11033,6 +11135,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &735224769
 GameObject:
@@ -11264,6 +11367,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!212 &760814186
 SpriteRenderer:
@@ -11375,6 +11479,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!114 &762808686
 MonoBehaviour:
@@ -11914,6 +12019,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 854183020}
 --- !u!212 &854183024
 SpriteRenderer:
@@ -12522,6 +12628,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &875205547 stripped
 GameObject:
@@ -13862,6 +13969,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &1028385636
 GameObject:
@@ -14095,6 +14203,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!212 &1031316599
 SpriteRenderer:
@@ -14267,6 +14376,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &1035593494
 GameObject:
@@ -14527,6 +14637,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!212 &1063984493
 SpriteRenderer:
@@ -14770,6 +14881,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!114 &1080247660
 MonoBehaviour:
@@ -15593,6 +15705,7 @@ MonoBehaviour:
   journal1: {fileID: 337999690}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 1145723991}
 --- !u!1 &1146293997
 GameObject:
@@ -15715,6 +15828,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 1146293999}
 --- !u!212 &1146294003
 SpriteRenderer:
@@ -15882,6 +15996,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!212 &1169252643
 SpriteRenderer:
@@ -15993,6 +16108,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!114 &1171445033
 MonoBehaviour:
@@ -16198,6 +16314,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!212 &1178384689
 SpriteRenderer:
@@ -16421,6 +16538,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &1198846162
 GameObject:
@@ -16750,6 +16868,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!114 &1223969510
 MonoBehaviour:
@@ -16955,6 +17074,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!212 &1234683540
 SpriteRenderer:
@@ -17073,6 +17193,7 @@ RectTransform:
   - {fileID: 1596310458}
   - {fileID: 583160648}
   - {fileID: 9081807592673073265}
+  - {fileID: 486693879}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17479,7 +17600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castPoint: {fileID: 1248651609}
-  player: {fileID: 0}
+  player: {fileID: 3791725899826369984}
   agroRange: 6
   moveSpeed: 2
   moveSpeedPatrol: 3
@@ -17658,6 +17779,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &1253646875
 GameObject:
@@ -17841,6 +17963,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!212 &1290944197
 SpriteRenderer:
@@ -18701,6 +18824,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &1399987248
 GameObject:
@@ -19177,6 +19301,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &1451503305
 GameObject:
@@ -19424,6 +19549,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &1512496971 stripped
 GameObject:
@@ -19624,7 +19750,7 @@ PrefabInstance:
     - target: {fileID: 162106920884228643, guid: ddaf73640a24ebb4d87478fba4d9bed6,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 162106921425994150, guid: ddaf73640a24ebb4d87478fba4d9bed6, type: 3}
@@ -19801,6 +19927,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &1537085392 stripped
 GameObject:
@@ -20232,6 +20359,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &1627250887
 GameObject:
@@ -20508,6 +20636,7 @@ GameObject:
   - component: {fileID: 1641237402}
   - component: {fileID: 1641237401}
   - component: {fileID: 1641237405}
+  - component: {fileID: 1641237406}
   m_Layer: 0
   m_Name: DisplayCollector (4)
   m_TagString: Untagged
@@ -20658,7 +20787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb0ad9f27ab8c34b8276303cc627171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 11400000, guid: 03d1a0c3337b3fa4a952ccd74027707e, type: 2}
   bubble: {fileID: 0}
   isDialogTrigger: 1
   item1: {fileID: 0}
@@ -20666,7 +20795,23 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 1
   tpScript: {fileID: 0}
+--- !u!114 &1641237406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641237399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc02138564bcf0b40a6b37081b71d267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dcScript: {fileID: 1641237401}
+  JumpScareImage: {fileID: 486693880}
+  transition: {fileID: 949376876}
 --- !u!1 &1651271232
 GameObject:
   m_ObjectHideFlags: 0
@@ -21153,6 +21298,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &1697090375
 GameObject:
@@ -21371,6 +21517,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &1713567943
 GameObject:
@@ -21473,6 +21620,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!212 &1713567948
 SpriteRenderer:
@@ -21716,6 +21864,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &1754539939
 GameObject:
@@ -23015,6 +23164,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!212 &1903025993
 SpriteRenderer:
@@ -23433,6 +23583,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!114 &1954140221 stripped
 MonoBehaviour:
@@ -23600,6 +23751,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!114 &1962708120
 MonoBehaviour:
@@ -24336,6 +24488,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &2040432580
 GameObject:
@@ -24676,6 +24829,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!114 &2069605777 stripped
 MonoBehaviour:
@@ -33029,6 +33183,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!114 &3661397084260675680
 MonoBehaviour:
@@ -33050,6 +33205,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!114 &3661397084260675683
 MonoBehaviour:
@@ -33071,6 +33227,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!114 &3661397084260675689
 MonoBehaviour:
@@ -56519,6 +56676,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &7005195967905083373
 GameObject:
@@ -56627,6 +56785,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &7005195968106855037
 GameObject:
@@ -56714,6 +56873,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &7005195968214119833
 GameObject:
@@ -56801,6 +56961,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &7005195968253720104
 GameObject:
@@ -56909,6 +57070,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &7005195968336701668
 GameObject:
@@ -57080,6 +57242,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!1 &7005195968703977596
 GameObject:
@@ -57999,6 +58162,7 @@ MonoBehaviour:
   journal1: {fileID: 453807577}
   journal2: {fileID: 0}
   desAfterTrigger: 1
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!222 &7478943802157712710
 CanvasRenderer:
@@ -64445,6 +64609,7 @@ MonoBehaviour:
   journal1: {fileID: 0}
   journal2: {fileID: 0}
   desAfterTrigger: 0
+  isLastCollector: 0
   tpScript: {fileID: 0}
 --- !u!4 &9165976770932719294
 Transform:
