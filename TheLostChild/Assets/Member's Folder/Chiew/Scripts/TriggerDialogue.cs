@@ -106,6 +106,7 @@ public class TriggerDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExit
                 {
                     if (item1.GetComponent<PickUp>() != null)
                     {
+                        Debug.Log("Ok picked bottle");
                         item1.GetComponent<PickUp>().performPickup();
                         isPicked = true;
                     }

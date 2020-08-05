@@ -37,7 +37,7 @@ public class OpenPanel : MonoBehaviour
     {
         if (hasPickedUpBottle == true)
         {
-            bottle2.SetActive(false);
+            //bottle2.SetActive(false);
 
         }
 
