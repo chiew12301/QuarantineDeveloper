@@ -94,6 +94,11 @@ public class TriggerDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExit
                 {
                     this.GetComponent<LastCollectorScript>().JumpScareActivate();
                 }
+                if (desAfterTrigger == true)
+                {
+                    this.GetComponent<BoxCollider2D>().enabled = false;
+                    this.gameObject.SetActive(false);
+                }
             }
             if (isPicked == false)
             {
@@ -140,11 +145,7 @@ public class TriggerDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExit
                     }
                 }
             }
-            if (desAfterTrigger == true)
-            {
-                this.GetComponent<BoxCollider2D>().enabled = false;
-                this.gameObject.SetActive(false);
-            }
+            
         }      
     }
 
