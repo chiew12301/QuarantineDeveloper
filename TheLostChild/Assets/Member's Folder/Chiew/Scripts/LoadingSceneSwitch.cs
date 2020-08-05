@@ -16,11 +16,13 @@ public class LoadingSceneSwitch : MonoBehaviour
 
     IEnumerator switchNxt()
     {
+
         yield return new WaitForSeconds(5f);
-        if(_NxtScene !=null)
+        if (_NxtScene != null)
         {
             SceneManager.LoadScene(_NxtScene);
         }
+
         yield return null;
     }
 

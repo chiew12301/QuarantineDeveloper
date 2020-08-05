@@ -124,14 +124,14 @@ public class DialogueCutscene : MonoBehaviour
     private void Start()
     {
         //starting cutscene
-        if (isStartCutScenePlayed == false)
+        if (isStartCutScenePlayed == false && Player.loadedYet == true)
         {
             OPObj.SetActive(true);
             PreloadCutsceneManager.instance.StartParagraph(OPObj, OPparagraph, OPparagraphText, picture);
- 
-           //dialogueDisplay.SetActive(true);
-          //DialogueManager.instance.StartDialogue(dialogueStartScene);
-            
+
+            //dialogueDisplay.SetActive(true);
+            //DialogueManager.instance.StartDialogue(dialogueStartScene);
+
         }
         else
         {

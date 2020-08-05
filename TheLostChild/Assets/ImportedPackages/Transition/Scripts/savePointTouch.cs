@@ -7,10 +7,9 @@ public class savePointTouch : MonoBehaviour
     public bool playerTouch = false;
     // Start is called before the first frame update
 
-    private void Start()
+    private void Update()
     {
-        playerTouch = false;
-        
+        Player.touch = playerTouch;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
