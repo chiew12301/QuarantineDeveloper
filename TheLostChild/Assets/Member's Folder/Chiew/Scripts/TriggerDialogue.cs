@@ -25,6 +25,7 @@ public class TriggerDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     public bool desAfterTrigger = false;
     public bool isLastCollector = false;
+    public bool isInteractable = true;
     public TransferPlayer tpScript;
 
     private void Awake()
@@ -151,14 +152,17 @@ public class TriggerDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         if(BackBoneManager.instance.isCutScene == false)
         {
-            if (dialogue != null)
+            if(isInteractable == true)
             {
-                TriggerDialogueSpeech();
-            }
-            else if (bubble != null)
-            {
-                TriggerBubbleSpeech();
-            }
+                if (dialogue != null)
+                {
+                    TriggerDialogueSpeech();
+                }
+                else if (bubble != null)
+                {
+                    TriggerBubbleSpeech();
+                }
+            }       
         }
     }
 
@@ -166,13 +170,16 @@ public class TriggerDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         if (BackBoneManager.instance.isCutScene == false)
         {
-            if (dialogue != null)
+            if (isInteractable == true)
             {
-                TriggerDialogueSpeech();
-            }
-            else if (bubble != null)
-            {
-                TriggerBubbleSpeech();
+                if (dialogue != null)
+                {
+                    TriggerDialogueSpeech();
+                }
+                else if (bubble != null)
+                {
+                    TriggerBubbleSpeech();
+                }
             }
         }
     }

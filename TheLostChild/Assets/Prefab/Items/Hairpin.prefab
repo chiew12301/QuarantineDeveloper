@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1576704396017738731}
   m_Layer: 8
   m_Name: Hairpin
-  m_TagString: Item
+  m_TagString: Hairpin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -688339761
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: beac711fde3e93f4688526f36a48c8ae, type: 3}
   m_Color: {r: 1, g: 0, b: 0.027146816, a: 1}
@@ -122,10 +122,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa1903b3f8b6c74ea745ec7f426224b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pD: {fileID: 0}
   DontDestroy: 0
+  CanInteractAgain: 0
+  isRiddleDone: 0
   Dialogue: 0
+  isMirror: 0
+  isMusicBox: 0
   dialogueDisplay: {fileID: 0}
   dialogue: {fileID: 11400000, guid: 79cbe2ce6001f4a43963a370c33c0e16, type: 2}
+  dialogue2: {fileID: 0}
   Item: 1
   itemObtainedPanel: {fileID: 0}
   itemButton: {fileID: 6902115521112785369, guid: 72d0e82d48111ee478c7feeb05d1ea54,
@@ -136,6 +142,7 @@ MonoBehaviour:
   Inspect: 0
   inspectDisplay: {fileID: 0}
   player: {fileID: 1346889373, guid: c19a4cfa4008cd449880bb23e939ad39, type: 3}
+  mcS: {fileID: 0}
   isShowDialogue: 0
   isItemObtain: 0
   MouseisIn: 0
@@ -143,6 +150,8 @@ MonoBehaviour:
   blockedArea:
   - {fileID: 0}
   - {fileID: 0}
+  isDestroyAfter: 0
+  itemshowafterhide: {fileID: 0}
 --- !u!50 &1576704396017738731
 Rigidbody2D:
   serializedVersion: 4
