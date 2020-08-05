@@ -5,12 +5,13 @@ using UnityEngine.UI;
 using System.Text.RegularExpressions;
 using TMPro;
 
-//need to still work with save and load manager on saving/ reverting the changed dialogues
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
 
     public Image dialoguePortrait;
+
+    //this is cutscene change img
     public Image cutscenePanel;
     public Image blackOverlay;
 
@@ -243,7 +244,7 @@ public class DialogueManager : MonoBehaviour
            
             dialogueText.text = info.sentences;
 
-            Debug.Log(info.sentences);
+         //   Debug.Log(info.sentences);
             StopAllCoroutines();
             StartCoroutine(TypeSceneDialogue(info));
         }
@@ -603,6 +604,19 @@ public class DialogueManager : MonoBehaviour
             tempBubble.isChanged = false;
             Debug.Log("Change revert.");
         }
+        //example : put {Heartbeat} to start heartbeat sfx; put {!Heartbeat} to stop heartbeat sfx ; (cannot put command at end of sentence, put it just bfr sentence end
+        //eg: I am dying{!Heartbeat}. <------ see the fullstop there
+        //!!!!!currently is start stop i think at start of asentence, heartbeat sfx not instant so not sure (the sfx slowly builds up)
+        if (command.Name == "Heartbeat")
+        {
+            AudioManager.instance.Play("HeartBeat");
+        }
+        if (command.Name == "!Heartbeat")
+        {
+            AudioManager.instance.Stop("HeartBeat");
+            Debug.Log("Change revert.");
+        }
+
 
     }
 
