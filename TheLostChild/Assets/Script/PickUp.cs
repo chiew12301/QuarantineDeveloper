@@ -144,7 +144,7 @@ public class PickUp : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 }
                 else
                 {
-                    dialogueDisplay.SetActive(true);
+                    //dialogueDisplay.SetActive(true);
                     DialogueManager.instance.StartDialogue(dialogue);
                 }
             }

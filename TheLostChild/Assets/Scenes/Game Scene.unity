@@ -24946,12 +24946,12 @@ PrefabInstance:
     - target: {fileID: 5636562398972030797, guid: 02ef4012f73269544a4e277efb406fa9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -54.38946
+      value: -48.2
       objectReference: {fileID: 0}
     - target: {fileID: 5636562398972030797, guid: 02ef4012f73269544a4e277efb406fa9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.98
+      value: 1.33
       objectReference: {fileID: 0}
     - target: {fileID: 5636562398972030797, guid: 02ef4012f73269544a4e277efb406fa9,
         type: 3}
@@ -25008,6 +25008,17 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 3791725899826369981}
+    - target: {fileID: 5636562398972030798, guid: 02ef4012f73269544a4e277efb406fa9,
+        type: 3}
+      propertyPath: Dialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5636562398972030798, guid: 02ef4012f73269544a4e277efb406fa9,
+        type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: f6d0613ff0da436488b2603cb4e7ba45,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02ef4012f73269544a4e277efb406fa9, type: 3}
 --- !u!4 &2081771017 stripped
@@ -30113,11 +30124,11 @@ MonoBehaviour:
   DontDestroy: 0
   CanInteractAgain: 0
   isRiddleDone: 0
-  Dialogue: 0
+  Dialogue: 1
   isMirror: 0
   isMusicBox: 0
   dialogueDisplay: {fileID: 0}
-  dialogue: {fileID: 11400000, guid: 79cbe2ce6001f4a43963a370c33c0e16, type: 2}
+  dialogue: {fileID: 11400000, guid: aa567ca4256b23b4d8c7ed6716a635ef, type: 2}
   dialogue2: {fileID: 0}
   Item: 1
   itemObtainedPanel: {fileID: 6463882579805858214}

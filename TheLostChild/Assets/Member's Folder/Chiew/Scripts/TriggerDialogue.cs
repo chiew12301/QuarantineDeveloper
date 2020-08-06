@@ -94,59 +94,58 @@ public class TriggerDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExit
                 {
                     this.GetComponent<LastCollectorScript>().JumpScareActivate();
                 }
+                if (isPicked == false)
+                {
+                    if (item1 != null)
+                    {
+                        if (item1.GetComponent<PickUp>() != null)
+                        {
+                            Debug.Log("Ok picked bottle");
+                            item1.GetComponent<PickUp>().performPickup();
+                            isPicked = true;
+                        }
+                        if (item1.GetComponent<MusicBoxSwitchSceneScript>() != null)
+                        {
+                            item1.GetComponent<MusicBoxSwitchSceneScript>().performPickup();
+                            isPicked = true;
+                        }
+                    }
+                    if (item2 != null)
+                    {
+                        if (item2.GetComponent<PickUp>() != null)
+                        {
+                            item2.GetComponent<PickUp>().performPickup();
+                            isPicked = true;
+                        }
+                        if (item2.GetComponent<MusicBoxSwitchSceneScript>() != null)
+                        {
+                            item2.GetComponent<MusicBoxSwitchSceneScript>().performPickup();
+                            isPicked = true;
+                        }
+                    }
+                    if (journal1 != null)
+                    {
+                        if (journal1.GetComponent<UnlockJournalPage>() != null)
+                        {
+                            journal1.GetComponent<UnlockJournalPage>().performPickup();
+                            isPicked = true;
+                        }
+                    }
+                    if (journal2 != null)
+                    {
+                        if (journal2.GetComponent<UnlockJournalPage>() != null)
+                        {
+                            journal2.GetComponent<UnlockJournalPage>().performPickup();
+                            isPicked = true;
+                        }
+                    }
+                }
                 if (desAfterTrigger == true)
                 {
                     this.GetComponent<BoxCollider2D>().enabled = false;
                     this.gameObject.SetActive(false);
                 }
-            }
-            if (isPicked == false)
-            {
-                if (item1 != null)
-                {
-                    if (item1.GetComponent<PickUp>() != null)
-                    {
-                        Debug.Log("Ok picked bottle");
-                        item1.GetComponent<PickUp>().performPickup();
-                        isPicked = true;
-                    }
-                    if (item1.GetComponent<MusicBoxSwitchSceneScript>() != null)
-                    {
-                        item1.GetComponent<MusicBoxSwitchSceneScript>().performPickup();
-                        isPicked = true;
-                    }
-                }
-                if (item2 != null)
-                {
-                    if (item2.GetComponent<PickUp>() != null)
-                    {
-                        item2.GetComponent<PickUp>().performPickup();
-                        isPicked = true;
-                    }
-                    if (item2.GetComponent<MusicBoxSwitchSceneScript>() != null)
-                    {
-                        item2.GetComponent<MusicBoxSwitchSceneScript>().performPickup();
-                        isPicked = true;
-                    }
-                }
-                if (journal1 != null)
-                {
-                    if (journal1.GetComponent<UnlockJournalPage>() != null)
-                    {
-                        journal1.GetComponent<UnlockJournalPage>().performPickup();
-                        isPicked = true;
-                    }
-                }
-                if (journal2 != null)
-                {
-                    if (journal2.GetComponent<UnlockJournalPage>() != null)
-                    {
-                        journal2.GetComponent<UnlockJournalPage>().performPickup();
-                        isPicked = true;
-                    }
-                }
-            }
-            
+            }   
         }      
     }
 
