@@ -69,6 +69,7 @@ public class DisplayCollector : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+   
         if (collision.gameObject == ItemCollect)
         {
             isCollected = true;

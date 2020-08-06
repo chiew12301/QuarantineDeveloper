@@ -18,11 +18,13 @@ public class saveTrigger : MonoBehaviour
     public bool[] hidingCaseTriggered = new bool[4];
     public List<GameObject> displayCases = new List<GameObject>();
     [HideInInspector]
-    public bool[] displayCaseProgress;
+    public bool[] displayCaseProgress = new bool[5];
+    //public List<bool> displayCaseProgress = new List<bool>();
     [HideInInspector]
     public bool[] dialogueChecks = new bool[12];
     [HideInInspector]
     public bool checkedYet = true;
+    public List<GameObject> puzzlePieces = new List<GameObject>();
 
     private void Awake()
     {
@@ -39,12 +41,21 @@ public class saveTrigger : MonoBehaviour
         {
             itemCheck.Add(false);
         }
-        displayCaseProgress = new bool[displayCases.Count];
+        displayCaseProgress = new bool[5];
+
     }
     public void Update()
     {
+        //if (photoItem.GetComponent<PickUp>() != null)
+        //{
+        //    photoItem.GetComponent<PickUp>().performPickup();
+        //}
+        
         if (checkedYet == false)
         {
+
+            Debug.Log("Checking");
+            Debug.Log(dialogueChecks[6]);
             //Checked means to reload in the items after loading
             //Dialogue
             dialogueCheckingFunction();
@@ -75,62 +86,37 @@ public class saveTrigger : MonoBehaviour
 
     public void dialogueCheckingFunction()
     {
-        if (dialogueChecks[0] == true)
-        {
-            DialogueCutscene.instance.isStartCutScenePlayed = true;
-        }
-        if (dialogueChecks[1] == true)
-        {
-            DialogueCutscene.instance.isStartConversation = true;
-        }
-        if (dialogueChecks[2] == true)
-        {
-            DialogueCutscene.instance.isStartConversationEnd = true;
-        }
-        if (dialogueChecks[3] == true)
-        {
-            DialogueCutscene.instance.isVSCutscenePlayed = true;
-        }
-        if (dialogueChecks[4] == true)
-        {
 
-            DialogueCutscene.instance.isEnteredLobbyOnce = true;
-        }
-        if (dialogueChecks[5] == true)
-        {
+        DialogueCutscene.instance.isStartCutScenePlayed = dialogueChecks[0];
 
-            DialogueCutscene.instance.isExitLobby = true;
-        }
-        if (dialogueChecks[6] == true)
-        {
+        DialogueCutscene.instance.isStartConversation = dialogueChecks[1];
 
-            DialogueCutscene.instance.isCutS2Played = true;
-        }
-        if (dialogueChecks[7] == true)
-        {
+        DialogueCutscene.instance.isStartConversationEnd = dialogueChecks[2];
 
-            DialogueCutscene.instance.isCutS3PlayedP1 = true;
-        }
-        if (dialogueChecks[8] == true)
-        {
 
-            DialogueCutscene.instance.isCutS3PlayedP3 = true;
-        }
-        if (dialogueChecks[9] == true)
-        {
+        DialogueCutscene.instance.isVSCutscenePlayed = dialogueChecks[3];
 
-            DialogueCutscene.instance.isCutSMemPlayed = true;
-        }
-        if (dialogueChecks[10] == true)
-        {
+        DialogueCutscene.instance.isEnteredLobbyOnce = dialogueChecks[4];
 
-            DialogueCutscene.instance.isCutSAyuLivingRPlayed = true;
-        }
-        if (dialogueChecks[11] == true)
-        {
 
-            DialogueCutscene.instance.isRiddleP1 = true;
-        }
+        DialogueCutscene.instance.isExitLobby = dialogueChecks[5];
+
+
+        DialogueCutscene.instance.isCutS2Played = dialogueChecks[6];
+
+
+        DialogueCutscene.instance.isCutS3PlayedP1 = dialogueChecks[7];
+
+        DialogueCutscene.instance.isCutS3PlayedP3 = dialogueChecks[8];
+
+
+        DialogueCutscene.instance.isCutSMemPlayed = dialogueChecks[9];
+
+
+        DialogueCutscene.instance.isCutSAyuLivingRPlayed = dialogueChecks[10];
+
+        DialogueCutscene.instance.isRiddleP1 = dialogueChecks[11];
+
     }
     public void dialogueUpdate()
     {
@@ -185,6 +171,7 @@ public class saveTrigger : MonoBehaviour
     }
     public void enemyCheck()
     {
+        
         if (enemySpawned)
         {
             MainEnemyScript.enableES = true;
@@ -195,6 +182,12 @@ public class saveTrigger : MonoBehaviour
         if (enemies[0].activeInHierarchy)
         {
             enemySpawned = true;
+        }
+        else if( enemySpawned == false)
+        {
+            MainEnemyScript.enableES = false;
+            enemies[0].SetActive(false);
+            enemies[1].SetActive(false);
         }
     }
     public void objectCheck()
@@ -234,17 +227,47 @@ public class saveTrigger : MonoBehaviour
 
     public void displayCheck()
     {
-            for (int i = 0; i < displayCases.Count; i++)
+        for (int i = 0; i < displayCases.Count; i++)
+        {
+            displayCases[i].GetComponent<DisplayCollector>().isCollected = displayCaseProgress[i];
+            if (displayCaseProgress[i])
             {
-                displayCases[i].GetComponent<DisplayCollector>().isCollected = displayCaseProgress[i];
+                spriteCheck(i);
             }
+            else
+            {
+
+            }
+
+            //Debug.Log(displayCases[i].GetComponent<DisplayCollector>().isCollected);
+            //Debug.Log(displayCaseProgress[i]);
+        }
     }
     public void displayUpdate()
     {
-        for (int i = 0; i < displayCases.Count; i++)
+
+        for (int i = 0; i < 5; i++)
         {
             displayCaseProgress[i] = displayCases[i].GetComponent<DisplayCollector>().isCollected;
+            //Debug.Log(displayCases[i].GetComponent<DisplayCollector>().isCollected);
+            //Debug.Log(displayCaseProgress[i]);
         }
+    }
+
+    public void spriteCheck(int i)
+    {
+
+        Color tempColor;
+        Sprite tempSprite;
+        tempColor.a = 0;
+        tempSprite = displayCases[i].GetComponent<DisplayCollector>().ItemCollect.GetComponent<SpriteRenderer>().sprite;
+        //displayCases[i].GetComponent<DisplayCollector>().childrenSprite = displayCases[0].GetComponent<DisplayCollector>().ItemCollect.GetComponent<SpriteRenderer>().sprite;
+        displayCases[i].GetComponent<DisplayCollector>().Children.GetComponent<SpriteRenderer>().sprite = tempSprite;
+        tempColor = displayCases[i].GetComponent<DisplayCollector>().Children.GetComponent<SpriteRenderer>().material.color;
+        tempColor.a = 1;
+        displayCases[i].GetComponent<DisplayCollector>().Children.GetComponent<SpriteRenderer>().material.color = tempColor;
+
+
     }
 
 }

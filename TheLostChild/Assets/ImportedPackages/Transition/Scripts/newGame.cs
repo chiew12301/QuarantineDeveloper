@@ -25,6 +25,7 @@ public class newGame : MonoBehaviour
         //SceneManager.LoadScene(firstScene);
         //StartCoroutine(LoadLevel());
         SceneManager.LoadScene("Loading Scene");
+        Time.timeScale = 1;
     }
 
     IEnumerator LoadLevel()

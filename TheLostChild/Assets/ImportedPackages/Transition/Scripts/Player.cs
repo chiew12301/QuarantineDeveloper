@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Security.Policy;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -15,6 +17,7 @@ public class Player : MonoBehaviour
     public List<string> takenItems;
     public GameObject transition;
     public GameObject journal;
+    private bool journalLoad = false;
 
 
 
@@ -26,11 +29,12 @@ public class Player : MonoBehaviour
         {
             curItems[i] = null;
         }
+        journalLoad = false;
     }
 
     void Update()
     {
-        if (loadedYet == false)
+        if (loadedYet == false || journalLoad == true)
         {
             loadNewInfo();
         }
@@ -58,32 +62,74 @@ public class Player : MonoBehaviour
                 }
             }
             saveSystem.Save(this);
+            Debug.Log("Saved");
         }      
 
     }
 
     public void loadPlayer()
     {
-        if (SceneManager.GetActiveScene().name == "Game Scene")
+        string path = Application.persistentDataPath + "/player.Data";
+        if (File.Exists(path))
         {
-            journal.GetComponent<JournalScript>().ExitJournal();
-            Inventory.instance.itemLists.Clear();
-            curItems.Clear();
-            loadNewInfo();
-            transition.SetActive(false);
-            transition.SetActive(true);            
+            if (SceneManager.GetActiveScene().buildIndex == 4)
+            {
+                Debug.Log(journalLoad);
+                Time.timeScale = 0;
+                SceneManager.LoadScene("Loading Scene");
+                loadedYet = false;
+                journalLoad = true;
+                Time.timeScale = 1;
+                Debug.Log(journalLoad);
+
+                //Inventory.instance.itemLists.Clear();
+
+                //Debug.Log(Inventory.instance.itemLists[0].name);
+
+
+                //curItems.Clear();
+                //loadNewInfo();
+                //transition.SetActive(false);
+                //transition.SetActive(true);
+            }
+            else
+            {
+                Time.timeScale = 1;
+                SceneManager.LoadScene("Loading Scene");
+                loadedYet = false;
+
+
+            }
+
+
+
         }
         else
         {
-            SceneManager.LoadScene("Loading Scene");
-            loadedYet = false;
+
         }
+
        
+    }
+
+    IEnumerator loadDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        loadedYet = false;
     }
 
     public void loadNewInfo()
     {
-        loadedYet = true;
+        Debug.Log("loaded");
+        if (journalLoad)
+        {
+            loadedYet = false;
+        }
+        else
+        {
+            loadedYet = true;
+        }
+
         saveTrigger.instance.checkedYet = false;
         playerData data = saveSystem.Load();
         JournalScript.enableArrows = data.journalArrows;
@@ -115,24 +161,24 @@ public class Player : MonoBehaviour
             switch (curItems[i])
             {
                 case "Hairpin":
-                    Inventory.instance.addItem(saveTrigger.instance.itemScriptObject[0]);
+                    saveTrigger.instance.puzzlePieces[0].GetComponent<PickUp>().performPickup();
                     break;
                 case "Music Box":
-                    Inventory.instance.addItem(saveTrigger.instance.itemScriptObject[1]);
+                    saveTrigger.instance.puzzlePieces[1].GetComponent<PickUp>().performPickup();
                     break;
                 case "Photograph":
-                    Inventory.instance.addItem(saveTrigger.instance.itemScriptObject[2]);
+                    saveTrigger.instance.puzzlePieces[2].GetComponent<PickUp>().performPickup();
                     break;
                 case "CorrectBottle":
-                    Inventory.instance.addItem(saveTrigger.instance.itemScriptObject[3]);
+                    saveTrigger.instance.puzzlePieces[3].GetComponent<PickUp>().performPickup();
                     break;
                 case "Bullets":
-                    Inventory.instance.addItem(saveTrigger.instance.itemScriptObject[4]);
+                    saveTrigger.instance.puzzlePieces[4].GetComponent<PickUp>().performPickup();
                     break;
                 case null:
                     break;
-            }             
-
+            }
+            saveTrigger.instance.puzzlePieces[0].GetComponent<PickUp>().itemObtainedPanel.SetActive(false);
         }
         
 
