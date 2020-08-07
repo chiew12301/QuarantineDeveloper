@@ -10,6 +10,7 @@ public class DialogueCutscene : MonoBehaviour
 
     //!!1 added
     public bool isTutorialPlayed = false;
+    public bool isVSCutscenePlayedEnd = false;
 
     [Header("OpeningCutscene")]
     public GameObject OPObj;
@@ -166,13 +167,19 @@ public class DialogueCutscene : MonoBehaviour
         {
             //    Debug.Log("HI");
             ParentBG.gameObject.SetActive(false);
-           // VSObj.SetActive(true);
-            //PreloadCutsceneManager.instance.StartParagraph(VSObj, VSparagraph, VSparagraphText, null);
+            VSObj.SetActive(true);
+            PreloadCutsceneManager.instance.StartParagraph(VSObj, VSparagraph, VSparagraphText, null);
             isVSCutscenePlayed = true;
 
             //for new note - journal
             //JournalAuto_Folder.SetActive(true);
-            Tutorial.SetActive(true); // <------------------------------------------------------------- make this happen after the black screen one ends D8
+             // <------------------------------------------------------------- make this happen after the black screen one ends D8
+        }
+        //
+        if(isVSCutscenePlayedEnd == true && isTutorialPlayed == false)
+        {
+            Tutorial.SetActive(true);
+            isTutorialPlayed = true;
         }
 
         ////first time receive hairpin
