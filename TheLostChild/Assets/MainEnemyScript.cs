@@ -20,6 +20,13 @@ public class MainEnemyScript : MonoBehaviour
         {
             EnemySoldier_1.SetActive(true);
             EnemySoldier_2.SetActive(true);
+            HidingObjectScript.instance.isAbleHide = true;
+        }
+        else
+        {
+            EnemySoldier_1.SetActive(false);
+            EnemySoldier_2.SetActive(false);
+            HidingObjectScript.instance.isAbleHide = false;
         }
     }
 }

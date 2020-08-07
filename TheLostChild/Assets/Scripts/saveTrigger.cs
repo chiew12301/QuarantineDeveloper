@@ -25,6 +25,7 @@ public class saveTrigger : MonoBehaviour
     [HideInInspector]
     public bool checkedYet = true;
     public List<GameObject> puzzlePieces = new List<GameObject>();
+    public bool enemyDespawner = false;
 
     private void Awake()
     {
@@ -183,8 +184,9 @@ public class saveTrigger : MonoBehaviour
         {
             enemySpawned = true;
         }
-        else if( enemySpawned == false)
+        else if (enemySpawned == false && enemyDespawner == false)
         {
+            enemyDespawner = true;
             MainEnemyScript.enableES = false;
             enemies[0].SetActive(false);
             enemies[1].SetActive(false);
