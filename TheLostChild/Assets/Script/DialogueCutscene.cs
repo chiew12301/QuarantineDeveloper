@@ -7,7 +7,9 @@ using TMPro;
 public class DialogueCutscene : MonoBehaviour
 {
     public static DialogueCutscene instance;
-   
+
+    //!!1 added
+    public bool isTutorialPlayed = false;
 
     [Header("OpeningCutscene")]
     public GameObject OPObj;
@@ -164,7 +166,7 @@ public class DialogueCutscene : MonoBehaviour
         {
             //    Debug.Log("HI");
             ParentBG.gameObject.SetActive(false);
-            //VSObj.SetActive(true);
+           // VSObj.SetActive(true);
             //PreloadCutsceneManager.instance.StartParagraph(VSObj, VSparagraph, VSparagraphText, null);
             isVSCutscenePlayed = true;
 
