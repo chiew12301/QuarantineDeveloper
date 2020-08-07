@@ -35,7 +35,7 @@ public class PuzzleDrop : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Jigsaw"))
+        if (collision.CompareTag("Jigsaw") || collision.CompareTag("Jigsaw2") || collision.CompareTag("Jigsaw3"))
         {
             counterBookDrop++;
             Debug.Log("Counter" + counterBookDrop);

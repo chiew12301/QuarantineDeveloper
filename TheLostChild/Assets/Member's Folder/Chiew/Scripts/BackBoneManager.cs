@@ -33,7 +33,7 @@ public class BackBoneManager : MonoBehaviour
 
         if(TutorialScript.isTutorial == true)
         {
-            //isTransfering = true;
+            isTransfering = true;    // <- enable when tutorial is on in DialogueCutscene.cs [Tutorial.SetActive(true);]
         }
         else if (TutorialScript.isTutorial == false)
         {

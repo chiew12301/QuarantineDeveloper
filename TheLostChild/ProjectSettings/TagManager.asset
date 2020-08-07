@@ -25,6 +25,8 @@ TagManager:
   - CorrectBottle
   - MusicBox
   - Hairpin
+  - Jigsaw2
+  - Jigsaw3
   layers:
   - Default
   - TransparentFX
