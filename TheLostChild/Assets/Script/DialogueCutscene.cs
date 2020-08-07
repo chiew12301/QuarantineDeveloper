@@ -111,6 +111,7 @@ public class DialogueCutscene : MonoBehaviour
     public Vector3 RightAyuPainting;
 
     public GameObject JournalAuto_Folder;
+    public GameObject Tutorial;
 
     private void Awake()
     {
@@ -168,7 +169,8 @@ public class DialogueCutscene : MonoBehaviour
             isVSCutscenePlayed = true;
 
             //for new note - journal
-            JournalAuto_Folder.SetActive(true);
+            //JournalAuto_Folder.SetActive(true);
+            Tutorial.SetActive(true);
         }
 
         ////first time receive hairpin

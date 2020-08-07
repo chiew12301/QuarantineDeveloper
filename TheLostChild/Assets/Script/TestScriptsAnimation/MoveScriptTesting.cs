@@ -166,9 +166,9 @@ public class MoveScriptTesting : MonoBehaviour
     {
         if (collision.CompareTag("EnemySoldier_1"))
         {
-            SceneManager.LoadScene("DeadScene");
+            /*SceneManager.LoadScene("DeadScene");
             AudioManager.instance.Stop("BGM");
-            AudioManager.instance.Stop("Moving");
+            AudioManager.instance.Stop("Moving");*/
         }
         else if(collision.CompareTag("EnemySoldier_P4"))
         {

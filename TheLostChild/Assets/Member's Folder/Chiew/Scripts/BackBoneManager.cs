@@ -30,6 +30,15 @@ public class BackBoneManager : MonoBehaviour
     void Update()
     {
         CheckBackBone();
+
+        if(TutorialScript.isTutorial == true)
+        {
+            //isTransfering = true;
+        }
+        else if (TutorialScript.isTutorial == false)
+        {
+            isTransfering = false;
+        }
     }
 
     public void CheckBackBone()

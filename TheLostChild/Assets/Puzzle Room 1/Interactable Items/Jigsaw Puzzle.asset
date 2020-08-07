@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 3da371d781d8326418ce03c260a019e3, type: 3}
   name: Jigsaw Piece 3
-  desc: Puzzle Piece 1
+  desc: Puzzle Piece 3
   itemType: 5
   itemPrefab: {fileID: 32998886288312305, guid: eaeff1ac2ea4e2b4b9f584f056d5f6a2,
     type: 3}

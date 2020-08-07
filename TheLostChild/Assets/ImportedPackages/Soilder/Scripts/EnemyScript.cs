@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyScript : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class EnemyScript : MonoBehaviour
     float agroRange = 5;
 
     [SerializeField]
-    float moveSpeed = 4;
+    float moveSpeed = 0;
 
     Rigidbody2D rb2d;
 
@@ -27,12 +28,18 @@ public class EnemyScript : MonoBehaviour
     public Transform rightWayPoint;
     bool movingRight = true;
     public bool patrolState = true;
+    public bool pointingState = true;
+    public bool chaseState = false;
+    public bool caughtState = false;
 
     public Animator animator; //Animation purpose
     bool FacingRight = false;
 
     public GameObject enemyParent;
     public GameObject enemyParent2;
+
+    bool isRepeat = true;
+    bool activeThis = true;
 
     void Awake()
     {
@@ -45,6 +52,7 @@ public class EnemyScript : MonoBehaviour
 
     void Start()
     {
+
         rb2d = GetComponent<Rigidbody2D>();
         animator.keepAnimatorControllerStateOnDisable = true;
         //Patrol 
@@ -56,10 +64,15 @@ public class EnemyScript : MonoBehaviour
     void Update()
     {
         animator.SetBool("IsPatrol", patrolState);
+        animator.SetBool("isPointing", pointingState);
+        animator.SetBool("isCaught", caughtState);
+        animator.SetBool("isChase", chaseState);
+
 
         if (patrolState)
         {
             moveSpeed = 1;
+            rb2d.velocity = new Vector2(moveSpeed, 0);
             //Left & Right way points
             if (transform.position.x > rightWayPoint.position.x)
                 movingRight = false;
@@ -71,44 +84,74 @@ public class EnemyScript : MonoBehaviour
             else
                 moveLeft();
         }
-        
-        
-
-
-
-        //Extra (USEFUL DONT DELETE) Below
-
-        /*//distance to player
-        float distToPlayer = Vector2.Distance(transform.position, player.position);
-        //print("distToPlayer: " + distToPlayer);
-
-        if (distToPlayer < agroRange)
+        else if (!patrolState && pointingState)
         {
-            //code to chase player
-            ChasePlayer();
+            if (isRepeat)
+            {
+                if (activeThis)
+                {
+                    moveSpeed = 0;
+                    rb2d.velocity = new Vector2(moveSpeed, 0);
+                    StartCoroutine(EnemyPointFinger());
+                    isRepeat = false;
+                }
+
+            }
         }
-        else
-        {
-            //stop chasing player
-            StopChasingPlayer();
-        }*/
-
     }
+
 
     private void FixedUpdate()
     {
         if (CanSeePlayer(agroRange))
         {
             patrolState = false;
-            ChasePlayer();
+            //ChasePlayer();
         }
         else
         {
-            StopChasingPlayer();
+            //StopChasingPlayer();
         }
     }
 
-    bool CanSeePlayer(float distance)
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            moveSpeed = 0;
+            rb2d.velocity = new Vector2(moveSpeed, 0);
+            patrolState = false;
+            pointingState = false;
+            caughtState = true;
+            activeThis = false;
+            isRepeat = false;
+
+            //MoveScriptTesting.instance.StopMoving();
+            //MoveScriptTesting.instance.isStop = true;
+
+            player.GetComponent<MoveScriptTesting>().StopMoving();
+            player.GetComponent<MoveScriptTesting>().isStop = true;
+
+            Debug.Log(player.GetComponent<MoveScriptTesting>().isStop);
+
+            //GameObject.Find("Player").GetComponent<MoveScriptTesting>().enabled = false;
+            //StartCoroutine(GameOver());
+            Debug.Log("DEAD");
+
+
+        }
+    }
+
+    IEnumerator GameOver()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("DeadScene");
+        AudioManager.instance.Stop("BGM");
+        AudioManager.instance.Stop("Moving");
+    }
+
+
+    public bool CanSeePlayer(float distance)
     {
         bool val = false;
         float castDist = distance;
@@ -120,36 +163,52 @@ public class EnemyScript : MonoBehaviour
 
         Vector2 endPos = castPoint.position + Vector3.right * castDist;
 
-        RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endPos, 1 << LayerMask.NameToLayer("Character") );
+        RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endPos, 1 << LayerMask.NameToLayer("Character"));
 
-        if(hit.collider != null)
+        if (hit.collider != null)
         {
             if (hit.collider.gameObject.CompareTag("Player"))
             {
-                moveSpeed = 2;
+                //moveSpeed = 2;
                 Debug.DrawLine(castPoint.position, hit.point, Color.red);
                 val = true;
+                activeThis = true;
+                patrolState = false;
 
             }
-            else
+            /*else
             {
-                moveSpeed = 1;
+                //moveSpeed = 1;
                 Debug.DrawLine(castPoint.position, hit.point, Color.yellow);
                 val = false;
                 patrolState = true;
-            }
+            }*/
 
-            
+
 
         }
         else
         {
-            patrolState = true;
+            isRepeat = true;
+            if (activeThis)
+            {
+                activeThis = false;
+                StartCoroutine(delayPatrol());
+                //patrolState = true;
+                Debug.DrawLine(castPoint.position, endPos, Color.blue);
+            }
             Debug.DrawLine(castPoint.position, endPos, Color.blue);
         }
 
         return val;
     }
+
+    IEnumerator delayPatrol()
+    {
+        yield return new WaitForSeconds(2f);
+        patrolState = true;
+    }
+
 
     void ChasePlayer()
     {
@@ -166,6 +225,25 @@ public class EnemyScript : MonoBehaviour
             transform.localScale = new Vector2(1, 1); // to make the enemy object turn around of -1(left)
             isFacingLeft = true;
         }
+    }
+
+    IEnumerator EnemyPointFinger()
+    {
+        //Put animation here!
+        yield return new WaitForSeconds(1.4f);
+
+        moveSpeed = 2;
+        //rb2d.velocity = new Vector2(moveSpeed, 0);
+        //Left & Right way points
+        if (transform.position.x > player.position.x)
+        {
+            rb2d.velocity = new Vector2(-moveSpeed, 0);
+        }
+        if (transform.position.x < player.position.x)
+        {
+            rb2d.velocity = new Vector2(moveSpeed, 0);
+        }
+
     }
 
     void StopChasingPlayer()
@@ -188,4 +266,5 @@ public class EnemyScript : MonoBehaviour
         transform.localScale = new Vector2(1, 1); // to make the enemy object turn around of -1(left)
         isFacingLeft = true;
     }
+
 }

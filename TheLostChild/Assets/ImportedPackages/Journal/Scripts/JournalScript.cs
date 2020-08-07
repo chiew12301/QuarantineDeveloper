@@ -399,7 +399,8 @@ public class JournalScript : MonoBehaviour
 
     public void ExitJournal()
     {
-        TutorialScript.disableTutorialBlocks = true;
+        TutorialScript.gameStart = true;
+        //TutorialScript.disableTutorialBlocks = true;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameisPaused = false;
