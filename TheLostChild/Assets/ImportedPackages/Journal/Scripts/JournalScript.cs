@@ -76,6 +76,10 @@ public class JournalScript : MonoBehaviour
         {
             enableArrows[x] = false;
         }
+
+        enableMap = false;
+        Page = 1;
+        p = -1;
     }
 
     void Update()

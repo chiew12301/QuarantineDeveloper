@@ -36,6 +36,7 @@ public class BackBoneManager : MonoBehaviour
         isCutScene = false;
         isTransfering = false;
         isTutorial = false;
+        TutorialScript.isTutorial = true;
     }
 
     // Update is called once per frame

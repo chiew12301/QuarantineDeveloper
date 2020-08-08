@@ -13,7 +13,10 @@ public class TutorialScript_TransferPlayer : MonoBehaviour
 
     void Start()
     {
-        
+        isEnable = false;
+        isEnable_2 = false;
+        deactive = false;
+        deactive_2 = false;
     }
 
 
@@ -23,14 +26,12 @@ public class TutorialScript_TransferPlayer : MonoBehaviour
         {
             Transfer_1();
             deactive = true;
-            isEnable = false;
         }
 
         if(isEnable_2 && !deactive_2)
         {
             Transfer_2();
             deactive_2 = true;
-            isEnable_2 = false;
         }
     }
 

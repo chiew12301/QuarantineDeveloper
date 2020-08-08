@@ -35,6 +35,9 @@ public class TutorialScript : MonoBehaviour
         blocker_2.SetActive(false);
         Panel.SetActive(false);
         isTutorial = true;
+        DontRepeat = false;
+        gameStart = false;
+        JournalAuto_Folder.SetActive(false);
     }
 
     void Update()

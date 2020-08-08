@@ -11,6 +11,11 @@ public class GetJournalNoteAuto : MonoBehaviour
     public bool note2 = false;
     public bool note5 = false;
 
+    private void Start()
+    {
+        getNote2 = true;
+        getNote5 = false;
+    }
 
     void Update()
     {
