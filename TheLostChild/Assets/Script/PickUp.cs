@@ -117,7 +117,6 @@ public class PickUp : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             if (item.name == "Hairpin")
             {
-                Debug.Log("Spawnenemy");
                 MainEnemyScript.enableES = true;
             }
             if (item.name == "MusicBox")

@@ -34,6 +34,7 @@ public class TutorialScript : MonoBehaviour
         blocker_1.SetActive(false);
         blocker_2.SetActive(false);
         Panel.SetActive(false);
+        isTutorial = true;
     }
 
     void Update()

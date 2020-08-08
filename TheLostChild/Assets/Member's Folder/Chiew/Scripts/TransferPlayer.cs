@@ -23,14 +23,12 @@ public class TransferPlayer : MonoBehaviour
 
     public void AtFirstEnter()
     {
+        AudioManager.instance.Play("Teleport");
         playerObj.transform.position = Des;
         if (playerObj.transform.position == Des)
         {
-            //if (loadingObj.stopMoving == false)
-            //{
-                TriggerDialogueBubble();
-                isEnterOnce = true;
-            //}
+             TriggerDialogueBubble();
+             isEnterOnce = true;
         }
     }
 

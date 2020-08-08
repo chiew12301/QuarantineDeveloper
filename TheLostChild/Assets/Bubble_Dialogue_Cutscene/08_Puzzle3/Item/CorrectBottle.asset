@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0071a5f07c607b94b9ad7b5031592816, type: 3}
   m_Name: CorrectBottle
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: d9ca3796c906ddd498c96b1f2dffbce9, type: 3}
+  itemSprite: {fileID: 21300000, guid: 7429e4e991ef1a0428d5f01846768f4a, type: 3}
   name: CorrectBottle
   desc: CorrectBottle
   itemType: 10

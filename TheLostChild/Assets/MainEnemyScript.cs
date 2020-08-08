@@ -10,7 +10,7 @@ public class MainEnemyScript : MonoBehaviour
 
     void Start()
     {
-        
+        enableES = false;
     }
 
     // Update is called once per frame

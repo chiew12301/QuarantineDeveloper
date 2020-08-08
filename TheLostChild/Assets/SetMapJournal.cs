@@ -45,6 +45,7 @@ public class SetMapJournal : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     private void Start()
     {
+        MapIsAvailable = false;
         mcs = GameObject.FindGameObjectWithTag("Cursor").GetComponent<MouseCursor>();
     }
 
