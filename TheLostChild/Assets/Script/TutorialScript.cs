@@ -29,7 +29,7 @@ public class TutorialScript : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        StartCoroutine(openTutorialPanel());
+        StartCoroutine(StartTutorial());
         journal.SetActive(false);
         blocker_1.SetActive(false);
         blocker_2.SetActive(false);
@@ -38,8 +38,6 @@ public class TutorialScript : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Tutorial is : " + JournalTutorialScript.isTutorial);
-
         if (gameStart && !DontRepeat)
         {
             gameStart = false;
@@ -49,16 +47,16 @@ public class TutorialScript : MonoBehaviour
 
     }
 
-    IEnumerator openTutorialPanel()
+    /*IEnumerator openTutorialPanel()
     {
         yield return new WaitForSeconds(3);
         Panel.SetActive(true);
         StartCoroutine(StartTutorial());
-    }
+    }*/
 
     IEnumerator StartTutorial()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         Panel.SetActive(true);
         TextBox.text = "Tutorial session";
         yield return new WaitForSeconds(4);

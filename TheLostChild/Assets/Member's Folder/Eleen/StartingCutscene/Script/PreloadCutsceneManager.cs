@@ -133,6 +133,7 @@ public class PreloadCutsceneManager : MonoBehaviour
             else
             {
                 tempObj.SetActive(false);
+                StartCoroutine(Wait2());
             }
             Debug.Log("CutsceneEnd");
             CutsceneEnd();
@@ -213,6 +214,16 @@ public class PreloadCutsceneManager : MonoBehaviour
         if (DialogueCutscene.instance.isStartCutScenePlayed == false)
         {
             DialogueCutscene.instance.isStartCutScenePlayed = true;
+        }
+    }
+
+    IEnumerator Wait2()
+    {
+        yield return new WaitForSeconds(1.0f);
+        tempObj.SetActive(false);
+        if (DialogueCutscene.instance.isVSCutscenePlayedEnd == false)
+        {
+            DialogueCutscene.instance.isVSCutscenePlayedEnd = true;
         }
     }
     private void CutsceneEnd()

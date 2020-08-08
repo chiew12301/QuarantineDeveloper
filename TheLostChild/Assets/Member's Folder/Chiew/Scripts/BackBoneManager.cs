@@ -39,6 +39,11 @@ public class BackBoneManager : MonoBehaviour
         {
             isTransfering = false;
         }
+
+        if (MoveScriptTesting.isPlayerDead == true)
+        {
+            isTransfering = true;
+        }
     }
 
     public void CheckBackBone()

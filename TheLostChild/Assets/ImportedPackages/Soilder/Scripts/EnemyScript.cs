@@ -29,7 +29,6 @@ public class EnemyScript : MonoBehaviour
     bool movingRight = true;
     public bool patrolState = true;
     public bool pointingState = true;
-    public bool chaseState = false;
     public bool caughtState = false;
 
     public Animator animator; //Animation purpose
@@ -40,6 +39,10 @@ public class EnemyScript : MonoBehaviour
 
     bool isRepeat = true;
     bool activeThis = true;
+
+    
+
+    public GameObject []Walls;
 
     void Awake()
     {
@@ -66,7 +69,6 @@ public class EnemyScript : MonoBehaviour
         animator.SetBool("IsPatrol", patrolState);
         animator.SetBool("isPointing", pointingState);
         animator.SetBool("isCaught", caughtState);
-        animator.SetBool("isChase", chaseState);
 
 
         if (patrolState)
@@ -83,6 +85,14 @@ public class EnemyScript : MonoBehaviour
                 moveRight();
             else
                 moveLeft();
+
+            Walls[0].SetActive(true);
+            Walls[1].SetActive(true);
+            Walls[2].SetActive(true);
+            Walls[3].SetActive(true);
+            Walls[4].SetActive(true);
+
+            agroRange = 6;
         }
         else if (!patrolState && pointingState)
         {
@@ -136,6 +146,7 @@ public class EnemyScript : MonoBehaviour
 
             //GameObject.Find("Player").GetComponent<MoveScriptTesting>().enabled = false;
             //StartCoroutine(GameOver());
+            StartCoroutine(DefaultState());
             Debug.Log("DEAD");
 
 
@@ -150,6 +161,14 @@ public class EnemyScript : MonoBehaviour
         AudioManager.instance.Stop("Moving");
     }
 
+    IEnumerator DefaultState()
+    {
+        yield return new WaitForSeconds(4f);
+        Debug.Log("ABLE");
+        patrolState = true;
+        pointingState = true;
+        caughtState = false;
+    }
 
     public bool CanSeePlayer(float distance)
     {
@@ -169,12 +188,18 @@ public class EnemyScript : MonoBehaviour
         {
             if (hit.collider.gameObject.CompareTag("Player"))
             {
+                Walls[0].SetActive(false);
+                Walls[1].SetActive(false);
+                Walls[2].SetActive(false);
+                Walls[3].SetActive(false);
+                Walls[4].SetActive(false);
+                agroRange = 13;
                 //moveSpeed = 2;
                 Debug.DrawLine(castPoint.position, hit.point, Color.red);
                 val = true;
                 activeThis = true;
                 patrolState = false;
-
+                
             }
             /*else
             {
@@ -198,6 +223,7 @@ public class EnemyScript : MonoBehaviour
                 Debug.DrawLine(castPoint.position, endPos, Color.blue);
             }
             Debug.DrawLine(castPoint.position, endPos, Color.blue);
+
         }
 
         return val;

@@ -9782,11 +9782,16 @@ MonoBehaviour:
   rightWayPoint: {fileID: 1451503306}
   patrolState: 1
   pointingState: 1
-  chaseState: 0
   caughtState: 0
   animator: {fileID: 574672912}
   enemyParent: {fileID: 0}
   enemyParent2: {fileID: 0}
+  Walls:
+  - {fileID: 226811189}
+  - {fileID: 1105807494}
+  - {fileID: 1754539939}
+  - {fileID: 1875839398}
+  - {fileID: 420396232}
 --- !u!61 &574672916
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10901,6 +10906,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 181868256, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
+      propertyPath: Walls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 181868256, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 3791725899826369984}
@@ -10912,6 +10921,26 @@ PrefabInstance:
       propertyPath: rightWayPoint
       value: 
       objectReference: {fileID: 6342046732523541655}
+    - target: {fileID: 181868256, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
+      propertyPath: Walls.Array.data[0]
+      value: 
+      objectReference: {fileID: 226811189}
+    - target: {fileID: 181868256, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
+      propertyPath: Walls.Array.data[1]
+      value: 
+      objectReference: {fileID: 1105807494}
+    - target: {fileID: 181868256, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
+      propertyPath: Walls.Array.data[2]
+      value: 
+      objectReference: {fileID: 1754539939}
+    - target: {fileID: 181868256, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
+      propertyPath: Walls.Array.data[3]
+      value: 
+      objectReference: {fileID: 1875839398}
+    - target: {fileID: 181868256, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
+      propertyPath: Walls.Array.data[4]
+      value: 
+      objectReference: {fileID: 420396232}
     - target: {fileID: 181868257, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
       propertyPath: m_Offset.x
       value: 0.6676388
@@ -18792,11 +18821,16 @@ MonoBehaviour:
   rightWayPoint: {fileID: 2063361834}
   patrolState: 1
   pointingState: 1
-  chaseState: 0
   caughtState: 0
   animator: {fileID: 1248651611}
   enemyParent: {fileID: 0}
   enemyParent2: {fileID: 0}
+  Walls:
+  - {fileID: 226811189}
+  - {fileID: 1105807494}
+  - {fileID: 1754539939}
+  - {fileID: 1875839398}
+  - {fileID: 420396232}
 --- !u!61 &1248651615
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18958,7 +18992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb0ad9f27ab8c34b8276303cc627171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 850aee035719ee245a09ebb4a5269432, type: 2}
+  dialogue: {fileID: 0}
   bubble: {fileID: 0}
   isDialogTrigger: 1
   item1: {fileID: 0}
@@ -20708,9 +20742,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingLayerID: 1936097293
+  m_SortingLayer: 6
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 07c8090e7b2f07246a1f676c70ce7e05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -26636,6 +26670,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 181868256, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
+      propertyPath: Walls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 181868256, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 3791725899826369984}
@@ -26655,6 +26693,26 @@ PrefabInstance:
       propertyPath: caughtState
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 181868256, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
+      propertyPath: Walls.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100294831}
+    - target: {fileID: 181868256, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
+      propertyPath: Walls.Array.data[1]
+      value: 
+      objectReference: {fileID: 584054305}
+    - target: {fileID: 181868256, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
+      propertyPath: Walls.Array.data[2]
+      value: 
+      objectReference: {fileID: 1568793674}
+    - target: {fileID: 181868256, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
+      propertyPath: Walls.Array.data[3]
+      value: 
+      objectReference: {fileID: 282780844}
+    - target: {fileID: 181868256, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
+      propertyPath: Walls.Array.data[4]
+      value: 
+      objectReference: {fileID: 282780844}
     - target: {fileID: 181868257, guid: 5c4682a06d70a3c4e914179ee4b6e8f9, type: 3}
       propertyPath: m_Offset.x
       value: 1.2800336
@@ -27055,6 +27113,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1229793233383433753, guid: 5c4682a06d70a3c4e914179ee4b6e8f9,
         type: 3}
+      propertyPath: Walls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229793233383433753, guid: 5c4682a06d70a3c4e914179ee4b6e8f9,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 3791725899826369984}
@@ -27068,6 +27131,31 @@ PrefabInstance:
       propertyPath: leftWayPoint
       value: 
       objectReference: {fileID: 2100294822}
+    - target: {fileID: 1229793233383433753, guid: 5c4682a06d70a3c4e914179ee4b6e8f9,
+        type: 3}
+      propertyPath: Walls.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100294831}
+    - target: {fileID: 1229793233383433753, guid: 5c4682a06d70a3c4e914179ee4b6e8f9,
+        type: 3}
+      propertyPath: Walls.Array.data[1]
+      value: 
+      objectReference: {fileID: 584054305}
+    - target: {fileID: 1229793233383433753, guid: 5c4682a06d70a3c4e914179ee4b6e8f9,
+        type: 3}
+      propertyPath: Walls.Array.data[2]
+      value: 
+      objectReference: {fileID: 1568793674}
+    - target: {fileID: 1229793233383433753, guid: 5c4682a06d70a3c4e914179ee4b6e8f9,
+        type: 3}
+      propertyPath: Walls.Array.data[3]
+      value: 
+      objectReference: {fileID: 282780844}
+    - target: {fileID: 1229793233383433753, guid: 5c4682a06d70a3c4e914179ee4b6e8f9,
+        type: 3}
+      propertyPath: Walls.Array.data[4]
+      value: 
+      objectReference: {fileID: 282780844}
     - target: {fileID: 1920988974187472929, guid: 5c4682a06d70a3c4e914179ee4b6e8f9,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -36187,12 +36275,12 @@ PrefabInstance:
     - target: {fileID: 3791725898869786933, guid: c19a4cfa4008cd449880bb23e939ad39,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.21
+      value: -9.19
       objectReference: {fileID: 0}
     - target: {fileID: 3791725898869786933, guid: c19a4cfa4008cd449880bb23e939ad39,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 126.76
+      value: 126.66
       objectReference: {fileID: 0}
     - target: {fileID: 3791725898869786933, guid: c19a4cfa4008cd449880bb23e939ad39,
         type: 3}
@@ -49697,7 +49785,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &4726831320118276917
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -60577,8 +60665,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1225756857
-  m_SortingLayer: 0
+  m_SortingLayerID: 1431707357
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6b50b768947aece4b849a28c9030ad75, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -64827,12 +64915,17 @@ PrefabInstance:
     - target: {fileID: 8975261800796664027, guid: 2d463f36e4a1f7b4c9c4e3015f68db9c,
         type: 3}
       propertyPath: m_text
-      value: Tutorial
+      value: Tutorial Session
       objectReference: {fileID: 0}
     - target: {fileID: 8975261800796664027, guid: 2d463f36e4a1f7b4c9c4e3015f68db9c,
         type: 3}
       propertyPath: m_textInfo.characterCount
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8975261800796664027, guid: 2d463f36e4a1f7b4c9c4e3015f68db9c,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8975261802520963224, guid: 2d463f36e4a1f7b4c9c4e3015f68db9c,
         type: 3}
@@ -65193,7 +65286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 0}
-  bubble: {fileID: 11400000, guid: cb612d6ecafd1df4f82e7252b8b2f5b1, type: 2}
+  bubble: {fileID: 0}
   isDialogTrigger: 0
   item1: {fileID: 0}
   item2: {fileID: 0}

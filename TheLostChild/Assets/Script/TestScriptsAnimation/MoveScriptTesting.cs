@@ -26,6 +26,8 @@ public class MoveScriptTesting : MonoBehaviour
     public delegate void PressLeftClickEvent(bool f);
     public PressLeftClickEvent OnPressLeftClick;
 
+    public static bool isPlayerDead = false;
+
     private void Awake()
     {
         if (instance != null)
@@ -169,6 +171,8 @@ public class MoveScriptTesting : MonoBehaviour
             /*SceneManager.LoadScene("DeadScene");
             AudioManager.instance.Stop("BGM");
             AudioManager.instance.Stop("Moving");*/
+            isPlayerDead = true;
+            StartCoroutine(GameOver());
         }
         else if(collision.CompareTag("EnemySoldier_P4"))
         {
@@ -176,5 +180,12 @@ public class MoveScriptTesting : MonoBehaviour
         }
     }
 
+    IEnumerator GameOver()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("DeadScene");
+        AudioManager.instance.Stop("BGM");
+        AudioManager.instance.Stop("Moving");
+    }
 
 }
