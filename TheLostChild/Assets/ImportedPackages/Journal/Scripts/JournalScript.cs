@@ -64,6 +64,8 @@ public class JournalScript : MonoBehaviour
     public static int p = -1;
     public static int[] currentPage = new int[SIZE];
     public static bool[] enableArrows = new bool[SIZE];
+
+    public static bool enableMap = false;
     
 
     void Start()
@@ -438,7 +440,12 @@ public class JournalScript : MonoBehaviour
         {
             MapTab.SetActive(true);
             MapTabBig.SetActive(false);
-        }        
+        }
+        else if(SetMapJournal.MapIsAvailable == false)
+        {
+            MapTab.SetActive(false);
+            MapTabBig.SetActive(false);
+        }
         
         NoteDetails.SetActive(true);
         SettingsDetails.SetActive(false);

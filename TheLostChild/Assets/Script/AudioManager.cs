@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine.Audio;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -38,7 +39,53 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        Play("BGM"); //Play BGM
+        AdjustAllVolume(0.5f);
+        Play("MainMenuBGM"); //Play BGM
+    }
+
+    private void Update()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
+        if (sceneName == "MainMenu")
+        {
+            if(FindIsPlaying("MainMenuBGM") == false)
+            {
+                Play("MainMenuBGM");
+                Stop("BGM");
+                Stop("Credit");
+            }
+        }
+        else if (sceneName == "Game Scene")
+        {
+            if (FindIsPlaying("BGM") == false)
+            {
+                Play("BGM");
+                Stop("MainMenuBGM");
+                Stop("Credit");
+            }
+        }
+        else if (sceneName == "StayTuneScene")
+        {
+            if (FindIsPlaying("Credit") == false)
+            {
+                Play("Credit");
+                Stop("MainMenuBGM");
+                Stop("BGM");
+            }
+        }
+    }
+
+    public bool FindIsPlaying(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null) //Warning Debug
+        {
+            Debug.LogWarning("Sounds: " + name + " not found!");
+            return false;
+        }
+        return s.source.isPlaying;
     }
 
     public void Play(string name) //Play Sound source
@@ -88,6 +135,23 @@ public class AudioManager : MonoBehaviour
         }
         s.volume = amount;
         s.source.volume = s.volume;
+    }
+
+    public void AdjustAllVolume(float amount)
+    {
+        foreach(Sound s in sounds)
+        {
+            if (amount >= 1)
+            {
+                amount = 1;
+            }
+            else if(amount <= 0)
+            {
+                amount = 0;
+            }
+            s.volume = amount;
+            s.source.volume = s.volume;
+        }
     }
 
 }

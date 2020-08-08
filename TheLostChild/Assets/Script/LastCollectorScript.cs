@@ -20,7 +20,7 @@ public class LastCollectorScript : MonoBehaviour
     public void JumpScareActivate()
     {
         JumpScareImage.gameObject.SetActive(true);
-        //AudioManager.instance.Play("JumpScare");
+        AudioManager.instance.Play("Jumpscare");
         StartCoroutine(TransferToStayTune());
 ;    }
 

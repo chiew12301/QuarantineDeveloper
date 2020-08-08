@@ -8,8 +8,8 @@ public class TutorialScript_TransferPlayer : MonoBehaviour
     public TransferPlayer tpScript2;
     public static bool isEnable = false;
     public static bool isEnable_2 = false;
-    bool deactive = false;
-    bool deactive_2 = false;
+    public static bool deactive = false;
+    public static bool deactive_2 = false;
 
     void Start()
     {
@@ -23,12 +23,14 @@ public class TutorialScript_TransferPlayer : MonoBehaviour
         {
             Transfer_1();
             deactive = true;
+            isEnable = false;
         }
 
         if(isEnable_2 && !deactive_2)
         {
             Transfer_2();
             deactive_2 = true;
+            isEnable_2 = false;
         }
     }
 

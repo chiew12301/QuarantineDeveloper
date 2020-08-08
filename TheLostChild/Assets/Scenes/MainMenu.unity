@@ -3470,6 +3470,7 @@ GameObject:
   - component: {fileID: 8824904373272975107}
   - component: {fileID: 292163149010480946}
   - component: {fileID: 3852921786192665120}
+  - component: {fileID: 7043938205876825593}
   m_Layer: 5
   m_Name: Setting Panel
   m_TagString: Untagged
@@ -3477,6 +3478,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &7043938205876825593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7043938205876825592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c5bc59fb5582642b223aff526b6599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7076976150470752833
 GameObject:
   m_ObjectHideFlags: 0
@@ -3798,13 +3811,24 @@ MonoBehaviour:
   m_FillRect: {fileID: 2410366202395173333}
   m_HandleRect: {fileID: 7224848205801111344}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7043938205876825593}
+        m_MethodName: SetVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &8412045435002593873
 RectTransform:
   m_ObjectHideFlags: 0

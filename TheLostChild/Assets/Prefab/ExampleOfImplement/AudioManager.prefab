@@ -45,13 +45,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Moving
-    clip: {fileID: 8300000, guid: e9386f1a46346aa4e8d7e2fcf205a6ad, type: 3}
-    volume: 0.3
+    clip: {fileID: 8300000, guid: 9768122230b5eb249a6045612b2b97d0, type: 3}
+    volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: BGM
-    clip: {fileID: 8300000, guid: 9b6003fb38ecf3b4db113e2a5970b1a4, type: 3}
+    clip: {fileID: 8300000, guid: a1573a44ecf3b0941972c35886a1dd80, type: 3}
     volume: 0.5
     pitch: 1
     loop: 1
@@ -69,8 +69,38 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: HeartBeat
-    clip: {fileID: 8300000, guid: f697ee27a95862b44a42a38b11a6096d, type: 3}
+    clip: {fileID: 8300000, guid: e713f72cb6e35eb49a0b9d39938b8dfd, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Credit
+    clip: {fileID: 8300000, guid: a0c0eaf8bd31b2c4087f1bb187503510, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Jumpscare
+    clip: {fileID: 8300000, guid: 25449e318482cb644960a67693c02ebc, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SoldierWalk
+    clip: {fileID: 8300000, guid: ecfc09ae76c5e4f4ab707090e7c8c7da, type: 3}
     volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Teleport
+    clip: {fileID: 8300000, guid: ec6e3457e6e11d64faee75b36fc25515, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MainMenuBGM
+    clip: {fileID: 8300000, guid: d99932b7630f5e7478914dd10279ad43, type: 3}
+    volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}

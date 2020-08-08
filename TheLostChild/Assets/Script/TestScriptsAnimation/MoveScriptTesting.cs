@@ -44,6 +44,13 @@ public class MoveScriptTesting : MonoBehaviour
         targetPos = transform.position;
         inventoryUI = GameObject.FindGameObjectWithTag("InventoryUI").GetComponent<InventoryScriptUI>();
         animator.keepAnimatorControllerStateOnDisable = true;
+        isPlayerDead = false;
+        isStop = false;
+        isMusicPicked = false;
+        FacingRight = false;
+        isLeftClicked = false;
+        isPlayed = false;
+        isMoving = false;
     }
 
     // Update is called once per frame
