@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+//using UnityEditor.ProjectWindowCallback;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -64,6 +65,8 @@ public class JournalScript : MonoBehaviour
     public static int p = -1;
     public static int[] currentPage = new int[SIZE];
     public static bool[] enableArrows = new bool[SIZE];
+
+    public static bool enableMap = false;
     
 
     void Start()
@@ -74,6 +77,10 @@ public class JournalScript : MonoBehaviour
         {
             enableArrows[x] = false;
         }
+
+        enableMap = false;
+        Page = 1;
+        p = -1;
     }
 
     void Update()
@@ -94,8 +101,10 @@ public class JournalScript : MonoBehaviour
 
     public void pageVisibility()
     {
+
         if(Page == 1)
-        {
+        { 
+            
             if(enableArrows[0] == true)
             {
                 NextPage.SetActive(true);
@@ -399,7 +408,8 @@ public class JournalScript : MonoBehaviour
 
     public void ExitJournal()
     {
-        TutorialScript.disableTutorialBlocks = true;
+        TutorialScript.gameStart = true;
+        //TutorialScript.disableTutorialBlocks = true;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameisPaused = false;
@@ -437,7 +447,12 @@ public class JournalScript : MonoBehaviour
         {
             MapTab.SetActive(true);
             MapTabBig.SetActive(false);
-        }        
+        }
+        else if(SetMapJournal.MapIsAvailable == false)
+        {
+            MapTab.SetActive(false);
+            MapTabBig.SetActive(false);
+        }
         
         NoteDetails.SetActive(true);
         SettingsDetails.SetActive(false);

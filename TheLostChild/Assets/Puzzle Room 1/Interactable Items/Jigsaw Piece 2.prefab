@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3037353189465481738}
   m_Layer: 0
   m_Name: Jigsaw Piece 2
-  m_TagString: Jigsaw
+  m_TagString: Jigsaw2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -688339761
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 42b18d6454dcf8d4bb137d1a5105a203, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -162,6 +162,7 @@ MonoBehaviour:
   Inspect: 0
   inspectDisplay: {fileID: 0}
   player: {fileID: 0}
+  mcS: {fileID: 0}
   isShowDialogue: 0
   isItemObtain: 0
   MouseisIn: 0

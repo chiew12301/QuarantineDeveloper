@@ -13,6 +13,7 @@ public class TriggerDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExit
     private bool isNear = false;
     private bool isPicked = false;
     public bool isDialogTrigger = false;
+    private bool isPlayed = false;
     private MouseCursor mcs;
 
     [Header("Item")]
@@ -23,7 +24,8 @@ public class TriggerDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public GameObject journal2;
 
     public bool desAfterTrigger = false;
-
+    public bool isLastCollector = false;
+    public bool isInteractable = true;
     public TransferPlayer tpScript;
 
     private void Awake()
@@ -55,70 +57,16 @@ public class TriggerDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExit
                 isNear = false;
             }
         }
+        Checking();
     }
 
     public void TriggerDialogueSpeech()
     {
         if (isDialogTrigger == true)
         {
+            isPlayed = true;
             Debug.Log("Triggered dialog");
             DialogueManager.instance.StartDialogue(dialogue);
-            //if (DialogueManager.instance.isDialogueEnd == true)
-            //{
-            if(tpScript != null)
-            {
-                tpScript.TransferPlayerToDes();
-            }
-            //}
-            if(isPicked == false)
-            {
-                if (item1 != null)
-                {
-                    if (item1.GetComponent<PickUp>() != null)
-                    {
-                        item1.GetComponent<PickUp>().performPickup();
-                        isPicked = true;
-                    }
-                    if(item1.GetComponent<MusicBoxSwitchSceneScript>() != null)
-                    {
-                        item1.GetComponent<MusicBoxSwitchSceneScript>().performPickup();
-                        isPicked = true;
-                    }
-                }
-                if (item2 != null)
-                {
-                    if (item2.GetComponent<PickUp>() != null)
-                    {
-                        item2.GetComponent<PickUp>().performPickup();
-                        isPicked = true;
-                    }
-                    if (item2.GetComponent<MusicBoxSwitchSceneScript>() != null)
-                    {
-                        item2.GetComponent<MusicBoxSwitchSceneScript>().performPickup();
-                        isPicked = true;
-                    }
-                }
-                if (journal1 != null)
-                {
-                    if (journal1.GetComponent<UnlockJournalPage>() != null)
-                    {
-                        journal1.GetComponent<UnlockJournalPage>().performPickup();
-                        isPicked = true;
-                    }
-                }
-                if (journal2 != null)
-                {
-                    if (journal2.GetComponent<UnlockJournalPage>() != null)
-                    {
-                        journal2.GetComponent<UnlockJournalPage>().performPickup();
-                        isPicked = true;
-                    }
-                }
-            }          
-            if (desAfterTrigger == true)
-            {
-                this.gameObject.SetActive(false);
-            }
         }
     }
 
@@ -126,70 +74,94 @@ public class TriggerDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         if (isNear)
         {
+            isPlayed = true;
             DialogueManager.instance.StartBubble(bubble);
-            if (isPicked == false)
-            {
-               if (item1 != null)
-                {
-                    if (item1.GetComponent<PickUp>() != null)
-                    {
-                        item1.GetComponent<PickUp>().performPickup();
-                        isPicked = true;
-                    }
-                    if(item1.GetComponent<MusicBoxSwitchSceneScript>() != null)
-                    {
-                        item1.GetComponent<MusicBoxSwitchSceneScript>().performPickup();
-                        isPicked = true;
-                    }
-                }
-                if (item2 != null)
-                {
-                    if (item2.GetComponent<PickUp>() != null)
-                    {
-                        item2.GetComponent<PickUp>().performPickup();
-                        isPicked = true;
-                    }
-                    if (item2.GetComponent<MusicBoxSwitchSceneScript>() != null)
-                    {
-                        item2.GetComponent<MusicBoxSwitchSceneScript>().performPickup();
-                        isPicked = true;
-                    }
-                }
-                if (journal1 != null)
-                {
-                    if (journal1.GetComponent<UnlockJournalPage>() != null)
-                    {
-                        journal1.GetComponent<UnlockJournalPage>().performPickup();
-                        isPicked = true;
-                    }
-                }
-                if (journal2 != null)
-                {
-                    if (journal2.GetComponent<UnlockJournalPage>() != null)
-                    {
-                        journal2.GetComponent<UnlockJournalPage>().performPickup();
-                        isPicked = true;
-                    }
-                }
-            }
-            if (desAfterTrigger == true)
-            {
-                this.gameObject.SetActive(false);
-            }
         }
+    }
+
+    void Checking()
+    {
+        if(isPlayed == true)
+        {
+            if (DialogueManager.instance.isTalking == false)
+            {
+                isPlayed = false;
+                if (tpScript != null)
+                {
+                    tpScript.TransferPlayerToDes();
+                }
+                if (isLastCollector == true)
+                {
+                    this.GetComponent<LastCollectorScript>().JumpScareActivate();
+                }
+                if (isPicked == false)
+                {
+                    if (item1 != null)
+                    {
+                        if (item1.GetComponent<PickUp>() != null)
+                        {
+                            item1.GetComponent<PickUp>().performPickup();
+                            isPicked = true;
+                        }
+                        if (item1.GetComponent<MusicBoxSwitchSceneScript>() != null)
+                        {
+                            item1.GetComponent<MusicBoxSwitchSceneScript>().performPickup();
+                            isPicked = true;
+                        }
+                    }
+                    if (item2 != null)
+                    {
+                        if (item2.GetComponent<PickUp>() != null)
+                        {
+                            item2.GetComponent<PickUp>().performPickup();
+                            isPicked = true;
+                        }
+                        if (item2.GetComponent<MusicBoxSwitchSceneScript>() != null)
+                        {
+                            item2.GetComponent<MusicBoxSwitchSceneScript>().performPickup();
+                            isPicked = true;
+                        }
+                    }
+                    if (journal1 != null)
+                    {
+                        if (journal1.GetComponent<UnlockJournalPage>() != null)
+                        {
+                            journal1.GetComponent<UnlockJournalPage>().performPickup();
+                            isPicked = true;
+                        }
+                    }
+                    if (journal2 != null)
+                    {
+                        if (journal2.GetComponent<UnlockJournalPage>() != null)
+                        {
+                            journal2.GetComponent<UnlockJournalPage>().performPickup();
+                            isPicked = true;
+                        }
+                    }
+                }
+                if (desAfterTrigger == true)
+                {
+                    this.GetComponent<BoxCollider2D>().enabled = false;
+                    this.gameObject.SetActive(false);
+                }
+            }     
+        }      
     }
 
     private void OnMouseDown()
     {
         if(BackBoneManager.instance.isCutScene == false)
         {
-            if (dialogue != null)
+            if(isInteractable == true)
             {
-                TriggerDialogueSpeech();
-            }
-            else if (bubble != null)
-            {
-                TriggerBubbleSpeech();
+                if (dialogue != null)
+                {
+                    TriggerDialogueSpeech();
+                }
+                else if (bubble != null)
+                {
+                    TriggerBubbleSpeech();
+                }
             }
         }
     }
@@ -198,13 +170,16 @@ public class TriggerDialogue : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         if (BackBoneManager.instance.isCutScene == false)
         {
-            if (dialogue != null)
+            if (isInteractable == true)
             {
-                TriggerDialogueSpeech();
-            }
-            else if (bubble != null)
-            {
-                TriggerBubbleSpeech();
+                if (dialogue != null)
+                {
+                    TriggerDialogueSpeech();
+                }
+                else if (bubble != null)
+                {
+                    TriggerBubbleSpeech();
+                }
             }
         }
     }

@@ -8,6 +8,7 @@ public class DialogueCutscene : MonoBehaviour
 {
     public static DialogueCutscene instance;
 
+
     public GameObject player;
     private CameraScript mainCam;
     public GameObject JournalAuto_Folder;
@@ -15,6 +16,10 @@ public class DialogueCutscene : MonoBehaviour
 
     [Header("DialogueCanvas")]
     public GameObject dialogueDisplay;
+
+    //!!1 added
+    public bool isTutorialPlayed = false;
+    public bool isVSCutscenePlayedEnd = false;
 
     [Header("OpeningCutscene")]
     public GameObject OPObj;
@@ -80,6 +85,7 @@ public class DialogueCutscene : MonoBehaviour
     public TransferPlayer tpScript;
     public PickUp pickUpBottle;
 
+
     private void Awake()
     {
         if (instance != null)
@@ -92,10 +98,14 @@ public class DialogueCutscene : MonoBehaviour
     private void Start()
     {
         //starting cutscene
-        if (isStartCutScenePlayed == false)
+        if (isStartCutScenePlayed == false && Player.loadedYet == true)
         {
             OPObj.SetActive(true);
             PreloadCutsceneManager.instance.StartParagraph(OPObj, OPparagraph, OPparagraphText, picture);
+
+            //dialogueDisplay.SetActive(true);
+            //DialogueManager.instance.StartDialogue(dialogueStartScene);
+
         }
         else
         {
@@ -142,7 +152,14 @@ public class DialogueCutscene : MonoBehaviour
             isVSCutscenePlayed = true;
 
             //for new note - journal
-            JournalAuto_Folder.SetActive(true);
+            //JournalAuto_Folder.SetActive(true);
+             // <------------------------------------------------------------- make this happen after the black screen one ends D8
+        }
+        //
+        if(isVSCutscenePlayedEnd == true && isTutorialPlayed == false)
+        {
+            Tutorial.SetActive(true);
+            isTutorialPlayed = true;
         }
 
         ////first time receive hairpin

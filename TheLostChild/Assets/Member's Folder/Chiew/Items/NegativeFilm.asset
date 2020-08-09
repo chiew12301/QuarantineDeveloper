@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0071a5f07c607b94b9ad7b5031592816, type: 3}
   m_Name: NegativeFilm
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: a0a6e5feb98509e489b70efc0fa64625, type: 3}
+  itemSprite: {fileID: 21300000, guid: 58c5024643a853440a394c674feb12ad, type: 3}
   name: NegativeFilm
   desc: A negative film
   itemType: 7

@@ -12,6 +12,8 @@ public class DisplayCollector : MonoBehaviour
 
     public Sprite childrenSprite;
 
+    public bool withTriggerDialogue = false;
+    private bool checkOnlyOnce = false;
     [HideInInspector]
     public bool isCollected = false;
 
@@ -50,12 +52,24 @@ public class DisplayCollector : MonoBehaviour
             {
                 TransitionObject.SetActive(true);
             }
-            BarrierToUnlock.SetActive(false);
+            if(BarrierToUnlock != null)
+            {
+                BarrierToUnlock.SetActive(false);
+            }
+            if(withTriggerDialogue == true && checkOnlyOnce == false)
+            {
+                checkOnlyOnce = true;
+                if(this.GetComponent<TriggerDialogue>() != null)
+                {
+                    this.GetComponent<TriggerDialogue>().TriggerDialogueSpeech();
+                }
+            }
         }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+   
         if (collision.gameObject == ItemCollect)
         {
             isCollected = true;

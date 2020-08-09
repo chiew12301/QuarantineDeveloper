@@ -8,11 +8,8 @@ public static class saveSystem
     public static void Save(Player player)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-
         string path = Application.persistentDataPath + "/player.Data";
-
         FileStream stream = new FileStream(path, FileMode.Create);
-
         playerData data = new playerData(player);
         formatter.Serialize(stream, data);
         stream.Close();
@@ -25,7 +22,6 @@ public static class saveSystem
         {
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
-
             playerData data = formatter.Deserialize(stream) as playerData;
             stream.Close();
 

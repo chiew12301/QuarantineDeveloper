@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
+  m_Name: Cutscene
+  m_EditorClassIdentifier: 
+  hasDialogueEnded: 0
+  dialogueInfo:
+  - name: Man
+    portrait: {fileID: 21300000, guid: 5345915c2ad8a5d43848c41a969533ab, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "Ayu, stay strong. I need to find the midwife, I can\u2019t do this
+      alone."
+    isJitter: 0
+  - name: 'Ayu '
+    portrait: {fileID: 21300000, guid: 87f7819225b25ec4a8ea4f530db95d28, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "*pant* *pant*...I ..understand..b-but\u2026. Please...hurry.."
+    isJitter: 0
+  - name: 'Ayu '
+    portrait: {fileID: 21300000, guid: 87f7819225b25ec4a8ea4f530db95d28, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "I d-don\u2019t\u2026*pant*...think I can hold the...pain..."
+    isJitter: 0
+  - name: Man
+    portrait: {fileID: 21300000, guid: 5345915c2ad8a5d43848c41a969533ab, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "Sayang, I will be fast. Please stay as quiet as you can...You can\u2019t
+      let the soldiers outside hear you."
+    isJitter: 0
+  - name: 'Ayu '
+    portrait: {fileID: 21300000, guid: 87f7819225b25ec4a8ea4f530db95d28, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "P-please\u2026*pant*...*coughs*...go fast! ...our baby\u2026is coming!"
+    isJitter: 0
+  - name: Man
+    portrait: {fileID: 21300000, guid: 5345915c2ad8a5d43848c41a969533ab, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "Ayu...I\u2019m sorry. I failed. I wasn\u2019t quick enough...the
+      soldiers followed me. The midwife was murdered."
+    isJitter: 0
+  - name: Man
+    portrait: {fileID: 21300000, guid: 5345915c2ad8a5d43848c41a969533ab, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "Keep your voice down...they don\u2019t know we\u2019re inside. They\u2019re
+      looking for us. Please sayang..."
+    isJitter: 0
+  - name: 'Ayu '
+    portrait: {fileID: 21300000, guid: 87f7819225b25ec4a8ea4f530db95d28, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "*grunts*... I\u2019m sorry\u2026 I...c-can\u2019t hold it ....much
+      longer...it hurts..."
+    isJitter: 0
+  - name: Man
+    portrait: {fileID: 21300000, guid: 5345915c2ad8a5d43848c41a969533ab, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: Saya-
+    isJitter: 0
+  - name: 'Ayu '
+    portrait: {fileID: 21300000, guid: 87f7819225b25ec4a8ea4f530db95d28, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: AGHHHHHHHHHHHH!!!!!!!!!!!!!!!!!!!
+    isJitter: 0
+  - name: Japanese Soldier
+    portrait: {fileID: 0}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: Hey! You guys were supposed to be with the others!
+    isJitter: 0
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 87f7819225b25ec4a8ea4f530db95d28, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "N-no\u2026*grunts*...please...no\u2026!"
+    isJitter: 0
+  - name: Man
+    portrait: {fileID: 21300000, guid: 5345915c2ad8a5d43848c41a969533ab, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: STOP! What are you doing to my wife?!
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "\u2026!"
+    isJitter: 1
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: Ayu...and her husband were murdered...by the soldier...
+    isJitter: 1
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "That\u2019s so cruel. The baby was so close to being born\u2026"
+    isJitter: 1
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    cutsceneImg: {fileID: 0}
+    textSpeed: 0.1
+    sentences: "(I feel sick to the stomach\u2026) "
+    isJitter: 1

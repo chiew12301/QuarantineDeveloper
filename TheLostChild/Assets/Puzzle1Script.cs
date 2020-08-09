@@ -33,6 +33,9 @@ public class Puzzle1Script : MonoBehaviour
             JigsawPuzzle[i].SetActive(false);
             col = GetComponent<Collider2D>();
         }
+        endPuzzlePicking = false;
+        totalPuzzle = 0;
+        isPuzzleDone = false;
     }
 
     private void Update()
@@ -66,7 +69,7 @@ public class Puzzle1Script : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Jigsaw"))
+        if (collision.CompareTag("Jigsaw") || collision.CompareTag("Jigsaw2") || collision.CompareTag("Jigsaw3"))
         {
             totalPuzzle++;
             //collision.gameObject.SetActive(false);

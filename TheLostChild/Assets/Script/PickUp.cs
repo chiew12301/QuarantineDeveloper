@@ -14,6 +14,7 @@ public class PickUp : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public bool CanInteractAgain = false;
     public bool isRiddleDone = false;
 
+
     [Header("Dialogue")]
     public bool Dialogue = false;
     public bool isMirror = false;
@@ -58,6 +59,11 @@ public class PickUp : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public bool isDestroyAfter = false;
     public GameObject itemshowafterhide;
+
+    private SpriteRenderer jigsawPuzzle_1;
+    private SpriteRenderer jigsawPuzzle_2;
+    private SpriteRenderer jigsawPuzzle_3;
+
     void Start()
     {
         mcS = GameObject.FindGameObjectWithTag("Cursor").GetComponent<MouseCursor>();
@@ -69,6 +75,10 @@ public class PickUp : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             itemshowafterhide.SetActive(false);
         }
+        jigsawPuzzle_1 = GameObject.Find("Jigsaw Piece 1").GetComponent<SpriteRenderer>();
+        jigsawPuzzle_2 = GameObject.Find("Jigsaw Piece 2").GetComponent<SpriteRenderer>();
+        jigsawPuzzle_3 = GameObject.Find("Jigsaw Piece 3").GetComponent<SpriteRenderer>();
+
 
     }
 
@@ -95,7 +105,15 @@ public class PickUp : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void performPickup()
     {
-        if(item != null)
+        Color tmp_p1 = jigsawPuzzle_1.color;
+        Color tmp_p2 = jigsawPuzzle_2.color;
+        Color tmp_p3 = jigsawPuzzle_3.color;
+        tmp_p1.a = Mathf.Lerp(0, 255, 1);
+        tmp_p2.a = Mathf.Lerp(0, 255, 1);
+        tmp_p3.a = Mathf.Lerp(0, 255, 1);
+        
+
+        if (item != null)
         {
             if (item.name == "Hairpin")
             {
@@ -113,6 +131,18 @@ public class PickUp : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                     //dialogue for tell player needed to collect puzzle?
                     return;
                 }
+            }
+            if(item.name == "Jigsaw Piece 1")
+            {
+                jigsawPuzzle_1.color = tmp_p1;
+            }
+            if (item.name == "Jigsaw Piece 2")
+            {
+                jigsawPuzzle_2.color = tmp_p2;
+            }
+            if (item.name == "Jigsaw Piece 3")
+            {
+                jigsawPuzzle_3.color = tmp_p3;
             }
         }
         
@@ -144,7 +174,7 @@ public class PickUp : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 }
                 else
                 {
-                    dialogueDisplay.SetActive(true);
+                    //dialogueDisplay.SetActive(true);
                     DialogueManager.instance.StartDialogue(dialogue);
                 }
             }

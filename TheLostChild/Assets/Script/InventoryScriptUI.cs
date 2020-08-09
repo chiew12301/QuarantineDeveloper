@@ -15,6 +15,7 @@ public class InventoryScriptUI : MonoBehaviour
     public GameObject GranParentsInventory;
     public GameObject CloseInventoryButton;
     public GameObject OpenInventoryImage;
+    public GameObject PanelOverlay;
 
     private void Awake()
     {
@@ -58,6 +59,7 @@ public class InventoryScriptUI : MonoBehaviour
     {
         //OpenInventoryImage.gameObject.SetActive(true);
         GranParentsInventory.gameObject.SetActive(false);
+        PanelOverlay.gameObject.SetActive(false);
         //CloseInventoryButton.gameObject.SetActive(false);
         isOpen = false;
     }
@@ -67,6 +69,7 @@ public class InventoryScriptUI : MonoBehaviour
         playerScript.StopMoving();
         //OpenInventoryImage.gameObject.SetActive(false);
         GranParentsInventory.gameObject.SetActive(true);
+        PanelOverlay.gameObject.SetActive(true);
         //CloseInventoryButton.gameObject.SetActive(true);
         isOpen = true;
     }

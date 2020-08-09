@@ -17,11 +17,16 @@ TagManager:
   - EnemySoldier_1
   - Hidden
   - Jigsaw
+  - Bullets
+  - EnemySoldier_P4
   - NegativeFilm
   - Photograph
   - CorrectPainting
   - CorrectBottle
   - MusicBox
+  - Hairpin
+  - Jigsaw2
+  - Jigsaw3
   layers:
   - Default
   - TransparentFX
@@ -75,7 +80,7 @@ TagManager:
     uniqueID: 2184790385
     locked: 0
   - name: LowerParallex
-    uniqueID: 2050047401
+    uniqueID: 1936097293
     locked: 0
   - name: Parallex
     uniqueID: 4179545683

@@ -7,6 +7,9 @@ public class MoveScriptTesting : MonoBehaviour
 {
     public static MoveScriptTesting instance;
 
+    [Header("Player Info")]
+    public GameObject playerObj;
+
     public float Speeds; //Speeds of character
     [SerializeField] Transform target = null;
     private InventoryScriptUI inventoryUI;
@@ -23,6 +26,8 @@ public class MoveScriptTesting : MonoBehaviour
     public delegate void PressLeftClickEvent(bool f);
     public PressLeftClickEvent OnPressLeftClick;
 
+    public static bool isPlayerDead = false;
+
     private void Awake()
     {
         if (instance != null)
@@ -32,12 +37,20 @@ public class MoveScriptTesting : MonoBehaviour
         instance = this;
     }
 
+    SkyScript ss;
     // Start is called before the first frame update
     void Start()
     {
         targetPos = transform.position;
         inventoryUI = GameObject.FindGameObjectWithTag("InventoryUI").GetComponent<InventoryScriptUI>();
         animator.keepAnimatorControllerStateOnDisable = true;
+        isPlayerDead = false;
+        isStop = false;
+        isMusicPicked = false;
+        FacingRight = false;
+        isLeftClicked = false;
+        isPlayed = false;
+        isMoving = false;
     }
 
     // Update is called once per frame
@@ -162,11 +175,24 @@ public class MoveScriptTesting : MonoBehaviour
     {
         if (collision.CompareTag("EnemySoldier_1"))
         {
-            SceneManager.LoadScene("DeadScene");
+            /*SceneManager.LoadScene("DeadScene");
             AudioManager.instance.Stop("BGM");
-            AudioManager.instance.Stop("Moving");
+            AudioManager.instance.Stop("Moving");*/
+            isPlayerDead = true;
+            StartCoroutine(GameOver());
+        }
+        else if(collision.CompareTag("EnemySoldier_P4"))
+        {
+            this.gameObject.GetComponent<TransferScript>().TransferPlayerToDes();
         }
     }
 
+    IEnumerator GameOver()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("DeadScene");
+        AudioManager.instance.Stop("BGM");
+        AudioManager.instance.Stop("Moving");
+    }
 
 }

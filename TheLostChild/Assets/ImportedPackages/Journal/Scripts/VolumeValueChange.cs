@@ -8,7 +8,7 @@ public class VolumeValueChange : MonoBehaviour
     private AudioManager audioSrc;
 
     // Music volume variable that will be modified by dragging slider knob
-    private float musicVolume = 1f;
+    private float musicVolume = 0.5f;
 
     void Start()
     {
@@ -17,7 +17,8 @@ public class VolumeValueChange : MonoBehaviour
 
     void Update()
     {
-        audioSrc.AdjustVolume("BGM",musicVolume);
+        //audioSrc.AdjustVolume("BGM",musicVolume);
+        AudioManager.instance.AdjustAllVolume(musicVolume);
     }
 
     // Method that is called by slider game object
