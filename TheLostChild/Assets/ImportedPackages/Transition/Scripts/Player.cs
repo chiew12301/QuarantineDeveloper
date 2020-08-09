@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
-using System.Security.Policy;
+//using System.Security.Policy;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
