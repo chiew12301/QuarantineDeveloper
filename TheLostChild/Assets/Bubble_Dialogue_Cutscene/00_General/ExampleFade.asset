@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
+  m_Name: ExampleFade
+  m_EditorClassIdentifier: 
+  hasDialogueEnded: 0
+  dialogueInfo:
+  - name: Mom
+    portrait: {fileID: 21300000, guid: 4f5af962634edea40acecabd491e0134, type: 3}
+    cutsceneImg: {fileID: 21300000, guid: 46fa3bbabc279464e98234bf6d40fe45, type: 3}
+    secondCutsceneImg: {fileID: 0}
+    isFadePreviousBG: 0
+    isFadeCurrentBGAfterEnd: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    sentences: Max, get off your journal. We have arrived.
+    isHide: 0
+    isJitter: 0
+  - name: 
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    isFadePreviousBG: 0
+    isFadeCurrentBGAfterEnd: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    sentences: '{Beat} '
+    isHide: 1
+    isJitter: 0
+  - name: Dad
+    portrait: {fileID: 21300000, guid: 3b437f119bfba054e862980efd1f30d9, type: 3}
+    cutsceneImg: {fileID: 21300000, guid: 91d0033ff3b28bb4bbec52bae7570b61, type: 3}
+    secondCutsceneImg: {fileID: 0}
+    isFadePreviousBG: 1
+    isFadeCurrentBGAfterEnd: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    sentences: Quit writing! Give me that stupid journal!
+    isHide: 0
+    isJitter: 0
+  - name: Dad
+    portrait: {fileID: 21300000, guid: 3b437f119bfba054e862980efd1f30d9, type: 3}
+    cutsceneImg: {fileID: 21300000, guid: e7bd1e2c3365cb54287405ce4bee4a17, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 91d0033ff3b28bb4bbec52bae7570b61,
+      type: 3}
+    isFadePreviousBG: 1
+    isFadeCurrentBGAfterEnd: 0
+    FadeBGTimer: 0.1
+    textSpeed: 0.1
+    sentences: "That\u2019ll teach you not to ignore your mother! Apologise!"
+    isHide: 0
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 21300000, guid: 91d0033ff3b28bb4bbec52bae7570b61, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: e7bd1e2c3365cb54287405ce4bee4a17,
+      type: 3}
+    isFadePreviousBG: 1
+    isFadeCurrentBGAfterEnd: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    sentences: "\u2026(How could he...do something like that...)"
+    isHide: 0
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 21300000, guid: 91d0033ff3b28bb4bbec52bae7570b61,
+      type: 3}
+    isFadePreviousBG: 1
+    isFadeCurrentBGAfterEnd: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    sentences: fade to nothing
+    isHide: 0
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 21300000, guid: 7def58c61f11d3941a277dd38241993e, type: 3}
+    secondCutsceneImg: {fileID: 0}
+    isFadePreviousBG: 0
+    isFadeCurrentBGAfterEnd: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    sentences: This no fade in effect, so it instant display
+    isHide: 0
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 21300000, guid: d2c9a5b307327214da1ca7918c477f31, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 7def58c61f11d3941a277dd38241993e,
+      type: 3}
+    isFadePreviousBG: 1
+    isFadeCurrentBGAfterEnd: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    sentences: if fade in effect is ticked again
+    isHide: 0
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 21300000, guid: d9ca3796c906ddd498c96b1f2dffbce9, type: 3}
+    secondCutsceneImg: {fileID: 0}
+    isFadePreviousBG: 0
+    isFadeCurrentBGAfterEnd: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    sentences: unticked
+    isHide: 0
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 21300000, guid: d2c9a5b307327214da1ca7918c477f31, type: 3}
+    secondCutsceneImg: {fileID: 0}
+    isFadePreviousBG: 1
+    isFadeCurrentBGAfterEnd: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    sentences: fade in this time fade out at next sentence
+    isHide: 0
+    isJitter: 0
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 21300000, guid: d2c9a5b307327214da1ca7918c477f31,
+      type: 3}
+    isFadePreviousBG: 1
+    isFadeCurrentBGAfterEnd: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    sentences: demo end here
+    isHide: 0
+    isJitter: 0

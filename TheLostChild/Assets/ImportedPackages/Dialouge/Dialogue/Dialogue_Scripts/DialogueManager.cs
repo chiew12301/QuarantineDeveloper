@@ -9,18 +9,26 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
 
-    public Image dialoguePortrait;
-
-    //this is cutscene change img
-    public Image cutscenePanel;
-    public Image blackOverlay;
-
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI bubbleText;
 
     //so that the GO wont block programmers view when coding
     public GameObject DialogueUI;
+
+    [Header("For blank only with SFX")]
+    //for somepart where dialogue box wont appear
+    public Image dialoguePortrait;
+    public Image DialogueBox;
+
+    //this is cutscene change img
+    public Image cutscenePanel;
+    public Image secondCutscenePanel;
+    public Sprite prevCutsceneImg;
+    public Image blackOverlay;
+    public TextMeshProUGUI continueTxt;
+    bool ignoreTime = true;
+
 
     private Queue<Dialogue.Info> dialogueInfo = new Queue<Dialogue.Info>();
     private Queue<BubbleSpeech.Info> bubbleInfo = new Queue<BubbleSpeech.Info>();
@@ -112,6 +120,7 @@ public class DialogueManager : MonoBehaviour
             DisplayNextSentence();
             isSentenceEnd = false;
         }
+
     }
 
     public void ResetDialogueChange()
@@ -210,8 +219,7 @@ public class DialogueManager : MonoBehaviour
 
             BubbleSpeech.Info info = bubbleInfo.Dequeue();
             bubbleText.text = info.sentences;
-       //     cutscenePanel.enabled = false;
-           
+
             StopAllCoroutines();
             StartCoroutine(TypeSentence(info));
         }
@@ -227,27 +235,136 @@ public class DialogueManager : MonoBehaviour
 
             Dialogue.Info info = dialogueInfo.Dequeue();
             nameText.text = info.name;
-            if (info.cutsceneImg == null)
-            {
-                cutscenePanel.gameObject.SetActive(false);
 
+          
+
+            if (info.isHide == true && info.isFade == false)
+            {
+                DialogueBox.gameObject.SetActive(false);
+                dialoguePortrait.gameObject.SetActive(false);
+                // cutscenePanel.gameObject.SetActive(false);
+                //do same thing as above - diff way of doing
+              //  cutscenePanel.canvasRenderer.SetAlpha(0.0f);
+              //  secondCutscenePanel.canvasRenderer.SetAlpha(0f);
+                continueTxt.gameObject.SetActive(false);
             }
             else
             {
-                // cutscenePanel.enabled = true;
-                cutscenePanel.gameObject.SetActive(true);
-                cutscenePanel.sprite = info.cutsceneImg;
-            }
-            dialoguePortrait.sprite = info.portrait;
-           
-            
-           
-            dialogueText.text = info.sentences;
+                if (info.cutsceneImg == null)
+                {
+                    cutscenePanel.canvasRenderer.SetAlpha(0f);
+                    secondCutscenePanel.canvasRenderer.SetAlpha(0f);
+                }
+                else
+                {
+                    cutscenePanel.canvasRenderer.SetAlpha(1f);
+                    secondCutscenePanel.canvasRenderer.SetAlpha(1f);
+                    prevCutsceneImg = info.secondCutsceneImg;
 
-         //   Debug.Log(info.sentences);
+                }
+                
+                    //if no fade whatsoever
+                    if (info.isFade == false)
+                    {
+ 
+                        cutscenePanel.sprite = info.cutsceneImg;
+                        secondCutscenePanel.canvasRenderer.SetAlpha(0f);
+
+                        dialoguePortrait.sprite = info.portrait;
+                        dialogueText.text = info.sentences;
+
+                        DialogueBox.gameObject.SetActive(true);
+                        dialoguePortrait.gameObject.SetActive(true);
+                        continueTxt.gameObject.SetActive(true);
+                        
+
+                } 
+                    
+                    else if (info.isFade == true)
+                    {
+                        DialogueBox.gameObject.SetActive(false);
+                        dialoguePortrait.gameObject.SetActive(false);
+                        continueTxt.gameObject.SetActive(false);
+                        nameText.canvasRenderer.SetAlpha(0f);
+                        dialogueText.canvasRenderer.SetAlpha(0f);
+                      
+                        dialoguePortrait.sprite = info.portrait;
+
+                        StopAllCoroutines();
+                        StartCoroutine(CrossFade(info));
+
+                        return;
+
+                    }
+             } 
+
+          //  Debug.Log(info.sentences);
+
             StopAllCoroutines();
             StartCoroutine(TypeSceneDialogue(info));
+
+
         }
+    }
+    //crossfade
+    IEnumerator CrossFade(Dialogue.Info info)
+    {
+        Debug.Log("HEYYYY");
+        cutscenePanel.canvasRenderer.SetAlpha(0f);
+        secondCutscenePanel.canvasRenderer.SetAlpha(1f);
+
+        if (info.secondCutsceneImg == null)
+        {
+            secondCutscenePanel.canvasRenderer.SetAlpha(0f);
+            cutscenePanel.CrossFadeAlpha(0f, info.FadeBGTimer, ignoreTime);
+        }
+        else
+        {
+            secondCutscenePanel.CrossFadeAlpha(1f, info.FadeBGTimer, ignoreTime);
+        }
+
+        if (info.cutsceneImg == null)
+        {
+            cutscenePanel.canvasRenderer.SetAlpha(0f);
+            secondCutscenePanel.CrossFadeAlpha(0f, info.FadeBGTimer, ignoreTime);
+        }
+        else
+        {
+            cutscenePanel.CrossFadeAlpha(1f, info.FadeBGTimer, ignoreTime);
+        }
+
+        
+
+       
+      //  secondCutscenePanel.CrossFadeAlpha(1f, info.FadeBGTimer, ignoreTime);
+       // secondCutscenePanel.gameObject.SetActive(true);
+     //   secondCutscenePanel.sprite = info.secondCutsceneImg;
+        cutscenePanel.sprite = info.cutsceneImg;
+        secondCutscenePanel.sprite = prevCutsceneImg;
+        yield return new WaitForSeconds(info.FadeBGTimer * 1.5f);
+
+        if(info.isHide == false)
+        {
+            DialogueBox.gameObject.SetActive(true);
+            dialoguePortrait.gameObject.SetActive(true);
+            continueTxt.gameObject.SetActive(true);
+
+            nameText.canvasRenderer.SetAlpha(1f);
+            dialogueText.canvasRenderer.SetAlpha(1f);
+        }
+       
+
+       
+
+
+        StopAllCoroutines();
+        StartCoroutine(TypeSceneDialogue(info));
+
+        //secondCutscenePanel.CrossFadeAlpha(1f, info.FadeBGTimer, ignoreTime);
+        //cutscenePanel.CrossFadeAlpha(0f, info.FadeBGTimer, ignoreTime);
+
+        yield return null;
+
     }
 
     //typewriting effect for bubble
@@ -286,11 +403,6 @@ public class DialogueManager : MonoBehaviour
             sentenceCurrentLength = counter;
             bubbleText.maxVisibleCharacters = counter;
 
-            //wat is this -- i didnt add this -Eleen
-            //if (Input.GetMouseButtonDown(0))
-            //{
-            //    yield return null;
-            //}
             if (hasClicked == true)
             {
                 sentenceCurrentLength = stripText.Length;
@@ -392,23 +504,27 @@ public class DialogueManager : MonoBehaviour
                 sentenceCurrentLength = stripText.Length;
                 dialogueText.maxVisibleCharacters = sentenceCurrentLength;
 
-                if (info.isJitter)
-                {
-                    jitterScript = Object.FindObjectsOfType<VertexJitter>();
-                    foreach (VertexJitter jitter in jitterScript)
+
+             
+                 if (info.isJitter)
                     {
-                        jitter.Start();
+                        jitterScript = Object.FindObjectsOfType<VertexJitter>();
+                        foreach (VertexJitter jitter in jitterScript)
+                        {
+                            jitter.Start();
+                        }
                     }
-                }
-                else
-                {
-                    jitterScript = Object.FindObjectsOfType<VertexJitter>();
-                    foreach (VertexJitter jitter in jitterScript)
+                    else
                     {
-                        jitter.StopAllCoroutines();
+                        jitterScript = Object.FindObjectsOfType<VertexJitter>();
+                        foreach (VertexJitter jitter in jitterScript)
+                        {
+                            jitter.StopAllCoroutines();
+                        }
                     }
-                }
-                yield break;
+                    yield break;
+                
+                
             }
             else
             {
@@ -423,25 +539,27 @@ public class DialogueManager : MonoBehaviour
                 {
                     counter += 1;
                 }
+                
+                    if (info.isJitter)
+                    {
+                        jitterScript = Object.FindObjectsOfType<VertexJitter>();
+                        foreach (VertexJitter jitter in jitterScript)
+                        {
+                            jitter.Start();
+                        }
+                    }
+                    else
+                    {
+                        jitterScript = Object.FindObjectsOfType<VertexJitter>();
+                        foreach (VertexJitter jitter in jitterScript)
+                        {
+                            jitter.StopAllCoroutines();
+                        }
+                    }
+                    yield return new WaitForSeconds(finalTxtSpd);
+                
 
-                if (info.isJitter)
-                {
-                    jitterScript = Object.FindObjectsOfType<VertexJitter>();
-                    foreach (VertexJitter jitter in jitterScript)
-                    {
-                        jitter.Start();
-                    }
                 }
-                else
-                {
-                    jitterScript = Object.FindObjectsOfType<VertexJitter>();
-                    foreach (VertexJitter jitter in jitterScript)
-                    {
-                        jitter.StopAllCoroutines();
-                    }
-                }
-                yield return new WaitForSeconds(finalTxtSpd);
-            }
         }
     }
 
@@ -606,7 +724,7 @@ public class DialogueManager : MonoBehaviour
         }
         //example : put {Heartbeat} to start heartbeat sfx; put {!Heartbeat} to stop heartbeat sfx ; (cannot put command at end of sentence, put it just bfr sentence end
         //eg: I am dying{!Heartbeat}. <------ see the fullstop there
-        //!!!!!currently is start stop i think at start of asentence, heartbeat sfx not instant so not sure (the sfx slowly builds up)
+        //!!!!!only per sentence sentence
         if (command.Name == "Heartbeat")
         {
             AudioManager.instance.Play("HeartBeat");
@@ -616,8 +734,14 @@ public class DialogueManager : MonoBehaviour
             AudioManager.instance.Stop("HeartBeat");
             Debug.Log("Change revert.");
         }
-
-
+        if (command.Name == "Beat")
+        {
+            AudioManager.instance.Play("Beat");
+        }
+        if (command.Name == "Moving")
+        {
+            AudioManager.instance.Play("Moving");
+        }
     }
 
 }
