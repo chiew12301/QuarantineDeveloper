@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     public GameObject journal;
     private bool journalLoad = false;
     playerData data;
+    string path;
+    bool loadCheck = false;
 
 
     void Start()
@@ -30,7 +32,7 @@ public class Player : MonoBehaviour
             curItems[i] = null;
         }
         journalLoad = false;
-
+        string path = Application.persistentDataPath + "/player.Data";
 
     }
 
@@ -40,14 +42,22 @@ public class Player : MonoBehaviour
         {
             loadNewInfo();
         }
-        playerData data = saveSystem.Load();
-        for (int i = 0; i < 12; i++)
+        if (File.Exists(path))
         {
-            if (data.journalArrows[i])
+            if (loadCheck)
             {
-                JournalScript.enableArrows[i] = true;
+                playerData data = saveSystem.Load();
+                for (int i = 0; i < 12; i++)
+                {
+                    if (data.journalArrows[i])
+                    {
+                        JournalScript.enableArrows[i] = true;
+                    }
+                }
             }
+
         }
+
 
 
     }
@@ -89,7 +99,7 @@ public class Player : MonoBehaviour
                 Debug.Log(journalLoad);
                 Time.timeScale = 0;
                 SceneManager.LoadScene("Loading Scene");
-        
+                loadCheck = true;
                 loadedYet = false;
                 journalLoad = true;
                 Time.timeScale = 1;
@@ -110,7 +120,7 @@ public class Player : MonoBehaviour
                 Time.timeScale = 1;
                 SceneManager.LoadScene("Loading Scene");
                 loadedYet = false;
-
+                loadCheck = true;
 
             }
 
