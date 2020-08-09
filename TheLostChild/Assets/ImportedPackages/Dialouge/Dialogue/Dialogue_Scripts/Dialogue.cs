@@ -11,11 +11,21 @@ public class Dialogue : ScriptableObject
     {
         public string name;
         public Sprite portrait;
-        public Sprite cutsceneImg;
+        public bool isJitter;
+
+        public bool isHide;
+        public bool isFade;
+
+        public float FadeBGTimer = 1.0f;
         public float textSpeed = 0.1f;
+        [Header("isFadePreviousBG used together with FadeBGTimer and secondCutsceneImg")]
+        public Sprite cutsceneImg;
+        public Sprite secondCutsceneImg;
+
         [TextArea(1, 10)]
         public string sentences;
-        public bool isJitter;
+        
+        
     }
 
     //! preserves original state of booleans
@@ -24,6 +34,7 @@ public class Dialogue : ScriptableObject
 
 
     [Header("Write down the dialogues in the scene below")]
+    [Header("If u just want a blank part with sfx use {} command (check DialogueManager), and type a blank space and remember to tick isHide")]
     public bool hasDialogueEnded = false;
     public Info[] dialogueInfo;
 

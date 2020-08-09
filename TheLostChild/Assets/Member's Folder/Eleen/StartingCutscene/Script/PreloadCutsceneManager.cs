@@ -77,7 +77,8 @@ public class PreloadCutsceneManager : MonoBehaviour
             if (sentenceCurrentLength >= sentenceMaxLength)
             {
                 isSentenceEnd = true;
-                //Debug.Log("Sentence ended");
+
+             //   Debug.Log("Sentence ended");
            }
         }
 

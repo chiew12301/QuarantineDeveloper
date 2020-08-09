@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948ceb2176cb4cd43bfdea7a1c011b89, type: 3}
   m_Name: Hiding
   m_EditorClassIdentifier: 
-  oriOnlyOnce: 0
+  oriOnlyOnce: 1
   bubbleInfo:
   - sentences: It looks like I can hide here, whenever I want to run away from my
       parents but....now I'm lost..

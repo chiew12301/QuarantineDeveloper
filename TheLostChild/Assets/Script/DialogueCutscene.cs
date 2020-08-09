@@ -8,6 +8,15 @@ public class DialogueCutscene : MonoBehaviour
 {
     public static DialogueCutscene instance;
 
+
+    public GameObject player;
+    private CameraScript mainCam;
+    public GameObject JournalAuto_Folder;
+    public Image blackScreen;
+
+    [Header("DialogueCanvas")]
+    public GameObject dialogueDisplay;
+
     //!!1 added
     public bool isTutorialPlayed = false;
     public bool isVSCutscenePlayedEnd = false;
@@ -31,15 +40,43 @@ public class DialogueCutscene : MonoBehaviour
     public TextMeshProUGUI VSparagraphText;
     public bool isVSCutscenePlayed = false;
 
+    [Header("First time out lady in red")]
+    public Dialogue dialogueCutS2;
+    public Vector3 LeftLocation2;
+    public Vector3 RightLocation2;
+    public bool isCutS2Played = false;
+
+    [Header("First time enter lobby")]
+    public Dialogue dialogueCutS3;
+    public Vector3 LeftLocation3;
+    public Vector3 RightLocation3;
+    public bool isCutS3PlayedP1 = false;
+
     [Header("After received Hairpin")]
     public GameObject hairpin;
     public Dialogue firstTimePickupHairpin;
     private bool hasTriggeredHairpinDialogue = false;
 
+    [Header("First time exit lobby - enemy spawn dialogue")]
+    //for check enter lobby once
+    public Vector3 FullLeftLocationLobby;
+    public Vector3 FullRightLocationLobby;
+    public bool isEnteredLobbyOnce = false;
+    public bool isExitLobby = false;
+    //enemy dialogue
+    public Dialogue dialogueCutS3P3;
+    public bool isCutS3PlayedP3 = false;
+
     [Header("After put hairpin in display case")]
     public GameObject hairpinInDisplayCase;
     public Dialogue dialogueHairPinDisplay;
     private bool hasTriggeredHairpinInDisplayCase = false;
+
+    [Header("First time enter seal room 1")]
+    public Dialogue dailogueAyuLivingR;
+    public Vector3 LeftLocationLR;
+    public Vector3 RightLocationLR;
+    public bool isCutSAyuLivingRPlayed = false;
 
     [Header("Puzzle3related")]
     public Dialogue dialoguePuzzle3;
@@ -48,73 +85,6 @@ public class DialogueCutscene : MonoBehaviour
     public TransferPlayer tpScript;
     public PickUp pickUpBottle;
 
-    [Header("DialogueData")]
-    public Dialogue dialogueMusicBox;
-    public Dialogue dialogueStartScene;
-
-    //first time out lady in red
-    public Dialogue dialogueCutS2;
-
-    //first time in lobby
-    public Dialogue dialogueCutS3;
-   // public Dialogue dialogueCutS3P2;
-
-    //first time out lobby - enemy spawn dialogue
-    public Dialogue dialogueCutS3P3;
-
-
-    public Dialogue dailogueAyuLivingR; //not working
-  //  public Dialogue dialogueLIG;
-  //  public Dialogue dialogueLIG2;
-  //  public Dialogue dialogueLIG3;
-    public Dialogue dialogueRiddleP1;
-    // in header dialogue data
-    public Dialogue dialogueHairPin;
-    [Header("DialogueCanvas")]
-    public GameObject dialogueDisplay;
-
-    [Header("Boolean")]
-    private bool isMusicBox = false;
-    public bool isEnteredLobbyOnce = false;
-    public bool isExitLobby = false;
-    public bool isCutS2Played = false;
-    public bool isCutS3PlayedP1 = false;
-  //  public bool isCutS3PlayedP2 = false;
-    public bool isCutS3PlayedP3 = false;
-    public bool isCutSMemPlayed = false;
-    public bool isCutSAyuLivingRPlayed = false;
- //   public bool isCutSLIG = false;
- //   public bool isCutSLIG2 = false;
- //   public bool isCutSLIG3 = false;
-    public bool isRiddleP1 = false;
-
-    //in header boolean
-    private bool pickedUpHairPin = false; //check if hairpin in inventory or not
-    private bool isHairPin = false;
-
-    public GameObject player;
-    private CameraScript mainCam;
-
-    [Header("Check")]
-    public Vector3 LeftLocationLobby;
-    public Vector3 RightLocationLobby;
-    public Vector3 FullLeftLocationLobby;
-    public Vector3 FullRightLocationLobby;
- 
-    [Header("Location Cutscene")]
-    public Vector3 LeftLocation2;
-    public Vector3 RightLocation2;
-    public Vector3 LeftLocation3;
-    public Vector3 RightLocation3;
-    public Vector3 LeftLocationLR;
-    public Vector3 RightLocationLR;
-    public Vector3 LeftLocationLIG;
-    public Vector3 RightLocationLIG;
-    public Vector3 LeftAyuPainting;
-    public Vector3 RightAyuPainting;
-
-    public GameObject JournalAuto_Folder;
-    public GameObject Tutorial;
 
     private void Awake()
     {
@@ -143,7 +113,6 @@ public class DialogueCutscene : MonoBehaviour
         }
         mainCam = GameObject.Find("Main Camera").GetComponent<CameraScript>();
 
-       
     }
 
     private void Update()
@@ -154,10 +123,21 @@ public class DialogueCutscene : MonoBehaviour
 
     void CheckTriggerCutScene()
     {
-        //the conveersation with parents
-        if(isStartCutScenePlayed == true && isStartConversation == false)
+
+        //while all opening cutscene hasnt played fin, leave a black screen to prevent player from seeing game
+        if (isVSCutscenePlayed == false)
         {
-            ParentBG.gameObject.SetActive(true);
+            blackScreen.gameObject.SetActive(true);
+        }
+        else
+        {
+            blackScreen.gameObject.SetActive(false);
+        }
+
+        //the conveersation with parents
+        if (isStartCutScenePlayed == true && isStartConversation == false)
+        {
+           // ParentBG.gameObject.SetActive(true);
             DialogueManager.instance.StartDialogue(conversationWithParent);
             isStartConversation = true;
         }
@@ -192,7 +172,7 @@ public class DialogueCutscene : MonoBehaviour
             }
         }
 
-        //firtime put hairpin in
+        //first time put hairpin in
         if(hairpinInDisplayCase.GetComponent<DisplayCollector>().isCollected == true )
         {
             if(hasTriggeredHairpinInDisplayCase == false)
@@ -207,17 +187,20 @@ public class DialogueCutscene : MonoBehaviour
             Puzzle3Cutscene();
         }
 
+        //transport player when puzzle 3 end
         if(dialoguePuzzle3.hasDialogueEnded ==true)
         {
             Puzzle3TransportPlayer();
         }
 
+        //first time out lady in red
         if (player.transform.position.x >= LeftLocation2.x && player.transform.position.x <= RightLocation2.x)
         {
             if(player.transform.position.y <= LeftLocation2.y && player.transform.position.y >= RightLocation2.y)
             { CutScene2(); }
         }
-        //Living room
+
+        //First enter seal room 1
         if (player.transform.position.x >= LeftLocationLR.x && player.transform.position.x <= RightLocationLR.x)
         {
             if (player.transform.position.y <= LeftLocationLR.y && player.transform.position.y >= RightLocationLR.y)
@@ -225,14 +208,8 @@ public class DialogueCutscene : MonoBehaviour
                 CutSceneLR();
             }
         }
-        ////Lady in red gallery
-        //if (player.transform.position.x >= LeftLocationLIG.x && player.transform.position.x <= RightLocationLIG.x)
-        //{
-        //    if (player.transform.position.y <= LeftLocationLIG.y && player.transform.position.y >= RightLocationLIG.y)
-        //    {
-        //        CutSceneLIG();
-        //    }
-        //}
+       
+        //first time in lobby
         if (player.transform.position.x >= LeftLocation3.x && player.transform.position.x <= RightLocation3.x)
         {
             if (player.transform.position.y <= LeftLocation3.y && player.transform.position.y >= RightLocation3.y)
@@ -241,35 +218,12 @@ public class DialogueCutscene : MonoBehaviour
                 { CutScene3(); }
             }
         }
+
+        //first time out lobby -  enemy spawn 
         if (isExitLobby == true && isCutS3PlayedP1 == true)
         {
             CutScene3ExitLobby();
         }
-
-        //////in checkTriggerCutscene()
-        ////if (pickedUpHairPin == true)
-        ////{
-        ////    if (player.transform.position.x >= LeftLocationLIG.x && player.transform.position.x <= RightLocationLIG.x)
-        ////    {
-        ////        if (player.transform.position.y <= LeftLocationLIG.y && player.transform.position.y >= RightLocationLIG.y)
-        ////        {
-        ////            HairPinCutScene();
-        ////        }
-        ////    }
-        ////}
-
-        ////check goinfront of ayu picture
-        //if(isHairPin == true)
-        //{
-        //    if (player.transform.position.x >= LeftAyuPainting.x && player.transform.position.x <= RightAyuPainting.x)
-        //    {
-        //        if (player.transform.position.y <= LeftAyuPainting.y && player.transform.position.y >= RightAyuPainting.y)
-        //        {
-        //            CutSceneLIG2();
-        //        }
-        //    }
-        //}
-
     }
 
     public void checkEnterOnce()
@@ -282,26 +236,6 @@ public class DialogueCutscene : MonoBehaviour
             { isExitLobby = true; }
         }
         
-        //if(player.transform.position.x >= FullLeftLocationLobby.x && player.transform.position.x <= FullRightLocationLobby.x)
-        //{
-        //    if (player.transform.position.y >= FullLeftLocationLobby.y && player.transform.position.y <= FullRightLocationLobby.y)
-        //    {
-        //        isExitLobby = true;
-        //    }
-        //}
-    }
-    //FirstTimeHairPin
-    public void FirstTimeHairPin()
-    {
-        if (hairpin.activeSelf == false && hasTriggeredHairpinDialogue == false)
-        {
-            dialogueDisplay.SetActive(true);
-            DialogueManager.instance.StartDialogue(firstTimePickupHairpin);
-            player.GetComponent<MoveScriptTesting>().StopMoving();
-            hasTriggeredHairpinDialogue = true;
-        }
-        else { return; }
-
     }
 
     //first time out lady in red
@@ -331,19 +265,25 @@ public class DialogueCutscene : MonoBehaviour
         
     }
 
+    //FirstTimeHairPin
+    public void FirstTimeHairPin()
+    {
+        if (hairpin.activeSelf == false && hasTriggeredHairpinDialogue == false)
+        {
+            dialogueDisplay.SetActive(true);
+            DialogueManager.instance.StartDialogue(firstTimePickupHairpin);
+            player.GetComponent<MoveScriptTesting>().StopMoving();
+            hasTriggeredHairpinDialogue = true;
+        }
+        else { return; }
+
+    }
 
     //first time out lobby -  enemy spawn 
     public void CutScene3ExitLobby()
     {
 
-        //if (isCutS3PlayedP2 == false)
-        //{
-        //    dialogueDisplay.SetActive(true);
-        //    DialogueManager.instance.StartDialogue(dialogueCutS3P2);
-        //    player.GetComponent<MoveScriptTesting>().StopMoving();
-        //    isCutS3PlayedP2 = true;
-        //}
-        if (isCutS3PlayedP3 == false && MainEnemyScript.enableES == true )//&& isCutS3PlayedP2 == true)
+        if (isCutS3PlayedP3 == false && MainEnemyScript.enableES == true )
         {
             dialogueDisplay.SetActive(true);
             DialogueManager.instance.StartDialogue(dialogueCutS3P3);
@@ -363,6 +303,19 @@ public class DialogueCutscene : MonoBehaviour
             DialogueManager.instance.StartDialogue(dialogueHairPinDisplay);
             player.GetComponent<MoveScriptTesting>().StopMoving();
             hasTriggeredHairpinInDisplayCase = true;
+        }
+        else { return; }
+    }
+
+    //first enter seal room 1
+    public void CutSceneLR()
+    {
+        if (isCutSAyuLivingRPlayed == false)
+        {
+            dialogueDisplay.SetActive(true);
+            DialogueManager.instance.StartDialogue(dailogueAyuLivingR);
+            player.GetComponent<MoveScriptTesting>().StopMoving();
+            isCutSAyuLivingRPlayed = true;
         }
         else { return; }
     }
@@ -390,106 +343,11 @@ public class DialogueCutscene : MonoBehaviour
                 tpScript.TransferPlayerToDes();
                 hasTriggeredFinP3Cutscene = true;
                 pickUpBottle.performPickup();
-                pickUpBottle.itemObtainedPanel.SetActive(false);
-            }
-           
-          
+                pickUpBottle.itemObtainedPanel.SetActive(false); 
+            }         
         }
         else { return; }
-    }
-
-    public void CutSceneLR()
-    {
-        if (isCutSAyuLivingRPlayed == false)
-        {
-            dialogueDisplay.SetActive(true);
-            DialogueManager.instance.StartDialogue(dailogueAyuLivingR);
-            player.GetComponent<MoveScriptTesting>().StopMoving();
-            isCutSAyuLivingRPlayed = true;
-        }
-        else { return; }
-    }
-
-    //public void CutSceneLIG()
-    //{
-    //    if (isCutSLIG == false)
-    //    {
-    //        dialogueDisplay.SetActive(true);
-    //        DialogueManager.instance.StartDialogue(dialogueLIG);
-    //        player.GetComponent<MoveScriptTesting>().StopMoving();
-    //        isCutSLIG = true;
-    //    }
-    //    else { return; }
-    //}
-
-    //public void CutSceneLIG2()
-    //{
-    //    if (isCutSLIG2 == false)
-    //    {
-    //        dialogueDisplay.SetActive(true);
-    //        DialogueManager.instance.StartDialogue(dialogueLIG2);
-    //        player.GetComponent<MoveScriptTesting>().StopMoving();
-    //        isCutSLIG2 = true;
-    //        CutSceneLIG3();
-    //    }
-    //    else { return; }
-    //}
-
-    //public void CutSceneLIG3()
-    //{
-    //    if (isCutSLIG3 == false)
-    //    {
-    //        dialogueDisplay.SetActive(true);
-    //        DialogueManager.instance.StartDialogue(dialogueLIG3);
-    //        player.GetComponent<MoveScriptTesting>().StopMoving();
-    //        isCutSLIG3 = true;
-    //    }
-    //    else { return; }
-    //}
-
-
-    ////Picked up Hairpin
-    //public void LIRwithHairPin()
-    //{
-    //    if (pickedUpHairPin == false)
-    //    {
-    //        Debug.Log("PickedHairpin");
-    //        pickedUpHairPin = true;
-    //    }
-    //    else
-    //    {
-    //        return;
-    //    }
-    //}
-
-    ////to take out
-    //public void HairPinCutScene()
-    //{
-    //    if (isHairPin == false)
-    //    {
-    //        dialogueDisplay.SetActive(true);
-    //        DialogueManager.instance.StartDialogue(dialogueHairPin);
-    //        player.GetComponent<MoveScriptTesting>().StopMoving();
-    //        isHairPin = true;
-    //    }
-    //    else
-    //    {
-    //        return;
-    //    }
-
-    //}
-
-    //music box
-    public void getMusicBox()
-    {
-        if (isMusicBox == false)
-        {
-            dialogueDisplay.SetActive(true);
-            DialogueManager.instance.StartDialogue(dialogueMusicBox);
-            player.GetComponent<MoveScriptTesting>().StopMoving();
-            isMusicBox = true;
-        }
-        else { return; }
+        GetJournalNoteAuto.getNote11 = true;
     }
 
 }
