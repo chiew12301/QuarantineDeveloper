@@ -115,7 +115,7 @@ public class DialogueCutscene : MonoBehaviour
     {
 
         //while all opening cutscene hasnt played fin, leave a black screen to prevent player from seeing game
-        if(isVSCutscenePlayed == false)
+        if (isVSCutscenePlayed == false)
         {
             blackScreen.gameObject.SetActive(true);
         }
@@ -125,9 +125,9 @@ public class DialogueCutscene : MonoBehaviour
         }
 
         //the conveersation with parents
-        if(isStartCutScenePlayed == true && isStartConversation == false)
+        if (isStartCutScenePlayed == true && isStartConversation == false)
         {
-            ParentBG.gameObject.SetActive(true);
+           // ParentBG.gameObject.SetActive(true);
             DialogueManager.instance.StartDialogue(conversationWithParent);
             isStartConversation = true;
         }
