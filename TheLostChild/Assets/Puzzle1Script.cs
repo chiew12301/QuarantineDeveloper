@@ -33,6 +33,9 @@ public class Puzzle1Script : MonoBehaviour
             JigsawPuzzle[i].SetActive(false);
             col = GetComponent<Collider2D>();
         }
+        endPuzzlePicking = false;
+        totalPuzzle = 0;
+        isPuzzleDone = false;
     }
 
     private void Update()

@@ -40,6 +40,10 @@ public class Puzzle1Script_3 : MonoBehaviour, IPointerEnterHandler, IPointerExit
     private void Start()
     {
         mcs = GameObject.FindGameObjectWithTag("Cursor").GetComponent<MouseCursor>();
+        isNear = false;
+        isPicked = false;
+        isDialogTrigger = false;
+        desAfterTrigger = false;
     }
 
     private void Update()
@@ -48,11 +52,11 @@ public class Puzzle1Script_3 : MonoBehaviour, IPointerEnterHandler, IPointerExit
         {
             float distance = Vector2.Distance(t.position, player.position);
 
-            if (distance <= 3.0f)
+            if (distance <= 10.0f)
             {
                 isNear = true;
             }
-            if (distance > 3.0f)
+            if (distance > 10.0f)
             {
                 isNear = false;
             }
