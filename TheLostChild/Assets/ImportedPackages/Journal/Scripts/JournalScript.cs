@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ProjectWindowCallback;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -100,8 +101,10 @@ public class JournalScript : MonoBehaviour
 
     public void pageVisibility()
     {
+
         if(Page == 1)
-        {
+        { 
+            
             if(enableArrows[0] == true)
             {
                 NextPage.SetActive(true);

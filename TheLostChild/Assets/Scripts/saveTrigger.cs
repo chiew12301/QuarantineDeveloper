@@ -25,7 +25,10 @@ public class saveTrigger : MonoBehaviour
     [HideInInspector]
     public bool checkedYet = true;
     public List<GameObject> puzzlePieces = new List<GameObject>();
+    [HideInInspector]
     public bool enemyDespawner = false;
+    [HideInInspector]
+    public bool mapIsAvailable;
 
     private void Awake()
     {
@@ -47,16 +50,10 @@ public class saveTrigger : MonoBehaviour
     }
     public void Update()
     {
-        //if (photoItem.GetComponent<PickUp>() != null)
-        //{
-        //    photoItem.GetComponent<PickUp>().performPickup();
-        //}
-        
         if (checkedYet == false)
         {
 
             Debug.Log("Checking");
-            Debug.Log(dialogueChecks[6]);
             //Checked means to reload in the items after loading
             //Dialogue
             dialogueCheckingFunction();
@@ -68,6 +65,10 @@ public class saveTrigger : MonoBehaviour
             hidingCheck();
             //Display Cases
             displayCheck();
+            if (!mapIsAvailable)
+            {
+                SetMapJournal.MapIsAvailable = false;
+            }
             checkedYet = true;
         }
 

@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     public GameObject transition;
     public GameObject journal;
     private bool journalLoad = false;
-
+    playerData data;
 
 
     void Start()
@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
             curItems[i] = null;
         }
         journalLoad = false;
+
+
     }
 
     void Update()
@@ -38,6 +40,16 @@ public class Player : MonoBehaviour
         {
             loadNewInfo();
         }
+        playerData data = saveSystem.Load();
+        for (int i = 0; i < 12; i++)
+        {
+            if (data.journalArrows[i])
+            {
+                JournalScript.enableArrows[i] = true;
+            }
+        }
+
+
     }
 
     public void savePlayer()
@@ -77,6 +89,7 @@ public class Player : MonoBehaviour
                 Debug.Log(journalLoad);
                 Time.timeScale = 0;
                 SceneManager.LoadScene("Loading Scene");
+        
                 loadedYet = false;
                 journalLoad = true;
                 Time.timeScale = 1;
@@ -129,14 +142,16 @@ public class Player : MonoBehaviour
         {
             loadedYet = true;
         }
-
+        TutorialScript.gameStart = true ;
+        TutorialScript.isTutorial = false;
+        journal.SetActive(true);
         saveTrigger.instance.checkedYet = false;
         playerData data = saveSystem.Load();
-        JournalScript.enableArrows = data.journalArrows;
+        //JournalScript.enableArrows = data.journalArrows;
         JournalScript.currentPage = data.journalNotes;
         SetMapJournal.MapIsAvailable = data.map;
+        saveTrigger.instance.mapIsAvailable = data.map;
         saveTrigger.instance.enemySpawned = data.enemySpawned;
-        TutorialScript.disableTutorialBlocks = data.tutorial;
         saveTrigger.instance.hidingCaseTriggered = data.hidingCases;
         saveTrigger.instance.displayCaseProgress = data.displayCases;
         saveTrigger.instance.dialogueChecks = data.dialogueChecks;
