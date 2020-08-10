@@ -1,0 +1,532 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
+  m_Name: LastCutscene
+  m_EditorClassIdentifier: 
+  hasDialogueEnded: 1
+  dialogueInfo:
+  - name: Max
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343, type: 3}
+    secondCutsceneImg: {fileID: 0}
+    sentences: ' '
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: ' '
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: Yes! That should be the last of it.
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: Ayu? Are you there?
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: I found all of your items...You can be freed now ...right?
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: Yes.
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: '*startled* Wha- Ayu?'
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "(Her voice is so much clearer now...like she\u2019s actually-)"
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: Here.
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 1
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 86a47ea1d77f3a8489ac27c4c38a595e, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: "Thank you Max... I\u2019m finally free, thanks to you."
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 86a47ea1d77f3a8489ac27c4c38a595e, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: Ayu!
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 1
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 86a47ea1d77f3a8489ac27c4c38a595e,
+      type: 3}
+    sentences: "You\u2019re...really real..?"
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: "(Wah...she is really pretty up close\u2026)"
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: "Thank you Max\u2026You\u2019ve done so much for me."
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: "I\u2019m just\u2026really glad that I could help."
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: Now please tell me how I can get out of-
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: "It\u2019s a shame that your parents can\u2019t see how wonderful
+      you are\u2026"
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: "\u2026(What..?)"
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: "...What do you mean by that\u2026?"
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: "It\u2019s clear that they don\u2019t appreciate you, don\u2019t love
+      you."
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: "Y-you\u2019re lying. T-they do love me. They care."
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: " I just want to know how I can return. Please. Mom and Dad must be
+      worried that I\u2019m missing."
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: "Worried\u2026? Why would they be worried? They didn\u2019t seem like
+      they were worried when you slipped past them."
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: "In fact, they probably went back home once they realized you were
+      missing. They\u2019re probably relieved."
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: " ...No that\u2019s not true\u2026 Why would you say something so
+      hurtful?"
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: "How is anything of what I\u2019m saying different from what you\u2019ve
+      been telling yourself?"
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: ....
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: You deserve better parents, Max. You deserve someone who will respect
+      you...
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: Someone who will take care of you... love you...
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: Someone like-
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: <i>Agh..!</i>
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: ...What is it?!
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: "It hurts\u2026 so bad\u2026"
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: ' ...What does?'
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: "T-there\u2019s a nail. The terrible people stabbed it into the nape
+      of my neck\u2026 <i>Ah!</i> "
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: "Could you take it out for me? Please...This nail... it\u2019s hurting
+      me so much\u2026"
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: "...I still know nothing about the terrible people that trapped you
+      here. I\u2019ll take it out if you promise to tell me everything."
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ded132ff97c3a534ea1b83c9e559ee88,
+      type: 3}
+    sentences: "I promise\u2026 Max...  please\u2026"
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: a864105f9e0edbd488803a84bca40573, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 1
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 12f5d9d5f512ecc4eba7f054dce29544, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35,
+      type: 3}
+    sentences: "Max...you\u2019re too kind\u2026You\u2019re just like the child I\u2019ve
+      always wanted..."
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 12f5d9d5f512ecc4eba7f054dce29544, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35,
+      type: 3}
+    sentences: "I-I\u2019ve helped you...I\u2019ve done what you\u2019ve asked me
+      to do and now you\u2019re free. Please... tell me how I can return home-"
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: a864105f9e0edbd488803a84bca40573, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 1
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 12f5d9d5f512ecc4eba7f054dce29544, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35,
+      type: 3}
+    sentences: "But Max\u2026"
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: 02ebdb1b3c128384a8435e3f1daf8ac1, type: 3}
+    isJitter: 1
+    isHide: 0
+    isFade: 1
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.5
+    cutsceneImg: {fileID: 21300000, guid: 366539ff83e155b48a0694835a2e114f, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 12f5d9d5f512ecc4eba7f054dce29544,
+      type: 3}
+    sentences: "<color=red>Y o u \u2019r e   a l r e a d y   h o m e.</color>"

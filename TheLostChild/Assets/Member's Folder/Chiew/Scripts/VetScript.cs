@@ -7,7 +7,7 @@ public class VetScript : MonoBehaviour
     [HideInInspector]
     public bool isCollected = false;
     public GameObject journal;
-    private bool isGived = false;
+    public static bool isGived = false;
 
     // Start is called before the first frame update
     void Start()

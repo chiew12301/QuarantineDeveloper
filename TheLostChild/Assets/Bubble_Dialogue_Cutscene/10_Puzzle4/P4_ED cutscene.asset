@@ -1,0 +1,272 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
+  m_Name: P4_ED cutscene
+  m_EditorClassIdentifier: 
+  hasDialogueEnded: 1
+  dialogueInfo:
+  - name: Max
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343, type: 3}
+    secondCutsceneImg: {fileID: 0}
+    sentences: ' '
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "Ayu, stay strong. I need to find the midwife, I can\u2019t do this
+      alone."
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "*pant* *pant*...I ..understand..b-but\u2026. <b>Please</b> ...hurry.."
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "I d-don\u2019t\u2026*pant*...think I can hold the...pain..."
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "Sayang, I will be fast. Please stay as quiet as you can...You can\u2019t
+      let the soldiers outside hear you."
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "P-please\u2026*pant*...*coughs*...go fast! ...our baby\u2026is coming!"
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 1
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639,
+      type: 3}
+    sentences: "Ayu...I\u2019m sorry. I failed. I wasn\u2019t quick enough...the
+      soldiers followed me. The midwife was murdered."
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "Keep your voice down...they don\u2019t know we\u2019re inside. They\u2019re
+      looking for us. Please sayang..."
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "*grunts*... I\u2019m sorry\u2026 I...c-can\u2019t hold it ....much
+      longer...it hurts..."
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: Saya-
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: <b>AGHHHHHHHHHHHH!!!!!!!!!!!!!!!!!!!</b>
+  - name: Japanese Soldier
+    portrait: {fileID: 21300000, guid: 5345915c2ad8a5d43848c41a969533ab, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 1
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639,
+      type: 3}
+    sentences: ' Hey! You guys were supposed to be with the others!'
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "N-no\u2026*grunts*...please...no\u2026!"
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: STOP! What are you doing to my wife?!
+  - name: ' '
+    portrait: {fileID: 21300000, guid: ecdaa1db93c8e0747bb5e174de2d5b3f, type: 3}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 0.01
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 3c67e4722aa0b1544b4316359d55fcfc, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639,
+      type: 3}
+    sentences: ' '
+  - name: Villager 1
+    portrait: {fileID: 21300000, guid: 725b849b00eb3a9468d13d711fa5dcca, type: 3}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 3c67e4722aa0b1544b4316359d55fcfc,
+      type: 3}
+    sentences: ' '
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639,
+      type: 3}
+    sentences: ' '
+  - name: Max
+    portrait: {fileID: 21300000, guid: 8515a77517b4d5248a6a25795438c83c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 1
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "\u2026!"
+  - name: Max
+    portrait: {fileID: 21300000, guid: 8515a77517b4d5248a6a25795438c83c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: Ayu...and her husband were murdered...by the soldier...
+  - name: Max
+    portrait: {fileID: 21300000, guid: 8515a77517b4d5248a6a25795438c83c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "That\u2019s so cruel. The baby was so close to being born\u2026"
+  - name: Max
+    portrait: {fileID: 21300000, guid: 8515a77517b4d5248a6a25795438c83c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "(I feel sick to the stomach\u2026)"

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
-  m_Name: BottleOnPainting
+  m_Name: BfrEnterSealRoom4
   m_EditorClassIdentifier: 
   hasDialogueEnded: 0
   dialogueInfo:
@@ -24,18 +24,7 @@ MonoBehaviour:
     textSpeed: 0.1
     cutsceneImg: {fileID: 0}
     secondCutsceneImg: {fileID: 0}
-    sentences: "(This should do the trick\u2026)"
-  - name: Max
-    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    isJitter: 0
-    isHide: 0
-    isFade: 1
-    isHideOverlay: 0
-    FadeBGTimer: 1
-    textSpeed: 0.1
-    cutsceneImg: {fileID: 0}
-    secondCutsceneImg: {fileID: 0}
-    sentences: (It worked! The painting looks much cleaner than before.)
+    sentences: "(That infamous slogan, Asia for Asians\u2026)"
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0
@@ -46,7 +35,7 @@ MonoBehaviour:
     textSpeed: 0.1
     cutsceneImg: {fileID: 0}
     secondCutsceneImg: {fileID: 0}
-    sentences: "(Huh...There\u2019s some scribbling above that woman\u2019s head\u2026)"
+    sentences: "*sighs*... Such simple words used to deceive us\u2026"
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0
@@ -57,8 +46,7 @@ MonoBehaviour:
     textSpeed: 0.1
     cutsceneImg: {fileID: 0}
     secondCutsceneImg: {fileID: 0}
-    sentences: "<i><color=#800000ff>...\u201CWaktu malam senyap sunyi, Waktu siang
-      mata hari\u2026</color></i>"
+    sentences: (We still live by those words...they still use it in school.)
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0
@@ -69,8 +57,8 @@ MonoBehaviour:
     textSpeed: 0.1
     cutsceneImg: {fileID: 0}
     secondCutsceneImg: {fileID: 0}
-    sentences: "<i><color=#800000ff>...Kasih suami pada isteri, Lebih dari nyawa
-      sendiri\u2026</color></i>"
+    sentences: (...We never got past that. Never moved on completely. It affected
+      us all.)
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0
@@ -81,15 +69,5 @@ MonoBehaviour:
     textSpeed: 0.1
     cutsceneImg: {fileID: 0}
     secondCutsceneImg: {fileID: 0}
-    sentences: "<i><color=#800000ff>...\u201CSenyap suara isteri, Senyap suami pergi\u201D</color></i>"
-  - name: Max
-    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    isJitter: 0
-    isHide: 0
-    isFade: 0
-    isHideOverlay: 0
-    FadeBGTimer: 1
-    textSpeed: 0.1
-    cutsceneImg: {fileID: 0}
-    secondCutsceneImg: {fileID: 0}
-    sentences: "(...Sounds like a love poem of some sort\u2026)"
+    sentences: (This museum is the prettiest building we have...and yet...it holds
+      the ugliest memories...)

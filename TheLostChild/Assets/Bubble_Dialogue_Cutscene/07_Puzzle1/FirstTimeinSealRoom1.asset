@@ -12,61 +12,107 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
   m_Name: FirstTimeinSealRoom1
   m_EditorClassIdentifier: 
+  hasDialogueEnded: 0
   dialogueInfo:
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 0}
-    textSpeed: 0.1
-    sentences: ...! (Oh god where am I now?)
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: ...! (Oh god where am I now?)
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 0}
-    textSpeed: 0.1
-    sentences: You found the first seal.
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: You found the first seal.
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 0}
-    textSpeed: 0.1
-    sentences: Ayu? Is this part of the dimension? I can hear you again.
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: Ayu? Is this part of the dimension? I can hear you again.
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "Don\u2019t worry...the plate you touched in the museum brought you
       into one of my memories."
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 0}
-    textSpeed: 0.1
-    sentences: 'I see... '
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: 'I see... '
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "There\u2019s something here you need to retrieve for me...that is
       all I can tell you."
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 0}
-    textSpeed: 0.1
-    sentences: Like the hairpin? You want me to find something like that here?
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: Like the hairpin? You want me to find something like that here?
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: Yes. When you find the items, bring it back to the display cases.
       I can only be freed when all of them are filled.
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 0}
-    textSpeed: 0.1
-    sentences: "<i> \u2026I understand.</i>"
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: "<i>\u2026I understand.</i>"

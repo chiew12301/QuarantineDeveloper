@@ -16,6 +16,4 @@ MonoBehaviour:
   bubbleInfo:
   - sentences: (How many lives has this sword have taken..?)
     isJitter: 0
-  - sentences: (Well is just for diaplay)
-    isJitter: 0
   changedInfo: []

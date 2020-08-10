@@ -38,17 +38,19 @@ public class PasscodeScript : MonoBehaviour
             svTrigger.SVUIOff();
             Debug.Log("Win");
             isCompleted = true;
-            DialogueManager.instance.StartDialogue(Puzzle2Ending);
+         //   DialogueManager.instance.StartDialogue(Puzzle2Ending);
             if(photoItem.GetComponent<PickUp>() != null)
             {
                 photoItem.GetComponent<PickUp>().performPickup();
             }
-            if(Journal9.GetComponent<UnlockJournalPage>() != null)
+
+            //THIS CALLS THE DIALOGUE WHEN RECEIVE OLD PHOTOGRAPH
+            if (Journal9.GetComponent<UnlockJournalPage>() != null)
             {
                 Journal9.GetComponent<UnlockJournalPage>().performPickup();
             }
             //Transfer to puzzle gallery again
-            this.GetComponent<TransferPlayer>().TransferPlayerToDes();
+            //   this.GetComponent<TransferPlayer>().TransferPlayerToDes();
             inventoryPanel.gameObject.SetActive(true);
             //player.gameObject.transform.position = backtoGallery;
         }

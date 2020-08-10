@@ -6,6 +6,7 @@ public class SafeVaultTrigger : MonoBehaviour
 {
     public VetScript vs;
     public GameObject svUI;
+    public GameObject cameras;
     public MoveScriptTesting player;
 
     private void OnMouseDown()
@@ -20,6 +21,7 @@ public class SafeVaultTrigger : MonoBehaviour
             if(svUI != null)
             { 
                 svUI.SetActive(true);
+                cameras.SetActive(false);
                 Time.timeScale = 0.00001f;
             }
         }

@@ -10,168 +10,294 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
-  m_Name: EndingPuzzle1
+  m_Name: (OLD)EndingPuzzle1
   m_EditorClassIdentifier: 
+  hasDialogueEnded: 0
   dialogueInfo:
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 0}
-    textSpeed: 0.1
-    sentences: "Mama...Papa\u2026"
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: "Mama...Papa\u2026"
   - name: Papa
     portrait: {fileID: 21300000, guid: e05378043435bfe49ac9a999e0ab8830, type: 3}
-    cutsceneImg: {fileID: 0}
-    textSpeed: 0.1
-    sentences: "\u2026\u2026.."
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: "\u2026\u2026.."
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: While dinner is still warm...shall we eat together?
-    isJitter: 0
   - name: Mama
     portrait: {fileID: 21300000, guid: 63e5ff455d3df9548afdc0e6358a2b25, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "\u2026\u2026.."
-    isJitter: 0
   - name: Mama
     portrait: {fileID: 21300000, guid: 63e5ff455d3df9548afdc0e6358a2b25, type: 3}
-    cutsceneImg: {fileID: 0}
-    textSpeed: 0.1
-    sentences: 'What have you been doing when we were at work? '
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: 'What have you been doing when we were at work? '
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 0}
-    textSpeed: 0.1
-    sentences: ...Mama?
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: ...Mama?
   - name: Mama
     portrait: {fileID: 21300000, guid: 63e5ff455d3df9548afdc0e6358a2b25, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "I heard from Mak Cik Siti just now. Haih anak aku ni\u2026 my child\u2026
       you think mama and papa are never home so you can use that time to go around
       flirting with other boys? "
-    isJitter: 0
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "But Mama, I didn\u2019t do anything wrong. Aqil was the one wh-"
-    isJitter: 0
   - name: Mama
     portrait: {fileID: 21300000, guid: 63e5ff455d3df9548afdc0e6358a2b25, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "I tak mau dengar dah. I\u2019m tired of listening to your excuses"
-    isJitter: 0
   - name: Mama
     portrait: {fileID: 21300000, guid: 63e5ff455d3df9548afdc0e6358a2b25, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: 'Do you know what all the other Mak Ciks are saying about you in the
       village? '
-    isJitter: 0
   - name: Mama
     portrait: {fileID: 21300000, guid: 63e5ff455d3df9548afdc0e6358a2b25, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "Do you know what shame you put on Papa and Mama for people to think
       we have an anak like this? \r"
-    isJitter: 0
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: 'Mama, please just listen to me. Aqil tried to come on to me and I
       pushed him aw-
 
 '
-    isJitter: 0
   - name: Papa
     portrait: {fileID: 21300000, guid: e05378043435bfe49ac9a999e0ab8830, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "Don\u2019t lie about other people! Anak Mak Cik Siti is a good boy.
       He would never do something like that. Cis, I never raised my child this way!"
-    isJitter: 0
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 0}
-    textSpeed: 0.1
-    sentences: " \u2026(How can my own parents not trust me?)..."
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: " \u2026(How can my own parents not trust me?)..."
   - name: Mama
     portrait: {fileID: 21300000, guid: 63e5ff455d3df9548afdc0e6358a2b25, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "Dah, that\u2019s enough. I have no appetite. I heard Pak Cik Yap
       bought another new camera for himself. He\u2019s always using those expensive
       cameras yang one-of-a-kind.\r\n"
-    isJitter: 0
   - name: Mama
     portrait: {fileID: 21300000, guid: 63e5ff455d3df9548afdc0e6358a2b25, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "Kalau you gatal sangat\u2026 nak cari boyfriend pon... at least find
       a rich one like him so that you tak yah bother us anymore.   "
-    isJitter: 0
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "Someday...I\u2019ll have children on my own\u2026\r"
-    isJitter: 0
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "...a husband...\r"
-    isJitter: 0
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: ...a real family to love.
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "\u2026"
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "(I heard Ayu speaking to her parents...They sounded really cold\u2026)"
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: (Just like Mom and Dad...)
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "(I bet it\u2019s painful to go through each day like that...Why do
       they not appreciate what she does?"
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 0}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: (...I understand the pain well.).
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 0}
-    textSpeed: 0.1
-    sentences: "This music box must be one of the items.\r"
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: "This music box must be one of the items.\r"

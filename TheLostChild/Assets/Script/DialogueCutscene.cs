@@ -7,6 +7,7 @@ using TMPro;
 public class DialogueCutscene : MonoBehaviour
 {
     public static DialogueCutscene instance;
+    public bool skipEverything = false;
 
     public GameObject player;
     private CameraScript mainCam;
@@ -17,7 +18,6 @@ public class DialogueCutscene : MonoBehaviour
     [Header("DialogueCanvas")]
     public GameObject dialogueDisplay;
 
-    //!!1 added
     public bool isTutorialPlayed = false;
     public bool isVSCutscenePlayedEnd = false;
 
@@ -79,13 +79,35 @@ public class DialogueCutscene : MonoBehaviour
     public Vector3 RightLocationLR;
     public bool isCutSAyuLivingRPlayed = false;
 
+    [Header("After receive music box")]
+    public Dialogue musicBox;
+    public Dialogue dialoguePuzzle1;
+    public bool hasTriggeredPuzzle1Cutscene = false;
+    public bool hasTriggeredFinP1Cutscene = false;
+    public TransferPlayer MBtpScript;
+
+    [Header("After put film in vat")]
+    public Dialogue dialogueFilm;
+    public bool hasTriggeredDevelopedFilm = false;
+
+    [Header("After key correct passcode for safe")]
+    public Dialogue oldPhotograph;
+    public Dialogue dialoguePuzzle2;
+    public bool hasTriggeredPuzzle2Cutscene = false;
+    public bool hasTriggeredFinP2Cutscene = false;
+    public TransferPlayer P2tpScript;
+
     [Header("Puzzle3related")]
     public Dialogue dialoguePuzzle3;
-    private bool hasTriggeredPuzzle3Cutscene = false;
-    private bool hasTriggeredFinP3Cutscene = false;
+    public bool hasTriggeredPuzzle3Cutscene = false;
+    public bool hasTriggeredFinP3Cutscene = false;
     public TransferPlayer tpScript;
     public PickUp pickUpBottle;
 
+    [Header("Puzzle 4 Cutscene")]
+    public bool hasTriggeredPuzzle4Cutscene = false;
+    public bool hasTriggeredFinP4Cutscene = false;
+    public TransferPlayer P4tpScript;
 
     private void Awake()
     {
@@ -94,6 +116,13 @@ public class DialogueCutscene : MonoBehaviour
             return;
         }
         instance = this;
+        if(skipEverything == true)
+        {
+            isStartCutScenePlayed = true;
+            isStartConversation = true;
+            isStartConversationEnd = true;
+            isTutorialPlayed = false;
+        }
     }
 
     private void Start()
@@ -186,18 +215,6 @@ public class DialogueCutscene : MonoBehaviour
             }
         }
 
-        //check if finished puzzle3 dialogue
-        if(PaintingOnEasel.instance.afterCleanPainting.hasDialogueEnded ==true)
-        {
-            Puzzle3Cutscene();
-        }
-
-        //transport player when puzzle 3 end
-        if(dialoguePuzzle3.hasDialogueEnded ==true)
-        {
-            Puzzle3TransportPlayer();
-        }
-
         //first time out lady in red
         if (player.transform.position.x >= LeftLocation2.x && player.transform.position.x <= RightLocation2.x)
         {
@@ -229,6 +246,57 @@ public class DialogueCutscene : MonoBehaviour
         {
             CutScene3ExitLobby();
         }
+
+        //=====PUZZLES RELATED
+        //check if dialogue for music box ended
+        if (musicBox.hasDialogueEnded == true)
+        {
+            Puzzle1Cutscene();
+        }
+
+        //transport player when puzzle 1 end
+        if (musicBox.hasDialogueEnded == true && hasTriggeredPuzzle1Cutscene == true)
+        {
+            Puzzle1TransportPlayer();
+        }
+
+        //after put film in vat
+        if (VetScript.isGived == true)
+        {
+            DevelopedFilm();
+        }
+
+        //dialogue for old photgraph triggered by Journal9 in PasscodeScript.cs
+        //check if dialogue for old photograph ended
+        if (oldPhotograph.hasDialogueEnded == true)
+        {
+            Puzzle2Cutscene();
+        }
+
+        //transport player when puzzle 2 end
+        if (oldPhotograph.hasDialogueEnded == true && hasTriggeredPuzzle2Cutscene == true)
+        {
+            Puzzle2TransportPlayer();
+        }
+        //check if finished puzzle3 dialogue
+        if (PaintingOnEasel.instance.afterCleanPainting.hasDialogueEnded == true)
+        {
+            Puzzle3Cutscene();
+        }
+
+        //transport player when puzzle 3 end
+        if (hasTriggeredPuzzle3Cutscene == true)
+        {
+            Puzzle3TransportPlayer();
+        }
+
+
+        //transport player when puzzle 4 ends
+        if (hasTriggeredPuzzle4Cutscene == true)
+        {
+            Puzzle4TransportPlayer();
+        }
+        //====PUZZLE RELATED END
     }
 
     public void checkEnterOnce()
@@ -324,16 +392,87 @@ public class DialogueCutscene : MonoBehaviour
         }
         else { return; }
     }
+    //after puzzle1 dialogue end - the cutscene plays
+    public void Puzzle1Cutscene()
+    {
+        if (hasTriggeredPuzzle1Cutscene == false)
+        {
+            dialogueDisplay.SetActive(true);
+            DialogueManager.instance.StartDialogue(dialoguePuzzle1);
+            player.GetComponent<MoveScriptTesting>().StopMoving();
+            hasTriggeredPuzzle1Cutscene = true;
+        }
+        else { return; }
+    }
+
+    //after fin puzzle1 cutscene
+    public void Puzzle1TransportPlayer()
+    {
+        if (hasTriggeredFinP1Cutscene == false)
+        {
+            if (MBtpScript != null)
+            {
+                MBtpScript.TransferPlayerToDes();
+                hasTriggeredFinP1Cutscene = true;
+            }
+        }
+        else { return; }
+    }
+
+    //after put film in vat
+    public void DevelopedFilm()
+    {
+        if (hasTriggeredDevelopedFilm == false)
+        {
+
+            dialogueDisplay.SetActive(true);
+            DialogueManager.instance.StartDialogue(dialogueFilm);
+            player.GetComponent<MoveScriptTesting>().StopMoving();
+            hasTriggeredDevelopedFilm = true;
+             
+         
+        }
+        else { return; }
+    }
+
+    //after puzzle2 dialogue end - the cutscene plays
+    public void Puzzle2Cutscene()
+    {
+        if (hasTriggeredPuzzle2Cutscene == false)
+        {
+            dialogueDisplay.SetActive(true);
+            DialogueManager.instance.StartDialogue(dialoguePuzzle2);
+            player.GetComponent<MoveScriptTesting>().StopMoving();
+            hasTriggeredPuzzle2Cutscene = true;
+        }
+        else { return; }
+    }
+
+    //after fin puzzle2 cutscene
+    public void Puzzle2TransportPlayer()
+    {
+        if (hasTriggeredFinP2Cutscene == false)
+        {
+            if (P2tpScript != null)
+            {
+                P2tpScript.TransferPlayerToDes();
+                hasTriggeredFinP2Cutscene = true;
+            }
+        }
+        else { return; }
+    }
 
     //after puzzle3 dialogue end - the cutscene plays
     public void Puzzle3Cutscene()
     {
         if (hasTriggeredPuzzle3Cutscene == false)
         {
+            pickUpBottle.Dialogue = false;
+            hasTriggeredPuzzle3Cutscene = true;
             dialogueDisplay.SetActive(true);
             DialogueManager.instance.StartDialogue(dialoguePuzzle3);
             player.GetComponent<MoveScriptTesting>().StopMoving();
-            hasTriggeredPuzzle3Cutscene = true;
+            
         }
         else { return; }
     }
@@ -353,6 +492,20 @@ public class DialogueCutscene : MonoBehaviour
         }
         else { return; }
         GetJournalNoteAuto.getNote11 = true;
+    }
+
+    //after fin puzzle4 cutscene
+    public void Puzzle4TransportPlayer()
+    {
+        if (hasTriggeredFinP4Cutscene == false)
+        {
+            if (P4tpScript != null)
+            {
+                P4tpScript.TransferPlayerToDes();
+                hasTriggeredFinP4Cutscene = true;        
+            }
+        }
+        else { return; }
     }
 
 }

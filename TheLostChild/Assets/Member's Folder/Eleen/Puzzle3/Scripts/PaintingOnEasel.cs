@@ -18,6 +18,8 @@ public class PaintingOnEasel : MonoBehaviour
     public Dialogue afterCleanPainting;
 
     public GameObject correctPainting;
+
+    public GameObject HidePaintings;
     void Awake()
     {
         if (instance != null)
@@ -50,6 +52,7 @@ public class PaintingOnEasel : MonoBehaviour
                 collision.gameObject.SetActive(false);
                 emptyPainting.GetComponent<SpriteRenderer>().sprite = shinyPainting;
                 DialogueManager.instance.StartDialogue(afterCleanPainting);
+                HidePaintings.SetActive(false);
                 //   curSprite.sprite = shinyPainting;
             }
         }

@@ -1,0 +1,433 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
+  m_Name: P3_ED cutscene
+  m_EditorClassIdentifier: 
+  hasDialogueEnded: 1
+  dialogueInfo:
+  - name: Max
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343, type: 3}
+    secondCutsceneImg: {fileID: 0}
+    sentences: ' '
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "<i>Sayang</i>\u2026.aren't you tired? You\u2019ve been staying up
+      so late these few weeks...What\u2019s wrong?"
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "...I feel like a disappointment...why can\u2019t I conceive a child\u2026?
+      We\u2019ve tried so many times...and yet\u2026"
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "*sobs* ...For so long...I\u2019ve always wanted a child. To start
+      a family...that\u2019s all I\u2019ve ever wanted."
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: ....
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "...<i>Sayang</i>, I have to admit... I haven\u2019t been honest with
+      you. I\u2019m actually\u2026"
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: ...sterile.
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "Wha-...? Sterile? That means\u2026"
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "I\u2019m sorry I never told you sooner. I didn\u2019t want to admit
+      to it because it would\u2019ve crushed your dreams and maybe\u2026"
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "You wouldn\u2019t have chosen to marry me if you knew."
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "I...I don\u2019t know what to say\u2026"
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "It\u2019s one of the real reasons why I left the city to move here.
+      When people found out, I was teased and made fun of. I hardly could--"
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "<i>Sayang</i>...it doesn\u2019t matter. I still love you for you."
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "That\u2019s...comforting to hear."
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: But <i>sayang</i>...I think I found a way.
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "A...way\u2026?"
+  - name: Man
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 1
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: ' '
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "...And this would help her get pregnant\u2026?"
+  - name: Witch Doctor
+    portrait: {fileID: 21300000, guid: 7273dd9f7f749a14b8a026bf2bc18a33, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: Yes...Trust me young man, many people have approached me on this before.
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "Well let\u2019s take the herbs. I really want to be able to bear
+      a child."
+  - name: Witch Doctor
+    portrait: {fileID: 21300000, guid: 7273dd9f7f749a14b8a026bf2bc18a33, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: Yes...yes...but just a warning.
+  - name: Witch Doctor
+    portrait: {fileID: 21300000, guid: 7273dd9f7f749a14b8a026bf2bc18a33, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: Do not let your desires get the best of you.
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: I understand.
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "<i>Sayang</i>, if we take these herbs...I\u2019ll finally be able
+      to bear us a child. Please...do it for me."
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "Of course....I\u2019ll do it for you."
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 1aab0842449cc7440b57a2fa1f3893a8, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639,
+      type: 3}
+    sentences: ' '
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 1
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 1aab0842449cc7440b57a2fa1f3893a8,
+      type: 3}
+    sentences: <i>Sayang!</i>  Wake up!
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 1aab0842449cc7440b57a2fa1f3893a8,
+      type: 3}
+    sentences: ...H-huh!? Wha-
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "I\u2019m pregnant! I\u2019m pregnant with our child!"
+  - name: Man
+    portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "What? That\u2019s great! It worked! I\u2019m so happy!"
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: <i>Wahai, sayang!</i>  We finally get to start our family!
+  - name: Ayu
+    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639,
+      type: 3}
+    sentences: ' '
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 1
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "That man was the newcomer from the group photo...he was Ayu\u2019s
+      husband?"
+  - name: Max
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
+      type: 3}
+    sentences: "\u2026That herb method seems quite sketchy... but I\u2019m glad Ayu
+      was able to achieve what she wanted."
