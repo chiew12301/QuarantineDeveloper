@@ -65,7 +65,8 @@ public class BackBoneManager : MonoBehaviour
         InvenUIIsStop = InventoryScriptUI.instance.isOpen;
         if(InvenUIIsStop == true || DialogueManager.instance.isTalking == true 
             || PreloadCutsceneManager.instance.isCutscene == true ||isTransfering == true || 
-            checkTFJournal() == false || isTutorial == true)
+            checkTFJournal() == false || isTutorial == true
+            ||DialogueCutscene.instance.isStartConversation== false)
         {
             if(DialogueManager.instance.isTalking == true 
                 || PreloadCutsceneManager.instance.isCutscene == true || isTransfering == true 

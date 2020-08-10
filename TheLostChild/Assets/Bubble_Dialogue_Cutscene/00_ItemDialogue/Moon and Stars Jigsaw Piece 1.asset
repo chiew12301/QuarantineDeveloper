@@ -10,13 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
-  m_Name: Moon and Stars Jigsaw Piece 3
+  m_Name: Moon and Stars Jigsaw Piece 1
   m_EditorClassIdentifier: 
   hasDialogueEnded: 0
   dialogueInfo:
   - name: Max
     portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
-    cutsceneImg: {fileID: 0}
-    textSpeed: 0
-    sentences: A third jigsaw piece! I think I found all the jigsaw pieces.
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: Hm?... What's that?
+  - name: Max
+    portrait: {fileID: 21300000, guid: 2b8bf1ebc2f0cec429df78bb8cf56fbc, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: A jigsaw piece?

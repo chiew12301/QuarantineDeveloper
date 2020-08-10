@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oriOnlyOnce: 0
   bubbleInfo:
-  - sentences: The bed looks cold...
+  - sentences: (The bed looks cold...and uncomfortable.)
     isJitter: 0
   changedInfo: []

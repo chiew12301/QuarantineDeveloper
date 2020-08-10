@@ -15,6 +15,7 @@ public class Dialogue : ScriptableObject
 
         public bool isHide;
         public bool isFade;
+        public bool isHideOverlay;
 
         public float FadeBGTimer = 1.0f;
         public float textSpeed = 0.1f;

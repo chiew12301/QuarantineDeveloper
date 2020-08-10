@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 948ceb2176cb4cd43bfdea7a1c011b89, type: 3}
-  m_Name: Dispaly
+  m_Name: ChineseCeramics
   m_EditorClassIdentifier: 
   oriOnlyOnce: 0
   bubbleInfo:
-  - sentences: (Looks like some Japanese army items)
-    isJitter: 0
-  - sentences: (Well is just for diaplay)
+  - sentences: These were probably last of its kind...
     isJitter: 0
   changedInfo: []

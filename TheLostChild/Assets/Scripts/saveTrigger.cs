@@ -112,12 +112,12 @@ public class saveTrigger : MonoBehaviour
         DialogueCutscene.instance.isCutS3PlayedP3 = dialogueChecks[8];
 
 
-        DialogueCutscene.instance.isCutSMemPlayed = dialogueChecks[9];
+      //  DialogueCutscene.instance.isCutSMemPlayed = dialogueChecks[9];
 
 
         DialogueCutscene.instance.isCutSAyuLivingRPlayed = dialogueChecks[10];
 
-        DialogueCutscene.instance.isRiddleP1 = dialogueChecks[11];
+     //   DialogueCutscene.instance.isRiddleP1 = dialogueChecks[11];
 
     }
     public void dialogueUpdate()
@@ -158,18 +158,18 @@ public class saveTrigger : MonoBehaviour
         {
             dialogueChecks[8] = true;
         }
-        if (DialogueCutscene.instance.isCutSMemPlayed)
-        {
-            dialogueChecks[9] = true;
-        }
+        //if (DialogueCutscene.instance.isCutSMemPlayed)
+        //{
+        //    dialogueChecks[9] = true;
+        //}
         if (DialogueCutscene.instance.isCutSAyuLivingRPlayed)
         {
             dialogueChecks[10] = true;
         }
-        if (DialogueCutscene.instance.isRiddleP1)
-        {
-            dialogueChecks[11] = true;
-        }
+        //if (DialogueCutscene.instance.isRiddleP1)
+        //{
+        //    dialogueChecks[11] = true;
+        //}
     }
     public void enemyCheck()
     {

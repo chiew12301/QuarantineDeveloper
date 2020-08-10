@@ -7,14 +7,17 @@ public class GetJournalNoteAuto : MonoBehaviour
     public int PageNumberToGet = 0;
     public static bool getNote2 = true;
     public static bool getNote5 = false;
+    public static bool getNote11 = false;
 
     public bool note2 = false;
     public bool note5 = false;
+    public bool note11 = false;
 
     private void Start()
     {
         getNote2 = true;
         getNote5 = false;
+        getNote11 = false;
     }
 
     void Update()
@@ -31,6 +34,12 @@ public class GetJournalNoteAuto : MonoBehaviour
             getPage5();
             getNote5 = false;
         }
+
+        if(getNote11 && note11)
+        {
+            getPage11();
+            getNote11 = false;
+        }
     }
 
     void getPage2()
@@ -40,6 +49,12 @@ public class GetJournalNoteAuto : MonoBehaviour
     }
 
     void getPage5()
+    {
+        UnlockJournalPage.instance.PageNumber = PageNumberToGet;
+        UnlockJournalPage.instance.performPickup();
+    }
+
+    void getPage11()
     {
         UnlockJournalPage.instance.PageNumber = PageNumberToGet;
         UnlockJournalPage.instance.performPickup();

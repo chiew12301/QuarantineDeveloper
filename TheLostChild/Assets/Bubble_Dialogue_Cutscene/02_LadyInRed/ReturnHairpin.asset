@@ -12,221 +12,397 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
   m_Name: ReturnHairpin
   m_EditorClassIdentifier: 
+  hasDialogueEnded: 0
   dialogueInfo:
   - name: Unknown Voice
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "...My hairpin\u2026"
-    isJitter: 0
   - name: Unknown Voice
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: Thank you for returning it to me.
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 8515a77517b4d5248a6a25795438c83c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: '...! '
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 8515a77517b4d5248a6a25795438c83c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
-    textSpeed: 0.1
-    sentences: Who are you?...Where is your voice coming from?
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: Who are you?...Where is your voice coming from?
   - name: Unknown Voice
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
-    textSpeed: 0.1
-    sentences: "Over here. I\u2019m the woman in the painting."
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: "Over here. I\u2019m the woman in the painting."
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
-    textSpeed: 0.1
-    sentences: " ...What\u2026?"
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: "...What\u2026?"
   - name: Unknown Voice
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "Yes\u2026.I am unfortunately trapped inside this painting\u2026 and...that\u2019s
       why I brought you here.\r"
-    isJitter: 0
   - name: Unknown Voice
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "I need your help...Max.\r"
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 8515a77517b4d5248a6a25795438c83c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "\u2026(She brought me here?)..."
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 8515a77517b4d5248a6a25795438c83c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
-    textSpeed: 0.1
-    sentences: "\u2026(How does she know my name?)..."
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: "\u2026(How does she know my name?)..."
   - name: Unknown Voice
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "I\u2019ve been watching you very closely...I saw the page your parents
       ripped off from your journal. Poor Max...how could they treat you like that?"
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 8515a77517b4d5248a6a25795438c83c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
-    textSpeed: 0.1
-    sentences: " ...H-how\u2026"
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: " ...H-how\u2026"
   - name: Unknown Voice
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: I brought you here into my dimension when you stood in front of my
       painting, Max. I really need your help.
-    isJitter: 0
   - name: Unknown Voice
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
-    textSpeed: 0.1
-    sentences: "You\u2019re the only one that can save me from my prison."
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: "You\u2019re the only one that can save me from my prison."
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "...Save...you? P-prison\u2026? What are you talking about?"
-    isJitter: 0
   - name: Max
-    portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
-    textSpeed: 0.1
-    sentences: "(Dimension\u2026? So this place isn\u2019t the real world?)"
+    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: "(Dimension\u2026? So this place isn\u2019t the real world?)"
   - name: Unknown Voice
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: Yes, I was imprisoned inside this painting by terrible people in the
       past.
-    isJitter: 0
   - name: Unknown Voice
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: My name is Ayu, and I want to be freed.
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: " (Ayu\u2026)"
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: ....
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: Well...what do I need to do?
-    isJitter: 0
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
-    textSpeed: 0.1
-    sentences: You need to find four more items that belong to me.
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: You need to find four more items that belong to me.
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
-    textSpeed: 0.1
-    sentences: "More items\u2026? Are your belongings scattered in the museum?"
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: "More items\u2026? Are your belongings scattered in the museum?"
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: ...Not exactly. You need to find something that can trigger you into
       my memory.
-    isJitter: 0
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: And in that memory, will you find an item that belongs to me.
-    isJitter: 0
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "I\u2019ll tell you how to return if you free me."
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
-    textSpeed: 0.1
-    sentences: Really? But...
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: Really? But...
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
-    textSpeed: 0.1
-    sentences: ...Do you have dinner often with your family, Max?
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: ...Do you have dinner often with your family, Max?
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "\u2026Not really...Mum and Dad usually come home past dinnertime\u2026I
       only eat with our kakak\u2026"
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: " I wished we could have more dinners together as a family...I wouldn\u2019t
       feel so alone...\r\n"
-    isJitter: 0
   - name: Unknown Voice
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "\u2026family dinners aren\u2019t as pleasant as you would assume...\r"
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "...What do you mean by that\u2026?"
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: " \u2026"
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
+    isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
     textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
     sentences: "Ayu? (...She\u2019s not responding.)"
-    isJitter: 0
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
-    cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
-    textSpeed: 0.1
-    sentences: "(...Where should I start\u2026)\r"
     isJitter: 0
+    isHide: 0
+    isFade: 0
+    isHideOverlay: 0
+    FadeBGTimer: 1
+    textSpeed: 0.1
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 0}
+    sentences: "(...Where should I start\u2026)\r"

@@ -8,10 +8,10 @@ public class DialogueCutscene : MonoBehaviour
 {
     public static DialogueCutscene instance;
 
-
     public GameObject player;
     private CameraScript mainCam;
     public GameObject JournalAuto_Folder;
+    public GameObject Tutorial;
     public Image blackScreen;
 
     [Header("DialogueCanvas")]
@@ -34,6 +34,7 @@ public class DialogueCutscene : MonoBehaviour
     public bool isStartConversationEnd = false;
     public Image ParentBG;
 
+    //!! NOT USED IN FINAL BUILD
     [Header("VerticalSliceSummary")]
     public GameObject VSObj;
     public Paragraph VSparagraph;
@@ -125,7 +126,7 @@ public class DialogueCutscene : MonoBehaviour
     {
 
         //while all opening cutscene hasnt played fin, leave a black screen to prevent player from seeing game
-        if (isVSCutscenePlayed == false)
+        if (isStartCutScenePlayed == false)
         {
             blackScreen.gameObject.SetActive(true);
         }
@@ -141,29 +142,33 @@ public class DialogueCutscene : MonoBehaviour
             DialogueManager.instance.StartDialogue(conversationWithParent);
             isStartConversation = true;
         }
-
-        //VSSummary
-        if(isStartConversationEnd == true && isVSCutscenePlayed == false)
-        {
-            //    Debug.Log("HI");
-            ParentBG.gameObject.SetActive(false);
-            VSObj.SetActive(true);
-            PreloadCutsceneManager.instance.StartParagraph(VSObj, VSparagraph, VSparagraphText, null);
-            isVSCutscenePlayed = true;
-
-            //for new note - journal
-            //JournalAuto_Folder.SetActive(true);
-             // <------------------------------------------------------------- make this happen after the black screen one ends D8
-        }
-        //
-        if(isVSCutscenePlayedEnd == true && isTutorialPlayed == false)
+        
+        //tutorial after conversation with parents
+        if(isStartConversationEnd == true && isTutorialPlayed == false)
         {
             Tutorial.SetActive(true);
             isTutorialPlayed = true;
         }
 
+        ////VSSummary - taken out in final build
+        //if(isStartConversationEnd == true && isVSCutscenePlayed == false)
+        //{
+        //    //    Debug.Log("HI");
+        //    ParentBG.gameObject.SetActive(false);
+        //    VSObj.SetActive(true);
+        //    PreloadCutsceneManager.instance.StartParagraph(VSObj, VSparagraph, VSparagraphText, null);
+        //    isVSCutscenePlayed = true;             
+        //}
+
+        ////tutorial after vs - taken out; changed to immediately after conversation with parents
+        //if(isVSCutscenePlayedEnd == true && isTutorialPlayed == false)
+        //{
+        //    Tutorial.SetActive(true);
+        //    isTutorialPlayed = true;
+        //}
+
         ////first time receive hairpin
-        if (player.transform.position.x >= -11 && player.transform.position.x <= 8)
+        if (player.transform.position.x >= -8 && player.transform.position.x <= 8)
         {
             if (player.transform.position.y >= 1  && player.transform.position.y <= 2)
             {

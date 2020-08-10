@@ -142,7 +142,7 @@ public class DialogueManager : MonoBehaviour
 
         dialogueAnimator.SetBool("isOpen", true);
         panelAnimator.SetBool("isOpen", true);
-        
+
 
         //for each seperate info(name, portrait, dialogue text) in the list of information(dialogueInfo)....
         foreach (Dialogue.Info info in dialogue.dialogueInfo)
@@ -170,27 +170,10 @@ public class DialogueManager : MonoBehaviour
 
         //if only want to trigger once      
         if (bubble.onlyOnce)
+        {
+            if (bubble.alreadyTriggered)
             {
-                if (bubble.alreadyTriggered)
-                {
-                    EndDialogue();
-                }
-                else
-                {
-                    foreach (BubbleSpeech.Info sentence in tempBubble.bubbleInfo)
-                    {
-                        bubbleInfo.Enqueue(sentence);
-
-                    }
-                    bubble.alreadyTriggered = true;
-                }
-            }
-            else if (tempBubble.isChanged)
-            {
-                foreach (BubbleSpeech.Info sentence in tempBubble.changedInfo)
-                {
-                    bubbleInfo.Enqueue(sentence);
-                }
+                EndDialogue();
             }
             else
             {
@@ -199,7 +182,24 @@ public class DialogueManager : MonoBehaviour
                     bubbleInfo.Enqueue(sentence);
 
                 }
+                bubble.alreadyTriggered = true;
             }
+        }
+        else if (tempBubble.isChanged)
+        {
+            foreach (BubbleSpeech.Info sentence in tempBubble.changedInfo)
+            {
+                bubbleInfo.Enqueue(sentence);
+            }
+        }
+        else
+        {
+            foreach (BubbleSpeech.Info sentence in tempBubble.bubbleInfo)
+            {
+                bubbleInfo.Enqueue(sentence);
+
+            }
+        }
 
         //to display the firstmost sentence
         DisplayNextSentence();
@@ -236,7 +236,15 @@ public class DialogueManager : MonoBehaviour
             Dialogue.Info info = dialogueInfo.Dequeue();
             nameText.text = info.name;
 
-          
+            if(info.isHideOverlay ==true)
+            {
+                blackOverlay.gameObject.SetActive(false);
+            }
+            else
+            {
+                blackOverlay.gameObject.SetActive(true);
+            }
+
 
             if (info.isHide == true && info.isFade == false)
             {
@@ -244,8 +252,8 @@ public class DialogueManager : MonoBehaviour
                 dialoguePortrait.gameObject.SetActive(false);
                 // cutscenePanel.gameObject.SetActive(false);
                 //do same thing as above - diff way of doing
-              //  cutscenePanel.canvasRenderer.SetAlpha(0.0f);
-              //  secondCutscenePanel.canvasRenderer.SetAlpha(0f);
+                //  cutscenePanel.canvasRenderer.SetAlpha(0.0f);
+                //  secondCutscenePanel.canvasRenderer.SetAlpha(0f);
                 continueTxt.gameObject.SetActive(false);
             }
             else
@@ -262,43 +270,45 @@ public class DialogueManager : MonoBehaviour
                     prevCutsceneImg = info.secondCutsceneImg;
 
                 }
-                
-                    //if no fade whatsoever
-                    if (info.isFade == false)
-                    {
- 
-                        cutscenePanel.sprite = info.cutsceneImg;
-                        secondCutscenePanel.canvasRenderer.SetAlpha(0f);
 
-                        dialoguePortrait.sprite = info.portrait;
-                        dialogueText.text = info.sentences;
+                //if no fade whatsoever
+                if (info.isFade == false)
+                {
 
-                        DialogueBox.gameObject.SetActive(true);
-                        dialoguePortrait.gameObject.SetActive(true);
-                        continueTxt.gameObject.SetActive(true);
-                        
+                    cutscenePanel.sprite = info.cutsceneImg;
+                    secondCutscenePanel.canvasRenderer.SetAlpha(0f);
 
-                } 
-                    
-                    else if (info.isFade == true)
-                    {
-                        DialogueBox.gameObject.SetActive(false);
-                        dialoguePortrait.gameObject.SetActive(false);
-                        continueTxt.gameObject.SetActive(false);
-                        nameText.canvasRenderer.SetAlpha(0f);
-                        dialogueText.canvasRenderer.SetAlpha(0f);
-                      
-                        dialoguePortrait.sprite = info.portrait;
+                    dialoguePortrait.sprite = info.portrait;
+                    dialogueText.text = info.sentences;
 
-                        StopAllCoroutines();
-                        StartCoroutine(CrossFade(info));
+                    DialogueBox.gameObject.SetActive(true);
+                    dialoguePortrait.gameObject.SetActive(true);
+                    continueTxt.gameObject.SetActive(true);
+                    nameText.canvasRenderer.SetAlpha(1f);
+                    dialogueText.canvasRenderer.SetAlpha(1f);
 
-                        return;
 
-                    }
-             } 
+                }
 
-          //  Debug.Log(info.sentences);
+                else if (info.isFade == true)
+                {
+                    DialogueBox.gameObject.SetActive(false);
+                    dialoguePortrait.gameObject.SetActive(false);
+                    continueTxt.gameObject.SetActive(false);
+                    nameText.canvasRenderer.SetAlpha(0f);
+                    dialogueText.canvasRenderer.SetAlpha(0f);
+
+                    dialoguePortrait.sprite = info.portrait;
+
+                    StopAllCoroutines();
+                    StartCoroutine(CrossFade(info));
+
+                    return;
+
+                }
+            }
+
+            //  Debug.Log(info.sentences);
 
             StopAllCoroutines();
             StartCoroutine(TypeSceneDialogue(info));
@@ -333,17 +343,17 @@ public class DialogueManager : MonoBehaviour
             cutscenePanel.CrossFadeAlpha(1f, info.FadeBGTimer, ignoreTime);
         }
 
-        
 
-       
-      //  secondCutscenePanel.CrossFadeAlpha(1f, info.FadeBGTimer, ignoreTime);
-       // secondCutscenePanel.gameObject.SetActive(true);
-     //   secondCutscenePanel.sprite = info.secondCutsceneImg;
+
+
+        //  secondCutscenePanel.CrossFadeAlpha(1f, info.FadeBGTimer, ignoreTime);
+        // secondCutscenePanel.gameObject.SetActive(true);
+        //   secondCutscenePanel.sprite = info.secondCutsceneImg;
         cutscenePanel.sprite = info.cutsceneImg;
         secondCutscenePanel.sprite = prevCutsceneImg;
         yield return new WaitForSeconds(info.FadeBGTimer * 1.5f);
 
-        if(info.isHide == false)
+        if (info.isHide == false)
         {
             DialogueBox.gameObject.SetActive(true);
             dialoguePortrait.gameObject.SetActive(true);
@@ -352,9 +362,9 @@ public class DialogueManager : MonoBehaviour
             nameText.canvasRenderer.SetAlpha(1f);
             dialogueText.canvasRenderer.SetAlpha(1f);
         }
-       
 
-       
+
+
 
 
         StopAllCoroutines();
@@ -505,26 +515,26 @@ public class DialogueManager : MonoBehaviour
                 dialogueText.maxVisibleCharacters = sentenceCurrentLength;
 
 
-             
-                 if (info.isJitter)
+
+                if (info.isJitter)
+                {
+                    jitterScript = Object.FindObjectsOfType<VertexJitter>();
+                    foreach (VertexJitter jitter in jitterScript)
                     {
-                        jitterScript = Object.FindObjectsOfType<VertexJitter>();
-                        foreach (VertexJitter jitter in jitterScript)
-                        {
-                            jitter.Start();
-                        }
+                        jitter.Start();
                     }
-                    else
+                }
+                else
+                {
+                    jitterScript = Object.FindObjectsOfType<VertexJitter>();
+                    foreach (VertexJitter jitter in jitterScript)
                     {
-                        jitterScript = Object.FindObjectsOfType<VertexJitter>();
-                        foreach (VertexJitter jitter in jitterScript)
-                        {
-                            jitter.StopAllCoroutines();
-                        }
+                        jitter.StopAllCoroutines();
                     }
-                    yield break;
-                
-                
+                }
+                yield break;
+
+
             }
             else
             {
@@ -539,27 +549,27 @@ public class DialogueManager : MonoBehaviour
                 {
                     counter += 1;
                 }
-                
-                    if (info.isJitter)
-                    {
-                        jitterScript = Object.FindObjectsOfType<VertexJitter>();
-                        foreach (VertexJitter jitter in jitterScript)
-                        {
-                            jitter.Start();
-                        }
-                    }
-                    else
-                    {
-                        jitterScript = Object.FindObjectsOfType<VertexJitter>();
-                        foreach (VertexJitter jitter in jitterScript)
-                        {
-                            jitter.StopAllCoroutines();
-                        }
-                    }
-                    yield return new WaitForSeconds(finalTxtSpd);
-                
 
+                if (info.isJitter)
+                {
+                    jitterScript = Object.FindObjectsOfType<VertexJitter>();
+                    foreach (VertexJitter jitter in jitterScript)
+                    {
+                        jitter.Start();
+                    }
                 }
+                else
+                {
+                    jitterScript = Object.FindObjectsOfType<VertexJitter>();
+                    foreach (VertexJitter jitter in jitterScript)
+                    {
+                        jitter.StopAllCoroutines();
+                    }
+                }
+                yield return new WaitForSeconds(finalTxtSpd);
+
+
+            }
         }
     }
 
@@ -570,8 +580,8 @@ public class DialogueManager : MonoBehaviour
         dialogueAnimator.SetBool("isOpen", false);
         bubbleAnimator.SetBool("isOpen", false);
         panelAnimator.SetBool("isOpen", false);
-        
-      //  Time.timeScale = 1.0f;
+
+        //  Time.timeScale = 1.0f;
         ItemObtainedScript.instance.ClosePanel();
 
         if (DialogueCutscene.instance.isStartConversation == true)
@@ -607,49 +617,49 @@ public class DialogueManager : MonoBehaviour
 
         string pattern = "\\{.[^}]+\\}";
 
-        cleanString = Regex.Replace( text, pattern,"");
+        cleanString = Regex.Replace(text, pattern, "");
         return cleanString;
     }
 
     //! Stores all command
-    private List<SpecialCommand>BuildSpecialCommandList(string text)
+    private List<SpecialCommand> BuildSpecialCommandList(string text)
     {
         List<SpecialCommand> listCommand = new List<SpecialCommand>();
 
         string command = "";
         char[] bracket = { '{', '}' };
 
-        for(int i = 0; i<text.Length;i++)
+        for (int i = 0; i < text.Length; i++)
         {
             string currentChar = text[i].ToString();
 
-                if (currentChar == "{")
+            if (currentChar == "{")
+            {
+                while (currentChar != "}" && i < text.Length)
                 {
-                    while (currentChar != "}" && i < text.Length)
-                    {
-                        currentChar = text[i].ToString();
-                        command += currentChar;
-                        text = text.Remove(i, 1); //this to check next char in the string
-                    }
-
-
-                    if (currentChar == "}")
-                    {
-                        command = command.Trim(bracket);
-                        SpecialCommand newCommand = GetSpecialCommand(command);
-                        newCommand.Index = i;
-                        //! reset
-                        listCommand.Add(newCommand);
-                        command = "";
-
-                        //so that no characters are skipped
-                        i--;
-                    }
-                    else
-                    {
-                        Debug.Log("Command in dialogue line not closed.");
-                    }
+                    currentChar = text[i].ToString();
+                    command += currentChar;
+                    text = text.Remove(i, 1); //this to check next char in the string
                 }
+
+
+                if (currentChar == "}")
+                {
+                    command = command.Trim(bracket);
+                    SpecialCommand newCommand = GetSpecialCommand(command);
+                    newCommand.Index = i;
+                    //! reset
+                    listCommand.Add(newCommand);
+                    command = "";
+
+                    //so that no characters are skipped
+                    i--;
+                }
+                else
+                {
+                    Debug.Log("Command in dialogue line not closed.");
+                }
+            }
         }
         return listCommand;
     }
@@ -662,11 +672,11 @@ public class DialogueManager : MonoBehaviour
 
         string[] matches = Regex.Split(text, commandRegex);
 
-        if(matches.Length>0)
+        if (matches.Length > 0)
         {
-            for(int i = 0; i<matches.Length; i++)
+            for (int i = 0; i < matches.Length; i++)
             {
-                if(i == 0)
+                if (i == 0)
                 {
                     newCommand.Name = matches[i];
                 }
@@ -686,9 +696,9 @@ public class DialogueManager : MonoBehaviour
     //! check all commands in a given index; possible to have 2 side by side and both will share same index
     private void CheckForCommands(int index)
     {
-        for(int i = 0; i<specialCommands.Count; i++)
+        for (int i = 0; i < specialCommands.Count; i++)
         {
-            if(specialCommands[i].Index == index)
+            if (specialCommands[i].Index == index)
             {
                 ExecuteCommand(specialCommands[i]);
                 specialCommands.RemoveAt(i);
@@ -703,7 +713,7 @@ public class DialogueManager : MonoBehaviour
     //! Add sound effects here
     private void ExecuteCommand(SpecialCommand command)
     {
-        if (command ==null)
+        if (command == null)
         {
             return;
         }
