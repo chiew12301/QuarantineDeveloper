@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectPoolingManager : MonoBehaviour
 {
     public static ObjectPoolingManager instance;
-
+    public GameObject player;
     public List<GameObject> pool = new List<GameObject>();
 
     private void Awake()
@@ -53,7 +53,16 @@ public class ObjectPoolingManager : MonoBehaviour
                 if (inpool.GetComponent<PickUp>().item.desc == i.GetComponent<PickUp>().item.desc || inpool.GetComponent<MusicBoxSwitchSceneScript>().item.desc == i.GetComponent<MusicBoxSwitchSceneScript>().item.desc)
                 {
                     setPoolObjActive(inpool);
-                    Vector3 dropSpawnPos = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0f);
+                    float yLocation;
+                    if (Camera.main.ScreenToWorldPoint(Input.mousePosition).y >= player.transform.position.y + 2.5f)
+                    {
+                        yLocation = player.transform.position.y + 2.5f;
+                    }
+                    else
+                    {
+                        yLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition).y;
+                    }
+                    Vector3 dropSpawnPos = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, yLocation, 0f);
                     inpool.gameObject.transform.position = dropSpawnPos;
                     RemovePoolList(inpool);
                     return;
