@@ -70,7 +70,7 @@ MonoBehaviour:
     secondCutsceneImg: {fileID: 0}
     sentences: "Over here. I\u2019m the woman in the painting."
   - name: Max
-    portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
+    portrait: {fileID: 21300000, guid: 8515a77517b4d5248a6a25795438c83c, type: 3}
     isJitter: 0
     isHide: 0
     isFade: 0
@@ -351,7 +351,7 @@ MonoBehaviour:
     secondCutsceneImg: {fileID: 0}
     sentences: " I wished we could have more dinners together as a family...I wouldn\u2019t
       feel so alone...\r\n"
-  - name: Unknown Voice
+  - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
     isJitter: 0
     isHide: 0

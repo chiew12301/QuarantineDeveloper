@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
   m_Name: LastCutscene
   m_EditorClassIdentifier: 
-  hasDialogueEnded: 1
+  hasDialogueEnded: 0
   dialogueInfo:
   - name: Max
     portrait: {fileID: 0}
@@ -382,7 +382,7 @@ MonoBehaviour:
       type: 3}
     sentences: Someone like-
   - name: Ayu
-    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    portrait: {fileID: 21300000, guid: 1b13c9e5bfa54494e8ffd33df81df8c8, type: 3}
     isJitter: 0
     isHide: 0
     isFade: 0
@@ -406,7 +406,7 @@ MonoBehaviour:
       type: 3}
     sentences: ...What is it?!
   - name: Ayu
-    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    portrait: {fileID: 21300000, guid: 1b13c9e5bfa54494e8ffd33df81df8c8, type: 3}
     isJitter: 0
     isHide: 0
     isFade: 0
@@ -430,7 +430,7 @@ MonoBehaviour:
       type: 3}
     sentences: ' ...What does?'
   - name: Ayu
-    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    portrait: {fileID: 21300000, guid: 1b13c9e5bfa54494e8ffd33df81df8c8, type: 3}
     isJitter: 0
     isHide: 0
     isFade: 0
@@ -443,7 +443,7 @@ MonoBehaviour:
     sentences: "T-there\u2019s a nail. The terrible people stabbed it into the nape
       of my neck\u2026 <i>Ah!</i> "
   - name: Ayu
-    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    portrait: {fileID: 21300000, guid: 1b13c9e5bfa54494e8ffd33df81df8c8, type: 3}
     isJitter: 0
     isHide: 0
     isFade: 0
@@ -469,7 +469,7 @@ MonoBehaviour:
     sentences: "...I still know nothing about the terrible people that trapped you
       here. I\u2019ll take it out if you promise to tell me everything."
   - name: Ayu
-    portrait: {fileID: 21300000, guid: b8592633a36084149aa7fea5b27bf637, type: 3}
+    portrait: {fileID: 21300000, guid: 1b13c9e5bfa54494e8ffd33df81df8c8, type: 3}
     isJitter: 0
     isHide: 0
     isFade: 0
