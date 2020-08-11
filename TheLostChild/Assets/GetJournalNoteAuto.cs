@@ -52,6 +52,7 @@ public class GetJournalNoteAuto : MonoBehaviour
     {
         UnlockJournalPage.instance.PageNumber = PageNumberToGet;
         UnlockJournalPage.instance.performPickup();
+        PlayerCurrentPosition.displayEnemyInjournal = true;
     }
 
     void getPage11()

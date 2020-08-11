@@ -183,7 +183,8 @@ public class UnlockJournalPage : MonoBehaviour
                 Debug.Log("Page number found: " + PageNumber);
                 break;
             case 11:
-                JournalScript.p -= 1;
+                //JournalScript.p -= 1;
+                JournalScript.p = 9;
                 Debug.Log("Curernt p: " + JournalScript.p);
                 JournalScript.currentPage[JournalScript.p] = PageNumber - 1;
                 JournalScript.enableArrows[JournalScript.p] = true;

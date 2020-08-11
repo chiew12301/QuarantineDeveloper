@@ -26,7 +26,7 @@ public class PlayerCurrentPosition : MonoBehaviour
     [Header("Enemy Soldiers (Journal)")]
     public GameObject soldier;
 
-    bool displayEnemyInjournal = false;
+    public static bool displayEnemyInjournal = false;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -118,7 +118,7 @@ public class PlayerCurrentPosition : MonoBehaviour
     {
         if (collision.CompareTag("EnemySoldier_1"))
         {
-            displayEnemyInjournal = true;    
+            //displayEnemyInjournal = true;
         }
 
         if (collision.CompareTag("Player") && displayEnemyInjournal)
