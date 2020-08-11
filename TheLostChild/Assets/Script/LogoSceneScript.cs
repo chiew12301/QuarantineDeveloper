@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LogoSceneScript : MonoBehaviour
 {
     public float waitTime = 5f;
+    public string sceneName = "MainMenu";
     void Start()
     {
         StartCoroutine(DelaySwitch());
@@ -15,7 +16,7 @@ public class LogoSceneScript : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
 
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(sceneName);
     }
 
 }

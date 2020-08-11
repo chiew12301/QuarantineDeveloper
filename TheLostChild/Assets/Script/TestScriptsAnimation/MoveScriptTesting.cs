@@ -175,9 +175,6 @@ public class MoveScriptTesting : MonoBehaviour
     {
         if (collision.CompareTag("EnemySoldier_1"))
         {
-            /*SceneManager.LoadScene("DeadScene");
-            AudioManager.instance.Stop("BGM");
-            AudioManager.instance.Stop("Moving");*/
             isPlayerDead = true;
             StartCoroutine(GameOver());
         }
@@ -190,7 +187,7 @@ public class MoveScriptTesting : MonoBehaviour
     IEnumerator GameOver()
     {
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("DeadScene");
+        SceneManager.LoadScene("JumpScareScene");
         AudioManager.instance.Stop("BGM");
         AudioManager.instance.Stop("Moving");
     }

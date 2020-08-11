@@ -29,7 +29,7 @@ public class LastCollectorScript : MonoBehaviour
         yield return new WaitForSeconds(2f);
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("StayTuneScene");
+        SceneManager.LoadScene("ToBeContinueScene");
     }
 
 }

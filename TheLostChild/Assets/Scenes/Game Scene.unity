@@ -14049,7 +14049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb0ad9f27ab8c34b8276303cc627171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 11400000, guid: 11d999e9e0d938745b45d1186d0497f0, type: 2}
   bubble: {fileID: 0}
   isDialogTrigger: 1
   item1: {fileID: 0}
@@ -35885,7 +35885,7 @@ SpriteRenderer:
   m_SortingLayerID: -688339761
   m_SortingLayer: 3
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: f0a19cb4006b9fd458dcc6e9de4b4afc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3fc5bca5070dd9e49b781bd023e9f8a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -49827,7 +49827,7 @@ SpriteRenderer:
   m_SortingLayerID: 1431707357
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 12aa2c68ce69c5a4aaaf17a6f9777fe6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb85b7e8d0b3c3647a049353184d0289, type: 3}
   m_Color: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 1}
   m_FlipX: 0
   m_FlipY: 0
