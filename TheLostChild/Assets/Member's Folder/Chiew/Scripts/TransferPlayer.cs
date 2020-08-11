@@ -16,6 +16,8 @@ public class TransferPlayer : MonoBehaviour
     public bool haveBubble = false;
     public BubbleSpeech bubble;
 
+    [Header("Just to solve Puzzle 3")]
+    public GameObject Journal12;
     public void Start()
     {
         isEnterOnce = false;
@@ -29,6 +31,13 @@ public class TransferPlayer : MonoBehaviour
         {
              TriggerDialogueBubble();
              isEnterOnce = true;
+            if(Journal12 != null)
+            {
+                if(Journal12.GetComponent<UnlockJournalPage>() != null)
+                {
+                    Journal12.GetComponent<UnlockJournalPage>().performPickup();
+                }
+            }
         }
     }
 
