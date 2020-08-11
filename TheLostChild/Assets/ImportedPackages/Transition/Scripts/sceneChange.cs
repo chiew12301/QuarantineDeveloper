@@ -56,7 +56,7 @@ public class sceneChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         AudioManager.instance.Play("Teleport");
         yield return new WaitForSeconds(transitionTime);
-        player.transform.position = new Vector3(newLocation.x, newLocation.y);
+        player.transform.position = new Vector3(newLocation.x, newLocation.y, -8.87f);
         BackBoneManager.instance.isTransfering = false;
         isPressed = false;
     }
