@@ -189,7 +189,7 @@ public class MoveScriptTesting : MonoBehaviour
 
     IEnumerator GameOver()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("DeadScene");
         AudioManager.instance.Stop("BGM");
         AudioManager.instance.Stop("Moving");
