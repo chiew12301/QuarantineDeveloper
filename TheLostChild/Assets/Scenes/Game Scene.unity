@@ -41224,7 +41224,7 @@ MonoBehaviour:
   playerObj: {fileID: 3791725899826369978}
   Des: {x: 11.72, y: 86.29, z: -8.87}
   haveDialogue: 1
-  dialogue: {fileID: 11400000, guid: 5c4b2186fb9ee93448ba8196178b9e26, type: 2}
+  dialogue: {fileID: 11400000, guid: 11d999e9e0d938745b45d1186d0497f0, type: 2}
   haveBubble: 0
   bubble: {fileID: 0}
 --- !u!114 &3791725899826369980
