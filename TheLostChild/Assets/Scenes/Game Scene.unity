@@ -5614,7 +5614,7 @@ PrefabInstance:
     - target: {fileID: 7170083411149338980, guid: ad7fe6ed5be369049a0202f6d5144895,
         type: 3}
       propertyPath: skipEverything
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7170083411149338980, guid: ad7fe6ed5be369049a0202f6d5144895,
         type: 3}
@@ -6068,6 +6068,54 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2557284056401758535}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &243374768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 243374769}
+  - component: {fileID: 243374770}
+  m_Layer: 0
+  m_Name: Journal_6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &243374769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243374768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.32, y: 12.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 703466915}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &243374770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243374768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac5096dc08f5f1428535c7192d0a76e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PageNumberToGet: 6
+  note2: 0
+  note5: 0
+  note6: 1
+  note11: 0
 --- !u!1 &245977419 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7260762931683580898, guid: ed7e8c517c8b90f428a7e4a8f00796ba,
@@ -7876,7 +7924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 3791725899826369984}
   player: {fileID: 3791725899826369978}
-  rangeToInteract: 2.3
+  rangeToInteract: 2.6
 --- !u!222 &420396235
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8600,6 +8648,7 @@ MonoBehaviour:
   PageNumberToGet: 2
   note2: 1
   note5: 0
+  note6: 0
   note11: 0
 --- !u!1 &486693878
 GameObject:
@@ -12774,6 +12823,7 @@ Transform:
   m_Children:
   - {fileID: 468183623}
   - {fileID: 1697090376}
+  - {fileID: 243374769}
   - {fileID: 814199593}
   m_Father: {fileID: 0}
   m_RootOrder: 35
@@ -14049,7 +14099,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 703466915}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &814199594
 MonoBehaviour:
@@ -14066,6 +14116,7 @@ MonoBehaviour:
   PageNumberToGet: 11
   note2: 0
   note5: 0
+  note6: 0
   note11: 1
 --- !u!114 &815813840 stripped
 MonoBehaviour:
@@ -17947,7 +17998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 3791725899826369984}
   player: {fileID: 3791725899826369978}
-  rangeToInteract: 2.3
+  rangeToInteract: 2.7
 --- !u!222 &1105807497
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25315,6 +25366,7 @@ MonoBehaviour:
   PageNumberToGet: 5
   note2: 0
   note5: 1
+  note6: 0
   note11: 0
 --- !u!1 &1701408736
 GameObject:
@@ -26218,7 +26270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p: {fileID: 3791725899826369984}
   player: {fileID: 3791725899826369978}
-  rangeToInteract: 2.3
+  rangeToInteract: 2.5
 --- !u!222 &1754539942
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26240,7 +26292,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.009125233, y: 0}
+  m_Offset: {x: 0.113069996, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -26251,7 +26303,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.98174953, y: 1}
+  m_Size: {x: 1.1896389, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1754539944
 SpriteRenderer:
@@ -29947,6 +29999,11 @@ PrefabInstance:
       propertyPath: Walls.Array.data[4]
       value: 
       objectReference: {fileID: 282780844}
+    - target: {fileID: 1229793233383433753, guid: 5c4682a06d70a3c4e914179ee4b6e8f9,
+        type: 3}
+      propertyPath: agroRange
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1920988974187472929, guid: 5c4682a06d70a3c4e914179ee4b6e8f9,
         type: 3}
       propertyPath: m_LocalPosition.y

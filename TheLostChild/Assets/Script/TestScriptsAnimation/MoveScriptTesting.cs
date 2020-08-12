@@ -68,7 +68,7 @@ public class MoveScriptTesting : MonoBehaviour
             }
             else
             {
-                Debug.Log("Stop");
+                //Debug.Log("Stop");
                 return;
             }
 

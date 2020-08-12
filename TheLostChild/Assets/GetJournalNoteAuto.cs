@@ -7,16 +7,19 @@ public class GetJournalNoteAuto : MonoBehaviour
     public int PageNumberToGet = 0;
     public static bool getNote2 = true;
     public static bool getNote5 = false;
+    public static bool getNote6 = false;
     public static bool getNote11 = false;
 
     public bool note2 = false;
     public bool note5 = false;
+    public bool note6 = false;
     public bool note11 = false;
 
     private void Start()
     {
         getNote2 = true;
         getNote5 = false;
+        getNote6 = false;
         getNote11 = false;
     }
 
@@ -33,6 +36,12 @@ public class GetJournalNoteAuto : MonoBehaviour
         {
             getPage5();
             getNote5 = false;
+        }
+        
+        if (getNote6 && note6)
+        {
+            getPage6();
+            getNote6 = false;
         }
 
         if(getNote11 && note11)
@@ -53,6 +62,12 @@ public class GetJournalNoteAuto : MonoBehaviour
         UnlockJournalPage.instance.PageNumber = PageNumberToGet;
         UnlockJournalPage.instance.performPickup();
         PlayerCurrentPosition.displayEnemyInjournal = true;
+    }
+
+    void getPage6()
+    {
+        UnlockJournalPage.instance.PageNumber = PageNumberToGet;
+        UnlockJournalPage.instance.performPickup();
     }
 
     void getPage11()

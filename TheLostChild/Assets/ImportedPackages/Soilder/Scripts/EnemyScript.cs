@@ -92,7 +92,7 @@ public class EnemyScript : MonoBehaviour
             Walls[3].SetActive(true);
             Walls[4].SetActive(true);
 
-            agroRange = 6;
+            agroRange = 5;
         }
         else if (!patrolState && pointingState)
         {

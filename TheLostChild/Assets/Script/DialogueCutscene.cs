@@ -378,6 +378,7 @@ public class DialogueCutscene : MonoBehaviour
             hasTriggeredHairpinInDisplayCase = true;
         }
         else { return; }
+        GetJournalNoteAuto.getNote6 = true;
     }
 
     //first enter seal room 1
