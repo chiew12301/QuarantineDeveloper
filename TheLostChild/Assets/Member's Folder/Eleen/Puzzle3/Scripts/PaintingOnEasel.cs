@@ -27,6 +27,7 @@ public class PaintingOnEasel : MonoBehaviour
             return;
         }
         instance = this;
+        
     }
 
 

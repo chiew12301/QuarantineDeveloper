@@ -20,11 +20,11 @@ public class Player : MonoBehaviour
     private bool journalLoad = false;
     playerData data;
     string path;
-    bool loadCheck = false;
-
+    public static bool loadCheck = true;
 
     void Start()
     {
+        Debug.Log("yes");
         GameObject curInventory = GameObject.Find("Player");
         inventory = curInventory.GetComponent<Inventory>();
         for (int i = 0;i < curItems.Count;i++)
@@ -32,8 +32,6 @@ public class Player : MonoBehaviour
             curItems[i] = null;
         }
         journalLoad = false;
-        string path = Application.persistentDataPath + "/player.Data";
-
     }
 
     void Update()
@@ -41,6 +39,10 @@ public class Player : MonoBehaviour
         if (loadedYet == false || journalLoad == true)
         {
             loadNewInfo();
+        }
+        if (path!= Application.persistentDataPath + "/player.Data")
+        {
+            path = Application.persistentDataPath + "/player.Data";
         }
         if (File.Exists(path))
         {
@@ -96,14 +98,12 @@ public class Player : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().buildIndex == 4)
             {
-                Debug.Log(journalLoad);
                 Time.timeScale = 0;
                 SceneManager.LoadScene("Loading Scene");
                 loadCheck = true;
                 loadedYet = false;
                 journalLoad = true;
                 Time.timeScale = 1;
-                Debug.Log(journalLoad);
 
                 //Inventory.instance.itemLists.Clear();
 
@@ -143,6 +143,7 @@ public class Player : MonoBehaviour
 
     public void loadNewInfo()
     {
+        
         Debug.Log("loaded");
         if (journalLoad)
         {
@@ -157,15 +158,14 @@ public class Player : MonoBehaviour
         journal.SetActive(true);
         saveTrigger.instance.checkedYet = false;
         playerData data = saveSystem.Load();
-        //JournalScript.enableArrows = data.journalArrows;
+        JournalScript.p = data.journalPages;
         JournalScript.currentPage = data.journalNotes;
         SetMapJournal.MapIsAvailable = data.map;
         saveTrigger.instance.mapIsAvailable = data.map;
         saveTrigger.instance.enemySpawned = data.enemySpawned;
         saveTrigger.instance.hidingCaseTriggered = data.hidingCases;
         saveTrigger.instance.displayCaseProgress = data.displayCases;
-        saveTrigger.instance.dialogueChecks = data.dialogueChecks;
-
+        saveTrigger.instance.cutsceneChecks = data.cutsceneChecks;
         transform.position = new Vector3(data.position[0], data.position[1]);
         for (int i = 0;i < 5;i++)
         {
@@ -181,29 +181,38 @@ public class Player : MonoBehaviour
         }
            
         saveTrigger.itemCheck = data.checking;
+
         for (int i = 0;i < 5;i++)
         {
+
             switch (curItems[i])
             {
                 case "Hairpin":
+                    saveTrigger.instance.puzzlePieces[0].GetComponent<PickUp>().Dialogue = false;
                     saveTrigger.instance.puzzlePieces[0].GetComponent<PickUp>().performPickup();
                     break;
                 case "Music Box":
+                    saveTrigger.instance.puzzlePieces[1].GetComponent<PickUp>().Dialogue = false;
                     saveTrigger.instance.puzzlePieces[1].GetComponent<PickUp>().performPickup();
                     break;
                 case "Photograph":
+                    saveTrigger.instance.puzzlePieces[2].GetComponent<PickUp>().Dialogue = false;
                     saveTrigger.instance.puzzlePieces[2].GetComponent<PickUp>().performPickup();
                     break;
                 case "CorrectBottle":
+                    saveTrigger.instance.puzzlePieces[3].GetComponent<PickUp>().Dialogue = false;
                     saveTrigger.instance.puzzlePieces[3].GetComponent<PickUp>().performPickup();
                     break;
                 case "Bullets":
+                    saveTrigger.instance.puzzlePieces[4].GetComponent<PickUp>().Dialogue = false;
                     saveTrigger.instance.puzzlePieces[4].GetComponent<PickUp>().performPickup();
                     break;
                 case null:
                     break;
             }
-            saveTrigger.instance.puzzlePieces[0].GetComponent<PickUp>().itemObtainedPanel.SetActive(false);
+
+            saveTrigger.instance.puzzlePieces[i].GetComponent<PickUp>().itemObtainedPanel.SetActive(false);
+
         }
         
 

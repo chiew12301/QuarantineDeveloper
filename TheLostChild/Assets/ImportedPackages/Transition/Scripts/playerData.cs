@@ -16,9 +16,10 @@ public class playerData
     public int[] journalNotes = new int[12];
     public bool[] hidingCases = new bool[4];
     public bool[] displayCases = new bool[5];
-    public bool[] dialogueChecks = new bool[12];
+    public bool[] cutsceneChecks = new bool[10];
     public List<bool> checking = new List<bool>();
     public bool enemySpawned;
+    public int journalPages;
 
     public playerData(Player player)
     {
@@ -26,12 +27,13 @@ public class playerData
         map = SetMapJournal.MapIsAvailable;
         journalArrows = JournalScript.enableArrows;
         journalNotes = JournalScript.currentPage;
+        journalPages = JournalScript.p;
         tutorial = TutorialScript.disableTutorialBlocks;
         takenItems = new string[player.takenItems.Count + 1];
         checking = saveTrigger.itemCheck;
         hidingCases = saveTrigger.instance.hidingCaseTriggered;
         displayCases = saveTrigger.instance.displayCaseProgress;
-        dialogueChecks = saveTrigger.instance.dialogueChecks;
+        cutsceneChecks = saveTrigger.instance.cutsceneChecks;
         position[0] = player.transform.position.x;
         position[1] = player.transform.position.y;
         position[2] = player.transform.position.z;

@@ -2818,7 +2818,7 @@ PrefabInstance:
     - target: {fileID: 9203203950355689397, guid: c460f9bc43955a4468593b68fc9019a6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 780.5
+      value: 779
       objectReference: {fileID: 0}
     - target: {fileID: 9203203950355689399, guid: c460f9bc43955a4468593b68fc9019a6,
         type: 3}
@@ -5661,6 +5661,11 @@ PrefabInstance:
       propertyPath: P4tpScript
       value: 
       objectReference: {fileID: 1145723991}
+    - target: {fileID: 7170083411149338980, guid: ad7fe6ed5be369049a0202f6d5144895,
+        type: 3}
+      propertyPath: isVSCutscenePlayedEnd
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7170083411149338981, guid: ad7fe6ed5be369049a0202f6d5144895,
         type: 3}
       propertyPath: m_Name
@@ -9541,6 +9546,16 @@ PrefabInstance:
       propertyPath: puzzlePieces.Array.data[4]
       value: 
       objectReference: {fileID: 1635335945}
+    - target: {fileID: 9216224438737107067, guid: f00cb1baa29adc842bc3ac239d7f6172,
+        type: 3}
+      propertyPath: journal
+      value: 
+      objectReference: {fileID: 4726831320417938681}
+    - target: {fileID: 9216224438737107067, guid: f00cb1baa29adc842bc3ac239d7f6172,
+        type: 3}
+      propertyPath: Map
+      value: 
+      objectReference: {fileID: 347748011}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f00cb1baa29adc842bc3ac239d7f6172, type: 3}
 --- !u!1 &532843989 stripped
@@ -54719,7 +54734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &4726831320118276917
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -55646,7 +55661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &4726831320417938682
 CanvasRenderer:
   m_ObjectHideFlags: 0

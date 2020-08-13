@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class saveTrigger : MonoBehaviour
 {
-    public GameObject tutorialObject;
+    public GameObject Map;
+    public GameObject journal;
     public List<GameObject> itemObject = new List<GameObject>();
     public static List<bool> itemCheck = new List<bool>();
     public List<Item> itemScriptObject = new List<Item>();
@@ -21,7 +22,10 @@ public class saveTrigger : MonoBehaviour
     public bool[] displayCaseProgress = new bool[5];
     //public List<bool> displayCaseProgress = new List<bool>();
     [HideInInspector]
-    public bool[] dialogueChecks = new bool[12];
+    public bool[] cutsceneChecks = new bool[18];
+    //[HideInInspector]
+    //Redundant
+    //public bool[] dialogueChecks = new bool[4];
     [HideInInspector]
     public bool checkedYet = true;
     public List<GameObject> puzzlePieces = new List<GameObject>();
@@ -46,17 +50,20 @@ public class saveTrigger : MonoBehaviour
             itemCheck.Add(false);
         }
         displayCaseProgress = new bool[5];
-
+        //dialogueCheck();
     }
     public void Update()
     {
         if (checkedYet == false)
         {
-
+            journal.SetActive(false);
+            TutorialScript_TransferPlayer.deactive = true;
+            TutorialScript_TransferPlayer.deactive_2 = true;
             Debug.Log("Checking");
             //Checked means to reload in the items after loading
-            //Dialogue
-            dialogueCheckingFunction();
+            //Dialogue Script
+            cutsceneCheck();
+            //dialogueCheck();
             //Enemies
             enemyCheck();
             //Items / Objects
@@ -69,12 +76,17 @@ public class saveTrigger : MonoBehaviour
             {
                 SetMapJournal.MapIsAvailable = false;
             }
+            else
+            {
+                Map.SetActive(false);
+            }
             checkedYet = true;
         }
 
         //Update is to check what new changes needs to be saved/updated
-        //Dialogue
-        dialogueUpdate();
+        //Dialogue Script
+        cutsceneUpdate();
+        //dialogueUpdate();
         //Enemies
         enemyUpdate();
         //Items / Objects
@@ -86,91 +98,152 @@ public class saveTrigger : MonoBehaviour
 
     }
 
-    public void dialogueCheckingFunction()
+    public void cutsceneCheck()
     {
 
-        DialogueCutscene.instance.isStartCutScenePlayed = dialogueChecks[0];
+        DialogueCutscene.instance.isTutorialPlayed = cutsceneChecks[0];
 
-        DialogueCutscene.instance.isStartConversation = dialogueChecks[1];
+        DialogueCutscene.instance.isStartCutScenePlayed = cutsceneChecks[1];
 
-        DialogueCutscene.instance.isStartConversationEnd = dialogueChecks[2];
+        DialogueCutscene.instance.isStartConversation = cutsceneChecks[2];
+        
+        DialogueCutscene.instance.isStartConversationEnd = cutsceneChecks[3];
 
-
-        DialogueCutscene.instance.isVSCutscenePlayed = dialogueChecks[3];
-
-        DialogueCutscene.instance.isEnteredLobbyOnce = dialogueChecks[4];
-
-
-        DialogueCutscene.instance.isExitLobby = dialogueChecks[5];
+        DialogueCutscene.instance.isCutS2Played = cutsceneChecks[4];
 
 
-        DialogueCutscene.instance.isCutS2Played = dialogueChecks[6];
+        DialogueCutscene.instance.isCutS3PlayedP1 = cutsceneChecks[5];
 
 
-        DialogueCutscene.instance.isCutS3PlayedP1 = dialogueChecks[7];
-
-        DialogueCutscene.instance.isCutS3PlayedP3 = dialogueChecks[8];
+        DialogueCutscene.instance.isEnteredLobbyOnce = cutsceneChecks[6];
 
 
-      //  DialogueCutscene.instance.isCutSMemPlayed = dialogueChecks[9];
+        DialogueCutscene.instance.isExitLobby = cutsceneChecks[7];
+
+        DialogueCutscene.instance.isCutS3PlayedP3 = cutsceneChecks[8];
 
 
-        DialogueCutscene.instance.isCutSAyuLivingRPlayed = dialogueChecks[10];
+        DialogueCutscene.instance.hasTriggeredHairpinInDisplayCase = cutsceneChecks[9];
 
-     //   DialogueCutscene.instance.isRiddleP1 = dialogueChecks[11];
+        DialogueCutscene.instance.hasTriggeredPuzzle1Cutscene = cutsceneChecks[10];
+
+        DialogueCutscene.instance.hasTriggeredFinP1Cutscene = cutsceneChecks[11];
+
+        DialogueCutscene.instance.hasTriggeredPuzzle2Cutscene = cutsceneChecks[12];
+
+        DialogueCutscene.instance.hasTriggeredFinP2Cutscene = cutsceneChecks[13];
+
+        DialogueCutscene.instance.hasTriggeredPuzzle3Cutscene = cutsceneChecks[14];
+
+        DialogueCutscene.instance.hasTriggeredFinP3Cutscene = cutsceneChecks[15];
+
+        DialogueCutscene.instance.hasTriggeredPuzzle4Cutscene = cutsceneChecks[16];
+
+        DialogueCutscene.instance.hasTriggeredFinP4Cutscene = cutsceneChecks[17];
+
 
     }
-    public void dialogueUpdate()
+    public void cutsceneUpdate()
     {
+        if (DialogueCutscene.instance.isTutorialPlayed)
+        {
+            cutsceneChecks[0] = true;
+        }
         if (DialogueCutscene.instance.isStartCutScenePlayed)
         {
-            dialogueChecks[0] = true;
+            cutsceneChecks[1] = true;
         }
         if (DialogueCutscene.instance.isStartConversation)
         {
-            dialogueChecks[1] = true;
+            cutsceneChecks[2] = true;
         }
         if (DialogueCutscene.instance.isStartConversationEnd)
         {
-            dialogueChecks[2] = true;
-        }
-        if (DialogueCutscene.instance.isVSCutscenePlayed)
-        {
-            dialogueChecks[3] = true;
-        }
-        if (DialogueCutscene.instance.isEnteredLobbyOnce)
-        {
-            dialogueChecks[4] = true;
-        }
-        if (DialogueCutscene.instance.isExitLobby)
-        {
-            dialogueChecks[5] = true;
+            cutsceneChecks[3] = true;
         }
         if (DialogueCutscene.instance.isCutS2Played)
         {
-            dialogueChecks[6] = true;
+            cutsceneChecks[4] = true;
         }
         if (DialogueCutscene.instance.isCutS3PlayedP1)
         {
-            dialogueChecks[7] = true;
+            cutsceneChecks[5] = true;
+        }
+        if (DialogueCutscene.instance.isEnteredLobbyOnce)
+        {
+            cutsceneChecks[6] = true;
+        }
+        if (DialogueCutscene.instance.isExitLobby)
+        {
+            cutsceneChecks[7] = true;
         }
         if (DialogueCutscene.instance.isCutS3PlayedP3)
         {
-            dialogueChecks[8] = true;
+            cutsceneChecks[8] = true;
         }
-        //if (DialogueCutscene.instance.isCutSMemPlayed)
-        //{
-        //    dialogueChecks[9] = true;
-        //}
-        if (DialogueCutscene.instance.isCutSAyuLivingRPlayed)
+        if (DialogueCutscene.instance.hasTriggeredHairpinInDisplayCase)
         {
-            dialogueChecks[10] = true;
+            cutsceneChecks[9] = true;
         }
-        //if (DialogueCutscene.instance.isRiddleP1)
-        //{
-        //    dialogueChecks[11] = true;
-        //}
+        if (DialogueCutscene.instance.hasTriggeredPuzzle1Cutscene)
+        {
+            cutsceneChecks[10] = true;
+        }
+        if (DialogueCutscene.instance.hasTriggeredFinP1Cutscene)
+        {
+            cutsceneChecks[11] = true;
+        }
+        if (DialogueCutscene.instance.hasTriggeredPuzzle2Cutscene)
+        {
+            cutsceneChecks[12] = true;
+        }
+        if (DialogueCutscene.instance.hasTriggeredFinP2Cutscene)
+        {
+            cutsceneChecks[13] = true;
+        }
+        if (DialogueCutscene.instance.hasTriggeredPuzzle3Cutscene)
+        {
+            cutsceneChecks[14] = true;
+        }
+        if (DialogueCutscene.instance.hasTriggeredFinP3Cutscene)
+        {
+            cutsceneChecks[15] = true;
+        }
+        if (DialogueCutscene.instance.hasTriggeredPuzzle4Cutscene)
+        {
+            cutsceneChecks[16] = true;
+        }
+        if (DialogueCutscene.instance.hasTriggeredFinP4Cutscene)
+        {
+            cutsceneChecks[17] = true;
+        }
     }
+    //public void dialogueCheck()
+    //{
+    //    Debug.Log("yes");
+    //    DialogueCutscene.instance.musicBox.hasDialogueEnded = dialogueChecks[0];
+
+    //    DialogueCutscene.instance.oldPhotograph.hasDialogueEnded = dialogueChecks[1];
+
+    //    PaintingOnEasel.instance.afterCleanPainting.hasDialogueEnded = dialogueChecks[2];
+    //}
+
+    //public void dialogueUpdate()
+    //{
+    //    if (DialogueCutscene.instance.musicBox.hasDialogueEnded)
+    //    {
+    //        dialogueChecks[0] = true;
+    //    }
+    //    if (DialogueCutscene.instance.oldPhotograph.hasDialogueEnded)
+    //    {
+    //        dialogueChecks[1] = true;
+    //    }
+    //    if (PaintingOnEasel.instance.afterCleanPainting.hasDialogueEnded)
+    //    {
+    //        dialogueChecks[2] = true;
+    //    }
+
+    //}
     public void enemyCheck()
     {
         

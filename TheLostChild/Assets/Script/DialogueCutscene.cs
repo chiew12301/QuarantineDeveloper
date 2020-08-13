@@ -71,7 +71,7 @@ public class DialogueCutscene : MonoBehaviour
     [Header("After put hairpin in display case")]
     public GameObject hairpinInDisplayCase;
     public Dialogue dialogueHairPinDisplay;
-    private bool hasTriggeredHairpinInDisplayCase = false;
+    public bool hasTriggeredHairpinInDisplayCase = false;
 
     [Header("First time enter seal room 1")]
     public Dialogue dailogueAyuLivingR;
@@ -116,13 +116,17 @@ public class DialogueCutscene : MonoBehaviour
             return;
         }
         instance = this;
-        if(skipEverything == true)
+        if (skipEverything == true)
         {
             isStartCutScenePlayed = true;
             isStartConversation = true;
             isStartConversationEnd = true;
             isTutorialPlayed = false;
         }
+        musicBox.hasDialogueEnded = false;
+        VetScript.isGived = false;
+        oldPhotograph.hasDialogueEnded = false;
+        PaintingOnEasel.instance.afterCleanPainting.hasDialogueEnded = false;
     }
 
     private void Start()
@@ -251,6 +255,7 @@ public class DialogueCutscene : MonoBehaviour
         //check if dialogue for music box ended
         if (musicBox.hasDialogueEnded == true)
         {
+            Debug.Log("What");
             Puzzle1Cutscene();
         }
 
@@ -384,6 +389,7 @@ public class DialogueCutscene : MonoBehaviour
     //first enter seal room 1
     public void CutSceneLR()
     {
+        Debug.Log(isCutSAyuLivingRPlayed);
         if (isCutSAyuLivingRPlayed == false)
         {
             dialogueDisplay.SetActive(true);
