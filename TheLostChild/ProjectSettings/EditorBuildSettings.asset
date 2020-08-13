@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/JumpScareScene.unity
     guid: de896bde381476c4f8c5b75953b950f0
   - enabled: 1
+    path: Assets/Scenes/JumpScareSceneEnd.unity
+    guid: ea8a0f2232d1a9340966da6b084807f9
+  - enabled: 1
     path: Assets/Scenes/DeadScene.unity
     guid: fd9e47568dcaab84baee2de66fff7b1e
   - enabled: 1

@@ -19,17 +19,17 @@ public class LastCollectorScript : MonoBehaviour
 
     public void JumpScareActivate()
     {
-        JumpScareImage.gameObject.SetActive(true);
-        AudioManager.instance.Play("Jumpscare");
-        StartCoroutine(TransferToStayTune());
+        //JumpScareImage.gameObject.SetActive(true);
+        //AudioManager.instance.Play("Jumpscare");
+        SceneManager.LoadScene("JumpScareSceneEnd");
+        //StartCoroutine(TransferToStayTune());
 ;    }
 
-    IEnumerator TransferToStayTune()
-    {
-        yield return new WaitForSeconds(2f);
-        transition.SetTrigger("Start");
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("ToBeContinueScene");
-    }
+    //IEnumerator TransferToStayTune()
+    //{
+    //    yield return new WaitForSeconds(1f);
+    //    //transition.SetTrigger("Start");
+
+    //}
 
 }
