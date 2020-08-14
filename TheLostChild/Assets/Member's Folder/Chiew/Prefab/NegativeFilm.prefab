@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -688339761
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a0a6e5feb98509e489b70efc0fa64625, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -100,11 +100,11 @@ MonoBehaviour:
   DontDestroy: 0
   CanInteractAgain: 0
   isRiddleDone: 0
-  Dialogue: 0
+  Dialogue: 1
   isMirror: 0
   isMusicBox: 0
   dialogueDisplay: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 11400000, guid: a2e48d49c48d7ce48825d8170c6a046b, type: 2}
   dialogue2: {fileID: 0}
   Item: 1
   itemObtainedPanel: {fileID: 0}
@@ -115,6 +115,7 @@ MonoBehaviour:
   Inspect: 0
   inspectDisplay: {fileID: 0}
   player: {fileID: 0}
+  mcS: {fileID: 0}
   isShowDialogue: 0
   isItemObtain: 0
   MouseisIn: 0

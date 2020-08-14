@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2764319249942142057}
   - component: {fileID: 2764319249942142056}
+  - component: {fileID: 2764319249942142058}
   - component: {fileID: 2764319249942142063}
   - component: {fileID: 2764319249942142062}
-  - component: {fileID: 2764319249942142058}
   m_Layer: 0
   m_Name: SafeVaultTrigger
   m_TagString: Untagged
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -688339761
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6d8f7b179ca785941a2846ab876fb8af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
@@ -84,6 +84,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2764319249942142058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2764319249942142061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df5a43a32d7b744280d9b44cb5b2969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vs: {fileID: 0}
+  svUI: {fileID: 0}
+  cameras: {fileID: 0}
+  player: {fileID: 0}
 --- !u!61 &2764319249942142063
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -131,17 +147,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2764319249942142058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2764319249942142061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4df5a43a32d7b744280d9b44cb5b2969, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vs: {fileID: 0}
-  svUI: {fileID: 0}

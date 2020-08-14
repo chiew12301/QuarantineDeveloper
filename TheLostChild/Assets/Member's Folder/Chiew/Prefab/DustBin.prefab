@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7162543246067692412}
   - component: {fileID: 7162543246067692415}
+  - component: {fileID: 1902062128}
   - component: {fileID: 7162543246067692414}
   - component: {fileID: 7162543246067692413}
-  - component: {fileID: 1902062128}
   m_Layer: 0
   m_Name: DustBin
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7162543246067692385}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.5795, y: -2.1487, z: 0}
-  m_LocalScale: {x: 0.8441693, y: 1.5027689, z: 1}
+  m_LocalScale: {x: 1.1660014, y: 2.1559746, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,10 +71,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -688339761
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6d8f7b179ca785941a2846ab876fb8af, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -84,6 +84,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1902062128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7162543246067692385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb0ad9f27ab8c34b8276303cc627171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 11400000, guid: 11d999e9e0d938745b45d1186d0497f0, type: 2}
+  bubble: {fileID: 0}
+  isDialogTrigger: 1
+  item1: {fileID: 0}
+  item2: {fileID: 0}
+  journal1: {fileID: 0}
+  journal2: {fileID: 0}
+  desAfterTrigger: 1
+  isLastCollector: 0
+  isInteractable: 1
+  tpScript: {fileID: 0}
 --- !u!61 &7162543246067692414
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -131,21 +154,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1902062128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7162543246067692385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fb0ad9f27ab8c34b8276303cc627171, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue: {fileID: 0}
-  bubble: {fileID: 11400000, guid: 7386e0f430532f541a05a72678266501, type: 2}
-  isDialogTrigger: 0
-  item1: {fileID: 0}
-  item2: {fileID: 0}
-  desAfterTrigger: 1
