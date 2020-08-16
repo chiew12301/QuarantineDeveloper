@@ -69,7 +69,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: HeartBeat
-    clip: {fileID: 8300000, guid: e713f72cb6e35eb49a0b9d39938b8dfd, type: 3}
+    clip: {fileID: 8300000, guid: 385b80f6e32a3a34f93a28857660b8bf, type: 3}
     volume: 0.5
     pitch: 1
     loop: 1
@@ -103,4 +103,142 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: pageTear
+    clip: {fileID: 8300000, guid: 12e0005dd80fc1e4483e15d4e40bc28c, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: carDoorOpenClose
+    clip: {fileID: 8300000, guid: 7d03f27078f55394eac2d3e68b6ed338, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: pencilWriting
+    clip: {fileID: 8300000, guid: a30ace3f3b5eb954f8f40f8500702bc4, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: familyWalking
+    clip: {fileID: 8300000, guid: edd83a8bec1b2264caa3fdad3bde0822, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: distantChatting
+    clip: {fileID: 8300000, guid: d199473b27cfbed4eb6e3bcf724d2968, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: maxFootstep
+    clip: {fileID: 8300000, guid: 05d6bd90a01efdf47b664d3b49dabb51, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: gossip
+    clip: {fileID: 8300000, guid: dd540c08783fdb243ac139d6df910329, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bigThud
+    clip: {fileID: 8300000, guid: 298314e5a032f3b42a5d35d0feddde42, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SealRoom1
+    clip: {fileID: 8300000, guid: fbea87825c8522a4b8c7c58dee8e15eb, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: MusicBox
+    clip: {fileID: 8300000, guid: f43fa6d0de895314da7bab99804be3e6, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: SealRoom2
+    clip: {fileID: 8300000, guid: 50b747c05e2e08049b2568be0e1e3ef8, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: SealRoom3
+    clip: {fileID: 8300000, guid: a45afc00d7b80964cb44c4ad87d3cfb3, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: SealRoom4
+    clip: {fileID: 8300000, guid: 4cc6d71ed4b644e45b6556ffdf9a1037, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: RemoveNail
+    clip: {fileID: 8300000, guid: edb6caa861fdfb4408ccf2d7cb85d489, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Dirt
+    clip: {fileID: 8300000, guid: 86139267b193e3d43999e1a9556dbdc3, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: InArm
+    clip: {fileID: 8300000, guid: 49380f8b9ab0ba6439c4b071890c2822, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CameraClick
+    clip: {fileID: 8300000, guid: 72bf4d63ab21fc246a8e226efebb4453, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BottleClink
+    clip: {fileID: 8300000, guid: d9cd712f234825a419838d7fd800f8ad, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BirdsChirp
+    clip: {fileID: 8300000, guid: 972115916caa9744280a8edd6bfda531, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GunShot
+    clip: {fileID: 8300000, guid: 221e2c8f6e3056f4a8893b6e318875b5, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: RunFootsteps
+    clip: {fileID: 8300000, guid: d9e525d5ad9f03547abb59e79b619e6e, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SoldierShoot
+    clip: {fileID: 8300000, guid: 517c063d8531d534a9b622ccb724141f, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: KickDoor
+    clip: {fileID: 8300000, guid: f2dd80004db89584baea8158af0e4e24, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
