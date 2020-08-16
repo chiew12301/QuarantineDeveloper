@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
   m_Name: P2_ED cutscene
   m_EditorClassIdentifier: 
-  hasDialogueEnded: 1
+  hasDialogueEnded: 0
   dialogueInfo:
   - name: Max
     portrait: {fileID: 0}
@@ -234,7 +234,7 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
       type: 3}
-    sentences: ...!
+    sentences: .{Dirt}..!
   - name: Man
     portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
     isJitter: 0
@@ -246,8 +246,8 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
       type: 3}
-    sentences: "A-are you okay? It\u2019s a good thing I caught you in time, wouldn\u2019t
-      want you to ruin that lovely red kebaya..."
+    sentences: "A{InArm}-are you okay? It\u2019s a good thing I caught you in time,
+      wouldn\u2019t want you to ruin that lovely red kebaya..."
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
     isJitter: 0
@@ -295,7 +295,7 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
       type: 3}
-    sentences: ' '
+    sentences: ' {!SealRoom2}{CameraClick} '
   - name: ' '
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
     isJitter: 0

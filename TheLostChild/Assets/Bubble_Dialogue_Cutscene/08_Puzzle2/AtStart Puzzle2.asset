@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
   m_Name: AtStart Puzzle2
   m_EditorClassIdentifier: 
-  hasDialogueEnded: 0
+  hasDialogueEnded: 1
   dialogueInfo:
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
@@ -24,7 +24,7 @@ MonoBehaviour:
     textSpeed: 0.1
     cutsceneImg: {fileID: 0}
     secondCutsceneImg: {fileID: 0}
-    sentences: ...Woah, this place is really dark and eerie...
+    sentences: ...{SealRoom2}{stopBGM}Woah, this place is really dark and eerie...
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0

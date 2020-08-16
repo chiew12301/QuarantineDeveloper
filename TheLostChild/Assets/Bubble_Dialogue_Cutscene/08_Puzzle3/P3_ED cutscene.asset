@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
   m_Name: P3_ED cutscene
   m_EditorClassIdentifier: 
-  hasDialogueEnded: 1
+  hasDialogueEnded: 0
   dialogueInfo:
   - name: Max
     portrait: {fileID: 0}
@@ -222,7 +222,7 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
       type: 3}
-    sentences: ' '
+    sentences: ' {BottleClink} '
   - name: Man
     portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
     isJitter: 0
@@ -344,7 +344,7 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: 1aab0842449cc7440b57a2fa1f3893a8,
       type: 3}
-    sentences: <i>Sayang!</i>  Wake up!
+    sentences: <i>Sayang!</i>  Wake up{BirdsChirp}!
   - name: Man
     portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
     isJitter: 0
@@ -404,7 +404,7 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639,
       type: 3}
-    sentences: ' '
+    sentences: ' {!SealRoom3} '
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0

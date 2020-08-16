@@ -1,0 +1,280 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
+  m_Name: credits
+  m_EditorClassIdentifier: 
+  hasDialogueEnded: 1
+  dialogueInfo:
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: 0dc13e9e6c371e54fa9d283b7e0ee197, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 0dc13e9e6c371e54fa9d283b7e0ee197,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: 1a76661e1e55a5d4bb3dd5fecc19f083, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 0dc13e9e6c371e54fa9d283b7e0ee197,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: 3b5c5bbdab5a0b0409061f9e90455d0c, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 1a76661e1e55a5d4bb3dd5fecc19f083,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: 0dd831499c116b340ad0f27e490533eb, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 3b5c5bbdab5a0b0409061f9e90455d0c,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: 204888281050e1541b9ce5887c78f596, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 0dd831499c116b340ad0f27e490533eb,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: ea7eddce5707e254b910c016ede1e993, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 204888281050e1541b9ce5887c78f596,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: 5042a3028ad62144f888522bc19ffd21, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: ea7eddce5707e254b910c016ede1e993,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: b9c2bc4637a97014eb5ceb92ddd75c4d, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 5042a3028ad62144f888522bc19ffd21,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: 1525de7289b9bf64f99e8414bba108ef, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: b9c2bc4637a97014eb5ceb92ddd75c4d,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: 2b47460428caf144696a857c69cd053a, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 1525de7289b9bf64f99e8414bba108ef,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: a0a71c2ad05810f4d95ba2ce1ca5ce9b, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 2b47460428caf144696a857c69cd053a,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: 4a228234376230443a13428f83ae1e33, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: a0a71c2ad05810f4d95ba2ce1ca5ce9b,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: a9f45923e891c4c4bb14ea25bbce6438, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 4a228234376230443a13428f83ae1e33,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: 9eb3f9b18289e6b46ab6ac1b27630514, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: a9f45923e891c4c4bb14ea25bbce6438,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: c11adc7f304baae498e508b6268c7617, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 9eb3f9b18289e6b46ab6ac1b27630514,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: 8489a4634e7c5fe4d8f0c4cf06791e47, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: c11adc7f304baae498e508b6268c7617,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: 09bbf9b2b34b39542bc2f0a4e29777c3, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 8489a4634e7c5fe4d8f0c4cf06791e47,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: 89cd37b19554be04f84318a238e45be7, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 09bbf9b2b34b39542bc2f0a4e29777c3,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: d38ae74123c35304d8a52fb3ac611e7f, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 89cd37b19554be04f84318a238e45be7,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: 9e429ee9ef64b0c4696c57cf952f26d1, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: d38ae74123c35304d8a52fb3ac611e7f,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 21300000, guid: 9e429ee9ef64b0c4696c57cf952f26d1, type: 3}
+    secondCutsceneImg: {fileID: 21300000, guid: 9e429ee9ef64b0c4696c57cf952f26d1,
+      type: 3}
+    sentences: ' '
+  - name: 
+    portrait: {fileID: 0}
+    isJitter: 0
+    isHide: 1
+    isFade: 1
+    isHideOverlay: 1
+    FadeBGTimer: 1
+    textSpeed: 0
+    cutsceneImg: {fileID: 0}
+    secondCutsceneImg: {fileID: 21300000, guid: 9e429ee9ef64b0c4696c57cf952f26d1,
+      type: 3}
+    sentences: ' '

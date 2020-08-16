@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
   m_Name: P4_ED cutscene
   m_EditorClassIdentifier: 
-  hasDialogueEnded: 1
+  hasDialogueEnded: 0
   dialogueInfo:
   - name: Max
     portrait: {fileID: 0}
@@ -37,7 +37,7 @@ MonoBehaviour:
     secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
       type: 3}
     sentences: "Ayu, stay strong. I need to find the midwife, I can\u2019t do this
-      alone."
+      alone{GunShot}."
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
     isJitter: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
     secondCutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639,
       type: 3}
     sentences: "Ayu...I\u2019m sorry. I failed. I wasn\u2019t quick enough...the
-      soldiers followed me. The midwife was murdered."
+      soldiers followed me. The midwife was murdered{RunFootsteps}."
   - name: Man
     portrait: {fileID: 21300000, guid: b571b43fc8367504ea6f6a5e8f6bdba0, type: 3}
     isJitter: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639,
       type: 3}
-    sentences: ' Hey! You guys were supposed to be with the others!'
+    sentences: Hey! You guys were supposed to be with the others{KickDoor}!
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
     isJitter: 0
@@ -194,10 +194,10 @@ MonoBehaviour:
     isHideOverlay: 1
     FadeBGTimer: 0.01
     textSpeed: 0.1
-    cutsceneImg: {fileID: 21300000, guid: 3c67e4722aa0b1544b4316359d55fcfc, type: 3}
+    cutsceneImg: {fileID: 21300000, guid: c01a49678ccdeea488df3986d528b219, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639,
       type: 3}
-    sentences: ' '
+    sentences: ' {SoldierShoot} '
   - name: Villager 1
     portrait: {fileID: 21300000, guid: 725b849b00eb3a9468d13d711fa5dcca, type: 3}
     isJitter: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
     FadeBGTimer: 1
     textSpeed: 0.1
     cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
-    secondCutsceneImg: {fileID: 21300000, guid: 3c67e4722aa0b1544b4316359d55fcfc,
+    secondCutsceneImg: {fileID: 21300000, guid: c01a49678ccdeea488df3986d528b219,
       type: 3}
     sentences: ' '
   - name: Ayu
@@ -221,7 +221,7 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639,
       type: 3}
-    sentences: ' '
+    sentences: ' {!SealRoom4} '
   - name: Max
     portrait: {fileID: 21300000, guid: 8515a77517b4d5248a6a25795438c83c, type: 3}
     isJitter: 0

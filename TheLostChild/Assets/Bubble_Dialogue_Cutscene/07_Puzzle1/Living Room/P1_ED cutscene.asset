@@ -239,7 +239,7 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639,
       type: 3}
-    sentences: "Someday...I\u2019ll have children on my own\u2026"
+    sentences: "Someday{!MusicBox}...I\u2019ll have children on my own\u2026"
   - name: Ayu
     portrait: {fileID: 21300000, guid: c39dec7254dbd4b48a5fa953dcd8214c, type: 3}
     isJitter: 0

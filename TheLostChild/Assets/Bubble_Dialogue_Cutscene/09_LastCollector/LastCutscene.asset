@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
   m_Name: LastCutscene
   m_EditorClassIdentifier: 
-  hasDialogueEnded: 0
+  hasDialogueEnded: 1
   dialogueInfo:
   - name: Max
     portrait: {fileID: 0}
@@ -491,8 +491,8 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: 12f5d9d5f512ecc4eba7f054dce29544, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: d6d9257001b95884f93972c1f3e46c35,
       type: 3}
-    sentences: "Max...you\u2019re too kind\u2026You\u2019re just like the child I\u2019ve
-      always wanted..."
+    sentences: "Max{RemoveNail}...you\u2019re too kind\u2026You\u2019re just like
+      the child I\u2019ve always wanted..."
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0
@@ -529,4 +529,4 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: 366539ff83e155b48a0694835a2e114f, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: 12f5d9d5f512ecc4eba7f054dce29544,
       type: 3}
-    sentences: "<color=red>Y o u \u2019r e   a l r e a d y   h o m e.</color>"
+    sentences: "<color=red>Y o u \u2019r e   a l r e a d y   h o m e{stopBGM}.</color>"

@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds; //Store Every Sounds, Refer Inspector
 
     public static AudioManager instance;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -59,11 +60,21 @@ public class AudioManager : MonoBehaviour
         }
         else if (sceneName == "Game Scene")
         {
+            Stop("MainMenuBGM");
+            Stop("Credit");
+
+            //if no default bg is played
             if (FindIsPlaying("BGM") == false)
             {
-                Play("BGM");
-                Stop("MainMenuBGM");
-                Stop("Credit");
+                if(FindIsPlaying("SealRoom1") == true || FindIsPlaying("MusicBox") == true || FindIsPlaying("SealRoom2") == true || FindIsPlaying("SealRoom3") == true || FindIsPlaying("SealRoom4") == true )
+                {
+                    return;
+                }
+                //if none of the seal rooms bg are being played/ music box
+                else//if(FindIsPlaying("SealRoom1") == false || FindIsPlaying("MusicBox") == false)
+                {
+                    Play("BGM");
+                }
             }
         }
         else if (sceneName == "StayTuneScene")

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6f07f0c9e960de4f9a6755f0c8b1c1f, type: 3}
   m_Name: Compiled OP Cutscene
   m_EditorClassIdentifier: 
-  hasDialogueEnded: 1
+  hasDialogueEnded: 0
   dialogueInfo:
   - name: Mom
     portrait: {fileID: 21300000, guid: 4f5af962634edea40acecabd491e0134, type: 3}
@@ -57,7 +57,7 @@ MonoBehaviour:
     textSpeed: 0.1
     cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
     secondCutsceneImg: {fileID: 0}
-    sentences: "That\u2019ll teach you not to ignore your mother! Apologise!"
+    sentences: "That\u2019ll teach you not to ignore your mother! Apologise{pageTear}!"
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0
@@ -90,7 +90,7 @@ MonoBehaviour:
     textSpeed: 0.1
     cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
     secondCutsceneImg: {fileID: 0}
-    sentences: ' '
+    sentences: ' {carDoorOpenClose}{familyWalking} '
   - name: Dad
     portrait: {fileID: 21300000, guid: 3b437f119bfba054e862980efd1f30d9, type: 3}
     isJitter: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
     secondCutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639,
       type: 3}
     sentences: "Take a look at this place\u2026Doesn\u2019t it look fascinating,
-      Max?"
+      Max{!familyWalking}{distantChatting}?"
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0
@@ -404,7 +404,7 @@ MonoBehaviour:
     textSpeed: 0.1
     cutsceneImg: {fileID: 21300000, guid: bc39f3d454c3ab245b695bf0219a62b3, type: 3}
     secondCutsceneImg: {fileID: 0}
-    sentences: "\u2026 "
+    sentences: '..{maxFootstep}. '
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0
@@ -450,7 +450,7 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: bc39f3d454c3ab245b695bf0219a62b3,
       type: 3}
-    sentences: ' '
+    sentences: ' {maxFootstep} '
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0
@@ -462,7 +462,7 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: d45ac94b37f5db84083240d4b520a88f, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639,
       type: 3}
-    sentences: "\u2026\u2026"
+    sentences: "\u2026{maxFootstep}\u2026"
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0
@@ -473,7 +473,7 @@ MonoBehaviour:
     textSpeed: 0.1
     cutsceneImg: {fileID: 21300000, guid: d45ac94b37f5db84083240d4b520a88f, type: 3}
     secondCutsceneImg: {fileID: 0}
-    sentences: "(These paintings are quite...depressing to look at\u2026)"
+    sentences: "(These paintings are quite...depressing to look at\u2026{gossip})"
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0
@@ -531,7 +531,7 @@ MonoBehaviour:
     textSpeed: 0.1
     cutsceneImg: {fileID: 21300000, guid: d44dbc30d7ecda94199daaa7061a3648, type: 3}
     secondCutsceneImg: {fileID: 0}
-    sentences: "(Let\u2019s try the second floor\u2026)"
+    sentences: "(Let\u2019s try the second floor\u2026{maxFootstep})"
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0
@@ -555,7 +555,7 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: bc4c8a118579dc7439afafaec96e8d22, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639,
       type: 3}
-    sentences: "\u2026\u2026"
+    sentences: "\u2026{maxFootstep}\u2026"
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0
@@ -692,7 +692,7 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: 14ca93e778e667c45a2eff18815ca6ea,
       type: 3}
-    sentences: ' '
+    sentences: ' {maxFootstep} '
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0
@@ -738,7 +738,7 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: 19427796e9627b844af552ef284843f7,
       type: 3}
-    sentences: ' '
+    sentences: ' {maxFootstep} '
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0
@@ -840,7 +840,7 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639,
       type: 3}
-    sentences: ' '
+    sentences: ' {bigThud} '
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0
@@ -875,7 +875,7 @@ MonoBehaviour:
     cutsceneImg: {fileID: 21300000, guid: 4eae37cc2e0896f46bde053ed0e8b639, type: 3}
     secondCutsceneImg: {fileID: 21300000, guid: 6be2e0c79b1b70945ad8fdfb5a5e5343,
       type: 3}
-    sentences: ' '
+    sentences: ' {teleport} '
   - name: Max
     portrait: {fileID: 21300000, guid: 1ac45a9209b88fe4593619af98c735d9, type: 3}
     isJitter: 0

@@ -319,7 +319,6 @@ public class DialogueManager : MonoBehaviour
     //crossfade
     IEnumerator CrossFade(Dialogue.Info info)
     {
-        Debug.Log("HEYYYY");
         cutscenePanel.canvasRenderer.SetAlpha(0f);
         secondCutscenePanel.canvasRenderer.SetAlpha(1f);
 
@@ -582,13 +581,19 @@ public class DialogueManager : MonoBehaviour
         panelAnimator.SetBool("isOpen", false);
 
         //  Time.timeScale = 1.0f;
-        ItemObtainedScript.instance.ClosePanel();
-
-        if (DialogueCutscene.instance.isStartConversation == true)
+        if(ItemObtainedScript.instance != null)
         {
-            DialogueCutscene.instance.isStartConversationEnd = true;
+            ItemObtainedScript.instance.ClosePanel();
         }
 
+        if(DialogueCutscene.instance != null)
+        {
+            if (DialogueCutscene.instance.isStartConversation == true)
+            {
+                DialogueCutscene.instance.isStartConversationEnd = true;
+            }
+
+        }
     }
 
     //!!! Extra fancy stuff : colours and effects
@@ -751,6 +756,134 @@ public class DialogueManager : MonoBehaviour
         if (command.Name == "Moving")
         {
             AudioManager.instance.Play("Moving");
+        }
+        if (command.Name == "pencilWriting")
+        {
+            AudioManager.instance.Play("pencilWriting");
+        }
+        if (command.Name == "!pencilWriting")
+        {
+            AudioManager.instance.Stop("pencilWriting");
+        }
+        if (command.Name =="pageTear")
+        {
+            AudioManager.instance.Play("pageTear");
+        }
+        if (command.Name == "carDoorOpenClose")
+        {
+            AudioManager.instance.Play("carDoorOpenClose");
+        }
+        if (command.Name == "familyWalking")
+        {
+            AudioManager.instance.Play("familyWalking");
+        }
+        if (command.Name == "!familyWalking")
+        {
+            AudioManager.instance.Stop("familyWalking");
+        }
+        if (command.Name == "distantChatting")
+        {
+            AudioManager.instance.Play("distantChatting");
+        }
+        if (command.Name == "!distantChatting")
+        {
+            AudioManager.instance.Stop("distantChatting");
+        }
+        if (command.Name == "maxFootstep")
+        {
+            AudioManager.instance.Play("maxFootstep");
+        }
+        if (command.Name == "gossip")
+        {
+            AudioManager.instance.Play("gossip");
+        }
+        if (command.Name == "teleport")
+        {
+            AudioManager.instance.Play("Teleport");
+        }
+        if (command.Name == "bigThud")
+        {
+            AudioManager.instance.Play("bigThud");
+        }
+        if(command.Name == "!SealRoom1")
+        {
+            AudioManager.instance.Stop("SealRoom1");
+        }
+        if(command.Name == "MusicBox")
+        {
+            AudioManager.instance.Play("MusicBox");
+        }
+        if (command.Name == "!MusicBox")
+        {
+            AudioManager.instance.Stop("MusicBox");
+        }
+        if (command.Name == "SealRoom2")
+        {
+            AudioManager.instance.Play("SealRoom2");
+        }
+        if (command.Name == "!SealRoom2")
+        {
+            AudioManager.instance.Stop("SealRoom2");
+        }
+        if (command.Name == "SealRoom3")
+        {
+            AudioManager.instance.Play("SealRoom3");
+        }
+        if (command.Name == "!SealRoom3")
+        {
+            AudioManager.instance.Stop("SealRoom3");
+        }
+        if (command.Name == "SealRoom4")
+        {
+            AudioManager.instance.Play("SealRoom4");
+        }
+        if (command.Name == "!SealRoom4")
+        {
+            AudioManager.instance.Stop("SealRoom4");
+        }
+        if (command.Name == "Dirt")
+        {
+            AudioManager.instance.Play("Dirt");
+        }
+        if (command.Name == "InArm")
+        {
+            AudioManager.instance.Play("InArm");
+        }
+        if (command.Name == "CameraClick")
+        {
+            AudioManager.instance.Play("CameraClick");
+        }
+        if (command.Name == "BottleClink")
+        {
+            AudioManager.instance.Play("BottleClink");
+        }
+        if (command.Name == "BirdsChirp")
+        {
+            AudioManager.instance.Play("BirdsChirp");
+        }
+        if (command.Name == "Gunshot")
+        {
+            AudioManager.instance.Play("GunShot");
+        }
+        if (command.Name == "RunFootsteps")
+        {
+            AudioManager.instance.Play("RunFootsteps");
+        }
+        if (command.Name == "SoldierShoot")
+        {
+            AudioManager.instance.Play("SoldierShoot");
+        }
+        if (command.Name == "KickDoor")
+        {
+            AudioManager.instance.Play("KickDoor");
+        }
+        if (command.Name == "RemoveNail")
+        {
+            AudioManager.instance.Play("RemoveNail");
+        }
+        if (command.Name == "stopBGM")
+        {
+            AudioManager.instance.Stop("BGM");
         }
     }
 

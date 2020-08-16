@@ -136,7 +136,7 @@ public class DialogueCutscene : MonoBehaviour
         {
             OPObj.SetActive(true);
             PreloadCutsceneManager.instance.StartParagraph(OPObj, OPparagraph, OPparagraphText, picture);
-
+            AudioManager.instance.Play("pencilWriting");
             //dialogueDisplay.SetActive(true);
             //DialogueManager.instance.StartDialogue(dialogueStartScene);
 
@@ -173,6 +173,7 @@ public class DialogueCutscene : MonoBehaviour
         {
            // ParentBG.gameObject.SetActive(true);
             DialogueManager.instance.StartDialogue(conversationWithParent);
+            AudioManager.instance.Stop("pencilWriting");
             isStartConversation = true;
         }
         
@@ -255,7 +256,6 @@ public class DialogueCutscene : MonoBehaviour
         //check if dialogue for music box ended
         if (musicBox.hasDialogueEnded == true)
         {
-            Debug.Log("What");
             Puzzle1Cutscene();
         }
 
@@ -396,6 +396,8 @@ public class DialogueCutscene : MonoBehaviour
             DialogueManager.instance.StartDialogue(dailogueAyuLivingR);
             player.GetComponent<MoveScriptTesting>().StopMoving();
             isCutSAyuLivingRPlayed = true;
+            AudioManager.instance.Play("SealRoom1");
+            AudioManager.instance.Stop("BGM");
         }
         else { return; }
     }
